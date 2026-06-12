@@ -1,14 +1,15 @@
-// 免費日線歷史（Stooq CSV，免金鑰）→ 算 ATR、均線、近期高低、52週區間、量能。
-// 美股 ticker 自動加 .us，例如 NVDA → nvda.us
+// 免費日線歷史（Yahoo Finance chart API，免金鑰）→ 算 ATR、均線、近期高低、52週區間、量能。
+// （原本用 Stooq，但它加了防爬蟲 JS 驗證牆，已改 Yahoo。）
 import type { MarketStats } from "./types";
+
+// 注意：帶瀏覽器 User-Agent 反而會被 Yahoo 限流(429)；用 Node 預設 UA 才穩。
 
 function sma(values: number[], n: number): number | null {
   if (values.length < n) return null;
-  const slice = values.slice(-n);
-  return slice.reduce((a, b) => a + b, 0) / n;
+  return values.slice(-n).reduce((a, b) => a + b, 0) / n;
 }
 
-/** 14 日 ATR：真實波動區間的平均，用來當「一個風險單位」 */
+/** 14 日 ATR：真實波動區間的平均，當「一個風險單位」 */
 function atr(
   highs: number[],
   lows: number[],
@@ -26,36 +27,70 @@ function atr(
       ),
     );
   }
-  const slice = trs.slice(-n);
-  return slice.reduce((a, b) => a + b, 0) / n;
+  return trs.slice(-n).reduce((a, b) => a + b, 0) / n;
+}
+
+interface YahooChart {
+  chart?: {
+    result?: Array<{
+      indicators?: {
+        quote?: Array<{
+          high?: (number | null)[];
+          low?: (number | null)[];
+          close?: (number | null)[];
+          volume?: (number | null)[];
+        }>;
+      };
+    }>;
+  };
 }
 
 export async function getMarketStats(
   symbol: string,
 ): Promise<MarketStats | null> {
   try {
-    const url = `https://stooq.com/q/d/l/?s=${symbol.toLowerCase()}.us&i=d`;
-    const res = await fetch(url);
-    if (!res.ok) return null;
-    const csv = await res.text();
-    const rows = csv.trim().split("\n").slice(1); // 去掉表頭 Date,Open,High,Low,Close,Volume
-    if (rows.length < 30) return null; // 歷史太短就不算（避免亂給數字）
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(
+      symbol,
+    )}?range=1y&interval=1d`;
+    let res: Response | null = null;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      res = await fetch(url); // 不要帶 User-Agent
+      if (res.ok) break;
+      if (res.status === 429) {
+        await new Promise((r) => setTimeout(r, (attempt + 1) * 1500));
+        continue;
+      }
+      return null;
+    }
+    if (!res || !res.ok) return null;
+    const data = (await res.json()) as YahooChart;
+    const q = data.chart?.result?.[0]?.indicators?.quote?.[0];
+    if (!q) return null;
+
+    const H = q.high ?? [];
+    const L = q.low ?? [];
+    const C = q.close ?? [];
+    const V = q.volume ?? [];
 
     const highs: number[] = [];
     const lows: number[] = [];
     const closes: number[] = [];
     const vols: number[] = [];
-    for (const line of rows) {
-      const cols = line.split(",");
-      const h = parseFloat(cols[2]);
-      const l = parseFloat(cols[3]);
-      const c = parseFloat(cols[4]);
-      const v = parseFloat(cols[5]);
-      if (Number.isFinite(h) && Number.isFinite(l) && Number.isFinite(c)) {
+    for (let i = 0; i < C.length; i++) {
+      const h = H[i];
+      const l = L[i];
+      const c = C[i];
+      const v = V[i];
+      if (
+        typeof h === "number" &&
+        typeof l === "number" &&
+        typeof c === "number" &&
+        Number.isFinite(c)
+      ) {
         highs.push(h);
         lows.push(l);
         closes.push(c);
-        vols.push(Number.isFinite(v) ? v : 0);
+        vols.push(typeof v === "number" && Number.isFinite(v) ? v : 0);
       }
     }
     if (closes.length < 30) return null;
