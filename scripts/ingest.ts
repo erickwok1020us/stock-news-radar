@@ -21,6 +21,7 @@ import { getMarketStats } from "../lib/marketdata";
 import { getStockTwitsSentiment } from "../lib/stocktwits";
 import { analyzeNews } from "../lib/analyze";
 import { dayTradeLevels, longTermLevels } from "../lib/levels";
+import { computeHeat, computeTiming } from "../lib/timing";
 import { reviewPosition } from "../lib/positions";
 import { sendTelegram } from "../lib/telegram";
 import type {
@@ -203,14 +204,19 @@ async function main(): Promise<void> {
       .map(({ _seenAt, ...n }) => n);
     const quote = quotes.get(ticker) ?? null;
     const stats = statsMap.get(ticker) ?? null;
+    const signal = computeSignal(news);
+    const timing = computeTiming(quote, stats, signal);
+    const dir = timing.direction === "short" ? "short" : "long";
     return {
       ticker,
       quote,
-      signal: computeSignal(news),
+      signal,
       social: socialMap.get(ticker) ?? null,
       stats,
-      day: quote ? dayTradeLevels(quote, stats) : null,
+      day: quote ? dayTradeLevels(quote, stats, dir) : null,
       long: quote ? longTermLevels(quote, stats) : null,
+      timing,
+      heat: computeHeat(quote, stats, signal),
       fundamentals: fundMap.get(ticker) ?? null,
       news,
     };

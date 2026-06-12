@@ -56,6 +56,10 @@ export interface TickerSnapshot {
   /** 規則計算的價位框架 —— 透明公式，非預測 */
   day: DayLevels | null;
   long: LongLevels | null;
+  /** 進場時機（技術指標合成，方向感知） */
+  timing: TimingRead | null;
+  /** in-play 熱度 0-100（量能/波動/異動/新聞），短線視圖排序用 */
+  heat: number;
   /** 基本面（估值/成長/體質/分析師）；抓不到就是 null */
   fundamentals: Fundamentals | null;
   news: AnalyzedNews[];
@@ -75,6 +79,7 @@ export interface Snapshot {
 export interface MarketStats {
   /** 14 日 ATR（平均真實波動，當風險單位用） */
   atr14: number | null;
+  sma20: number | null;
   sma50: number | null;
   sma200: number | null;
   /** 近 20 日擺動高/低（短線阻力/支撐） */
@@ -84,6 +89,10 @@ export interface MarketStats {
   low52: number;
   avgVol20: number | null;
   lastVol: number | null;
+  /** RSI(14)：>70 超買 / <30 超賣 */
+  rsi14: number | null;
+  /** MACD（動能） */
+  macd: { macd: number; signal: number; hist: number } | null;
 }
 
 /** 基本面快照（Finnhub 免費端點：profile2 / metric / recommendation） */
@@ -111,9 +120,11 @@ export interface Fundamentals {
 
 /** 短線價位框架（規則算出，非預測） */
 export interface DayLevels {
+  /** 操作方向：做多 / 做空 */
+  direction: "long" | "short";
   /** 進場參考區 [低, 高] */
   entryZone: [number, number];
-  /** 突破買進參考 */
+  /** 順勢突破/跌破參考 */
   breakout: number;
   stop: number;
   target: number;
@@ -122,6 +133,18 @@ export interface DayLevels {
   /** 每股風險（進場 − 止損） */
   riskPerShare: number;
   basis: string;
+}
+
+/** 進場時機（技術指標合成，方向感知）。非預測，是紀律性的「現在是不是好時機」讀數。 */
+export interface TimingRead {
+  /** 建議方向：long=做多 / short=做空 / none=觀望 */
+  direction: "long" | "short" | "none";
+  /** 該方向的有利程度 0-1 */
+  score: number;
+  /** 一句話結論 */
+  label: string;
+  /** 拆解因子（趨勢/RSI/量能/MACD/乖離…） */
+  factors: string[];
 }
 
 /** 長期價位框架（結構錨點；「止損」= 檢討觸發，非緊停損） */

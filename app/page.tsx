@@ -47,10 +47,8 @@ export default function Home() {
   const account = snap?.account ?? DEFAULT_ACCOUNT;
   const tickers = snap?.tickers ?? [];
   const positions = snap?.positions ?? [];
-  // 短線：訊號最強的浮上來
-  const shortSorted = [...tickers].sort(
-    (a, b) => Math.abs(b.signal.score) - Math.abs(a.signal.score),
-  );
+  // 短線：今日「最在玩(in-play)」的熱度浮上來
+  const shortSorted = [...tickers].sort((a, b) => b.heat - a.heat);
   const posAlerts = positions.filter((p) => p.urgent).length;
 
   return (

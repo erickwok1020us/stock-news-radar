@@ -30,6 +30,48 @@ function atr(
   return trs.slice(-n).reduce((a, b) => a + b, 0) / n;
 }
 
+/** RSI(14)，Wilder 平滑 */
+function rsi(closes: number[], n = 14): number | null {
+  if (closes.length < n + 1) return null;
+  let gain = 0;
+  let loss = 0;
+  for (let i = 1; i <= n; i++) {
+    const d = closes[i] - closes[i - 1];
+    if (d >= 0) gain += d;
+    else loss -= d;
+  }
+  let avgGain = gain / n;
+  let avgLoss = loss / n;
+  for (let i = n + 1; i < closes.length; i++) {
+    const d = closes[i] - closes[i - 1];
+    avgGain = (avgGain * (n - 1) + (d > 0 ? d : 0)) / n;
+    avgLoss = (avgLoss * (n - 1) + (d < 0 ? -d : 0)) / n;
+  }
+  if (avgLoss === 0) return 100;
+  return 100 - 100 / (1 + avgGain / avgLoss);
+}
+
+function emaSeries(values: number[], n: number): number[] {
+  const k = 2 / (n + 1);
+  const out: number[] = [values[0]];
+  for (let i = 1; i < values.length; i++) out.push(values[i] * k + out[i - 1] * (1 - k));
+  return out;
+}
+
+/** MACD(12,26,9) */
+function macd(
+  closes: number[],
+): { macd: number; signal: number; hist: number } | null {
+  if (closes.length < 35) return null;
+  const e12 = emaSeries(closes, 12);
+  const e26 = emaSeries(closes, 26);
+  const line = closes.map((_, i) => e12[i] - e26[i]);
+  const sig = emaSeries(line, 9);
+  const m = line[line.length - 1];
+  const s = sig[sig.length - 1];
+  return { macd: m, signal: s, hist: m - s };
+}
+
 interface YahooChart {
   chart?: {
     result?: Array<{
@@ -98,6 +140,7 @@ export async function getMarketStats(
     const W = 20; // 近期擺動視窗
     return {
       atr14: atr(highs, lows, closes, 14),
+      sma20: sma(closes, 20),
       sma50: sma(closes, 50),
       sma200: sma(closes, 200),
       swingHigh: Math.max(...highs.slice(-W)),
@@ -106,6 +149,8 @@ export async function getMarketStats(
       low52: Math.min(...lows.slice(-252)),
       avgVol20: sma(vols, 20),
       lastVol: vols[vols.length - 1] ?? null,
+      rsi14: rsi(closes, 14),
+      macd: macd(closes),
     };
   } catch (err) {
     console.warn(`  ⚠ getMarketStats(${symbol}) 失敗:`, (err as Error).message);

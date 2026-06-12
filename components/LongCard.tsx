@@ -63,6 +63,16 @@ export function LongCard({ t }: { t: TickerSnapshot }) {
           color={growthColor(f?.revenueGrowthTTMYoy ?? null)}
         />
         <LV k="體質" v={`毛利 ${f1(f?.grossMarginTTM ?? null, "%")} · Beta ${f1(f?.beta ?? null)}`} />
+        <LV
+          k="技術面"
+          v={`RSI ${s?.rsi14 != null ? Math.round(s.rsi14) : "—"} · ${
+            s?.sma200 && price != null
+              ? price >= s.sma200
+                ? "站上200日線"
+                : "跌破200日線"
+              : "—"
+          }`}
+        />
       </div>
 
       {pos52 != null && s && (

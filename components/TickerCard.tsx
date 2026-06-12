@@ -1,4 +1,4 @@
-// 短線視圖卡片：報價 + 多空訊號 + 價位框架（進場/止損/止盈/部位）+ 催化劑新聞
+// 短線視圖卡片：方向(做多/做空/觀望) + 進場時機(技術指標) + 方向感知價位框架 + 催化劑
 import type { Account, AnalyzedNews, TickerSnapshot } from "@/lib/types";
 import { positionSize } from "@/lib/levels";
 
@@ -8,13 +8,18 @@ const SENT_COLOR = {
   neutral: "var(--neutral)",
 } as const;
 
-const SENT_LABEL = { bullish: "偏多", bearish: "偏空", neutral: "中性" } as const;
+// 方向 → 顏色/標籤
+const DIR = {
+  long: { label: "做多", color: "var(--bull)" },
+  short: { label: "做空", color: "var(--bear)" },
+  none: { label: "觀望", color: "var(--neutral)" },
+} as const;
 
-// 卡片邊框依訊號發光
+// 卡片邊框依方向發光
 const SKIN = {
-  bullish: { border: "rgba(44,240,122,0.45)", shadow: "0 0 18px rgba(44,240,122,0.16)" },
-  bearish: { border: "rgba(255,62,77,0.5)", shadow: "0 0 18px rgba(255,62,77,0.16)" },
-  neutral: { border: "rgba(154,163,178,0.22)", shadow: "0 0 14px rgba(154,163,178,0.07)" },
+  long: { border: "rgba(44,240,122,0.45)", shadow: "0 0 18px rgba(44,240,122,0.16)" },
+  short: { border: "rgba(255,62,77,0.5)", shadow: "0 0 18px rgba(255,62,77,0.16)" },
+  none: { border: "rgba(154,163,178,0.22)", shadow: "0 0 14px rgba(154,163,178,0.07)" },
 } as const;
 
 function fmtTime(unixSec: number): string {
@@ -56,11 +61,12 @@ function LV({ k, v, color }: { k: string; v: string; color?: string }) {
 
 export function TickerCard({ t, account }: { t: TickerSnapshot; account: Account }) {
   const up = (t.quote?.changePct ?? 0) >= 0;
-  const skin = SKIN[t.signal.sentiment];
+  const dir = t.timing?.direction ?? "none";
+  const skin = SKIN[dir];
   const d = t.day;
+  const isShort = d?.direction === "short";
   const shares = d ? positionSize(account.size, account.riskPct, d.riskPerShare) : 0;
   const riskAmt = Math.round(account.size * account.riskPct);
-  // 催化劑：已證實的優先，其次最近的
   const catalysts = [...t.news].sort(
     (a, b) => (b.credibility === "confirmed" ? 1 : 0) - (a.credibility === "confirmed" ? 1 : 0),
   ).slice(0, 4);
@@ -68,7 +74,9 @@ export function TickerCard({ t, account }: { t: TickerSnapshot; account: Account
   return (
     <div className="card" style={{ borderColor: skin.border, boxShadow: skin.shadow }}>
       <div className="card-head">
-        <span className="ticker">${t.ticker}</span>
+        <span className="ticker">
+          ${t.ticker} <span className="chip" style={{ background: "#1f2435", color: "#ffd24d" }}>熱 {t.heat}</span>
+        </span>
         {t.quote && (
           <span className="price">
             <div>{t.quote.current.toFixed(2)}</div>
@@ -79,24 +87,35 @@ export function TickerCard({ t, account }: { t: TickerSnapshot; account: Account
         )}
       </div>
 
-      <div className="badges">
-        <span className="badge" style={{ color: SENT_COLOR[t.signal.sentiment], borderColor: "currentColor" }}>
-          {SENT_LABEL[t.signal.sentiment]} {t.signal.score > 0 ? "+" : ""}{t.signal.score}
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+        <span style={{ fontSize: 13, fontWeight: 500, color: "#0a0b14", background: DIR[dir].color, padding: "2px 10px", borderRadius: 6 }}>
+          {DIR[dir].label}
         </span>
-        <span className="badge">多 {t.signal.bullCount} · 空 {t.signal.bearCount}</span>
-        {t.social && <span className="badge">散戶 {t.social.bullish}/{t.social.bearish}</span>}
+        <span style={{ fontSize: 12.5, color: "var(--text)" }}>{t.timing?.label}</span>
       </div>
+
+      {t.timing && t.timing.factors.length > 0 && (
+        <div style={{ display: "flex", gap: 5, flexWrap: "wrap", marginBottom: 10 }}>
+          {t.timing.factors.map((f, i) => <span key={i} className="fchip">{f}</span>)}
+        </div>
+      )}
 
       {d ? (
         <div className="lvbox">
-          <LV k="進場區" v={`${d.entryZone[0]} – ${d.entryZone[1]}`} />
+          <LV k={isShort ? "進場區(空)" : "進場區"} v={`${d.entryZone[0]} – ${d.entryZone[1]}`} />
           <LV k="止損" v={`${d.stop}`} color="var(--bear)" />
-          <LV k="止盈 (2:1)" v={`${d.target}`} color="var(--bull)" />
-          <LV k="突破買" v={`${d.breakout}`} />
+          <LV k={isShort ? "止盈(回補)" : "止盈 (2:1)"} v={`${d.target}`} color="var(--bull)" />
+          <LV k={isShort ? "跌破續空" : "突破買"} v={`${d.breakout}`} />
           <LV k="建議部位" v={`≈ ${shares} 股 · 風險 $${riskAmt}`} />
         </div>
       ) : (
         <div className="muted-note">技術資料不足，暫無價位框架</div>
+      )}
+
+      {isShort && (
+        <div style={{ fontSize: 11.5, color: "var(--bear)", marginTop: 8, lineHeight: 1.5 }}>
+          ⚠ 放空：虧損無上限、需融資/可借券、務必守住止損
+        </div>
       )}
 
       {catalysts.length > 0 && (
