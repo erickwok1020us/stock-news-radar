@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T18:44:12.140Z",
+  "generatedAt": "2026-06-12T19:30:54.570Z",
   "account": {
     "size": 10000,
     "riskPct": 0.01,
@@ -9,8 +9,8 @@
     {
       "ticker": "NVDA",
       "quote": {
-        "current": 205,
-        "changePct": 0.0635,
+        "current": 204.85,
+        "changePct": -0.0098,
         "high": 207.07,
         "low": 203.4385,
         "prevClose": 204.87
@@ -22,31 +22,39 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 10,
+        "bullish": 8,
         "bearish": 2
       },
       "stats": {
         "atr14": 8.33367919921875,
-        "sma50": 206.91040100097655,
-        "sma200": 189.25960052490234,
+        "sma20": 214.59350128173827,
+        "sma50": 206.90080078125,
+        "sma200": 189.2572004699707,
         "swingHigh": 232.27999877929688,
         "swingLow": 199.33999633789062,
         "high52": 236.5399932861328,
         "low52": 140.85000610351562,
-        "avgVol20": 174227370.25,
-        "lastVol": 76519005
+        "avgVol20": 174667705.5,
+        "lastVol": 84554510,
+        "rsi14": 44.80360226297381,
+        "macd": {
+          "macd": -1.143781374806622,
+          "signal": 1.2486716320491245,
+          "hist": -2.3924530068557464
+        }
       },
       "day": {
+        "direction": "short",
         "entryZone": [
-          203.44,
-          205.94
+          204.57,
+          207.07
         ],
-        "breakout": 207.07,
-        "stop": 199.27,
-        "target": 215.52,
+        "breakout": 203.44,
+        "stop": 211.24,
+        "target": 194.99,
         "rr": 2,
         "riskPerShare": 5.42,
-        "basis": "回踩支撐 203.44 進場 · 止損=支撐下 0.5×ATR(8.33) · 止盈=風報比 2:1 · 突破 207.07 為另一進場參考"
+        "basis": "做空：反彈靠近阻力 207.07 進場 · 止損=阻力上方 0.5×ATR(8.33) · 止盈=風報比 2:1(往下) · 跌破 203.44 為順勢續空"
       },
       "long": {
         "accumulateZone": [
@@ -58,6 +66,18 @@
         "stretched": false,
         "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 236.54 · 「止損」=收盤跌破 200 日線 189.26 或論點改變"
       },
+      "timing": {
+        "direction": "short",
+        "score": 0.33,
+        "label": "偏好做空（反彈靠近阻力進場）",
+        "factors": [
+          "偏空",
+          "RSI 44.8 中性",
+          "MACD↓",
+          "量縮"
+        ]
+      },
+      "heat": 32,
       "fundamentals": {
         "marketCap": 4967049.881616825,
         "industry": "Semiconductors",
@@ -249,8 +269,8 @@
     {
       "ticker": "TSLA",
       "quote": {
-        "current": 401.16,
-        "changePct": 0.5036,
+        "current": 403.12,
+        "changePct": 0.9946,
         "high": 405.24,
         "low": 386.76,
         "prevClose": 399.15
@@ -262,21 +282,29 @@
         "bearCount": 3
       },
       "social": {
-        "bullish": 2,
-        "bearish": 7
+        "bullish": 11,
+        "bearish": 0
       },
       "stats": {
         "atr14": 17.666431971958705,
-        "sma50": 398.2002014160156,
-        "sma200": 415.669450378418,
+        "sma20": 415.57900085449216,
+        "sma50": 398.23420166015626,
+        "sma200": 415.6779504394531,
         "swingHigh": 445.6000061035156,
         "swingLow": 380.1499938964844,
         "high52": 498.8299865722656,
         "low52": 288.7699890136719,
-        "avgVol20": 46639857.25,
-        "lastVol": 48406145
+        "avgVol20": 46881032.4,
+        "lastVol": 52926648,
+        "rsi14": 47.74005341075357,
+        "macd": {
+          "macd": -2.435822286712323,
+          "signal": 2.1431320328555086,
+          "hist": -4.578954319567831
+        }
       },
       "day": {
+        "direction": "long",
         "entryZone": [
           386.76,
           392.06
@@ -286,18 +314,29 @@
         "target": 412.38,
         "rr": 2,
         "riskPerShare": 11.48,
-        "basis": "回踩支撐 386.76 進場 · 止損=支撐下 0.5×ATR(17.67) · 止盈=風報比 2:1 · 突破 405.24 為另一進場參考"
+        "basis": "做多：回踩支撐 386.76 進場 · 止損=支撐下 0.5×ATR(17.67) · 止盈=風報比 2:1 · 突破 405.24 為另一進場參考"
       },
       "long": {
         "accumulateZone": [
-          401.16,
-          436.45
+          403.12,
+          436.46
         ],
         "trimZone": 498.83,
-        "reviewTrigger": 415.67,
+        "reviewTrigger": 415.68,
         "stretched": false,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 498.83 · 「止損」=收盤跌破 200 日線 415.67 或論點改變"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 498.83 · 「止損」=收盤跌破 200 日線 415.68 或論點改變"
       },
+      "timing": {
+        "direction": "none",
+        "score": 0.17,
+        "label": "多空不明 → 觀望",
+        "factors": [
+          "偏多",
+          "RSI 47.7 中性",
+          "MACD↓"
+        ]
+      },
+      "heat": 48,
       "fundamentals": {
         "marketCap": 1481276.1567488092,
         "industry": "Automobiles",
@@ -489,8 +528,8 @@
     {
       "ticker": "AAPL",
       "quote": {
-        "current": 290.55,
-        "changePct": -1.7184,
+        "current": 290.66,
+        "changePct": -1.6812,
         "high": 297.14,
         "low": 289.62,
         "prevClose": 295.63
@@ -502,21 +541,29 @@
         "bearCount": 2
       },
       "social": {
-        "bullish": 5,
-        "bearish": 3
+        "bullish": 3,
+        "bearish": 5
       },
       "stats": {
         "atr14": 7.591432843889509,
-        "sma50": 285.48019927978515,
-        "sma200": 266.86679931640623,
+        "sma20": 303.8565017700195,
+        "sma50": 285.4813998413086,
+        "sma200": 266.8670994567871,
         "swingHigh": 317.3999938964844,
         "swingLow": 287.3800048828125,
         "high52": 317.3999938964844,
         "low52": 195.07000732421875,
-        "avgVol20": 49737747.8,
-        "lastVol": 23846456
+        "avgVol20": 49873779.3,
+        "lastVol": 26517886,
+        "rsi14": 43.64720493307873,
+        "macd": {
+          "macd": 2.2223150262771583,
+          "signal": 5.75220611006032,
+          "hist": -3.529891083783162
+        }
       },
       "day": {
+        "direction": "long",
         "entryZone": [
           289.62,
           291.9
@@ -526,7 +573,7 @@
         "target": 300.63,
         "rr": 2,
         "riskPerShare": 4.93,
-        "basis": "回踩支撐 289.62 進場 · 止損=支撐下 0.5×ATR(7.59) · 止盈=風報比 2:1 · 突破 297.14 為另一進場參考"
+        "basis": "做多：回踩支撐 289.62 進場 · 止損=支撐下 0.5×ATR(7.59) · 止盈=風報比 2:1 · 突破 297.14 為另一進場參考"
       },
       "long": {
         "accumulateZone": [
@@ -538,6 +585,18 @@
         "stretched": false,
         "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 317.4 · 「止損」=收盤跌破 200 日線 266.87 或論點改變"
       },
+      "timing": {
+        "direction": "none",
+        "score": 0.17,
+        "label": "多空不明 → 觀望",
+        "factors": [
+          "偏多",
+          "RSI 43.6 中性",
+          "MACD↓",
+          "量縮"
+        ]
+      },
+      "heat": 33,
       "fundamentals": {
         "marketCap": 4286945.670063387,
         "industry": "Technology",
@@ -729,34 +788,42 @@
     {
       "ticker": "AMD",
       "quote": {
-        "current": 515.97,
-        "changePct": 5.6341,
+        "current": 512.64,
+        "changePct": 4.9524,
         "high": 521.71,
         "low": 492.3125,
         "prevClose": 488.45
       },
       "signal": {
-        "sentiment": "bullish",
-        "score": 0.16,
-        "bullCount": 5,
+        "sentiment": "neutral",
+        "score": 0.13,
+        "bullCount": 4,
         "bearCount": 1
       },
       "social": {
-        "bullish": 10,
+        "bullish": 6,
         "bearish": 3
       },
       "stats": {
         "atr14": 35.05714634486607,
-        "sma50": 386.86170074462893,
-        "sma200": 253.95202514648437,
+        "sma20": 482.0449951171875,
+        "sma50": 386.80839874267576,
+        "sma200": 253.93869964599608,
         "swingHigh": 546.4400024414062,
         "swingLow": 393.3599853515625,
         "high52": 546.4400024414062,
         "low52": 115.05999755859375,
-        "avgVol20": 31535391.95,
-        "lastVol": 23801539
+        "avgVol20": 31631279,
+        "lastVol": 25628880,
+        "rsi14": 60.65546672486407,
+        "macd": {
+          "macd": 28.626987734711975,
+          "signal": 36.69835042740802,
+          "hist": -8.071362692696049
+        }
       },
       "day": {
+        "direction": "long",
         "entryZone": [
           492.31,
           502.83
@@ -766,18 +833,29 @@
         "target": 543.15,
         "rr": 2,
         "riskPerShare": 22.79,
-        "basis": "回踩支撐 492.31 進場 · 止損=支撐下 0.5×ATR(35.06) · 止盈=風報比 2:1 · 突破 521.71 為另一進場參考"
+        "basis": "做多：回踩支撐 492.31 進場 · 止損=支撐下 0.5×ATR(35.06) · 止盈=風報比 2:1 · 突破 521.71 為另一進場參考"
       },
       "long": {
         "accumulateZone": [
-          246.33,
-          266.65
+          246.32,
+          266.64
         ],
         "trimZone": 546.44,
-        "reviewTrigger": 253.95,
+        "reviewTrigger": 253.94,
         "stretched": true,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 546.44 · 「止損」=收盤跌破 200 日線 253.95 或論點改變 · ⚠ 現價明顯高於均線，宜小額分批/等回檔"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 546.44 · 「止損」=收盤跌破 200 日線 253.94 或論點改變 · ⚠ 現價明顯高於均線，宜小額分批/等回檔"
       },
+      "timing": {
+        "direction": "long",
+        "score": 0.33,
+        "label": "偏好做多（順勢、未過熱時進場）",
+        "factors": [
+          "順勢↑",
+          "RSI 60.7 中性",
+          "MACD↓"
+        ]
+      },
+      "heat": 63,
       "fundamentals": {
         "marketCap": 832511.3029589495,
         "industry": "Semiconductors",
@@ -796,6 +874,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140621315",
+          "ticker": "AMD",
+          "headline": "Discover which S&P500 stocks are making waves on Friday.",
+          "summary": "Wondering what's happening in today's session for the S&P500 index? Stay informed with the top movers within the S&P500 index on Friday.",
+          "source": "ChartMill",
+          "url": "https://finnhub.io/api/news?id=ab4801b856c9578b02ee9b031906c635e9d741654385abfdc79c3e06d0d90cbd",
+          "datetime": 1781291100,
+          "sentiment": "neutral",
+          "confidence": 0.5,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "僅為市場觀察報導，無特定利多或利空。"
+        },
         {
           "id": "finnhub-140620124",
           "ticker": "AMD",
@@ -881,6 +973,20 @@
           "reason": "華爾街分析師上調AMD評級。"
         },
         {
+          "id": "finnhub-140621020",
+          "ticker": "AMD",
+          "headline": "10 Information Technology Stocks With Whale Alerts In Today's Session",
+          "summary": " ",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=730335d8535a9441dd734be2591f7738f8722950a597b4ef76f636032c3125d9",
+          "datetime": 1781271324,
+          "sentiment": "neutral",
+          "confidence": 0.4,
+          "credibility": "unknown",
+          "longTermImpact": "noise",
+          "reason": "提及大額交易警報，但方向不明。"
+        },
+        {
           "id": "finnhub-140617348",
           "ticker": "AMD",
           "headline": "NVIDIA's CPU Ambitions Expand: Can It Challenge x86 Giants Now?",
@@ -935,42 +1041,14 @@
           "credibility": "rumor",
           "longTermImpact": "noise",
           "reason": "AMD被列為華爾街最佳分析師推薦。"
-        },
-        {
-          "id": "finnhub-140616532",
-          "ticker": "AMD",
-          "headline": "Latest News In AI Chips - AI-Powered Shift: Transforming Data Into Business Intelligence",
-          "summary": "Treasure Global Inc. has secured a US$15 million contract to develop an AI-powered Social Listening Platform for Creative World Industries, emphasizing the growing demand for AI systems that convert digital data into actionable insights. This platform leverages machine learning and NVIDIA-powered infrastructure to provide real-time sentiment and trend analytics across various sectors. The deployment underscores a trend in the AI chips industry towards enhancing real-time decision intelligence...",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=215df91f3795cdd46039fce8dbef9d1344f37568e1bdb6e5bf57f16f11463859",
-          "datetime": 1781264255,
-          "sentiment": "neutral",
-          "confidence": 0.1,
-          "credibility": "unknown",
-          "longTermImpact": "noise",
-          "reason": "報導AI晶片產業趨勢，非AMD特定消息。"
-        },
-        {
-          "id": "finnhub-140618583",
-          "ticker": "AMD",
-          "headline": "Buy The Dip: 5 Top Nasdaq AI Stocks",
-          "summary": "The Nasdaqâs broad selloff punished several AI stocks with strong fundamentals and robust earnings growth. Discover 5 top Nasdaq AI stocks to buy on the dip.",
-          "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=faf40c1081cc32edc208d06d2f1b73d3828c59d959163e78fcc8678451f74f0a",
-          "datetime": 1781263850,
-          "sentiment": "bullish",
-          "confidence": 0.6,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "建議買入AI股票，AMD為其中之一。"
         }
       ]
     },
     {
       "ticker": "MSFT",
       "quote": {
-        "current": 388.03,
-        "changePct": -0.5918,
+        "current": 389.44,
+        "changePct": -0.2306,
         "high": 392.03999999999996,
         "low": 382.27,
         "prevClose": 390.34
@@ -982,47 +1060,66 @@
         "bearCount": 2
       },
       "social": {
-        "bullish": 3,
+        "bullish": 6,
         "bearish": 1
       },
       "stats": {
         "atr14": 13.15785653250558,
-        "sma50": 411.7440008544922,
-        "sma200": 453.7176499938965,
+        "sma20": 419.67749938964846,
+        "sma50": 411.76779907226563,
+        "sma200": 453.72359954833985,
         "swingHigh": 466.32000732421875,
         "swingLow": 382.2699890136719,
         "high52": 555.4500122070312,
         "low52": 356.2799987792969,
-        "avgVol20": 37401488.25,
-        "lastVol": 25345165
+        "avgVol20": 37517177.35,
+        "lastVol": 27548847,
+        "rsi14": 36.44383887208989,
+        "macd": {
+          "macd": -4.25160790243325,
+          "signal": 1.2480069282278414,
+          "hist": -5.499614830661091
+        }
       },
       "day": {
+        "direction": "short",
         "entryZone": [
-          382.27,
-          386.22
+          388.09,
+          392.04
         ],
-        "breakout": 392.04,
-        "stop": 375.69,
-        "target": 401.35,
+        "breakout": 382.27,
+        "stop": 398.62,
+        "target": 372.96,
         "rr": 2,
         "riskPerShare": 8.55,
-        "basis": "回踩支撐 382.27 進場 · 止損=支撐下 0.5×ATR(13.16) · 止盈=風報比 2:1 · 突破 392.04 為另一進場參考"
+        "basis": "做空：反彈靠近阻力 392.04 進場 · 止損=阻力上方 0.5×ATR(13.16) · 止盈=風報比 2:1(往下) · 跌破 382.27 為順勢續空"
       },
       "long": {
         "accumulateZone": [
-          388.03,
-          476.4
+          389.44,
+          476.41
         ],
         "trimZone": 555.45,
         "reviewTrigger": 453.72,
         "stretched": false,
         "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 555.45 · 「止損」=收盤跌破 200 日線 453.72 或論點改變"
       },
+      "timing": {
+        "direction": "short",
+        "score": 0.33,
+        "label": "偏好做空（反彈靠近阻力進場）",
+        "factors": [
+          "偏空",
+          "RSI 36.4 中性",
+          "MACD↓"
+        ]
+      },
+      "heat": 34,
       "fundamentals": {
         "marketCap": 2875286.9999824697,
         "industry": "Technology",
-        "peTTM": 23.1207,
-        "psTTM": 9.0962,
+        "peTTM": 22.9626,
+        "psTTM": 9.034,
         "grossMarginTTM": 68.31,
         "beta": 1.1339233,
         "epsGrowthTTMYoy": 29.75,
@@ -1209,8 +1306,8 @@
     {
       "ticker": "META",
       "quote": {
-        "current": 566.37,
-        "changePct": -0.3624,
+        "current": 566.64,
+        "changePct": -0.3149,
         "high": 576.07,
         "low": 560.9,
         "prevClose": 568.43
@@ -1222,35 +1319,43 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 2,
-        "bearish": 6
+        "bullish": 6,
+        "bearish": 8
       },
       "stats": {
         "atr14": 20.492863246372767,
-        "sma50": 621.8138012695313,
-        "sma200": 658.0815997314453,
+        "sma20": 604.1894989013672,
+        "sma50": 621.8202001953125,
+        "sma200": 658.0831994628907,
         "swingHigh": 643,
         "swingLow": 557.010009765625,
         "high52": 796.25,
         "low52": 520.260009765625,
-        "avgVol20": 17457615.75,
-        "lastVol": 8793915
+        "avgVol20": 17514199.25,
+        "lastVol": 9884485,
+        "rsi14": 34.55884058470451,
+        "macd": {
+          "macd": -12.839317674848303,
+          "signal": -7.975137758862907,
+          "hist": -4.864179915985396
+        }
       },
       "day": {
+        "direction": "short",
         "entryZone": [
-          560.9,
-          567.05
+          569.92,
+          576.07
         ],
-        "breakout": 576.07,
-        "stop": 550.65,
-        "target": 590.61,
+        "breakout": 560.9,
+        "stop": 586.32,
+        "target": 546.36,
         "rr": 2,
         "riskPerShare": 13.32,
-        "basis": "回踩支撐 560.9 進場 · 止損=支撐下 0.5×ATR(20.49) · 止盈=風報比 2:1 · 突破 576.07 為另一進場參考"
+        "basis": "做空：反彈靠近阻力 576.07 進場 · 止損=阻力上方 0.5×ATR(20.49) · 止盈=風報比 2:1(往下) · 跌破 560.9 為順勢續空"
       },
       "long": {
         "accumulateZone": [
-          566.37,
+          566.64,
           690.99
         ],
         "trimZone": 796.25,
@@ -1258,6 +1363,18 @@
         "stretched": false,
         "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 796.25 · 「止損」=收盤跌破 200 日線 658.08 或論點改變"
       },
+      "timing": {
+        "direction": "short",
+        "score": 0.5,
+        "label": "偏好做空（反彈靠近阻力進場）",
+        "factors": [
+          "順勢↓",
+          "RSI 34.6 中性",
+          "MACD↓",
+          "量縮"
+        ]
+      },
+      "heat": 34,
       "fundamentals": {
         "marketCap": 1450198.574864104,
         "industry": "Media",
@@ -1449,8 +1566,8 @@
     {
       "ticker": "AMZN",
       "quote": {
-        "current": 236.7,
-        "changePct": -1.9916,
+        "current": 237.88,
+        "changePct": -1.503,
         "high": 243.36,
         "low": 233.59,
         "prevClose": 241.51
@@ -1462,31 +1579,39 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 5,
-        "bearish": 4
+        "bullish": 11,
+        "bearish": 1
       },
       "stats": {
         "atr14": 7.762141636439732,
-        "sma50": 254.73710052490233,
-        "sma200": 232.5002751159668,
+        "sma20": 257.21125106811525,
+        "sma50": 254.7581002807617,
+        "sma200": 232.50552505493164,
         "swingHigh": 274.75,
         "swingLow": 233.58999633789062,
         "high52": 278.55999755859375,
         "low52": 196,
-        "avgVol20": 40954973.05,
-        "lastVol": 35574761
+        "avgVol20": 41120012.15,
+        "lastVol": 38790343,
+        "rsi14": 34.26604614060298,
+        "macd": {
+          "macd": -4.949729251747158,
+          "signal": -1.4927452258070133,
+          "hist": -3.4569840259401445
+        }
       },
       "day": {
+        "direction": "short",
         "entryZone": [
-          233.59,
-          235.92
+          241.03,
+          243.36
         ],
-        "breakout": 243.36,
-        "stop": 229.71,
-        "target": 244.85,
+        "breakout": 233.59,
+        "stop": 247.24,
+        "target": 232.1,
         "rr": 2,
         "riskPerShare": 5.05,
-        "basis": "回踩支撐 233.59 進場 · 止損=支撐下 0.5×ATR(7.76) · 止盈=風報比 2:1 · 突破 243.36 為另一進場參考"
+        "basis": "做空：反彈靠近阻力 243.36 進場 · 止損=阻力上方 0.5×ATR(7.76) · 止盈=風報比 2:1(往下) · 跌破 233.59 為順勢續空"
       },
       "long": {
         "accumulateZone": [
@@ -1494,15 +1619,26 @@
           244.13
         ],
         "trimZone": 278.56,
-        "reviewTrigger": 232.5,
+        "reviewTrigger": 232.51,
         "stretched": false,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 278.56 · 「止損」=收盤跌破 200 日線 232.5 或論點改變"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 278.56 · 「止損」=收盤跌破 200 日線 232.51 或論點改變"
       },
+      "timing": {
+        "direction": "short",
+        "score": 0.33,
+        "label": "偏好做空（反彈靠近阻力進場）",
+        "factors": [
+          "偏空",
+          "RSI 34.3 中性",
+          "MACD↓"
+        ]
+      },
+      "heat": 43,
       "fundamentals": {
         "marketCap": 2539753.4656709144,
         "industry": "Retail",
-        "peTTM": 28.0283,
-        "psTTM": 3.4262,
+        "peTTM": 27.9715,
+        "psTTM": 3.4193,
         "grossMarginTTM": 50.6,
         "beta": 1.4785593,
         "epsGrowthTTMYoy": 36.46,
@@ -1516,6 +1652,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140621316",
+          "ticker": "AMZN",
+          "headline": "Stay informed with the top movers within the dow jones index on Friday.",
+          "summary": "Let's have a look at the top dow jones gainers and losers one hour before the close of the markets of today's session.",
+          "source": "ChartMill",
+          "url": "https://finnhub.io/api/news?id=7799b4943b4070490c4c31469f624b75e45753e95bef0bca85f5be0499429bf9",
+          "datetime": 1781291402,
+          "sentiment": "neutral",
+          "confidence": 0.5,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "僅為市場觀察報導，無特定利多或利空。"
+        },
         {
           "id": "finnhub-140620714",
           "ticker": "AMZN",
@@ -1669,28 +1819,14 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "華爾街市場回顧，與Amazon無關。"
-        },
-        {
-          "id": "finnhub-140618677",
-          "ticker": "AMZN",
-          "headline": "Chewy's Stock Is In The Doghouse. Its Profits Aren't",
-          "summary": "The pet e-commerce giant is getting more efficient just as its customers are getting more frugal, leaving investors with a tough question.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=c6686e15cf464ca8ba691c181301b1c41c6686adfb75a19e08ec01a47e4590fe",
-          "datetime": 1781272571,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "新聞內容與Amazon無關。"
         }
       ]
     },
     {
       "ticker": "GOOGL",
       "quote": {
-        "current": 361.36,
-        "changePct": 1.0034,
+        "current": 360.54,
+        "changePct": 0.7742,
         "high": 366.57,
         "low": 354.94,
         "prevClose": 357.77
@@ -1702,31 +1838,39 @@
         "bearCount": 2
       },
       "social": {
-        "bullish": 6,
+        "bullish": 4,
         "bearish": 1
       },
       "stats": {
         "atr14": 10.675718035016741,
-        "sma50": 362.2899993896484,
-        "sma200": 307.95299980163577,
+        "sma20": 376.4657501220703,
+        "sma50": 362.2736993408203,
+        "sma200": 307.9489247894287,
         "swingHigh": 408.6099853515625,
         "swingLow": 346.3599853515625,
         "high52": 408.6099853515625,
         "low52": 162,
-        "avgVol20": 32064074.25,
-        "lastVol": 16612685
+        "avgVol20": 32152521.2,
+        "lastVol": 18284924,
+        "rsi14": 43.0880012351001,
+        "macd": {
+          "macd": -2.832894797006759,
+          "signal": 1.1177079266624537,
+          "hist": -3.9506027236692125
+        }
       },
       "day": {
+        "direction": "short",
         "entryZone": [
-          354.94,
-          358.14
+          363.37,
+          366.57
         ],
-        "breakout": 366.57,
-        "stop": 349.6,
-        "target": 370.42,
+        "breakout": 354.94,
+        "stop": 371.91,
+        "target": 351.09,
         "rr": 2,
         "riskPerShare": 6.94,
-        "basis": "回踩支撐 354.94 進場 · 止損=支撐下 0.5×ATR(10.68) · 止盈=風報比 2:1 · 突破 366.57 為另一進場參考"
+        "basis": "做空：反彈靠近阻力 366.57 進場 · 止損=阻力上方 0.5×ATR(10.68) · 止盈=風報比 2:1(往下) · 跌破 354.94 為順勢續空"
       },
       "long": {
         "accumulateZone": [
@@ -1738,6 +1882,18 @@
         "stretched": false,
         "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 408.61 · 「止損」=收盤跌破 200 日線 307.95 或論點改變"
       },
+      "timing": {
+        "direction": "short",
+        "score": 0.33,
+        "label": "偏好做空（反彈靠近阻力進場）",
+        "factors": [
+          "偏空",
+          "RSI 43.1 中性",
+          "MACD↓",
+          "量縮"
+        ]
+      },
+      "heat": 31,
       "fundamentals": {
         "marketCap": 4393540.268,
         "industry": "Media",
@@ -1930,47 +2086,21 @@
   "positions": [
     {
       "position": {
-        "id": "demo1",
+        "id": "1",
         "ticker": "NVDA",
-        "mode": "day",
-        "shares": 9,
-        "entry": 860.5,
-        "stop": 850,
-        "target": 881,
-        "openedAt": "2026-06-12",
-        "note": "示範短線單，請換成你真實持倉"
-      },
-      "price": 205,
-      "pnlPct": -0.7617664148750727,
-      "pnlAmount": -5899.5,
-      "rMultiple": -62.42857142857143,
-      "suggestedTarget": 881,
-      "action": "exit",
-      "suggestedStop": 850,
-      "reason": "已觸及止損 850，建議出場。",
-      "urgent": true
-    },
-    {
-      "position": {
-        "id": "demo2",
-        "ticker": "AAPL",
         "mode": "long",
-        "shares": 20,
-        "entry": 180,
-        "stop": 0,
-        "target": 0,
-        "openedAt": "2026-01-15",
-        "note": "示範長期持有"
+        "shares": 10,
+        "entry": 195
       },
-      "price": 290.55,
-      "pnlPct": 0.6141666666666667,
-      "pnlAmount": 2211,
+      "price": 204.85,
+      "pnlPct": 0.05051282051282048,
+      "pnlAmount": 98.5,
       "rMultiple": null,
       "suggestedTarget": null,
-      "action": "review",
-      "suggestedStop": 266.87,
-      "reason": "出現可能改變長期論點的新聞，建議檢視這筆持倉。",
-      "urgent": true
+      "action": "trail_stop",
+      "suggestedStop": 189.26,
+      "reason": "論點未變，續抱；把「檢討價」上移到 200 日線 189.26。",
+      "urgent": false
     }
   ]
 }
