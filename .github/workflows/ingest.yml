@@ -29,7 +29,7 @@ jobs:
       - name: Run ingest
         env:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           # 公開 repo：把真實持倉放這個 secret（整包 JSON），就不用提交到版控

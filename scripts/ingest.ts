@@ -137,7 +137,7 @@ async function main(): Promise<void> {
   const { tickers: watchlist, alertThreshold } = loadWatchlist();
   const { account, positions } = loadPortfolio();
   const finnhubKey = requireEnv("FINNHUB_API_KEY");
-  requireEnv("ANTHROPIC_API_KEY"); // SDK 自己讀，這裡先確認有設
+  requireEnv("GEMINI_API_KEY"); // analyze.ts 會用這把（免費 Gemini）
   const tgToken = optionalEnv("TELEGRAM_BOT_TOKEN");
   const tgChat = optionalEnv("TELEGRAM_CHAT_ID");
 
