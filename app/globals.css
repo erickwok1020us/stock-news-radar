@@ -1,0 +1,275 @@
+:root {
+  /* 霓虹主題（對齊「AI 每日情報」站）：cyan / magenta on dark + 發光邊框 */
+  --bg: #0a0b14;
+  --card: #111320;
+  --border: #1f2435;
+  --text: #e8ecf5;
+  --muted: #8b93a8;
+  --bull: #2cf07a; /* 升 = 霓虹綠 */
+  --bear: #ff3e4d; /* 跌 = 霓虹紅 */
+  --neutral: #9aa3b2;
+  --rumor: #ffd24d; /* 傳聞 = 警示琥珀 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC",
+    "Microsoft JhengHei", Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.header h1 {
+  font-size: 22px;
+  margin: 0;
+}
+.header .meta {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.ticker {
+  font-size: 18px;
+  font-weight: 700;
+}
+.price {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.price .pct {
+  font-size: 13px;
+}
+
+.badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.badge {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.news {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.news li {
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+.news .line {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+}
+.news .time {
+  color: var(--muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.news .head {
+  font-size: 14px;
+}
+.news .reason {
+  color: var(--muted);
+  font-size: 12.5px;
+  margin-top: 2px;
+}
+.tag {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.empty {
+  color: var(--muted);
+  text-align: center;
+  padding: 64px 0;
+}
+.error {
+  color: var(--bear);
+  background: rgba(255, 62, 77, 0.08);
+  border: 1px solid rgba(255, 62, 77, 0.3);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+/* 視圖切換 */
+.seg {
+  display: inline-flex;
+  gap: 4px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 18px;
+}
+.seg button {
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-family: inherit;
+  padding: 6px 14px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.seg button.active {
+  background: rgba(52, 226, 232, 0.12);
+  color: #34e2e8;
+}
+
+/* 價位列 */
+.lvbox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 4px 0 10px;
+}
+.lv {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 13px;
+}
+.lv .k {
+  color: var(--muted);
+}
+.lv .v {
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+.muted-note {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 8px;
+}
+.chip {
+  font-size: 11px;
+  color: #0a0b14;
+  background: #34e2e8;
+  padding: 1px 7px;
+  border-radius: 999px;
+  vertical-align: 2px;
+}
+
+/* 持倉總覽 + 止損列 */
+.summary {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.summary .k {
+  color: var(--muted);
+  font-size: 11px;
+}
+.summary .big {
+  font-size: 22px;
+  font-weight: 500;
+}
+.summary .mid {
+  font-size: 16px;
+  color: var(--text);
+}
+.summary .sep {
+  height: 32px;
+  width: 1px;
+  background: var(--border);
+}
+.stoprow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+}
+.stopcell {
+  flex: 1;
+  background: #0d101a;
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+  padding: 8px;
+}
+.stopcell.hl {
+  background: rgba(52, 226, 232, 0.06);
+  border-color: rgba(52, 226, 232, 0.35);
+}
+.stopcell .k {
+  color: var(--muted);
+  font-size: 11px;
+  margin-bottom: 2px;
+}
+.stopcell .v {
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+.arrow {
+  color: var(--muted);
+}

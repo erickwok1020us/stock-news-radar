@@ -1,0 +1,28 @@
+{
+  "_comment": "你的真實持倉。mode 填 day 或 long；stop/target 可填 0 讓系統建議。account 用來算部位與風險。下面兩筆是示範，請改成你自己的。",
+  "account": { "size": 10000, "riskPct": 0.01, "currency": "USD" },
+  "positions": [
+    {
+      "id": "demo1",
+      "ticker": "NVDA",
+      "mode": "day",
+      "shares": 9,
+      "entry": 860.5,
+      "stop": 850,
+      "target": 881,
+      "openedAt": "2026-06-12",
+      "note": "示範短線單，請換成你真實持倉"
+    },
+    {
+      "id": "demo2",
+      "ticker": "AAPL",
+      "mode": "long",
+      "shares": 20,
+      "entry": 180,
+      "stop": 0,
+      "target": 0,
+      "openedAt": "2026-01-15",
+      "note": "示範長期持有"
+    }
+  ]
+}

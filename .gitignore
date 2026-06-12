@@ -1,0 +1,24 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+
+# production
+/build
+
+# env — 機密金鑰絕對不要進版控
+.env
+.env*.local
+
+# 注意：data/snapshot.json 和 data/store.json 是「要」進版控的
+# （GitHub Actions 把結果 commit 回 repo，前端再從 raw GitHub 讀；store.json 兼作跨次去重）
+
+# misc
+.DS_Store
+*.log
+.vercel
