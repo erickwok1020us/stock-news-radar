@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13T04:21:52.396Z",
+  "generatedAt": "2026-06-13T08:01:53.217Z",
   "account": {
     "size": 10000,
     "riskPct": 0.01,
@@ -16,14 +16,14 @@
         "prevClose": 204.87
       },
       "signal": {
-        "sentiment": "neutral",
-        "score": 0.07,
-        "bullCount": 1,
+        "sentiment": "bullish",
+        "score": 0.18,
+        "bullCount": 3,
         "bearCount": 0
       },
       "social": {
-        "bullish": 11,
-        "bearish": 6
+        "bullish": 15,
+        "bearish": 3
       },
       "stats": {
         "atr14": 8.333572387695312,
@@ -72,19 +72,20 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "偏空",
+          "新聞偏多",
           "RSI 45.2 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 36,
+      "heat": 37,
       "fundamentals": {
         "marketCap": 4965597.881651431,
         "industry": "Semiconductors",
         "peTTM": 31.1193,
         "psTTM": 19.5946,
         "grossMarginTTM": 74.15,
-        "beta": 2.2398267,
+        "beta": 2.2420425,
         "epsGrowthTTMYoy": 110.34,
         "revenueGrowthTTMYoy": 70.68,
         "analyst": {
@@ -96,6 +97,118 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140626159",
+          "ticker": "NVDA",
+          "headline": "If Gas Prices Stay High, Costco Stock Could Be a Better Buy Than Walmart",
+          "summary": "Costco members tend to spend more when they buy gas there.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=03247f9f02b64cedf2d07ff600a7ecd186a7fc4d33aff0a04494faeb3184538f",
+          "datetime": 1781336700,
+          "sentiment": "neutral",
+          "confidence": 1,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "與NVDA無關。"
+        },
+        {
+          "id": "finnhub-140626160",
+          "ticker": "NVDA",
+          "headline": "I Used to Think Claiming Social Security at 62 Was a Disastrous Move. I Was Clearly Misinformed.",
+          "summary": "Filing as early as possible isn't guaranteed to be a mistake.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=efabeed4a885f428b8b5b08345c7526dd100fbc2e396b415377bd39fc5ba618e",
+          "datetime": 1781336280,
+          "sentiment": "neutral",
+          "confidence": 1,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "與NVDA無關。"
+        },
+        {
+          "id": "finnhub-140626161",
+          "ticker": "NVDA",
+          "headline": "Roku Stock Skyrocketed on Friday. Investors Should Be Paying Attention.",
+          "summary": "Investors haven't fully appreciated the streaming pioneer. That could be a costly mistake.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=8976bcc4abdc012a493785e8c1d87b7f4ed6cd613890a4058cd5150f4df3a7d0",
+          "datetime": 1781335321,
+          "sentiment": "neutral",
+          "confidence": 1,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "與NVDA無關。"
+        },
+        {
+          "id": "finnhub-140626162",
+          "ticker": "NVDA",
+          "headline": "POET Technologies (POET) Rides Market Leaders’ Semiconductor Optimism, Climbs 11%",
+          "summary": "POET Technologies Inc. (NASDAQ:POET) is one of the 10 Stocks That Absolutely Exploded Higher. POET Technologies saw its share prices jump by 11.38 percent on Friday to close at $12.53 apiece, as investor sentiment was bolstered by the continued optimism for companies and sectors riding the AI boom, thanks to bullish comments from analysts and […]",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=212d24183dc225a4c98545bb27a98c3e786eda357d9787bec6d6fb5df297245a",
+          "datetime": 1781333938,
+          "sentiment": "bullish",
+          "confidence": 0.6,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "AI產業樂觀情緒，間接利好。"
+        },
+        {
+          "id": "finnhub-140626163",
+          "ticker": "NVDA",
+          "headline": "Arm Holdings (ARM) Gets BofA Backing, 37% PT Upgrade, Climbs 11%",
+          "summary": "Arm Holdings PLC (NASDAQ:ARM) is one of the 10 Stocks That Absolutely Exploded Higher. Arm Holdings saw its share prices jump by 11.27 percent on Friday to close at $380.81 apiece, as investors took heart from Bank of America’s highly optimistic outlook for the broader semiconductor industry, with the company alone earning a 37 percent […]",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=2230e84dacc82e7f9297ccf07e84b1444c8c189f7d14b3389a13f268a561b9b7",
+          "datetime": 1781333806,
+          "sentiment": "bullish",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "半導體產業樂觀，間接利好NVDA。"
+        },
+        {
+          "id": "finnhub-140626164",
+          "ticker": "NVDA",
+          "headline": "Is Cardano Too Risky to Own -- or Too Cheap to Ignore?",
+          "summary": "Cardano trades for just pennies, but it may still be too risky for many investors.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=1343ee66f9358c1708a6da5601b5c7d2474633b54602853de64b9ad9b971c054",
+          "datetime": 1781333400,
+          "sentiment": "neutral",
+          "confidence": 1,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "與NVDA無關。"
+        },
+        {
+          "id": "finnhub-140625821",
+          "ticker": "NVDA",
+          "headline": "Meet the Medtech Stock Wall Street Thinks Will Soar 65% Over the Next 12 Months",
+          "summary": "Analysts remain relatively more upbeat, but this could prove fleeting.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=c56d4fde8896e52c097d513feb9c0471c6976ba85b826a0df55622096ec10417",
+          "datetime": 1781325300,
+          "sentiment": "neutral",
+          "confidence": 1,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "與NVDA無關。"
+        },
+        {
+          "id": "finnhub-140625822",
+          "ticker": "NVDA",
+          "headline": "Navitas Semiconductor (NVTS) Is Down 6.7% After Nvidia AI MGX Showcase Tie‑In And $500M ATM Plan",
+          "summary": "In recent days, Navitas Semiconductor announced a new ultra‑high‑voltage UHV‑TO‑247‑4‑ISO SiC package, filed an omnibus shelf registration and a US$500 million at‑the‑market equity program, participated in Nvidia’s AI Factory MGX showcase at COMPUTEX 2026, and saw director Dr. Ranbir Singh resign from the board effective June 9, 2026. These events collectively highlight Navitas’ push to deepen its role in AI data‑center and high‑voltage energy infrastructure while potentially increasing its...",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=688134aec4614d3ff0af5e337bd876ea1d4eadd6c7585148af5a276e9fed8713",
+          "datetime": 1781323991,
+          "sentiment": "neutral",
+          "confidence": 0.8,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "提及NVDA生態系，但主要關於他股。"
+        },
         {
           "id": "finnhub-140625449",
           "ticker": "NVDA",
@@ -151,118 +264,6 @@
           "credibility": "rumor",
           "longTermImpact": "noise",
           "reason": "推薦其他AI股，對NVDA影響中性。"
-        },
-        {
-          "id": "finnhub-140624831",
-          "ticker": "NVDA",
-          "headline": "Why CoreWeave Stock Surged Today",
-          "summary": "Investors were feeling more bullish about CoreWeave stock today following recent market developments.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=8143be73b754ba7d6a1b56ada93991a4d0faba4307ec0d0055aa61950bcb50ce",
-          "datetime": 1781310885,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "關於CoreWeave，與NVDA無直接關聯。"
-        },
-        {
-          "id": "finnhub-140624086",
-          "ticker": "NVDA",
-          "headline": "Why Red Cat Stock Sank Today",
-          "summary": "Red Cat stock lost ground even as the broader market moved higher.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=38b4b71680b5d3d9ac5dac611133b80bea9aea67ba07b900ea10cfb54278ac7e",
-          "datetime": 1781307932,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "關於Red Cat，與NVDA無直接關聯。"
-        },
-        {
-          "id": "finnhub-140624087",
-          "ticker": "NVDA",
-          "headline": "Bitcoin Perpetual Futures Are Now Available for Trading. Here's What You Need to Know.",
-          "summary": "These derivative contracts are exciting for a lot of different reasons.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=1d3c58ce49264666922a3a1659accca9b5bfeaa815a212211d84ec7ded10b2ad",
-          "datetime": 1781307780,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "關於比特幣期貨，與NVDA無關。"
-        },
-        {
-          "id": "finnhub-140624088",
-          "ticker": "NVDA",
-          "headline": "Poet Technologies Skyrocketed Today -- Is the Stock a Buy Right Now?",
-          "summary": "Poet stock is still down 39% from its 52-week high after a recent pop. Should investors be buying?",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=40fb86a0bf482f07fd2903e1d8c841e55777adb4b59b05b98af5e3c033a258ed",
-          "datetime": 1781305495,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "關於Poet Technologies，與NVDA無關。"
-        },
-        {
-          "id": "finnhub-140624089",
-          "ticker": "NVDA",
-          "headline": "5 Reasons to Buy Celsius Stock Right Now",
-          "summary": "Celsius Holdings now sells one in five U.S. energy drinks. The stock price doesn't reflect that dominance.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=d8148930952ddb9c91c4877562bf22659601084e25b4f803faf09332705f4726",
-          "datetime": 1781302980,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "關於Celsius，與NVDA無關。"
-        },
-        {
-          "id": "finnhub-140624090",
-          "ticker": "NVDA",
-          "headline": "Why First Advantage Stock Crushed the Market Today",
-          "summary": "The thriving employment verification company is joining a prominent index.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=c1029a7802ed0012429f6774079e8e441043bf3b3ddd3c6c27e4c859770dca09",
-          "datetime": 1781302856,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "關於First Advantage，與NVDA無關。"
-        },
-        {
-          "id": "finnhub-140624091",
-          "ticker": "NVDA",
-          "headline": "Why Adobe Stock Fell Today",
-          "summary": "Artificial intelligence (AI)-powered threats are forcing the software giant to adopt a risky new growth strategy.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=b3fb9fdaf3c58aec6ffecffda0e321bd2f95b7f83d813d7451f42c74e75be709",
-          "datetime": 1781302807,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "關於Adobe，與NVDA無關。"
-        },
-        {
-          "id": "finnhub-140624092",
-          "ticker": "NVDA",
-          "headline": "Could Buying an AI Crypto Today Set You Up for Life?",
-          "summary": "There has yet to be an artificial intelligence (AI) crypto that investors can buy and hold for the long haul.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=458e934e17db6ba0c77676c1f8cfb659c288105f27a1a318210faab0b09391cf",
-          "datetime": 1781302800,
-          "sentiment": "neutral",
-          "confidence": 0.7,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "關於AI加密貨幣，與NVDA無關。"
         }
       ]
     },
@@ -282,8 +283,8 @@
         "bearCount": 2
       },
       "social": {
-        "bullish": 8,
-        "bearish": 6
+        "bullish": 6,
+        "bearish": 5
       },
       "stats": {
         "atr14": 17.76928928920201,
@@ -340,10 +341,10 @@
       "fundamentals": {
         "marketCap": 1526438.7327427862,
         "industry": "Automobiles",
-        "peTTM": 388.166,
-        "psTTM": 15.3158,
+        "peTTM": 395.2457,
+        "psTTM": 15.5952,
         "grossMarginTTM": 19.07,
-        "beta": 1.8108728,
+        "beta": 1.8071764,
         "epsGrowthTTMYoy": -39.08,
         "revenueGrowthTTMYoy": 2.25,
         "analyst": {
@@ -355,6 +356,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140625574",
+          "ticker": "TSLA",
+          "headline": "World's First Net-Worth Trillionaire Shows Us How Markets Price The Future",
+          "summary": "Following the pricing of the SpaceX IPO, Elon Musk has become the worldâs first trillionaire, on paper.",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=eae5fd1a33f64dc42f4217730acdb9d3b293d5e8ae399ffbb9e2511833829d0d",
+          "datetime": 1781309700,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "關於馬斯克個人財富，非TSLA營運。"
+        },
         {
           "id": "finnhub-140624136",
           "ticker": "TSLA",
@@ -508,20 +523,6 @@
           "credibility": "rumor",
           "longTermImpact": "noise",
           "reason": "關於SpaceX技術風險，與TSLA無關。"
-        },
-        {
-          "id": "finnhub-140621608",
-          "ticker": "TSLA",
-          "headline": "Wealth Expert: SpaceX IPO Will Likely Make Elon Musk the World’s First Trillionaire",
-          "summary": "CNBC Wealth Editor correspondent Robert Frank delivered a milestone moment on air this morning, saying: “By the end of today, Elon Musk will likely become the world’s first trillionaire.” This comes as the result of the long-awaited SpaceX IPO, which is poised to revalue Musk’s privately held stake at public-market multiples and push his net ... Wealth Expert: SpaceX IPO Will Likely Make Elon Musk the World’s First Trillionaire",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=08d7dc05967008d00fd1dcebd95125e53b04da41e20865a263760acddee90428",
-          "datetime": 1781290176,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "關於SpaceX IPO與馬斯克財富，與TSLA無關。"
         }
       ]
     },
@@ -800,7 +801,7 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 10,
+        "bullish": 12,
         "bearish": 1
       },
       "stats": {
@@ -862,7 +863,7 @@
         "peTTM": 166.5335,
         "psTTM": 22.2718,
         "grossMarginTTM": 50.28,
-        "beta": 2.5441084,
+        "beta": 2.527304,
         "epsGrowthTTMYoy": 123.4,
         "revenueGrowthTTMYoy": 34.97,
         "analyst": {
@@ -1121,7 +1122,7 @@
         "peTTM": 22.9626,
         "psTTM": 9.034,
         "grossMarginTTM": 68.31,
-        "beta": 1.1339233,
+        "beta": 1.1307626,
         "epsGrowthTTMYoy": 29.75,
         "revenueGrowthTTMYoy": 17.87,
         "analyst": {
@@ -1133,6 +1134,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140625587",
+          "ticker": "MSFT",
+          "headline": "Investors Brace For SpaceX's Historic Trading Debut",
+          "summary": "Trading is all about the SpaceX IPO today. Markets embrace possible âgreat settlementâ with Iran. Adobeâs losing two top executives as well as share value",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=efcd09acd2cf09895b341a41c7ebb3f5e7de2f812e62f6c90ab72c10abfa8354",
+          "datetime": 1781307600,
+          "sentiment": "neutral",
+          "confidence": 1,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "與MSFT無關，主要關於SpaceX。"
+        },
         {
           "id": "finnhub-140624111",
           "ticker": "MSFT",
@@ -1286,20 +1301,6 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "科技股因AI支出擔憂而下跌，微軟受壓。"
-        },
-        {
-          "id": "finnhub-140620160",
-          "ticker": "MSFT",
-          "headline": "Microsoft (MSFT) Stock After 17% Year-To-Date Slide Is The Market Overreacting",
-          "summary": "For investors wondering whether Microsoft stock still offers value at current levels, or if the market has already priced in the story, this article walks through what the numbers say and how to read them clearly. Microsoft shares last closed at US$390.34, with the stock down 8.8% over the past week, 4.3% over the past month, and 17.5% year to date, while still showing a cumulative return of 14.8% over three years and 55.9% over five years. Recent coverage has focused on how large technology...",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=caa3ac85ff42d69afdae53e856abf3a5fd29132502bef9a4a8e22376c83c7d3e",
-          "datetime": 1781281028,
-          "sentiment": "neutral",
-          "confidence": 0.7,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "分析微軟股價下跌是否過度反應，無明確方向。"
         }
       ]
     },
@@ -1320,7 +1321,7 @@
       },
       "social": {
         "bullish": 9,
-        "bearish": 9
+        "bearish": 10
       },
       "stats": {
         "atr14": 20.492863246372767,
@@ -1380,7 +1381,7 @@
         "peTTM": 20.414,
         "psTTM": 6.7033,
         "grossMarginTTM": 81.94,
-        "beta": 1.2499832,
+        "beta": 1.2489165,
         "epsGrowthTTMYoy": 7.49,
         "revenueGrowthTTMYoy": 26.18,
         "analyst": {
@@ -1578,7 +1579,7 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 6,
+        "bullish": 7,
         "bearish": 2
       },
       "stats": {
@@ -1651,6 +1652,34 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140626087",
+          "ticker": "AMZN",
+          "headline": "AI's True Costs Limit Its Impact On Job Displacement",
+          "summary": "With the rapid improvement in AI, especially agentic AI systems, one narrative is these programs will eliminate many jobs.",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=b5acd729c14b0cce5c340bf00a1664a1aa1fd851c3472f85c21d2118de5f49ef",
+          "datetime": 1781320200,
+          "sentiment": "neutral",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "討論AI成本限制，對AMZN影響中性。"
+        },
+        {
+          "id": "finnhub-140625646",
+          "ticker": "AMZN",
+          "headline": "SpaceX Settles",
+          "summary": "Bankers working the deal, led by Goldman Sachs and Morgan Stanley as the co-lead, priced SpaceX at $135/share last night, giving the company a market cap of roughly $1.77 trillion.",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=6eff06620d130023ffeb74b9eabd9a40a54da24b51b05155e5a480fc1a5f9d13",
+          "datetime": 1781310600,
+          "sentiment": "neutral",
+          "confidence": 1,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "與AMZN無關，主要關於SpaceX。"
+        },
         {
           "id": "finnhub-140624835",
           "ticker": "AMZN",
@@ -1790,34 +1819,6 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "僅為道瓊指數變動觀察，無特定影響。"
-        },
-        {
-          "id": "finnhub-140620161",
-          "ticker": "AMZN",
-          "headline": "SpaceX Opens at $150. That's Disappointing.",
-          "summary": "SpaceX stock opened at $150, up 11% from the $135 IPO price and valuing the space company at about $1.9 trillion, according to Dow Jones Market Data. That makes Elon Musk's rocket company the sixth most valuable company in America, more than Broadcom and less than Amazon.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=656ca06ffd1933cb3ad16bd31d98678f3e6c6f36e1cea1dc98bb6c68a30406b0",
-          "datetime": 1781279723,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "SpaceX IPO表現，與Amazon市值比較。"
-        },
-        {
-          "id": "finnhub-140620162",
-          "ticker": "AMZN",
-          "headline": "Amazon Stock Trading In A Range Sets Direction Toward A Quick Return",
-          "summary": "Amazon stock is trading right in between its 50-day and 200-day moving averages, which could provide support and resistance in the coming weeks.  Iron condors can work well when a stock trades sideways and volatility remains low or drops.  The technology and retail giant operates across e‑commerce, cloud computing, digital advertising and consumer devices.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=048d9e1ae61b4252dee0d9293425dea088050ae2476c5025f47aba9dc1cca8a0",
-          "datetime": 1781279471,
-          "sentiment": "neutral",
-          "confidence": 0.7,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "Amazon股價區間震盪，技術分析觀點。"
         }
       ]
     },
@@ -1832,9 +1833,9 @@
       },
       "signal": {
         "sentiment": "bullish",
-        "score": 0.18,
-        "bullCount": 4,
-        "bearCount": 1
+        "score": 0.39,
+        "bullCount": 6,
+        "bearCount": 0
       },
       "social": {
         "bullish": 6,
@@ -1892,7 +1893,7 @@
           "MACD↓"
         ]
       },
-      "heat": 35,
+      "heat": 38,
       "fundamentals": {
         "marketCap": 4357882.88,
         "industry": "Media",
@@ -1912,6 +1913,34 @@
       },
       "news": [
         {
+          "id": "finnhub-140626165",
+          "ticker": "GOOGL",
+          "headline": "Alphabet’s US$80 Billion AI Build‑Out Funding Might Change The Case For Investing In Alphabet (GOOGL)",
+          "summary": "In early June 2026, Alphabet Inc. moved to raise over US$80 billion for AI infrastructure via a mix of follow-on equity offerings, convertible and preferred fixed‑income securities, and a US$10 billion private placement from Berkshire Hathaway, while also appointing long‑time finance executive Marsida Saraci as Principal Accounting Officer. This large-scale capital raise, backed by a wide syndicate of underwriters and Moody’s credit‑positive view, signals Alphabet’s intention to finance an...",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=0ca0e816f1ba914fe0e65f0bc85dfe2e036a4c7199d09d8ce41dea50bd8afef3",
+          "datetime": 1781335092,
+          "sentiment": "bullish",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "巨額融資投入AI基礎設施，前景看好。"
+        },
+        {
+          "id": "finnhub-140625823",
+          "ticker": "GOOGL",
+          "headline": "Mark Zuckerberg admits Meta has 'made mistakes' as AI overhaul reshapes 20% of its workforce: report",
+          "summary": "Mark Zuckerberg admits Meta has 'made mistakes' during its AI-driven workforce overhaul that is expected to ultimately affect about 20% of employees.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=7f577875cac5ef069511c777bb19887d47f9d0888835b764f9e2f56880d433b1",
+          "datetime": 1781318663,
+          "sentiment": "neutral",
+          "confidence": 1,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "與GOOGL無關，主要關於Meta。"
+        },
+        {
           "id": "finnhub-140624833",
           "ticker": "GOOGL",
           "headline": "Meet the 2 Newcomers Challenging the Cloud Computing Titans in Artificial Intelligence (AI)",
@@ -1924,6 +1953,20 @@
           "credibility": "confirmed",
           "longTermImpact": "thesis",
           "reason": "新競爭者挑戰雲端巨頭，長期影響待觀察。"
+        },
+        {
+          "id": "finnhub-140625674",
+          "ticker": "GOOGL",
+          "headline": "The Unit Economics Of AI Infrastructure",
+          "summary": "More users, high usage frequency, vastly greater per-task complexity, and persistent time sensitivity are placing token consumption on a trajectory that outpaces any realistic supply growth.",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=f8237074d58007743be855d7aa34870d4518d905ed5a5742d552fcf1385a3234",
+          "datetime": 1781311200,
+          "sentiment": "bullish",
+          "confidence": 0.8,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "AI基礎設施需求強勁，利好GOOGL。"
         },
         {
           "id": "finnhub-140624107",
@@ -2036,48 +2079,6 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "報導本週熱門股票，Alphabet未被提及。"
-        },
-        {
-          "id": "finnhub-140621625",
-          "ticker": "GOOGL",
-          "headline": "SpaceX IPO is a model for Anthropic and OpenAI",
-          "summary": "SpaceX and lead IPO banker Goldman Sachs began meeting with prospective IPO investors back in January, Axios has learned.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=059a4f8b5568d7edb1f04177bf005ddcc134dc0ecf383718fb7a49ffbebac039",
-          "datetime": 1781291589,
-          "sentiment": "neutral",
-          "confidence": 0.1,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "新聞與GOOGL無關。"
-        },
-        {
-          "id": "finnhub-140621626",
-          "ticker": "GOOGL",
-          "headline": "Elon Musk's trillionaire leap carries big stakes for Nashville, Memphis",
-          "summary": "The implications of Musk’s staggering wealth are being felt in Nashville and across Tennessee, as Musk-tied projects reshape the environment, above and below ground.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=12b369111bfdcf11775bb2660c6a322d51a9f32cd7dc160c62a87d5216321fd1",
-          "datetime": 1781290691,
-          "sentiment": "neutral",
-          "confidence": 0.1,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "新聞與GOOGL無關。"
-        },
-        {
-          "id": "finnhub-140621606",
-          "ticker": "GOOGL",
-          "headline": "Billionaire Brad Gerstner Dumped All of His Alphabet Then Bought 2 Stocks Nobody Expected",
-          "summary": "Brad Gerstner’s Altimeter Capital fully exited its entire 519,290-share Alphabet (NASDAQ:GOOGL) position in Q1 2026, according to the firm’s 13F filed May 15, 2026 (SEC CIK 0001541617). In its place, Gerstner opened two brand-new positions that did not exist in the prior quarter: 1,715,440 shares of Arm Holdings (NASDAQ:ARM) worth roughly $259.5 million, and 148,986 ... Billionaire Brad Gerstner Dumped All of His Alphabet Then Bought 2 Stocks Nobody Expected",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=b4590d01ae042e327265f0ecb19cb11e64ee414775ceb350691c22899de77f35",
-          "datetime": 1781290607,
-          "sentiment": "bearish",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "知名投資者清倉Alphabet持股。"
         }
       ]
     }
