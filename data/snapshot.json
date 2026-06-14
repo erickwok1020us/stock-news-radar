@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T21:36:44.078Z",
+  "generatedAt": "2026-06-14T22:51:17.748Z",
   "account": {
     "size": 10000,
     "riskPct": 0.01,
@@ -16,14 +16,14 @@
         "prevClose": 204.87
       },
       "signal": {
-        "sentiment": "neutral",
-        "score": 0.15,
-        "bullCount": 3,
-        "bearCount": 1
+        "sentiment": "bullish",
+        "score": 0.2,
+        "bullCount": 4,
+        "bearCount": 0
       },
       "social": {
-        "bullish": 12,
-        "bearish": 3
+        "bullish": 20,
+        "bearish": 0
       },
       "stats": {
         "atr14": 8.333572387695312,
@@ -72,12 +72,13 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "偏空",
+          "新聞偏多",
           "RSI 45.2 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 37,
+      "heat": 38,
       "fundamentals": {
         "marketCap": 4965597.881651431,
         "industry": "Semiconductors",
@@ -96,6 +97,104 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140633907",
+          "ticker": "NVDA",
+          "headline": "Are You Missing the Boat on This AI Stock That's Up 104% This Year?",
+          "summary": "Despite the surging stock price, it is still a bargain.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=82726cd2fd571f792454810711eadd933b515b9b181a1540b366f0b602584027",
+          "datetime": 1781472000,
+          "sentiment": "bullish",
+          "confidence": 0.7,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "股價上漲仍被低估，看好後市。"
+        },
+        {
+          "id": "finnhub-140633908",
+          "ticker": "NVDA",
+          "headline": "Tech Shakeup on the S&P 500",
+          "summary": "The S&P 500 index is removing Pool Corp and Campbell Soup, replacing them with Marvell Technology and Flex. The team discusses what this means for investors.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=fe846ccd9aae829cd64473d2dbecdf3c80eb95b64992f9f78c0c2fb804b8e8a0",
+          "datetime": 1781470437,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "S&P 500指數成分股調整，與NVDA無直接關聯。"
+        },
+        {
+          "id": "finnhub-140633909",
+          "ticker": "NVDA",
+          "headline": "Should You Buy VOO While the Market Is Near All-Time Highs?",
+          "summary": "The Vanguard S&P 500 ETF just passed $1 trillion in assets.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=72d6380da3ef4246133ace691bedead3d438dc8f2a01b619e21da3327a92f70b",
+          "datetime": 1781470320,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "討論VOO ETF，與NVDA無直接關聯。"
+        },
+        {
+          "id": "finnhub-140633910",
+          "ticker": "NVDA",
+          "headline": "Here's How to Snag a 20% Dividend Yield",
+          "summary": "It can take time, but you'll be paid to wait.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=bd24cdc6bec946ca51c07fa5d53b4d632473e426b3c1ae4782441c71d251d015",
+          "datetime": 1781469180,
+          "sentiment": "neutral",
+          "confidence": 0.8,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "討論高股息策略，與NVDA無直接關聯。"
+        },
+        {
+          "id": "finnhub-140633911",
+          "ticker": "NVDA",
+          "headline": "The Invisible Layer Protecting the World's Biggest Companies",
+          "summary": "Zscaler's CFO discusses the challenges facing cybersecurity in an age of agentic AI.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=8451fdbcfd6ac8712ee91be437a33a34b49bc98bfa47aa7eff59fee820e24323",
+          "datetime": 1781468725,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "討論Zscaler與網路安全，與NVDA無直接關聯。"
+        },
+        {
+          "id": "finnhub-140633912",
+          "ticker": "NVDA",
+          "headline": "Oracle Stock Dips Despite Continued Strong Backlog Growth. Should Investors Buy the Stock on the Dip?",
+          "summary": "Investors continue to worry about the return Oracle will get on its AI infrastructure spending.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=a7b93e844033f891a121af6906d5f2e0b54fbe0e2c0cb542d04ccddd10bde6ea",
+          "datetime": 1781468400,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "討論甲骨文股價與AI投資，與NVDA無直接關聯。"
+        },
+        {
+          "id": "finnhub-140633913",
+          "ticker": "NVDA",
+          "headline": "Millions of Americans Are Retiring Earlier Than They'd Planned To -- Here's Why",
+          "summary": "You may face multiple problems if you're forced to retire early.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=d672043cb0964ccbcb7395ecac1e14c8b0621de249f9ed246faefd0affe0f43c",
+          "datetime": 1781467620,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "討論美國人提早退休現象，與NVDA無關。"
+        },
         {
           "id": "finnhub-140633544",
           "ticker": "NVDA",
@@ -165,104 +264,6 @@
           "credibility": "unknown",
           "longTermImpact": "noise",
           "reason": "與輝達無關的SpaceX新聞。"
-        },
-        {
-          "id": "finnhub-140633550",
-          "ticker": "NVDA",
-          "headline": "For the First Time in Over 155 Years, the Stock Market May Be Headed Here -- and It's Not Good News for Investors",
-          "summary": "History is giving investors a reason to pause.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=e4fb8c98318c83f2f8367f8cf944c74e7fc4b04dc89fa912f60d605d04e8a7fb",
-          "datetime": 1781463000,
-          "sentiment": "bearish",
-          "confidence": 0.6,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "股市可能面臨負面趨勢。"
-        },
-        {
-          "id": "finnhub-140633552",
-          "ticker": "NVDA",
-          "headline": "This Little-Known Healthcare Stock Is Up 90% This Year, and the Party Might Just Be Getting Started",
-          "summary": "Investors are still underrating this insurance disrupter.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=893c260c81ffb4b92a7175b986d498167067ddfc5d10577ea8566e6f90ad51bf",
-          "datetime": 1781461200,
-          "sentiment": "neutral",
-          "confidence": 0.9,
-          "credibility": "unknown",
-          "longTermImpact": "noise",
-          "reason": "與輝達無關的醫療保健新聞。"
-        },
-        {
-          "id": "finnhub-140633553",
-          "ticker": "NVDA",
-          "headline": "If You Only Buy One Dividend ETF, Make It This One",
-          "summary": "This ETF has a 5% yield and market-beating returns.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=1d724507a2b8625b74fcaf593fef180cfdcae9fb02591227f03f3625a63a6d26",
-          "datetime": 1781460300,
-          "sentiment": "neutral",
-          "confidence": 0.9,
-          "credibility": "unknown",
-          "longTermImpact": "noise",
-          "reason": "與輝達無關的ETF新聞。"
-        },
-        {
-          "id": "finnhub-140633554",
-          "ticker": "NVDA",
-          "headline": "As Artificial Intelligence (AI) Stocks Drive the Market Higher, Is Now the Time to Buy? These 9 Words From Warren Buffett Might Change Your Mind.",
-          "summary": "Are you greedy or fearful? The Oracle of Omaha has some thoughts on that.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=d31eb4e6ef6b06c26132f605ffbd6d87c892f239c554b1f85506fcfca370fcd1",
-          "datetime": 1781459400,
-          "sentiment": "neutral",
-          "confidence": 0.7,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "AI熱潮與巴菲特投資警語。"
-        },
-        {
-          "id": "finnhub-140633187",
-          "ticker": "NVDA",
-          "headline": "1 Plain-As-Day Dividend King to Buy on the Dip That Has Hiked Its Payout for 70 Consecutive Years",
-          "summary": "Genuine Parts (NYSE:GPC) is a stock built to be owned for decades, because its 70 consecutive years of dividend increases were earned by a distribution business whose customers cannot choose to skip the purchase. That is the entire forever thesis in one sentence, and the rest of this piece simply unpacks why a retirement-focused investor ... 1 Plain-As-Day Dividend King to Buy on the Dip That Has Hiked Its Payout for 70 Consecutive Years",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=bfb18b0f4eaffb71c3a4076448df823f8cc7b51d60671fd8e5c0841552dc0d80",
-          "datetime": 1781458009,
-          "sentiment": "neutral",
-          "confidence": 1,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "新聞內容與NVDA無關。"
-        },
-        {
-          "id": "finnhub-140633188",
-          "ticker": "NVDA",
-          "headline": "3 Top Consumer Stocks Building Durable Growth",
-          "summary": "These high-performing brands are showing resilience and solid growth potential in a challenging economic environment.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=cb73c9d7266ca073653a46b9d98c40a150ff670b073976e8e028f440e8c12b6e",
-          "datetime": 1781457600,
-          "sentiment": "neutral",
-          "confidence": 0.5,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "內容為一般消費股分析，與NVDA無直接關聯。"
-        },
-        {
-          "id": "finnhub-140633189",
-          "ticker": "NVDA",
-          "headline": "Forget SCHD: This Monthly Dividend Grower Out-Returned It by 38% Over the Last Decade",
-          "summary": "The Schwab U.S. Dividend Equity ETF (NYSEARCA:SCHD) has become the default holding for income-minded investors who want a low-cost basket of U.S. dividend payers. It charges a 0.06% expense ratio, holds roughly $95.1 billion in net assets, and screens for companies with durable dividends and reasonable balance sheets. SCHD owners generally want quarterly checks, a ... Forget SCHD: This Monthly Dividend Grower Out-Returned It by 38% Over the Last Decade",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=8f76be8e797b8fed32cd104e055365093830611e2d5b92eba0007a62005bd2de",
-          "datetime": 1781456897,
-          "sentiment": "neutral",
-          "confidence": 1,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "新聞內容與NVDA無關。"
         }
       ]
     },
@@ -277,13 +278,13 @@
       },
       "signal": {
         "sentiment": "neutral",
-        "score": -0.15,
-        "bullCount": 1,
+        "score": -0.12,
+        "bullCount": 2,
         "bearCount": 3
       },
       "social": {
-        "bullish": 13,
-        "bearish": 5
+        "bullish": 14,
+        "bearish": 3
       },
       "stats": {
         "atr14": 17.76928928920201,
@@ -355,6 +356,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140633928",
+          "ticker": "TSLA",
+          "headline": "Tesla Merger Talk With SpaceX Reshapes AI And Investor Outlook",
+          "summary": "Speculation around a potential Tesla and SpaceX merger has intensified following SpaceX's recent IPO and public comments from its president treating the idea as a real possibility. Prediction markets, company filings and several high profile analysts now treat a merger as a credible scenario, rather than a fringe rumor. Any move to combine Tesla and SpaceX could reshape how investors think about NasdaqGS:TSLA, including its business mix, capital needs and exposure to AI and advanced...",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=48517a66837cfba22a8037a987e192ff2f9f3f0e6a88d5a913d9ef55601711a6",
+          "datetime": 1781467633,
+          "sentiment": "bullish",
+          "confidence": 0.7,
+          "credibility": "rumor",
+          "longTermImpact": "thesis",
+          "reason": "傳聞與SpaceX合併，可能改變公司長期發展。"
+        },
         {
           "id": "finnhub-140633568",
           "ticker": "TSLA",
@@ -508,20 +523,6 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "馬斯克重心分散，對特斯拉影響不明。"
-        },
-        {
-          "id": "finnhub-140629014",
-          "ticker": "TSLA",
-          "headline": "Former Tesla board member issues candid message on SpaceX stock",
-          "summary": "Venture capitalist Steve Westly says SpaceX is \"three moonshots in one company\" and the math only works if most of them pay off. On June 12, SpaceX (SPCX) just pulled off the biggest initial public offering in stock market history. The company raised $75 billion, priced shares at $135 each, ...",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=89ea8a4a799deb704e6ef6289cd199041caa496234aea3a3b32728dec23edca2",
-          "datetime": 1781374620,
-          "sentiment": "neutral",
-          "confidence": 0.7,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "SpaceX IPO與TSLA業務無直接關聯"
         }
       ]
     },
@@ -535,14 +536,14 @@
         "prevClose": 295.63
       },
       "signal": {
-        "sentiment": "neutral",
-        "score": 0.14,
-        "bullCount": 6,
+        "sentiment": "bullish",
+        "score": 0.17,
+        "bullCount": 7,
         "bearCount": 2
       },
       "social": {
-        "bullish": 7,
-        "bearish": 2
+        "bullish": 10,
+        "bearish": 1
       },
       "stats": {
         "atr14": 7.591432843889509,
@@ -586,11 +587,12 @@
         "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 317.4 · 「止損」=收盤跌破 200 日線 266.87 或論點改變"
       },
       "timing": {
-        "direction": "none",
-        "score": 0.17,
-        "label": "多空不明 → 觀望",
+        "direction": "long",
+        "score": 0.33,
+        "label": "偏好做多（順勢、未過熱時進場）",
         "factors": [
           "偏多",
+          "新聞偏多",
           "RSI 44 中性",
           "MACD↓"
         ]
@@ -614,6 +616,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140633916",
+          "ticker": "AAPL",
+          "headline": "Apple's iOS 27 surprise could change the AI narrative",
+          "summary": "AI is now the largest battleground in technology. Over the last two years investors have pumped hundreds of billions of dollars into firms promising to lead the next stage of the AI revolution. At Apple (AAPL), that talk has become more and more about the iPhone. Many experts have said AI might ...",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=e8eb80e2ce264592c8dde8f2c3220fd94afce8c5b8ec4307c94de48849c880e2",
+          "datetime": 1781471520,
+          "sentiment": "bullish",
+          "confidence": 0.7,
+          "credibility": "rumor",
+          "longTermImpact": "thesis",
+          "reason": "iOS 27 AI功能可能改變市場對蘋果的看法。"
+        },
         {
           "id": "finnhub-140633556",
           "ticker": "AAPL",
@@ -767,20 +783,6 @@
           "credibility": "rumor",
           "longTermImpact": "thesis",
           "reason": "分析師預測Apple股價長期成長，利好。"
-        },
-        {
-          "id": "finnhub-140624104",
-          "ticker": "AAPL",
-          "headline": "Cash Flow Kings: These Companies Generate Huge Cash",
-          "summary": "Companies with strong cash-generating abilities are great targets, as they have plenty of cash to fuel growth, pay out dividends, buy back shares, and easily wipe out debt.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=d66cb568e1b53fa6bd11255ec0743b2eaeefcecbecb25ffb1e51ed7f2beb3b5f",
-          "datetime": 1781304600,
-          "sentiment": "neutral",
-          "confidence": 0.7,
-          "credibility": "rumor",
-          "longTermImpact": "thesis",
-          "reason": "關於現金流強勁公司，對Apple間接利好。"
         }
       ]
     },
@@ -800,8 +802,8 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 9,
-        "bearish": 3
+        "bullish": 16,
+        "bearish": 1
       },
       "stats": {
         "atr14": 35.05857631138393,
@@ -1060,8 +1062,8 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 6,
-        "bearish": 5
+        "bullish": 15,
+        "bearish": 1
       },
       "stats": {
         "atr14": 13.15785653250558,
@@ -1315,13 +1317,13 @@
       },
       "signal": {
         "sentiment": "neutral",
-        "score": 0.12,
+        "score": 0.14,
         "bullCount": 5,
         "bearCount": 2
       },
       "social": {
-        "bullish": 8,
-        "bearish": 7
+        "bullish": 9,
+        "bearish": 4
       },
       "stats": {
         "atr14": 20.492863246372767,
@@ -1393,6 +1395,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140633917",
+          "ticker": "META",
+          "headline": "How Constellation’s US$3.09 Billion Equity Raise And AI Power Deals At Constellation Energy (CEG) Has Changed Its Investment Story",
+          "summary": "Earlier this month, Constellation Energy Corporation completed a US$3.09 billion follow-on equity offering of 11,000,000 common shares at about US$281 each, following an earlier filing to issue 9,000,000 shares. This capital raise comes alongside stronger-than-expected quarterly earnings, new clean energy projects coming online, and growing long-term power contracts with major AI and data center customers like Microsoft and Meta. We’ll now examine how this large equity raise, paired with...",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=41fe5406c3d2f17d78b5ff4161bf6e490abbecce1b66225ffda3e8a724164510",
+          "datetime": 1781471442,
+          "sentiment": "bullish",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "與能源公司簽訂AI資料中心長期供電合約。"
+        },
         {
           "id": "finnhub-140632773",
           "ticker": "META",
@@ -1546,20 +1562,6 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "新聞內容與META無關。"
-        },
-        {
-          "id": "finnhub-140627973",
-          "ticker": "META",
-          "headline": "Mark Zuckerberg's Net Worth Crashes $31 Billion This Year, But Analysts Still Bullish on Meta",
-          "summary": "Meta stock has retreated this year, making it the worst-performing member of the Magnificent Seven.",
-          "source": "Benzinga",
-          "url": "https://finnhub.io/api/news?id=b4e919c60397797fa178c3d48aa3d6a0c77a151993fcb6736347b114b59bc9cc",
-          "datetime": 1781353268,
-          "sentiment": "bullish",
-          "confidence": 0.7,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "儘管祖克柏財富縮水，分析師仍看好Meta。"
         }
       ]
     },
@@ -1574,12 +1576,12 @@
       },
       "signal": {
         "sentiment": "bullish",
-        "score": 0.35,
-        "bullCount": 7,
+        "score": 0.43,
+        "bullCount": 8,
         "bearCount": 1
       },
       "social": {
-        "bullish": 7,
+        "bullish": 10,
         "bearish": 1
       },
       "stats": {
@@ -1634,7 +1636,7 @@
           "MACD↓"
         ]
       },
-      "heat": 49,
+      "heat": 50,
       "fundamentals": {
         "marketCap": 2566108.3830402237,
         "industry": "Retail",
@@ -1653,6 +1655,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140633919",
+          "ticker": "AMZN",
+          "headline": "Amazon.com Inc. (AMZN) Shows How Logistics Scale Can Become a Broader E-Commerce Service",
+          "summary": "Amazon.com, Inc. (NASDAQ:AMZN) is one of the best e-commerce stocks to buy as global sales hit records. The company’s advantage in online retail has long been tied to fulfillment depth, and Amazon is now pushing more of that logistics infrastructure beyond its own marketplace. On June 10, Amazon Supply Chain Services launched a less-than-truckload freight […]",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=1ce44a3992afc0a616f0c9c71e293bca781a2e3f4a9285d8ac07e68148b0e29e",
+          "datetime": 1781467132,
+          "sentiment": "bullish",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "亞馬遜擴展物流服務，強化電商優勢。"
+        },
         {
           "id": "finnhub-140633545",
           "ticker": "AMZN",
@@ -1694,6 +1710,20 @@
           "credibility": "rumor",
           "longTermImpact": "noise",
           "reason": "有電商股表現優於Amazon，暗示競爭壓力。"
+        },
+        {
+          "id": "finnhub-140633921",
+          "ticker": "AMZN",
+          "headline": "Corning’s Amazon Deal Validates the AI Optics Boom. What That Means for GLW Stock.",
+          "summary": "Corning’s latest Amazon agreement strengthens the case that fiber optics demand is becoming a major AI infrastructure growth driver.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=49ab5c914c90f74b43724aa05f846226fa53f7c03794fd483eebc945de99d1a7",
+          "datetime": 1781449202,
+          "sentiment": "bullish",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "與康寧合作強化AI光纖基礎設施，利好長期發展。"
         },
         {
           "id": "finnhub-140632350",
@@ -1792,34 +1822,6 @@
           "credibility": "confirmed",
           "longTermImpact": "thesis",
           "reason": "亞馬遜擴大投資衛星、雲端和機器人，利好成長。"
-        },
-        {
-          "id": "finnhub-140629001",
-          "ticker": "AMZN",
-          "headline": "Amazon.com, Inc. (AMZN) Pursues Canadian Bond to Finance $200B AI Data Center Investment Spree",
-          "summary": "Amazon.com, Inc. (NASDAQ:AMZN) is one of the most promising growth stocks to buy now. On June 8, Amazon.com, Inc. (NASDAQ:AMZN) completed the sale of C$14 billion ($10 billion) in investment-grade bonds in Canada. It marked the largest corporate bond offering in Canadian dollars, attracting C$28 billion in orders from investors amid strong global demand for […]",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=d20e8b6c5fdbc661a16bdbf66ed29f562dac31227eaa3310c5b4352eab051807",
-          "datetime": 1781378711,
-          "sentiment": "bullish",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "發債籌資擴大AI資料中心投資"
-        },
-        {
-          "id": "finnhub-140628429",
-          "ticker": "AMZN",
-          "headline": "Costco vs. Walmart vs. Amazon: Which Stock Is the Smartest Buy in 2026?",
-          "summary": "If you can only pick one, here's how you decide between Costco, Walmart, and Amazon.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=506e221ac47bb90ea6689bd2fffd0607a3a1ed8a414e3697a9e502db0845639d",
-          "datetime": 1781372100,
-          "sentiment": "neutral",
-          "confidence": 0.6,
-          "credibility": "rumor",
-          "longTermImpact": "thesis",
-          "reason": "比較三家公司，非單一股票短線。"
         }
       ]
     },
@@ -1834,12 +1836,12 @@
       },
       "signal": {
         "sentiment": "bullish",
-        "score": 0.3,
+        "score": 0.34,
         "bullCount": 7,
         "bearCount": 0
       },
       "social": {
-        "bullish": 14,
+        "bullish": 17,
         "bearish": 1
       },
       "stats": {
@@ -1894,7 +1896,7 @@
           "MACD↓"
         ]
       },
-      "heat": 36,
+      "heat": 37,
       "fundamentals": {
         "marketCap": 4357882.88,
         "industry": "Media",
@@ -1913,6 +1915,34 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140633914",
+          "ticker": "GOOGL",
+          "headline": "SMH vs. SOXX vs. SOXQ: Which Semiconductor ETF Is the Best Buy Right Now?",
+          "summary": "Which semiconductor ETF to choose comes down to cost and portfolio construction. One wins on both counts.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=3f3faefae9aa11ef692e4bae99b1156f2702b62fc7da910d866f3e9546f103ac",
+          "datetime": 1781466600,
+          "sentiment": "neutral",
+          "confidence": 0.8,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "比較半導體ETF，與個股無直接關聯。"
+        },
+        {
+          "id": "finnhub-140633923",
+          "ticker": "GOOGL",
+          "headline": "Anthropic Turns To Google To Back Massive Data Center Push",
+          "summary": "Anthropic is moving to take greater control of the computing infrastructure that powers its AI models, pursuing data center leases that would place the company in direct control of operating its own facilities. The effort could secure vast amounts of...",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=10516eb67afbd63874e6a316c615f698039cdf07a10a771172eae4e4346db16d",
+          "datetime": 1781465424,
+          "sentiment": "bullish",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "Anthropic尋求Google支持資料中心，強化雲端AI業務。"
+        },
         {
           "id": "finnhub-140633551",
           "ticker": "GOOGL",
@@ -2052,34 +2082,6 @@
           "credibility": "rumor",
           "longTermImpact": "thesis",
           "reason": "Google在AI領域進展快於蘋果，具競爭優勢。"
-        },
-        {
-          "id": "finnhub-140631909",
-          "ticker": "GOOGL",
-          "headline": "This market is at 'a 10': Wall Street weighs record SpaceX IPO amid AI-driven stock market",
-          "summary": "SpaceX's record IPO on Friday is a reassuring sign for Wall Street that the AI bull market has plenty of runway to go.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=2f722834bb7079e2705a6abbd3481e4e27cd56bd2ab8aa0421f9175eb8d8d235",
-          "datetime": 1781436727,
-          "sentiment": "bullish",
-          "confidence": 0.7,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "AI牛市樂觀情緒，間接利好GOOGL。"
-        },
-        {
-          "id": "finnhub-140632357",
-          "ticker": "GOOGL",
-          "headline": "Google Reveals Why It Turned Down Trump Administration's Quantum Funding Deal: 'In This One Specific Case…'",
-          "summary": "Alphabet‘s Google Quantum AI turned down funding from the Trump administration for its quantum computing initiative, citing “conditions” that would have slowed down its progress. Charina Chou, Chief Operating Officer of Google Quantum AI, disclosed at the Semafor Tech summit...",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=f4e0594d5937e93cbeefb0c3729fdf84cd8a52f958f4e1ca16e351cd19e7bded",
-          "datetime": 1781436627,
-          "sentiment": "neutral",
-          "confidence": 0.6,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "Google拒絕政府資金，為保持研發自主性。"
         }
       ]
     }
