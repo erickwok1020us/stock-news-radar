@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T08:48:51.561Z",
+  "generatedAt": "2026-06-14T11:22:56.917Z",
   "account": {
     "size": 10000,
     "riskPct": 0.01,
@@ -16,14 +16,14 @@
         "prevClose": 204.87
       },
       "signal": {
-        "sentiment": "bullish",
-        "score": 0.18,
-        "bullCount": 3,
-        "bearCount": 0
+        "sentiment": "neutral",
+        "score": 0.07,
+        "bullCount": 2,
+        "bearCount": 2
       },
       "social": {
         "bullish": 11,
-        "bearish": 3
+        "bearish": 1
       },
       "stats": {
         "atr14": 8.333572387695312,
@@ -72,13 +72,12 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "偏空",
-          "新聞偏多",
           "RSI 45.2 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 37,
+      "heat": 36,
       "fundamentals": {
         "marketCap": 4965597.881651431,
         "industry": "Semiconductors",
@@ -97,6 +96,104 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140631557",
+          "ticker": "NVDA",
+          "headline": "Berkshire Hathaway's Greg Abel Just Made a Big Bet on Who Will Win the AI Races -- And He's Even Tipping the Scale in Its Favor",
+          "summary": "Berkshire just made this AI leader its fourth-largest position, and it could get even bigger.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=139702b5026cdc501a4b7314c6a3c9fdac439507e853d5c0b9c53b3526b42d1f",
+          "datetime": 1781430600,
+          "sentiment": "bullish",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "知名投資者大舉買入，看好AI前景。"
+        },
+        {
+          "id": "finnhub-140631559",
+          "ticker": "NVDA",
+          "headline": "Have S&P 500 Index Funds, Often Touted as the Best Stock Investments, Become Dangerous? There's a Worrisome Development -- and a Possibly Better Alternative.",
+          "summary": "The hard-earned dollars you park in a standard S&P 500 index fund may not be distributed the way you think they are.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=827bbf4887e7f6fd7f819e43d7377d19ba92b1f9d169cdc1967520d5778b3fbf",
+          "datetime": 1781428800,
+          "sentiment": "neutral",
+          "confidence": 0.5,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "討論S&P 500指數基金，與個股無直接關聯。"
+        },
+        {
+          "id": "finnhub-140631560",
+          "ticker": "NVDA",
+          "headline": "A Bigger Social Security Raise Than the COLA? Congress Is Considering One Right Now",
+          "summary": "Legislation proposed by one Senator would even extend Social Security's solvency by 75 years.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=5e8708e7eb32416ee30f86dd9712b9cc7024f4ef8dc660df4051aa39346486d6",
+          "datetime": 1781427840,
+          "sentiment": "neutral",
+          "confidence": 0.5,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "討論社會保障法案，與個股無直接關聯。"
+        },
+        {
+          "id": "finnhub-140631561",
+          "ticker": "NVDA",
+          "headline": "Rate Cuts Are Dead. Inflation Is Sticky. Here's 1 Type of Stock Built to Thrive in Exactly This Environment.",
+          "summary": "These stocks were made for times like these.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=dd5927d884621b910088258a0419f9008d3e8ba3a7385f4879f28d177de9f108",
+          "datetime": 1781427300,
+          "sentiment": "neutral",
+          "confidence": 0.5,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "討論利率與通膨，未明確提及個股影響。"
+        },
+        {
+          "id": "finnhub-140631562",
+          "ticker": "NVDA",
+          "headline": "Up 600% in 2026, Is Sandisk Stock Still a Buy?",
+          "summary": "How much longer can this millionaire-maker rally last?",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=19d0e7c373ec5938e5cd6ed77c6be34f117f333a4ab7514babf01bc977f34f97",
+          "datetime": 1781426100,
+          "sentiment": "neutral",
+          "confidence": 0.3,
+          "credibility": "unknown",
+          "longTermImpact": "noise",
+          "reason": "標題與股票代碼不符，無法判斷。"
+        },
+        {
+          "id": "finnhub-140631563",
+          "ticker": "NVDA",
+          "headline": "The Stock Market Could Drop: 2 Urgent Warnings From Former Fed Chair Jerome Powell Explain Why.",
+          "summary": "The stock market's expensive valuation is particularly concerning alongside the prospect of higher interest rates.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=b184be2b5fc5656ec74a8306ff25a64b5e9c05fa5419c2cf0eaac1b825d4c238",
+          "datetime": 1781425920,
+          "sentiment": "bearish",
+          "confidence": 0.7,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "前聯準會主席警告股市可能下跌。"
+        },
+        {
+          "id": "finnhub-140631564",
+          "ticker": "NVDA",
+          "headline": "President Donald Trump's 7-Word Take on Interest Rates Is Due for a Reality Check",
+          "summary": "The probability of rate hikes is rapidly rising, whether the president or Wall Street likes it or not.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=356a43c2472afcf1760430b0c80905ed7866c992dc5b81c896e290f6c2aad159",
+          "datetime": 1781425560,
+          "sentiment": "bearish",
+          "confidence": 0.7,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "利率上漲機率增加，對成長股不利。"
+        },
         {
           "id": "finnhub-140631268",
           "ticker": "NVDA",
@@ -166,104 +263,6 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "業績雖好但股價盤整，短線中性。"
-        },
-        {
-          "id": "finnhub-140630200",
-          "ticker": "NVDA",
-          "headline": "Oracle's Stock Is Plummeting. Is This an Opportunity or a Red Flag?",
-          "summary": "The tech giant's earnings were impressive, but Wall Street is still nervous.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=482c278ae0c9f81c48462afbf0bbec10fd76dc0bf995e69208939eff8d1a68af",
-          "datetime": 1781401860,
-          "sentiment": "neutral",
-          "confidence": 1,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "與NVDA無關，為雜訊。"
-        },
-        {
-          "id": "finnhub-140630201",
-          "ticker": "NVDA",
-          "headline": "Americans Are Looking at a 40% Social Security Tax Hike Unless This Happens",
-          "summary": "A huge tax increase may be the only solution to save Social Security unless lawmakers act quickly.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=764cdad737f70a0f6af3cc44f0655dd66c0e1c5de9283a8b58ee0f4180516fdf",
-          "datetime": 1781398200,
-          "sentiment": "neutral",
-          "confidence": 0.6,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "宏觀經濟議題，與NVDA無直接關聯。"
-        },
-        {
-          "id": "finnhub-140630202",
-          "ticker": "NVDA",
-          "headline": "With Bitcoin Down 21% in 1 Month, Is It Still Worth Buying and Holding Forever?",
-          "summary": "Holders are dumping this coin, and it's probably a bit shortsighted.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=fcd14e66ba0b5a6eb2d29b9904fb646365ba04180c07e1f9181b9d648fb42e6b",
-          "datetime": 1781397660,
-          "sentiment": "neutral",
-          "confidence": 1,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "與NVDA無關，為雜訊。"
-        },
-        {
-          "id": "finnhub-140630203",
-          "ticker": "NVDA",
-          "headline": "SharonAI Holdings (SHAZ) Stock After NVIDIA AI Deal A Fresh Look At A 11.3x P/B Valuation",
-          "summary": "SharonAI Holdings (SHAZ) has drawn fresh attention after unveiling a six year AI compute collaboration with NVIDIA, centered on 72MW of new Australian data center capacity using Grace Blackwell GB300 GPUs. See our latest analysis for SharonAI Holdings. Even after a sharp 12.85% 1 day share price pullback to US$62.32 and some pressure following the recent shelf registration, SharonAI’s 90 day share price return of 172.74% and very weak 3 year total shareholder return of 98.82% highlight strong...",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=2e5c404ac582e125a6a4787681cff9d1bf70d747326b1ccfc6ce85aaf9dc2522",
-          "datetime": 1781396182,
-          "sentiment": "bullish",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "NVIDIA新合作案，顯示AI晶片需求強勁。"
-        },
-        {
-          "id": "finnhub-140629950",
-          "ticker": "NVDA",
-          "headline": "NVIDIA Tests Recurring AI Data Center Model With Australian GPU Expansion",
-          "summary": "NVIDIA (NasdaqGS:NVDA) has entered a new capital-efficient AI data center partnership to deploy 72MW of GPU infrastructure in Australia. The SharonAI collaboration uses a recurring revenue and usage-linked model instead of large upfront hardware purchases. The agreement supports broader access to AI compute for startups and research institutions in an underserved region. NVIDIA, trading at $205.19, sits at the center of global AI infrastructure, and its stock has very large multi year...",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=34b95f509b3220ed8055d18dff619307b3b9f70cfab9b48bbbb660f787eb7974",
-          "datetime": 1781392358,
-          "sentiment": "bullish",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "新合作模式擴展市場，增加營收穩定性。"
-        },
-        {
-          "id": "finnhub-140629951",
-          "ticker": "NVDA",
-          "headline": "Is Palantir Stock Ripe for a Rebound?",
-          "summary": "The once high-flying stock has declined 26% so far this year.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=6d3a158f02667e4e744409b998d90c5473488d8b219326da48f9fe9b38983107",
-          "datetime": 1781389800,
-          "sentiment": "neutral",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "新聞內容與NVDA無關。"
-        },
-        {
-          "id": "finnhub-140629952",
-          "ticker": "NVDA",
-          "headline": "Micron Reports Earnings June 24. Here's the One Number That May Make or Break the Stock.",
-          "summary": "One figure from the memory maker's upcoming report matters more than the rest -- and it will likely set the tone for the stock.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=3863521d3c466475d91dfca36cfba5bb90f8635200b80f32d60c99201081c060",
-          "datetime": 1781387760,
-          "sentiment": "neutral",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "新聞內容與NVDA無關。"
         }
       ]
     },
@@ -283,8 +282,8 @@
         "bearCount": 2
       },
       "social": {
-        "bullish": 8,
-        "bearish": 5
+        "bullish": 9,
+        "bearish": 3
       },
       "stats": {
         "atr14": 17.76928928920201,
@@ -542,8 +541,8 @@
         "bearCount": 2
       },
       "social": {
-        "bullish": 1,
-        "bearish": 8
+        "bullish": 4,
+        "bearish": 9
       },
       "stats": {
         "atr14": 7.591432843889509,
@@ -801,7 +800,7 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 10,
+        "bullish": 12,
         "bearish": 0
       },
       "stats": {
@@ -1056,13 +1055,13 @@
       },
       "signal": {
         "sentiment": "bullish",
-        "score": 0.17,
-        "bullCount": 4,
+        "score": 0.2,
+        "bullCount": 5,
         "bearCount": 1
       },
       "social": {
-        "bullish": 15,
-        "bearish": 5
+        "bullish": 16,
+        "bearish": 4
       },
       "stats": {
         "atr14": 13.15785653250558,
@@ -1135,6 +1134,34 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140631565",
+          "ticker": "MSFT",
+          "headline": "3 Genius Stocks I'm Buying Instead of the SpaceX IPO",
+          "summary": "SpaceX IPO may be popular, but there are better options available.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=fff634b31b368b7066fd705ba8a6cf5af8145f0a82d5f0fafa4cd1ab550613d1",
+          "datetime": 1781424300,
+          "sentiment": "bullish",
+          "confidence": 0.7,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "分析師推薦買入，認為是好選擇。"
+        },
+        {
+          "id": "finnhub-140631625",
+          "ticker": "MSFT",
+          "headline": "Wall Street Week Ahead",
+          "summary": "Holiday-shortened Wall Street week preview: Fed June rate decision & Warsh presser, retail sales, G7, earnings, and triple witching risks.",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=8937fd45928381a6d80f71affebd41492f8dcfd7350b1017c8556676053e617e",
+          "datetime": 1781417163,
+          "sentiment": "neutral",
+          "confidence": 0.5,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "華爾街週報預覽，與個股無直接關聯。"
+        },
         {
           "id": "finnhub-140628997",
           "ticker": "MSFT",
@@ -1274,34 +1301,6 @@
           "credibility": "rumor",
           "longTermImpact": "noise",
           "reason": "討論甲骨文AI轉型，與微軟無關。"
-        },
-        {
-          "id": "finnhub-140628081",
-          "ticker": "MSFT",
-          "headline": "I was worried about the SpaceX deal, but they got it right: Jim Cramer",
-          "summary": "CNBC's Jim Cramer breaks down SpaceX's historic public trading debut, the market reaction and more.",
-          "source": "CNBC",
-          "url": "https://finnhub.io/api/news?id=af87c1e8fb13b6b07e2ae04728d4d9693a6196acf4cf0051a2c27bf2397eebfc",
-          "datetime": 1781292209,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "Jim Cramer對SpaceX IPO的評論，與MSFT無關。"
-        },
-        {
-          "id": "finnhub-140628082",
-          "ticker": "MSFT",
-          "headline": "Cramer: Never has an IPO captivated Wall Street as much as SpaceX",
-          "summary": "CNBC's Jim Cramer breaks down SpaceX's historic public trading debut, the market reaction and more.",
-          "source": "CNBC",
-          "url": "https://finnhub.io/api/news?id=40cadb90a8ca78539411e49fc1f343767bcc54dc212c51c5b7476a5bfe968e66",
-          "datetime": 1781291965,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "Jim Cramer對SpaceX IPO的評論，與MSFT無關。"
         }
       ]
     },
@@ -1321,8 +1320,8 @@
         "bearCount": 2
       },
       "social": {
-        "bullish": 9,
-        "bearish": 10
+        "bullish": 10,
+        "bearish": 9
       },
       "stats": {
         "atr14": 20.492863246372767,
@@ -1575,12 +1574,12 @@
       },
       "signal": {
         "sentiment": "bullish",
-        "score": 0.33,
+        "score": 0.29,
         "bullCount": 6,
         "bearCount": 1
       },
       "social": {
-        "bullish": 13,
+        "bullish": 14,
         "bearish": 3
       },
       "stats": {
@@ -1635,7 +1634,7 @@
           "MACD↓"
         ]
       },
-      "heat": 49,
+      "heat": 48,
       "fundamentals": {
         "marketCap": 2566108.3830402237,
         "industry": "Retail",
@@ -1654,6 +1653,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140631558",
+          "ticker": "AMZN",
+          "headline": "Forget SpaceX: 3 Stocks That Are Brilliant Buys Right Now",
+          "summary": "There are several stocks that look like better ideas than SpaceX.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=7cb7b77bf1065acec24e7b62a998d13f7793f148d241b223dbaf07f7e58423a7",
+          "datetime": 1781430300,
+          "sentiment": "bullish",
+          "confidence": 0.7,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "分析師推薦買入，認為是好選擇。"
+        },
         {
           "id": "finnhub-140631271",
           "ticker": "AMZN",
@@ -1807,20 +1820,6 @@
           "credibility": "rumor",
           "longTermImpact": "noise",
           "reason": "知名投資人買入科技股"
-        },
-        {
-          "id": "finnhub-140627224",
-          "ticker": "AMZN",
-          "headline": "The Bull Case For Old Dominion Freight Line (ODFL) Could Change Following Rising LTL Pricing Amid Amazon Threats - Learn Why",
-          "summary": "In early June 2026, Old Dominion Freight Line reported that May revenue per day rose as higher less‑than‑truckload (LTL) pricing more than offset lower shipment volumes, while investors weighed inflation, rate expectations, and Amazon’s entry into LTL freight alongside insider selling and institutional repositioning. This mix of healthier yields, soft tonnage, geopolitical and energy cost pressures, and fresh competitive threats has sharpened attention on how resilient Old Dominion’s...",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=0828d5ee4a57029362ee19ad7f1fd72c459a6a75c0d384ccd3b3040ac38aa214",
-          "datetime": 1781352723,
-          "sentiment": "bullish",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "亞馬遜進入新市場，擴大競爭力。"
         }
       ]
     },
@@ -1835,8 +1834,8 @@
       },
       "signal": {
         "sentiment": "bullish",
-        "score": 0.32,
-        "bullCount": 5,
+        "score": 0.21,
+        "bullCount": 3,
         "bearCount": 0
       },
       "social": {
@@ -1895,7 +1894,7 @@
           "MACD↓"
         ]
       },
-      "heat": 37,
+      "heat": 35,
       "fundamentals": {
         "marketCap": 4357882.88,
         "industry": "Media",
@@ -1915,6 +1914,20 @@
       },
       "news": [
         {
+          "id": "finnhub-140631568",
+          "ticker": "GOOGL",
+          "headline": "How Booking won online travel & can it win AI travel?",
+          "summary": "Investing.com -- Booking Holdings (NASDAQ: BKNG) remains one of the strongest players in online travel, but artificial intelligence could eventually challenge some of the company’s competitive advantages, according to a report from Bernstein.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=5dee81ae6891b5adea2566657d0edf39b48a7812ebaf75092fee563f2e12b4a6",
+          "datetime": 1781425617,
+          "sentiment": "neutral",
+          "confidence": 0.3,
+          "credibility": "unknown",
+          "longTermImpact": "noise",
+          "reason": "標題與股票代碼不符，無法判斷。"
+        },
+        {
           "id": "finnhub-140631270",
           "ticker": "GOOGL",
           "headline": "Alphabet is Raising $84.75 Billion to Win the AI Wars. Should Investors Celebrate or Worry?",
@@ -1927,6 +1940,20 @@
           "credibility": "confirmed",
           "longTermImpact": "thesis",
           "reason": "大筆AI投資，短期影響待觀察。"
+        },
+        {
+          "id": "finnhub-140631498",
+          "ticker": "GOOGL",
+          "headline": "Meta At 17x P/E: Investing Doesn't Get Any Easier",
+          "summary": "Meta Platforms remains under pressure due to investor skepticism over rising AI-driven capex and potential equity dilution. Learn why META stock is a buy.",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=3a615536cf2aa9978251873e519d1b30717dbd985a77f5ce80fe9fc64031d750",
+          "datetime": 1781414723,
+          "sentiment": "neutral",
+          "confidence": 0.3,
+          "credibility": "unknown",
+          "longTermImpact": "noise",
+          "reason": "標題與股票代碼不符，無法判斷。"
         },
         {
           "id": "finnhub-140630647",
@@ -1985,6 +2012,20 @@
           "reason": "大量訂購TPU強化AI基礎設施"
         },
         {
+          "id": "finnhub-140631569",
+          "ticker": "GOOGL",
+          "headline": "SpaceX's $2 Trillion Hardware Moat Is Basically A Knicks NFT, Says Wall Street Veteran",
+          "summary": "Without blockchain, Visser warned, \"there'll be 24 million” of Knicks tickers sold at “whatever price\" - making crypto the only verification layer that matters in an unreliable world.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=8ef355a5aed8abe525bcceb816a28b48a3e68688c539b671d76dec77d5c534db",
+          "datetime": 1781367829,
+          "sentiment": "neutral",
+          "confidence": 0.3,
+          "credibility": "unknown",
+          "longTermImpact": "noise",
+          "reason": "標題與股票代碼不符，無法判斷。"
+        },
+        {
           "id": "finnhub-140627770",
           "ticker": "GOOGL",
           "headline": "RBC Capital Maintains Outperform Rating for Zillow Group (ZG)",
@@ -2039,48 +2080,6 @@
           "credibility": "unknown",
           "longTermImpact": "noise",
           "reason": "新聞內容與該股無關。"
-        },
-        {
-          "id": "finnhub-140627772",
-          "ticker": "GOOGL",
-          "headline": "Is Alphabet (GOOGL) Still Undervalued?",
-          "summary": "We just covered the Top 10 Stock Picks of 10 Famous Billionaires. Alphabet (NASDAQ:GOOGL) ranks #2 (see Top 5 Stock Picks of 5 Famous Billionaires). Number of Hedge Funds: 265 Top Pick Of: Chase Coleman — Tiger Global Management Alphabet (NASDAQ:GOOGL) is the biggest holding of billionaire Chase Coleman’s Tiger Global. What was once seen as […]",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=3958f3dc79d5412d262f3d41d7a67dd8237a03e6907e96a5377e17ec2a3dc571",
-          "datetime": 1781361756,
-          "sentiment": "bullish",
-          "confidence": 0.8,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "億萬富翁持股，分析師認為可能被低估。"
-        },
-        {
-          "id": "finnhub-140627773",
-          "ticker": "GOOGL",
-          "headline": "Greg Abel Era At Berkshire Hathaway Shifts Capital Toward Housing And Tech",
-          "summary": "Berkshire Hathaway (NYSE:BRK.B) under new CEO Greg Abel is reshaping its capital deployment approach. The company has agreed to acquire Taylor Morrison Home, increasing its direct ownership in an operating business. Berkshire has also made a large investment in Alphabet, adding a major technology and AI platform to its holdings. Berkshire Hathaway sits at the center of many portfolios, and at a share price of $489.25, NYSE:BRK.B often serves as a reference point for long term compounding...",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=f68aa2610d2820859c7010400b5f37cfe2e5366bd477ec815e2cd68cbda645e8",
-          "datetime": 1781359810,
-          "sentiment": "bullish",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "柏克夏海瑟威大筆投資Alphabet。"
-        },
-        {
-          "id": "finnhub-140629953",
-          "ticker": "GOOGL",
-          "headline": "Nvidia CEO Jensen Huang Isn’t Worried About the Chip Rout. The Numbers Back Him Up on NVDA Stock.",
-          "summary": "Huang views the ongoing semiconductor selloff as a prime buying opportunity.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=69b19b3cc6d3b06bae45f33e3cdf38888cfd1e898efcef103ffc5915bbf3475e",
-          "datetime": 1781359202,
-          "sentiment": "neutral",
-          "confidence": 0.7,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "NVDA CEO言論對GOOGL影響間接。"
         }
       ]
     }
