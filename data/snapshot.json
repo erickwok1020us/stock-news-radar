@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T00:06:12.625Z",
+  "generatedAt": "2026-06-14T05:05:45.288Z",
   "account": {
     "size": 10000,
     "riskPct": 0.01,
@@ -16,14 +16,14 @@
         "prevClose": 204.87
       },
       "signal": {
-        "sentiment": "bullish",
-        "score": 0.18,
-        "bullCount": 3,
+        "sentiment": "neutral",
+        "score": 0.1,
+        "bullCount": 2,
         "bearCount": 1
       },
       "social": {
-        "bullish": 13,
-        "bearish": 1
+        "bullish": 14,
+        "bearish": 4
       },
       "stats": {
         "atr14": 8.333572387695312,
@@ -72,13 +72,12 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "偏空",
-          "新聞偏多",
           "RSI 45.2 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 37,
+      "heat": 36,
       "fundamentals": {
         "marketCap": 4965597.881651431,
         "industry": "Semiconductors",
@@ -97,6 +96,90 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140630645",
+          "ticker": "NVDA",
+          "headline": "Want a Lifetime of Passive Income? Buy Coca-Cola in June and Never Sell.",
+          "summary": "This blue chip consumer staples giant is still a reliable long-term investment.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=ad50a1a10fe7e6b72a885efc9d5e5bc2bbddf2b8a0c1b385122e2c09fa32b304",
+          "datetime": 1781405167,
+          "sentiment": "neutral",
+          "confidence": 1,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "與NVDA無關，為雜訊。"
+        },
+        {
+          "id": "finnhub-140630646",
+          "ticker": "NVDA",
+          "headline": "Is Nvidia Stock a Buy?",
+          "summary": "The AI chip giant keeps posting blockbuster numbers. But the stock has gone nowhere for months.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=7ed751a212d768901c2f5783d8020e4e0322599c05fcb953f32e4e6c16fbbb3f",
+          "datetime": 1781403660,
+          "sentiment": "neutral",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "業績雖好但股價盤整，短線中性。"
+        },
+        {
+          "id": "finnhub-140630200",
+          "ticker": "NVDA",
+          "headline": "Oracle's Stock Is Plummeting. Is This an Opportunity or a Red Flag?",
+          "summary": "The tech giant's earnings were impressive, but Wall Street is still nervous.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=482c278ae0c9f81c48462afbf0bbec10fd76dc0bf995e69208939eff8d1a68af",
+          "datetime": 1781401860,
+          "sentiment": "neutral",
+          "confidence": 1,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "與NVDA無關，為雜訊。"
+        },
+        {
+          "id": "finnhub-140630201",
+          "ticker": "NVDA",
+          "headline": "Americans Are Looking at a 40% Social Security Tax Hike Unless This Happens",
+          "summary": "A huge tax increase may be the only solution to save Social Security unless lawmakers act quickly.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=764cdad737f70a0f6af3cc44f0655dd66c0e1c5de9283a8b58ee0f4180516fdf",
+          "datetime": 1781398200,
+          "sentiment": "neutral",
+          "confidence": 0.6,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "宏觀經濟議題，與NVDA無直接關聯。"
+        },
+        {
+          "id": "finnhub-140630202",
+          "ticker": "NVDA",
+          "headline": "With Bitcoin Down 21% in 1 Month, Is It Still Worth Buying and Holding Forever?",
+          "summary": "Holders are dumping this coin, and it's probably a bit shortsighted.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=fcd14e66ba0b5a6eb2d29b9904fb646365ba04180c07e1f9181b9d648fb42e6b",
+          "datetime": 1781397660,
+          "sentiment": "neutral",
+          "confidence": 1,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "與NVDA無關，為雜訊。"
+        },
+        {
+          "id": "finnhub-140630203",
+          "ticker": "NVDA",
+          "headline": "SharonAI Holdings (SHAZ) Stock After NVIDIA AI Deal A Fresh Look At A 11.3x P/B Valuation",
+          "summary": "SharonAI Holdings (SHAZ) has drawn fresh attention after unveiling a six year AI compute collaboration with NVIDIA, centered on 72MW of new Australian data center capacity using Grace Blackwell GB300 GPUs. See our latest analysis for SharonAI Holdings. Even after a sharp 12.85% 1 day share price pullback to US$62.32 and some pressure following the recent shelf registration, SharonAI’s 90 day share price return of 172.74% and very weak 3 year total shareholder return of 98.82% highlight strong...",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=2e5c404ac582e125a6a4787681cff9d1bf70d747326b1ccfc6ce85aaf9dc2522",
+          "datetime": 1781396182,
+          "sentiment": "bullish",
+          "confidence": 0.8,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "NVIDIA新合作案，顯示AI晶片需求強勁。"
+        },
         {
           "id": "finnhub-140629950",
           "ticker": "NVDA",
@@ -180,90 +263,6 @@
           "credibility": "rumor",
           "longTermImpact": "noise",
           "reason": "關於Block和加密貨幣，與NVDA無關。"
-        },
-        {
-          "id": "finnhub-140629449",
-          "ticker": "NVDA",
-          "headline": "3 Things to Watch This Week That Could Heavily Impact How the S&P 500 Does From Here on Out",
-          "summary": "This could be a pivotal week for the stock market, shaping the remainder of the year.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=e39edcdfd99b006222560d0fc4a3c5c049994b50b464a050d5d6ee02359de82e",
-          "datetime": 1781381431,
-          "sentiment": "neutral",
-          "confidence": 0.6,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "關於S&P 500市場展望，非NVDA特定消息。"
-        },
-        {
-          "id": "finnhub-140628986",
-          "ticker": "NVDA",
-          "headline": "Down 50% Over the Past Year, Is There Anything Adobe Can Do to Rebound?",
-          "summary": "The stock has struggled despite the company's consistency.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=3f1bf7aa88888fa7f14395884864c56776c7caaf53591559f46d695a1c407f7b",
-          "datetime": 1781379660,
-          "sentiment": "neutral",
-          "confidence": 1,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "與NVDA無關"
-        },
-        {
-          "id": "finnhub-140628987",
-          "ticker": "NVDA",
-          "headline": "NVIDIA Corporation (NVDA) Partners with Nebius to Support AI Robotics Startup in Europe",
-          "summary": "NVIDIA Corporation (NASDAQ:NVDA) is one of the most promising growth stocks to buy now. On June 9, Nebius reiterated a strategic collaboration with NVIDIA Corporation (NASDAQ:NVDA) to create a cloud platform for robotics and physical artificial intelligence. Nebius launched the Physical AI Living Lab for UK and European robotics startups, built with NVIDIA technologies. The […]",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=965d67564bc8375d925345b42c276bd313dc32ea0711c583637db28289183493",
-          "datetime": 1781378721,
-          "sentiment": "bullish",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "擴展AI機器人合作生態系"
-        },
-        {
-          "id": "finnhub-140628988",
-          "ticker": "NVDA",
-          "headline": "Wall Street Can't Decide What the Fed Will Do Next. CME Group Gets Paid Either Way.",
-          "summary": "The recent surge in inflation has forced institutions and individuals to make some strategic, defensive hedging trades they wouldn't normally make.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=6e16ba2fb713a10bbeca07fd67fdca718553e2d6313762416587f4b029a56a7f",
-          "datetime": 1781378700,
-          "sentiment": "neutral",
-          "confidence": 1,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "與NVDA無關"
-        },
-        {
-          "id": "finnhub-140628989",
-          "ticker": "NVDA",
-          "headline": "The Danger of Diversifying Without Really Diversifying",
-          "summary": "There is such a thing as too much of a good thing.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=a777e3400e4daa59582ba2b83b9742175a63a96ff1b1ae3c4d6ae0c1f66c7dc7",
-          "datetime": 1781376180,
-          "sentiment": "neutral",
-          "confidence": 1,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "與NVDA無關"
-        },
-        {
-          "id": "finnhub-140628990",
-          "ticker": "NVDA",
-          "headline": "CoreWeave (CRWV) Deploys NVIDIA (NVDA) Vera Rubin NVL72, First to Validate at Rack Scale",
-          "summary": "CoreWeave Inc. (NASDAQ:CRWV) is one of the best young stocks with the highest upside potential. On June 1, CoreWeave announced it had completed the industry-first bring-up and full validation of NVIDIA Vera Rubin NVL72 on its cloud platform. This makes CoreWeave the first AI cloud provider to deploy and operationalize the system at rack scale, […]",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=3cd2c0d4177dcc652b2d693ab96ff51b17f4b85195ef91000c66780b8fc313a5",
-          "datetime": 1781375872,
-          "sentiment": "bullish",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "新產品獲客戶部署驗證"
         }
       ]
     },
@@ -283,8 +282,8 @@
         "bearCount": 2
       },
       "social": {
-        "bullish": 7,
-        "bearish": 3
+        "bullish": 11,
+        "bearish": 5
       },
       "stats": {
         "atr14": 17.76928928920201,
@@ -356,6 +355,34 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140630644",
+          "ticker": "TSLA",
+          "headline": "Can Rivian Beat Tesla in the Long Term?",
+          "summary": "Rivian began delivering its affordable R2 fleet this week in a push to bring the company to the mainstream.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=c3fc80201d1a6273146f33b342ea56ed489a06340a28b3075586f9e229159aac",
+          "datetime": 1781405580,
+          "sentiment": "bearish",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "Rivian新車交付，增加特斯拉競爭壓力。"
+        },
+        {
+          "id": "finnhub-140630205",
+          "ticker": "TSLA",
+          "headline": "Elon Musk Is Now the World's First Trillionaire. For Tesla Shareholders, the More Important Question Is What Comes Next.",
+          "summary": "A second Musk-led megacap is now publicly traded -- and that quietly changes a few things for the electric-car maker's investors.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=d18131bc6fc8e58d8a0800d52243c23318c7d2b4a39212a25b280c3b4de0e651",
+          "datetime": 1781400660,
+          "sentiment": "neutral",
+          "confidence": 0.6,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "馬斯克重心分散，對特斯拉影響不明。"
+        },
         {
           "id": "finnhub-140629014",
           "ticker": "TSLA",
@@ -495,34 +522,6 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "市場普遍上漲，SpaceX利好，與特斯拉無直接關聯。"
-        },
-        {
-          "id": "finnhub-140623019",
-          "ticker": "TSLA",
-          "headline": "SpaceX Passes Tesla as Most Valuable Company in Musk’s Portfolio",
-          "summary": "(Bloomberg) -- When it comes to the interconnected companies of Elon Musk, Tesla Inc. is no longer the big man on campus.Most Read from BloombergSpaceX IPO Raises $75 Billion in Biggest Debut of All TimeUS, Iran Edge Toward Interim Deal Signing Close to G7 Next WeekXbox Plans Significant Layoffs as New CEO Plans OverhaulSpaceX Shares Close 19% Higher After Historic $75 Billion IPOTrump Insists Iran Deal Is Close After Scrapping New StrikesThe $75 billion initial public offering of Space Explorat",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=1bbb456e7b8940f01c5db550746e05a2967438da741a106b4597c9e1c2a448f2",
-          "datetime": 1781295571,
-          "sentiment": "bearish",
-          "confidence": 0.7,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "SpaceX市值超越特斯拉，可能影響投資者關注。"
-        },
-        {
-          "id": "finnhub-140623020",
-          "ticker": "TSLA",
-          "headline": "What's at Stake for Trillionaire Elon Musk and SpaceX After Blockbuster IPO",
-          "summary": "The pressure is on the company—and newly minted trillionaire Elon Musk—to deliver.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=01dce16f6fb7ad709989786a856001694542d19308e4ecdbaac40f565c104b0b",
-          "datetime": 1781295265,
-          "sentiment": "neutral",
-          "confidence": 0.6,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "討論SpaceX與馬斯克壓力，與特斯拉無關。"
         }
       ]
     },
@@ -542,7 +541,7 @@
         "bearCount": 2
       },
       "social": {
-        "bullish": 3,
+        "bullish": 1,
         "bearish": 0
       },
       "stats": {
@@ -801,7 +800,7 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 13,
+        "bullish": 11,
         "bearish": 0
       },
       "stats": {
@@ -863,7 +862,7 @@
         "peTTM": 166.5335,
         "psTTM": 22.2718,
         "grossMarginTTM": 50.28,
-        "beta": 2.527304,
+        "beta": 2.5166523,
         "epsGrowthTTMYoy": 123.4,
         "revenueGrowthTTMYoy": 34.97,
         "analyst": {
@@ -1061,8 +1060,8 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 7,
-        "bearish": 9
+        "bullish": 14,
+        "bearish": 4
       },
       "stats": {
         "atr14": 13.15785653250558,
@@ -1316,13 +1315,13 @@
       },
       "signal": {
         "sentiment": "neutral",
-        "score": -0.15,
-        "bullCount": 3,
-        "bearCount": 4
+        "score": 0.04,
+        "bullCount": 4,
+        "bearCount": 2
       },
       "social": {
-        "bullish": 5,
-        "bearish": 7
+        "bullish": 7,
+        "bearish": 10
       },
       "stats": {
         "atr14": 20.492863246372767,
@@ -1375,7 +1374,7 @@
           "MACD↓"
         ]
       },
-      "heat": 37,
+      "heat": 36,
       "fundamentals": {
         "marketCap": 1439235.1255234994,
         "industry": "Media",
@@ -1394,6 +1393,48 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140630649",
+          "ticker": "META",
+          "headline": "AMD Meta AI Chip Pact Puts Data Center Growth And Valuation In Focus",
+          "summary": "AMD (NasdaqGS:AMD) has agreed its largest AI chip deal to date with Meta Platforms, tied to a multi-year 6-gigawatt Instinct GPU rollout. The agreement includes up to 160 million share warrants for Meta, linked to shipment milestones that could result in roughly 10% dilution for existing shareholders. AMD plans to ramp shipments of its MI450 AI accelerators in 2026, with deployments expected at Meta and OpenAI. For investors following AMD’s data center story, this deal puts AI accelerators...",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=38773133b9813474014952359e7fc45f7cfc46a35bb6398191055fd4da1165a8",
+          "datetime": 1781406568,
+          "sentiment": "bullish",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "Meta投資AI基礎設施，有利長期發展。"
+        },
+        {
+          "id": "finnhub-140630204",
+          "ticker": "META",
+          "headline": "Meta reportedly moves to unwind $2B Manus deal after Beijing’s demand",
+          "summary": "Meta starts dismantling its $2 billion Manus acquisition after Beijing ordered the deal reversed.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=18200e0fc1d0348a8038ab294c6ffd228b1c11f73c877fe0843e2366b64409f4",
+          "datetime": 1781395429,
+          "sentiment": "bearish",
+          "confidence": 0.8,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "因監管壓力，Meta被迫取消20億美元收購案。"
+        },
+        {
+          "id": "finnhub-140630402",
+          "ticker": "META",
+          "headline": "Meta Platforms: Great Business, But The Shareholder Story Is Getting Worse",
+          "summary": "Meta (META) Q1 2026 revenue +33% on ad growth, but AI capex is squeezing free cash flow and slowing buybacks.",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=695bed6b2675e3dc04a9e07c59b02dbe20512a30e6957e01817a5684aa020594",
+          "datetime": 1781389978,
+          "sentiment": "neutral",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "營收成長但AI資本支出影響現金流與回購。"
+        },
         {
           "id": "finnhub-140628446",
           "ticker": "META",
@@ -1519,48 +1560,6 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "討論大盤科技股名稱，對META影響中性。"
-        },
-        {
-          "id": "finnhub-140628165",
-          "ticker": "META",
-          "headline": "One year in, big challenges ahead for Meta AI Chief Alexandr Wang",
-          "summary": "A year after Meta's $14.3 billion bet on Alexandr Wang, the company has its first proprietary AI model, Muse Spark, but remains far behind OpenAI, Anthropic and Google. Developers are largely ignoring it, morale is low after mass layoffs and trust and safety cuts are raising red flags. Now Wang and Zuckerberg must prove AI can generate real revenue beyond ads.",
-          "source": "CNBC",
-          "url": "https://finnhub.io/api/news?id=10ff35d4731ef226bcab6fa0fadaeaa6d1ba3aae0eaeef84221e59e5dad49116",
-          "datetime": 1781334002,
-          "sentiment": "bearish",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "Meta AI發展面臨重大挑戰，落後競爭者。"
-        },
-        {
-          "id": "finnhub-140627977",
-          "ticker": "META",
-          "headline": "Mark Zuckerberg Reportedly Admits Meta 'Made Mistakes' In AI Restructuring Push, Says 'Will Almost Certainly Make More'",
-          "summary": "Mark Zuckerberg admitted Meta made mistakes during its AI overhaul after cutting 10% of its workforce and reassigning 7,000 employees.",
-          "source": "Benzinga",
-          "url": "https://finnhub.io/api/news?id=bae513a25516b8d89aa3b87edb05d6732640555bbb0db14276282a0df8a92509",
-          "datetime": 1781315869,
-          "sentiment": "bearish",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "祖克柏承認AI重組失誤，影響市場信心。"
-        },
-        {
-          "id": "finnhub-140624102",
-          "ticker": "META",
-          "headline": "The Index Says Euphoria. But Don’t Panic.",
-          "summary": "A Citigroup sentiment indicator hasn’t shown this much market euphoria since the post-Covid rally of 2021. How long can it last?",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=6306a17d4e6f82666ce939663f199e5a3c19c79d1f6c125181e5151f642976b5",
-          "datetime": 1781305980,
-          "sentiment": "bearish",
-          "confidence": 0.7,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "市場情緒過熱，可能預示短期修正。"
         }
       ]
     },
@@ -1580,7 +1579,7 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 9,
+        "bullish": 11,
         "bearish": 3
       },
       "stats": {
@@ -1840,8 +1839,8 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 11,
-        "bearish": 2
+        "bullish": 12,
+        "bearish": 1
       },
       "stats": {
         "atr14": 10.675718035016741,
@@ -1914,6 +1913,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140630647",
+          "ticker": "GOOGL",
+          "headline": "The hottest debate on Wall Street right now: Does the flood of mega-IPOs and new shares signal a downturn ahead? That depends",
+          "summary": "\"The reason is that companies tend to issue when equity demand is strong, earnings momentum is healthy and investor risk appetite is elevated.\"",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=31ddb53d01eb1bf6856577859c7918195aeeae1f4afac68293320f8a109ba3d4",
+          "datetime": 1781393000,
+          "sentiment": "neutral",
+          "confidence": 0.6,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "宏觀市場討論，與GOOGL無直接關聯。"
+        },
         {
           "id": "finnhub-140629955",
           "ticker": "GOOGL",
@@ -2062,20 +2075,6 @@
           "source": "Yahoo",
           "url": "https://finnhub.io/api/news?id=246d69f8f982177b3b460df530d192839d23e93a3a037cbb0d38eacb9683f5cc",
           "datetime": 1781358064,
-          "sentiment": "neutral",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "新聞內容與GOOGL無直接關聯。"
-        },
-        {
-          "id": "finnhub-140627207",
-          "ticker": "GOOGL",
-          "headline": "Harvard University Likes This Top AI Stock",
-          "summary": "We just covered Harvard University Stock Portfolio 2026: Top 10 Picks. Amazon.com (NASDAQ:AMZN) ranks #4 (see Harvard University Stock Portfolio 2026: Top 5 Picks). Harvard’s Stake: $149,441,848 Amazon.com (NASDAQ:AMZN) is among the top beneficiaries of the AI revolution, yet its stock hasn’t received nearly the same appreciation as peers like Google and Nvidia — which many […]",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=5725c694a42e1a63bd1cafc98bc58e1ed9a47ed043ab163c9d6dc7ce2112d3d4",
-          "datetime": 1781357897,
           "sentiment": "neutral",
           "confidence": 0.9,
           "credibility": "confirmed",
