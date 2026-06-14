@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13T22:52:45.009Z",
+  "generatedAt": "2026-06-14T00:06:12.625Z",
   "account": {
     "size": 10000,
     "riskPct": 0.01,
@@ -16,14 +16,14 @@
         "prevClose": 204.87
       },
       "signal": {
-        "sentiment": "neutral",
-        "score": 0.11,
-        "bullCount": 2,
+        "sentiment": "bullish",
+        "score": 0.18,
+        "bullCount": 3,
         "bearCount": 1
       },
       "social": {
-        "bullish": 15,
-        "bearish": 3
+        "bullish": 13,
+        "bearish": 1
       },
       "stats": {
         "atr14": 8.333572387695312,
@@ -72,12 +72,13 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "偏空",
+          "新聞偏多",
           "RSI 45.2 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 36,
+      "heat": 37,
       "fundamentals": {
         "marketCap": 4965597.881651431,
         "industry": "Semiconductors",
@@ -96,6 +97,48 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140629950",
+          "ticker": "NVDA",
+          "headline": "NVIDIA Tests Recurring AI Data Center Model With Australian GPU Expansion",
+          "summary": "NVIDIA (NasdaqGS:NVDA) has entered a new capital-efficient AI data center partnership to deploy 72MW of GPU infrastructure in Australia. The SharonAI collaboration uses a recurring revenue and usage-linked model instead of large upfront hardware purchases. The agreement supports broader access to AI compute for startups and research institutions in an underserved region. NVIDIA, trading at $205.19, sits at the center of global AI infrastructure, and its stock has very large multi year...",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=34b95f509b3220ed8055d18dff619307b3b9f70cfab9b48bbbb660f787eb7974",
+          "datetime": 1781392358,
+          "sentiment": "bullish",
+          "confidence": 0.8,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "新合作模式擴展市場，增加營收穩定性。"
+        },
+        {
+          "id": "finnhub-140629951",
+          "ticker": "NVDA",
+          "headline": "Is Palantir Stock Ripe for a Rebound?",
+          "summary": "The once high-flying stock has declined 26% so far this year.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=6d3a158f02667e4e744409b998d90c5473488d8b219326da48f9fe9b38983107",
+          "datetime": 1781389800,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "新聞內容與NVDA無關。"
+        },
+        {
+          "id": "finnhub-140629952",
+          "ticker": "NVDA",
+          "headline": "Micron Reports Earnings June 24. Here's the One Number That May Make or Break the Stock.",
+          "summary": "One figure from the memory maker's upcoming report matters more than the rest -- and it will likely set the tone for the stock.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=3863521d3c466475d91dfca36cfba5bb90f8635200b80f32d60c99201081c060",
+          "datetime": 1781387760,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "新聞內容與NVDA無關。"
+        },
         {
           "id": "finnhub-140629446",
           "ticker": "NVDA",
@@ -221,48 +264,6 @@
           "credibility": "confirmed",
           "longTermImpact": "thesis",
           "reason": "新產品獲客戶部署驗證"
-        },
-        {
-          "id": "finnhub-140628991",
-          "ticker": "NVDA",
-          "headline": "Pipeline Stock Face-Off: Is Enbridge or Oneok the Better Buy Right Now?",
-          "summary": "These two top pipeline stocks go head-to-head.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=73ef4815f856017d12dfc1578567e85c643c919262759496392246d5171ec8ec",
-          "datetime": 1781375700,
-          "sentiment": "neutral",
-          "confidence": 1,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "與NVDA無關"
-        },
-        {
-          "id": "finnhub-140628992",
-          "ticker": "NVDA",
-          "headline": "This Could Be the Easiest Way to Save for Retirement Despite Inflation",
-          "summary": "Even if money is tight, this strategy could be a game-changer.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=2e18be0e038f3dc9541e9f617b928d035474ec998d958e4d5ae43fdda76667c6",
-          "datetime": 1781375160,
-          "sentiment": "neutral",
-          "confidence": 1,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "與NVDA無關"
-        },
-        {
-          "id": "finnhub-140628993",
-          "ticker": "NVDA",
-          "headline": "Prediction: Bitcoin Will Hit $100,000 By the End of 2026",
-          "summary": "Things may look bleak now for Bitcoin investors, but just wait six months.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=88202a8a1caa36e939e104f91707b969fe56be2a7f47b96ff518480672c8dfa6",
-          "datetime": 1781374260,
-          "sentiment": "neutral",
-          "confidence": 1,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "與NVDA無關"
         }
       ]
     },
@@ -282,8 +283,8 @@
         "bearCount": 2
       },
       "social": {
-        "bullish": 6,
-        "bearish": 4
+        "bullish": 7,
+        "bearish": 3
       },
       "stats": {
         "atr14": 17.76928928920201,
@@ -542,7 +543,7 @@
       },
       "social": {
         "bullish": 3,
-        "bearish": 1
+        "bearish": 0
       },
       "stats": {
         "atr14": 7.591432843889509,
@@ -800,7 +801,7 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 12,
+        "bullish": 13,
         "bearish": 0
       },
       "stats": {
@@ -1060,8 +1061,8 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 6,
-        "bearish": 10
+        "bullish": 7,
+        "bearish": 9
       },
       "stats": {
         "atr14": 13.15785653250558,
@@ -1320,7 +1321,7 @@
         "bearCount": 4
       },
       "social": {
-        "bullish": 6,
+        "bullish": 5,
         "bearish": 7
       },
       "stats": {
@@ -1579,7 +1580,7 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 10,
+        "bullish": 9,
         "bearish": 3
       },
       "stats": {
@@ -1834,9 +1835,9 @@
       },
       "signal": {
         "sentiment": "bullish",
-        "score": 0.2,
-        "bullCount": 4,
-        "bearCount": 1
+        "score": 0.32,
+        "bullCount": 5,
+        "bearCount": 0
       },
       "social": {
         "bullish": 11,
@@ -1894,7 +1895,7 @@
           "MACD↓"
         ]
       },
-      "heat": 35,
+      "heat": 37,
       "fundamentals": {
         "marketCap": 4357882.88,
         "industry": "Media",
@@ -1913,6 +1914,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140629955",
+          "ticker": "GOOGL",
+          "headline": "Alphabet’s New SpaceX Exposure Adds A Fresh Dimension To Its Story",
+          "summary": "Alphabet's long held private stake in SpaceX has become a publicly traded position following SpaceX's historic IPO. The IPO turns Alphabet's multi billion dollar SpaceX investment into a liquid asset with a transparent market price. Investors can now see Alphabet's exposure to the commercial space and space focused AI cloud sector reflected in daily trading data. Alphabet (NasdaqGS:GOOGL) now has a directly observable stake in one of the highest profile space infrastructure companies, which...",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=97cc33a0479d496fc94b782377b423d5bee4ffbd46a25141926fb0f2edc9fbc7",
+          "datetime": 1781388628,
+          "sentiment": "bullish",
+          "confidence": 0.8,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "SpaceX持股透明化，增加資產流動性與新產業曝險。"
+        },
         {
           "id": "finnhub-140628998",
           "ticker": "GOOGL",
@@ -2026,6 +2041,20 @@
           "reason": "柏克夏海瑟威大筆投資Alphabet。"
         },
         {
+          "id": "finnhub-140629953",
+          "ticker": "GOOGL",
+          "headline": "Nvidia CEO Jensen Huang Isn’t Worried About the Chip Rout. The Numbers Back Him Up on NVDA Stock.",
+          "summary": "Huang views the ongoing semiconductor selloff as a prime buying opportunity.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=69b19b3cc6d3b06bae45f33e3cdf38888cfd1e898efcef103ffc5915bbf3475e",
+          "datetime": 1781359202,
+          "sentiment": "neutral",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "NVDA CEO言論對GOOGL影響間接。"
+        },
+        {
           "id": "finnhub-140627218",
           "ticker": "GOOGL",
           "headline": "Harvard University Likes Meta (META) Stock Despite AI CapEx Fears",
@@ -2052,34 +2081,6 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "新聞內容與GOOGL無直接關聯。"
-        },
-        {
-          "id": "finnhub-140627212",
-          "ticker": "GOOGL",
-          "headline": "Alphabet Stock Is Up Nearly 100% Over the Past Year. Is It Still a Buy?",
-          "summary": "Alphabet has been one of the best-performing tech stocks over the past year.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=b53819e6a63a85a600ee86e0e5482a2158bce7f41b437f94ac1e0401b24a152e",
-          "datetime": 1781355900,
-          "sentiment": "neutral",
-          "confidence": 0.7,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "股價已大漲，未來買入價值待評估。"
-        },
-        {
-          "id": "finnhub-140629000",
-          "ticker": "GOOGL",
-          "headline": "Why Wells Fargo Is Warning That Surging AI Token Costs Is a Death Knell for Hyperscaler Stocks Like Meta and Microsoft",
-          "summary": "As AI token costs surge, Wells Fargo warns that hyperscalers like Meta and Microsoft could face growing pressure on the very technology driving their explosive growth.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=2114a4529bf03a258c4114248d75655d9d891bcc1a3f2797ae2a4bc00e1cfb3d",
-          "datetime": 1781355603,
-          "sentiment": "bearish",
-          "confidence": 0.6,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "AI成本上升恐壓抑獲利"
         }
       ]
     }
