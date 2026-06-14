@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T05:05:45.288Z",
+  "generatedAt": "2026-06-14T08:48:51.561Z",
   "account": {
     "size": 10000,
     "riskPct": 0.01,
@@ -16,14 +16,14 @@
         "prevClose": 204.87
       },
       "signal": {
-        "sentiment": "neutral",
-        "score": 0.1,
-        "bullCount": 2,
-        "bearCount": 1
+        "sentiment": "bullish",
+        "score": 0.18,
+        "bullCount": 3,
+        "bearCount": 0
       },
       "social": {
-        "bullish": 14,
-        "bearish": 4
+        "bullish": 11,
+        "bearish": 3
       },
       "stats": {
         "atr14": 8.333572387695312,
@@ -72,12 +72,13 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "偏空",
+          "新聞偏多",
           "RSI 45.2 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 36,
+      "heat": 37,
       "fundamentals": {
         "marketCap": 4965597.881651431,
         "industry": "Semiconductors",
@@ -96,6 +97,48 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140631268",
+          "ticker": "NVDA",
+          "headline": "Down 72%, Should You Buy the Dip in SoundHound AI?",
+          "summary": "The company's financial results are mixed, but its voice AI technology could be second to none.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=7cb2f2d2ee019dd839553dc964ea2ea6cda5d967f015d3ac1f26038938841ca4",
+          "datetime": 1781422500,
+          "sentiment": "bullish",
+          "confidence": 0.6,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "科技潛力佳，但財務表現不一。"
+        },
+        {
+          "id": "finnhub-140631269",
+          "ticker": "NVDA",
+          "headline": "Seniors Just Got a Big Clue on Social Security's 2027 COLA",
+          "summary": "We're getting closer to nailing down the final number.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=4040ea5fc0655d79d865676a932f14bd92fb7d7766e0e6f3c5a63fe1b71f6df6",
+          "datetime": 1781422080,
+          "sentiment": "neutral",
+          "confidence": 0.8,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "與公司營運無直接關聯。"
+        },
+        {
+          "id": "finnhub-140631021",
+          "ticker": "NVDA",
+          "headline": "SpaceX, Anthropic, or OpenAI: Which IPO Is the Better Buy?",
+          "summary": "Investors may get the chance to invest in all three this year.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=0e038bdcfdecdfa757f6d0d2d65ae9c45e5ea5230eebc333ffb491342b9ca76e",
+          "datetime": 1781414400,
+          "sentiment": "neutral",
+          "confidence": 0.8,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "與公司營運無直接關聯。"
+        },
         {
           "id": "finnhub-140630645",
           "ticker": "NVDA",
@@ -221,48 +264,6 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "新聞內容與NVDA無關。"
-        },
-        {
-          "id": "finnhub-140629446",
-          "ticker": "NVDA",
-          "headline": "These Are the Only 2 Cryptocurrencies I'm Comfortable Buying Right Now",
-          "summary": "The crypto market's pullback is revealing that many valuations were based solely on hot air.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=52c15eed3b45965efa0a65ac309341587be7e1d1e8ba69dbd7dd6cd462ded1f3",
-          "datetime": 1781387220,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "關於加密貨幣，與NVDA無直接關聯。"
-        },
-        {
-          "id": "finnhub-140629447",
-          "ticker": "NVDA",
-          "headline": "U.S. Interest Expense Just Hit $1.6 Trillion Annually. Peter Schiff Warns a Dollar Crisis Arrives When It Hits $2 Trillion.",
-          "summary": "Peter Schiff has been sounding the alarm on U.S. sovereign debt for years, and his latest warning on The Peter Schiff Show Podcast segment titled “A Complete Meltdown Is Coming” sharpens the math behind why he thinks the next chapter ends in a dollar crisis. The numbers he is citing this time line up uncomfortably ... U.S. Interest Expense Just Hit $1.6 Trillion Annually. Peter Schiff Warns a Dollar Crisis Arrives When It Hits $2 Trillion.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=38e5fcf5847619c4ed0459bf3103ad834b3b6578d02047c92151b89ec4ce4aba",
-          "datetime": 1781386366,
-          "sentiment": "bearish",
-          "confidence": 0.7,
-          "credibility": "rumor",
-          "longTermImpact": "thesis",
-          "reason": "宏觀經濟警告，可能影響整體市場。"
-        },
-        {
-          "id": "finnhub-140629448",
-          "ticker": "NVDA",
-          "headline": "Fintech Stock Block Is Trying to Prove That the Ultimate Cryptocurrency Has a Real Use Case, But Will It Work?",
-          "summary": "The innovative financial services and payments enterprise continues to operate with a forward-looking attitude.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=8af540a1b63ae29e4b6bc2b46055ea6fb311a1d71bc75ed6966eacb1a0119be4",
-          "datetime": 1781382240,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "關於Block和加密貨幣，與NVDA無關。"
         }
       ]
     },
@@ -282,7 +283,7 @@
         "bearCount": 2
       },
       "social": {
-        "bullish": 11,
+        "bullish": 8,
         "bearish": 5
       },
       "stats": {
@@ -542,7 +543,7 @@
       },
       "social": {
         "bullish": 1,
-        "bearish": 0
+        "bearish": 8
       },
       "stats": {
         "atr14": 7.591432843889509,
@@ -800,7 +801,7 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 11,
+        "bullish": 10,
         "bearish": 0
       },
       "stats": {
@@ -1060,8 +1061,8 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 14,
-        "bearish": 4
+        "bullish": 15,
+        "bearish": 5
       },
       "stats": {
         "atr14": 13.15785653250558,
@@ -1320,7 +1321,7 @@
         "bearCount": 2
       },
       "social": {
-        "bullish": 7,
+        "bullish": 9,
         "bearish": 10
       },
       "stats": {
@@ -1574,12 +1575,12 @@
       },
       "signal": {
         "sentiment": "bullish",
-        "score": 0.26,
-        "bullCount": 5,
+        "score": 0.33,
+        "bullCount": 6,
         "bearCount": 1
       },
       "social": {
-        "bullish": 11,
+        "bullish": 13,
         "bearish": 3
       },
       "stats": {
@@ -1634,7 +1635,7 @@
           "MACD↓"
         ]
       },
-      "heat": 48,
+      "heat": 49,
       "fundamentals": {
         "marketCap": 2566108.3830402237,
         "industry": "Retail",
@@ -1653,6 +1654,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140631271",
+          "ticker": "AMZN",
+          "headline": "Pinterest Links Amazon Storefronts And AWS To Support AI Shopping",
+          "summary": "Pinterest (NYSE:PINS) is rolling out Amazon Storefront linking for creators, allowing direct integration of Amazon influencer profiles into Pinterest. The company is also expanding its multi billion dollar partnership with Amazon Web Services to support AI and visual discovery features. Together, these updates aim to strengthen Pinterest's position as a product discovery and shopping platform for users, creators, and brands. Pinterest sits at the intersection of visual inspiration, product...",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=c2bff8fecce1809305375a8cc852faf643f830da2560d703c1728b5371c154ec",
+          "datetime": 1781421230,
+          "sentiment": "bullish",
+          "confidence": 0.8,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "擴大合作強化電商與雲端業務。"
+        },
         {
           "id": "finnhub-140629450",
           "ticker": "AMZN",
@@ -1806,20 +1821,6 @@
           "credibility": "confirmed",
           "longTermImpact": "thesis",
           "reason": "亞馬遜進入新市場，擴大競爭力。"
-        },
-        {
-          "id": "finnhub-140627974",
-          "ticker": "AMZN",
-          "headline": "Mark Zuckerberg Says Peter Thiel's 'Pithy Quote' Helped Him Navigate Directional Shifts In Facebook's Early Days: 'The Biggest Risk You Can Take…'",
-          "summary": "Meta Platforms CEO Mark Zuckerberg&#39;s best advice from PayPal cofounder Peter Thiel is to take risks and avoid stagnation.",
-          "source": "Benzinga",
-          "url": "https://finnhub.io/api/news?id=50a221b81adefa33b21121fad4be2c397458126ec771bb2e9f6bd74028060a0e",
-          "datetime": 1781348505,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "祖克柏分享商業建議，非AMZN營運消息。"
         }
       ]
     },
@@ -1839,7 +1840,7 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 12,
+        "bullish": 13,
         "bearish": 1
       },
       "stats": {
@@ -1913,6 +1914,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140631270",
+          "ticker": "GOOGL",
+          "headline": "Alphabet is Raising $84.75 Billion to Win the AI Wars. Should Investors Celebrate or Worry?",
+          "summary": "Alphabet is finding new ways to fund its $180 billion to $190 billion AI budget.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=44e8aaf59b6c88a67b4f054fe7281ca1268996871ea74a2b957069461a4e563b",
+          "datetime": 1781421900,
+          "sentiment": "neutral",
+          "confidence": 0.6,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "大筆AI投資，短期影響待觀察。"
+        },
         {
           "id": "finnhub-140630647",
           "ticker": "GOOGL",
@@ -2066,20 +2081,6 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "NVDA CEO言論對GOOGL影響間接。"
-        },
-        {
-          "id": "finnhub-140627218",
-          "ticker": "GOOGL",
-          "headline": "Harvard University Likes Meta (META) Stock Despite AI CapEx Fears",
-          "summary": "We just covered Harvard University Stock Portfolio 2026: Top 10 Picks. Meta Platforms (NASDAQ:META) ranks #8 (see Harvard University Stock Portfolio 2026: Top 5 Picks). Harvard’s Stake: $111,310,180 Meta Platforms (NASDAQ:META) is down about 12% so far this year, with CapEx-related fears being the primary drag on the stock despite Mark Zuckerberg’s assurances that these […]",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=246d69f8f982177b3b460df530d192839d23e93a3a037cbb0d38eacb9683f5cc",
-          "datetime": 1781358064,
-          "sentiment": "neutral",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "新聞內容與GOOGL無直接關聯。"
         }
       ]
     }
