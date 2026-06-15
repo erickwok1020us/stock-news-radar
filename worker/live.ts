@@ -13,7 +13,7 @@ const SNAPSHOT_URL =
   "https://raw.githubusercontent.com/erickwok1020us/stock-news-radar/main/data/snapshot.json";
 const DASH_URL =
   process.env.DASHBOARD_URL ||
-  "https://stock-news-radar-c7e7wi4v0-alexs-projects-84e44ccd.vercel.app";
+  "https://stock-news-radar-alexs-projects-84e44ccd.vercel.app"; // 我們的 Next 專案正式網址（非凍結的固定部署）
 const FINNHUB_KEY = requireEnv("FINNHUB_API_KEY");
 const TG_TOKEN = optionalEnv("TELEGRAM_BOT_TOKEN");
 const TG_CHAT = optionalEnv("TELEGRAM_CHAT_ID");
