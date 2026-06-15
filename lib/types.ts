@@ -218,6 +218,8 @@ export interface PositionReview {
 /** 一筆被記錄、等待結算的短線訊號 */
 export interface TrackedSignal {
   id: string;
+  /** 由哪一套策略（公式）開出 */
+  strategy: string;
   ticker: string;
   direction: "long" | "short";
   createdAt: string;
@@ -244,9 +246,15 @@ export interface TrackStat {
   totalR: number;
 }
 
+/** 單一策略（公式）的成績 */
+export interface StrategyStat extends TrackStat {
+  name: string;
+}
+
 export interface TrackSummary extends TrackStat {
   open: number;
-  byDirection: { long: TrackStat; short: TrackStat };
+  /** 各策略（公式）各自一份成績，長期比出最好 */
+  byStrategy: StrategyStat[];
   /** 最近結算的幾筆，給 UI 顯示 */
   recent: TrackedSignal[];
 }

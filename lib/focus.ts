@@ -28,11 +28,10 @@ const POS_TONE: Record<
   trail_stop: { tone: "protect", label: "移動止損", priority: 60 },
 };
 
-function winChip(track: Snapshot["track"], dir: "long" | "short"): string {
-  const d = track?.byDirection?.[dir];
-  const name = dir === "long" ? "做多" : "做空";
-  if (!d || d.wins + d.losses === 0) return `${name}勝率 累積中`;
-  return `你${name}勝率 ${Math.round(d.winRate * 100)}% · ${d.wins + d.losses}筆`;
+function winChip(track: Snapshot["track"]): string {
+  const s = track?.byStrategy?.find((x) => x.name === "綜合時機");
+  if (!s || s.wins + s.losses === 0) return "綜合時機勝率 累積中";
+  return `綜合時機勝率 ${Math.round(s.winRate * 100)}% · ${s.wins + s.losses}筆`;
 }
 
 export function buildFocus(snap: Snapshot): Focus {
@@ -80,7 +79,7 @@ export function buildFocus(snap: Snapshot): Focus {
           ? `順勢做多 · 突破 ${d.breakout}`
           : `順勢做空 · 跌破 ${d.breakout}`,
       detail: `進場 ${d.entryZone[0]}–${d.entryZone[1]} · 止損 ${d.stop} · 止盈 ${d.target}`,
-      chip: winChip(snap.track, dir),
+      chip: winChip(snap.track),
     });
     acted.add(t.ticker);
   }

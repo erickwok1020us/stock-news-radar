@@ -1,14 +1,16 @@
-// 成效追蹤：把每次的短線訊號記成帳本，之後用後續價格自動結算（達標/停損/到期），
-// 再算出勝率、平均 R、做多 vs 做空表現。純函式、透明。
+// 多策略成效追蹤：5 套策略各自「自動下模擬單 → 後續價格自動結算 → 各自一份成績」。
+// 純函式、透明。每次 ingest 呼叫一次。長期累積後可比出哪套公式最好。
+import { STRATEGIES } from "./strategies";
 import type {
+  StrategyStat,
   TickerSnapshot,
   TrackedSignal,
   TrackStat,
   TrackSummary,
 } from "./types";
 
-const HORIZON_MS = 7 * 86_400_000; // 7 天沒碰到止盈/止損就到期結算
-const MAX_CLOSED = 200; // 帳本只保留最近 200 筆已結算
+const HORIZON_MS = 7 * 86_400_000; // 7 天沒結果就到期結算
+const MAX_CLOSED = 400; // 帳本保留最近 400 筆已結算
 
 function realizedR(s: TrackedSignal, closePrice: number): number {
   if (s.riskPerShare <= 0) return 0;
@@ -16,9 +18,6 @@ function realizedR(s: TrackedSignal, closePrice: number): number {
   return Number(((dir * (closePrice - s.entry)) / s.riskPerShare).toFixed(2));
 }
 
-/**
- * 每次 ingest 呼叫：先結算開倉中的訊號，再為「有方向的新設定」記一筆（每檔最多一個 open）。
- */
 export function updateTrack(
   ledger: TrackedSignal[],
   tickers: TickerSnapshot[],
@@ -32,11 +31,9 @@ export function updateTrack(
     if (s.status !== "open") continue;
     const q = byTicker.get(s.ticker)?.quote ?? null;
     const aged = nowMs - Date.parse(s.createdAt) > HORIZON_MS;
-
     if (q) {
       const hi = q.high || q.current;
       const lo = q.low || q.current;
-      // 先檢查停損（保守），再檢查止盈
       if (s.direction === "long") {
         if (lo <= s.stop) {
           s.status = "hit_stop";
@@ -68,36 +65,33 @@ export function updateTrack(
       s.closePrice = s.entry;
       s.rMultiple = 0;
     }
-
     if (s.status !== "open" && !s.closedAt) s.closedAt = nowISO;
   }
 
-  // 2) 記錄新訊號（方向為 long/short、有價位、且該檔目前沒有開倉中的）
-  const openTickers = new Set(
-    ledger.filter((s) => s.status === "open").map((s) => s.ticker),
+  // 2) 記錄新訊號：每套策略 × 每檔，符合規則且該(策略,標的)目前沒有開倉中 → 開一筆
+  const openSet = new Set(
+    ledger.filter((s) => s.status === "open").map((s) => `${s.strategy}::${s.ticker}`),
   );
-  for (const t of tickers) {
-    const dir = t.timing?.direction;
-    if (
-      (dir === "long" || dir === "short") &&
-      t.day &&
-      t.quote &&
-      !openTickers.has(t.ticker)
-    ) {
-      const entry = (t.day.entryZone[0] + t.day.entryZone[1]) / 2;
+  for (const strat of STRATEGIES) {
+    for (const t of tickers) {
+      const key = `${strat.name}::${t.ticker}`;
+      if (openSet.has(key)) continue;
+      const sig = strat.evaluate(t);
+      if (!sig) continue;
       ledger.push({
-        id: `${t.ticker}-${nowMs}`,
+        id: `${strat.name}-${t.ticker}-${nowMs}`,
+        strategy: strat.name,
         ticker: t.ticker,
-        direction: dir,
+        direction: sig.direction,
         createdAt: nowISO,
-        createdPrice: t.quote.current,
-        entry: Number(entry.toFixed(2)),
-        stop: t.day.stop,
-        target: t.day.target,
-        riskPerShare: t.day.riskPerShare,
+        createdPrice: t.quote?.current ?? sig.entry,
+        entry: sig.entry,
+        stop: sig.stop,
+        target: sig.target,
+        riskPerShare: sig.riskPerShare,
         status: "open",
       });
-      openTickers.add(t.ticker);
+      openSet.add(key);
     }
   }
 
@@ -108,7 +102,7 @@ export function updateTrack(
     .sort((a, b) => Date.parse(b.closedAt ?? "") - Date.parse(a.closedAt ?? ""))
     .slice(0, MAX_CLOSED);
 
-  return { ledger: [...open, ...closed], summary: summarize(closed, open.length) };
+  return { ledger: [...open, ...closed], summary: summarize(closed, open) };
 }
 
 function stat(arr: TrackedSignal[]): TrackStat {
@@ -126,14 +120,15 @@ function stat(arr: TrackedSignal[]): TrackStat {
   };
 }
 
-function summarize(closed: TrackedSignal[], openCount: number): TrackSummary {
+function summarize(closed: TrackedSignal[], open: TrackedSignal[]): TrackSummary {
+  const byStrategy: StrategyStat[] = STRATEGIES.map((s) => ({
+    name: s.name,
+    ...stat(closed.filter((c) => c.strategy === s.name)),
+  }));
   return {
     ...stat(closed),
-    open: openCount,
-    byDirection: {
-      long: stat(closed.filter((s) => s.direction === "long")),
-      short: stat(closed.filter((s) => s.direction === "short")),
-    },
-    recent: closed.slice(0, 12),
+    open: open.length,
+    byStrategy,
+    recent: closed.slice(0, 15),
   };
 }
