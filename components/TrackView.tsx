@@ -73,6 +73,8 @@ export function TrackView({ track }: { track: TrackSummary | null }) {
     floatByStrat[o.strategy] = (floatByStrat[o.strategy] ?? 0) + (o.pnlHKD ?? 0);
   }
   const totalFloatHKD = Object.values(floatByStrat).reduce((a, b) => a + b, 0);
+  const openL = (track.openList ?? []).filter((o) => o.direction === "long").length;
+  const openS = (track.openList ?? []).length - openL;
 
   const ranked = [...track.byStrategy].sort((a, b) => {
     const da = a.wins + a.losses;
@@ -109,17 +111,19 @@ export function TrackView({ track }: { track: TrackSummary | null }) {
       {track.openList && track.openList.length > 0 && (
         <>
           <div style={{ color: "var(--muted)", fontSize: 13, margin: "16px 0 6px" }}>
-            進行中的模擬單（{track.openList.length} 筆）— 每套策略現在各自押什麼、目前浮動損益（每單 100 港幣）
+            進行中的模擬單（{track.openList.length} 筆 · <span style={{ color: "var(--bull)" }}>做多 {openL}</span> / <span style={{ color: "var(--bear)" }}>做空 {openS}</span>）— 每套策略各自押什麼、浮動損益（每單 100 港幣）
           </div>
           {STRATEGIES.map((strat) => {
             const orders = [...track.openList]
               .filter((o) => o.strategy === strat.name)
               .sort((a, b) => (b.pnlHKD ?? -99) - (a.pnlHKD ?? -99));
             if (!orders.length) return null;
+            const ol = orders.filter((o) => o.direction === "long").length;
+            const os = orders.length - ol;
             return (
               <div key={strat.name} style={{ marginBottom: 8 }}>
                 <div style={{ color: "var(--muted)", fontSize: 11.5, margin: "8px 0 3px" }}>
-                  {strat.name}（{orders.length}）
+                  {strat.name}（<span style={{ color: "var(--bull)" }}>做多 {ol}</span> · <span style={{ color: "var(--bear)" }}>做空 {os}</span>）
                 </div>
                 <ul className="news">
                   {orders.map((o) => (
