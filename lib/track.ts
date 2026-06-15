@@ -35,9 +35,12 @@ export function updateTrack(
     if (s.status !== "open") continue;
     const q = byTicker.get(s.ticker)?.quote ?? null;
     const aged = nowMs - Date.parse(s.createdAt) > HORIZON_MS;
-    if (q) {
-      const hi = q.high || q.current;
-      const lo = q.low || q.current;
+    if (q && q.current > 0) {
+      // 同一天開的單只用「現價」判斷，避免拿到開倉前的當日高低點而誤結算；
+      // 隔天起才用當日高低（此時高低點都在開倉之後）。
+      const sameDay = s.createdAt.slice(0, 10) === nowISO.slice(0, 10);
+      const hi = sameDay ? q.current : q.high || q.current;
+      const lo = sameDay ? q.current : q.low || q.current;
       if (s.direction === "long") {
         if (lo <= s.stop) {
           s.status = "hit_stop";
