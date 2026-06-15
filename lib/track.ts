@@ -26,6 +26,10 @@ export function updateTrack(
 ): { ledger: TrackedSignal[]; summary: TrackSummary } {
   const byTicker = new Map(tickers.map((t) => [t.ticker, t]));
 
+  // 0) 清掉早期沒有 strategy 欄位的舊紀錄（會顯示成 undefined），自我修復、不再對不上計數
+  const known = new Set(STRATEGIES.map((s) => s.name));
+  ledger = ledger.filter((s) => known.has(s.strategy));
+
   // 1) 結算開倉中的訊號
   for (const s of ledger) {
     if (s.status !== "open") continue;
