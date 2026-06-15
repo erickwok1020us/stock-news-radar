@@ -102,7 +102,10 @@ export function updateTrack(
     .sort((a, b) => Date.parse(b.closedAt ?? "") - Date.parse(a.closedAt ?? ""))
     .slice(0, MAX_CLOSED);
 
-  return { ledger: [...open, ...closed], summary: summarize(closed, open) };
+  return {
+    ledger: [...open, ...closed],
+    summary: summarize(closed, open, (tk) => byTicker.get(tk)?.quote?.current ?? null),
+  };
 }
 
 function stat(arr: TrackedSignal[]): TrackStat {
@@ -120,15 +123,29 @@ function stat(arr: TrackedSignal[]): TrackStat {
   };
 }
 
-function summarize(closed: TrackedSignal[], open: TrackedSignal[]): TrackSummary {
+function summarize(
+  closed: TrackedSignal[],
+  open: TrackedSignal[],
+  priceOf: (ticker: string) => number | null,
+): TrackSummary {
   const byStrategy: StrategyStat[] = STRATEGIES.map((s) => ({
     name: s.name,
     ...stat(closed.filter((c) => c.strategy === s.name)),
   }));
+  // 進行中的模擬單：附上目前浮動 R（依現價），讓前端顯示「個別情況」
+  const openList: TrackedSignal[] = open.map((o) => {
+    const cur = priceOf(o.ticker);
+    const ur =
+      cur && cur > 0 && o.riskPerShare > 0
+        ? Number((((o.direction === "long" ? 1 : -1) * (cur - o.entry)) / o.riskPerShare).toFixed(2))
+        : undefined;
+    return { ...o, unrealizedR: ur };
+  });
   return {
     ...stat(closed),
     open: open.length,
     byStrategy,
     recent: closed.slice(0, 15),
+    openList,
   };
 }

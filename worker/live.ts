@@ -17,10 +17,7 @@ const DASH_URL =
 const FINNHUB_KEY = requireEnv("FINNHUB_API_KEY");
 const TG_TOKEN = optionalEnv("TELEGRAM_BOT_TOKEN");
 const TG_CHAT = optionalEnv("TELEGRAM_CHAT_ID");
-const MOVE_THRESHOLDS = [5, 8]; // 今日(vs昨收)大漲/大跌門檻 %
-const VELO_PCT = 3; // 「急拉/急殺」：短窗內 ±3% 才警報（調高避免太敏感）
-const VELO_WINDOW_MS = 5 * 60 * 1000; // 看最近 5 分鐘
-const VELO_COOLDOWN_MS = 15 * 60 * 1000; // 同向 15 分鐘內不重複
+const STEP_PCT = 3; // 異動門檻：價格每比「上次基準」再走 ±3% 才提示一次（不把同一段重複報）
 const FLUSH_MS = 3 * 60 * 1000; // 非緊急警報每 3 分鐘合併成一則送出（防洗版）
 
 let snap: Snapshot | null = null;
@@ -29,8 +26,7 @@ const fired = new Set<string>();
 const sentDigests = new Set<string>();
 const muted = new Set<string>();
 let firedDay = "";
-const ticks = new Map<string, { t: number; p: number }[]>(); // 每檔近期 tick（算速度）
-const lastVelo = new Map<string, number>(); // symbol:dir → 上次急拉/急殺時間
+const anchor = new Map<string, number>(); // 每檔「上次提示時的基準價」，每天/重啟重設
 const fyiBuffer: string[] = []; // 非緊急警報暫存，每 FLUSH_MS 合併送出
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -88,6 +84,7 @@ function rollover(): void {
   const d = ny().date;
   if (d !== firedDay) {
     fired.clear();
+    anchor.clear(); // 每天重設異動基準
     firedDay = d;
   }
 }
@@ -133,33 +130,32 @@ function fmtPositions(s: Snapshot): string {
   return `<b>📊 你的持倉</b>\n${lines.join("\n")}`;
 }
 
-// 急拉/急殺：最近 5 分鐘內 ±VELO_PCT%（自帶冷卻，不走每日去重）
-function checkVelocity(symbol: string, price: number): void {
-  const now = Date.now();
-  let buf = ticks.get(symbol);
-  if (!buf) {
-    buf = [];
-    ticks.set(symbol, buf);
+// 異動提示（棘輪式）：價格每比「上次基準」再走 ±STEP_PCT% 才提示一次。
+// 基準每天/重啟重設 → 同一段漲跌不會一直重報，重啟也不會把現有漲幅再洗一次。
+function checkMove(symbol: string, price: number): void {
+  if (price <= 0) return;
+  const base = anchor.get(symbol);
+  if (base === undefined) {
+    anchor.set(symbol, price); // 今天第一次看到這檔：設基準，不提示
+    return;
   }
-  buf.push({ t: now, p: price });
-  const cutoff = now - VELO_WINDOW_MS;
-  while (buf.length && buf[0].t < cutoff) buf.shift();
-  if (buf.length < 2 || buf[0].p <= 0) return;
-  const chg = ((price - buf[0].p) / buf[0].p) * 100;
-  if (Math.abs(chg) < VELO_PCT) return;
-  const k = `${symbol}:${chg > 0 ? "up" : "dn"}`;
-  if (now - (lastVelo.get(k) ?? 0) < VELO_COOLDOWN_MS) return;
-  lastVelo.set(k, now);
-  const mins = Math.max(1, Math.round((now - buf[0].t) / 60000));
+  const step = ((price - base) / base) * 100;
+  if (Math.abs(step) < STEP_PCT) return;
+  anchor.set(symbol, price); // 移動基準（下次要再走 STEP% 才提示）
+  if (!marketOpen()) return; // 盤外只更新基準、不提示
+  const t = snap?.tickers.find((x) => x.ticker === symbol);
+  const pc = t?.quote?.prevClose;
+  const cum = pc && pc > 0 ? ((price - pc) / pc) * 100 : null;
+  const cumTxt = cum != null ? `，今日累計 ${cum >= 0 ? "+" : ""}${cum.toFixed(1)}%` : "";
   fyiBuffer.push(
-    `• <b>$${symbol}</b> ${chg > 0 ? "急拉" : "急殺"} ${chg > 0 ? "+" : ""}${chg.toFixed(1)}%（約 ${mins} 分鐘內 · ${price}）`,
+    `${step > 0 ? "📈" : "📉"} <b>$${symbol}</b> ${step > 0 ? "再漲" : "再跌"} ${step > 0 ? "+" : ""}${step.toFixed(1)}%${cumTxt}（現價 ${price}）`,
   );
 }
 
 // ── 即時成交處理 ────────────────────────────────────────────
 function onTrade(symbol: string, price: number): void {
   if (!snap || muted.has(symbol)) return;
-  checkVelocity(symbol, price); // 先看有沒有「突然」急拉/急殺
+  checkMove(symbol, price); // 比上次基準再走 ±STEP% 才提示（取代固定門檻+急拉，防重複洗版）
 
   // 持倉：價格事件（真錢 → 緊急，永遠推）
   for (const r of snap.positions) {
@@ -175,24 +171,9 @@ function onTrade(symbol: string, price: number): void {
       alertOnce(symbol, `${p.id}:be`, `<b>$${symbol}</b> 獲利達 +1R（現價 ${price}）——止損可移到保本 ${p.entry}`, true);
   }
 
-  // watchlist：大幅異動 + 當日關鍵價突破（FYI → 盤中才推）
+  // watchlist：當日關鍵價突破（FYI → 盤中才推）。大幅異動已交給 checkMove 棘輪式處理。
   const t = snap.tickers.find((x) => x.ticker === symbol);
   if (!t) return;
-  const pc = t.quote?.prevClose;
-  if (pc && pc > 0) {
-    const chg = ((price - pc) / pc) * 100;
-    const ths = [...MOVE_THRESHOLDS].sort((a, b) => b - a);
-    for (const th of ths)
-      if (chg >= th) {
-        alertOnce(symbol, `${symbol}:up${th}`, `<b>$${symbol}</b> 今日大漲 +${chg.toFixed(1)}%（昨收 ${pc} → ${price}）`, false);
-        break;
-      }
-    for (const th of ths)
-      if (chg <= -th) {
-        alertOnce(symbol, `${symbol}:dn${th}`, `<b>$${symbol}</b> 今日大跌 ${chg.toFixed(1)}%（昨收 ${pc} → ${price}）`, false);
-        break;
-      }
-  }
   const d = t.day;
   if (d?.direction === "long" && price >= d.breakout)
     alertOnce(symbol, `${symbol}:brk`, `<b>$${symbol}</b> 突破 ${d.breakout}（現價 ${price}）— 順勢做多參考`, false);
@@ -248,7 +229,7 @@ async function handleCommand(text: string): Promise<void> {
           "/mute NVDA — 靜音某檔\n" +
           "/unmute NVDA（或 ALL）— 取消靜音\n" +
           "/muted — 看靜音清單\n\n" +
-          "另外會自動推：持倉止損/止盈、大幅異動、突破，以及盤前/盤後摘要。",
+          "另外會自動推：持倉止損/止盈、顯著異動（每再走 3%）、突破，以及盤前/盤後摘要。",
         false,
       );
       break;

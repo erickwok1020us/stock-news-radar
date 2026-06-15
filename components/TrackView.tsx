@@ -85,6 +85,47 @@ export function TrackView({ track }: { track: TrackSummary | null }) {
         ))}
       </div>
 
+      {track.openList && track.openList.length > 0 && (
+        <>
+          <div style={{ color: "var(--muted)", fontSize: 13, margin: "16px 0 6px" }}>
+            進行中的模擬單（{track.openList.length} 筆）— 每套策略現在各自押什麼、目前浮動損益
+          </div>
+          {STRATEGIES.map((strat) => {
+            const orders = [...track.openList]
+              .filter((o) => o.strategy === strat.name)
+              .sort((a, b) => (b.unrealizedR ?? -99) - (a.unrealizedR ?? -99));
+            if (!orders.length) return null;
+            return (
+              <div key={strat.name} style={{ marginBottom: 8 }}>
+                <div style={{ color: "var(--muted)", fontSize: 11.5, margin: "8px 0 3px" }}>
+                  {strat.name}（{orders.length}）
+                </div>
+                <ul className="news">
+                  {orders.map((o) => (
+                    <li key={o.id}>
+                      <div className="line">
+                        <span className="tag" style={{ background: "#1f2435", color: o.direction === "long" ? "var(--bull)" : "var(--bear)" }}>
+                          {DIRLABEL[o.direction]}
+                        </span>
+                        <span className="head">${o.ticker}</span>
+                        <span style={{ fontSize: 11.5, color: "var(--muted)" }}>
+                          進{o.entry} · 損{o.stop} · 標{o.target}
+                        </span>
+                        {o.unrealizedR != null && (
+                          <span style={{ marginLeft: "auto", fontSize: 12, whiteSpace: "nowrap", color: o.unrealizedR >= 0 ? "var(--bull)" : "var(--bear)" }}>
+                            浮動 {rr(o.unrealizedR)}
+                          </span>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </>
+      )}
+
       {track.recent.length > 0 && (
         <>
           <div style={{ color: "var(--muted)", fontSize: 13, margin: "16px 0 8px" }}>最近結算</div>

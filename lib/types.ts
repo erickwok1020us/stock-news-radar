@@ -234,6 +234,8 @@ export interface TrackedSignal {
   closePrice?: number;
   /** 實現的 R 倍數 */
   rMultiple?: number;
+  /** 開倉中：目前的浮動 R（依現價，summary 時計算，不持久化） */
+  unrealizedR?: number;
 }
 
 export interface TrackStat {
@@ -257,4 +259,6 @@ export interface TrackSummary extends TrackStat {
   byStrategy: StrategyStat[];
   /** 最近結算的幾筆，給 UI 顯示 */
   recent: TrackedSignal[];
+  /** 目前進行中的模擬單（含浮動 R），給 UI 顯示「個別情況」 */
+  openList: TrackedSignal[];
 }
