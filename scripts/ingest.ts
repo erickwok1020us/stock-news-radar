@@ -105,7 +105,13 @@ async function chunkedAnalyze(items: RawNews[]): Promise<AnalyzedNews[]> {
   const CHUNK = 40;
   const out: AnalyzedNews[] = [];
   for (let i = 0; i < items.length; i += CHUNK) {
-    out.push(...(await analyzeNews(items.slice(i, i + CHUNK))));
+    try {
+      out.push(...(await analyzeNews(items.slice(i, i + CHUNK))));
+    } catch (err) {
+      // Gemini 偶爾 503/限流：本輪略過這批（不存入庫 → 下輪自動重試），
+      // 但價格/價位/策略/持倉照常更新，不讓整輪掛掉。
+      console.warn("  ⚠ Gemini 分析失敗，本輪略過這批新聞:", (err as Error).message);
+    }
   }
   return out;
 }
