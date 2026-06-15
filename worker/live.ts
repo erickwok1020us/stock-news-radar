@@ -75,9 +75,18 @@ function onTrade(symbol: string, price: number): void {
   const pc = t.quote?.prevClose;
   if (pc && pc > 0) {
     const chg = ((price - pc) / pc) * 100;
-    for (const th of MOVE_THRESHOLDS) {
-      if (chg >= th) alertOnce(`${symbol}:up${th}`, `<b>$${symbol}</b> 大漲 +${chg.toFixed(1)}%（現價 ${price}）`);
-      if (chg <= -th) alertOnce(`${symbol}:dn${th}`, `<b>$${symbol}</b> 大跌 ${chg.toFixed(1)}%（現價 ${price}）`);
+    const ths = [...MOVE_THRESHOLDS].sort((a, b) => b - a); // 高→低，只推最高跨過的那條
+    for (const th of ths) {
+      if (chg >= th) {
+        alertOnce(`${symbol}:up${th}`, `<b>$${symbol}</b> 大漲 +${chg.toFixed(1)}%（現價 ${price}）`);
+        break;
+      }
+    }
+    for (const th of ths) {
+      if (chg <= -th) {
+        alertOnce(`${symbol}:dn${th}`, `<b>$${symbol}</b> 大跌 ${chg.toFixed(1)}%（現價 ${price}）`);
+        break;
+      }
     }
   }
   const d = t.day;
