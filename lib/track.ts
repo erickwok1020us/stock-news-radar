@@ -18,6 +18,14 @@ function realizedR(s: TrackedSignal, closePrice: number): number {
   return Number(((dir * (closePrice - s.entry)) / s.riskPerShare).toFixed(2));
 }
 
+const BET_HKD = 100; // 假設每張模擬單投入 100 港幣（要改金額改這裡）
+// 把一張單換算成港幣損益：100 港幣 × 進出場百分比（做空方向相反）
+function pnlHKD(s: TrackedSignal, exitPrice: number): number {
+  if (s.entry <= 0) return 0;
+  const pct = ((s.direction === "long" ? 1 : -1) * (exitPrice - s.entry)) / s.entry;
+  return Number((BET_HKD * pct).toFixed(2));
+}
+
 export function updateTrack(
   ledger: TrackedSignal[],
   tickers: TickerSnapshot[],
@@ -120,6 +128,10 @@ function stat(arr: TrackedSignal[]): TrackStat {
   const losses = arr.filter((s) => s.status === "hit_stop").length;
   const decided = wins + losses;
   const totalR = arr.reduce((a, s) => a + (s.rMultiple ?? 0), 0);
+  const totalHKD = arr.reduce(
+    (a, s) => a + (s.closePrice != null ? pnlHKD(s, s.closePrice) : 0),
+    0,
+  );
   return {
     closed: arr.length,
     wins,
@@ -127,6 +139,7 @@ function stat(arr: TrackedSignal[]): TrackStat {
     winRate: decided ? wins / decided : 0,
     avgR: arr.length ? totalR / arr.length : 0,
     totalR: Number(totalR.toFixed(2)),
+    totalHKD: Number(totalHKD.toFixed(2)),
   };
 }
 
@@ -146,13 +159,18 @@ function summarize(
       cur && cur > 0 && o.riskPerShare > 0
         ? Number((((o.direction === "long" ? 1 : -1) * (cur - o.entry)) / o.riskPerShare).toFixed(2))
         : undefined;
-    return { ...o, unrealizedR: ur };
+    const hkd = cur && cur > 0 ? pnlHKD(o, cur) : undefined;
+    return { ...o, unrealizedR: ur, pnlHKD: hkd };
   });
+  const recent = closed.slice(0, 15).map((c) => ({
+    ...c,
+    pnlHKD: c.closePrice != null ? pnlHKD(c, c.closePrice) : undefined,
+  }));
   return {
     ...stat(closed),
     open: open.length,
     byStrategy,
-    recent: closed.slice(0, 15),
+    recent,
     openList,
   };
 }

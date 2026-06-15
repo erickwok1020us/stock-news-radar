@@ -236,6 +236,8 @@ export interface TrackedSignal {
   rMultiple?: number;
   /** 開倉中：目前的浮動 R（依現價，summary 時計算，不持久化） */
   unrealizedR?: number;
+  /** 假設每單 100 港幣的損益（已結算=實現/開倉中=浮動），summary 時計算 */
+  pnlHKD?: number;
 }
 
 export interface TrackStat {
@@ -246,6 +248,8 @@ export interface TrackStat {
   winRate: number;
   avgR: number;
   totalR: number;
+  /** 假設每張單投入 100 港幣，已結算單的累積損益（港幣） */
+  totalHKD: number;
 }
 
 /** 單一策略（公式）的成績 */
