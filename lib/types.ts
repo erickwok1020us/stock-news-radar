@@ -73,6 +73,8 @@ export interface Snapshot {
   tickers: TickerSnapshot[];
   /** 對每筆持倉的即時檢視 + 調整建議 */
   positions: PositionReview[];
+  /** 訊號成效追蹤摘要 */
+  track: TrackSummary | null;
 }
 
 /** 由日線歷史（Stooq）算出的技術統計 */
@@ -209,4 +211,42 @@ export interface PositionReview {
   reason: string;
   /** true → 該推播提醒 */
   urgent: boolean;
+}
+
+// ── 成效追蹤（訊號回測）──────────────────────────────────────
+
+/** 一筆被記錄、等待結算的短線訊號 */
+export interface TrackedSignal {
+  id: string;
+  ticker: string;
+  direction: "long" | "short";
+  createdAt: string;
+  createdPrice: number;
+  entry: number;
+  stop: number;
+  target: number;
+  riskPerShare: number;
+  /** open=未結算 / hit_target=達標(贏) / hit_stop=停損(輸) / expired=到期結算 */
+  status: "open" | "hit_target" | "hit_stop" | "expired";
+  closedAt?: string;
+  closePrice?: number;
+  /** 實現的 R 倍數 */
+  rMultiple?: number;
+}
+
+export interface TrackStat {
+  closed: number;
+  wins: number;
+  losses: number;
+  /** 勝率 = wins / (wins + losses) */
+  winRate: number;
+  avgR: number;
+  totalR: number;
+}
+
+export interface TrackSummary extends TrackStat {
+  open: number;
+  byDirection: { long: TrackStat; short: TrackStat };
+  /** 最近結算的幾筆，給 UI 顯示 */
+  recent: TrackedSignal[];
 }

@@ -5,11 +5,12 @@ import type { Snapshot } from "@/lib/types";
 import { TickerCard } from "@/components/TickerCard";
 import { LongCard } from "@/components/LongCard";
 import { PositionsView } from "@/components/PositionsView";
+import { TrackView } from "@/components/TrackView";
 
 const DATA_URL = process.env.NEXT_PUBLIC_DATA_URL || "/snapshot.json";
 const REFRESH_MS = 60_000;
 
-type View = "short" | "long" | "positions";
+type View = "short" | "long" | "positions" | "track";
 
 const DEFAULT_ACCOUNT = { size: 10000, riskPct: 0.01, currency: "USD" };
 
@@ -70,6 +71,7 @@ export default function Home() {
         <button className={view === "positions" ? "active" : ""} onClick={() => setView("positions")}>
           持倉{posAlerts > 0 ? ` (${posAlerts})` : ""}
         </button>
+        <button className={view === "track" ? "active" : ""} onClick={() => setView("track")}>成效</button>
       </div>
 
       {error && (
@@ -82,6 +84,8 @@ export default function Home() {
 
       {view === "positions" ? (
         <PositionsView positions={positions} account={account} />
+      ) : view === "track" ? (
+        <TrackView track={snap?.track ?? null} />
       ) : tickers.length > 0 ? (
         <div className="grid">
           {view === "short"

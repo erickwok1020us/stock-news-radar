@@ -23,6 +23,7 @@ import { analyzeNews } from "../lib/analyze";
 import { dayTradeLevels, longTermLevels } from "../lib/levels";
 import { computeHeat, computeTiming } from "../lib/timing";
 import { reviewPosition } from "../lib/positions";
+import { updateTrack } from "../lib/track";
 import { sendTelegram } from "../lib/telegram";
 import type {
   AnalyzedNews,
@@ -34,6 +35,7 @@ import type {
   Sentiment,
   Snapshot,
   TickerSnapshot,
+  TrackedSignal,
 } from "../lib/types";
 
 const DATA_DIR = resolve(process.cwd(), "data");
@@ -41,6 +43,8 @@ const SNAPSHOT_PATH = resolve(DATA_DIR, "snapshot.json");
 const STORE_PATH = resolve(DATA_DIR, "store.json");
 // 本機開發時前端讀 public/snapshot.json，所以也寫一份過去（CI 只 commit data/，不會推這份）
 const PUBLIC_SNAPSHOT_PATH = resolve(process.cwd(), "public", "snapshot.json");
+// 成效追蹤帳本（持久化，跨次累積）
+const TRACK_PATH = resolve(DATA_DIR, "track.json");
 const STORE_TTL_SECONDS = 48 * 3600;
 const NEWS_PER_TICKER = 12;
 const USE_STOCKTWITS = true;
@@ -236,11 +240,30 @@ async function main(): Promise<void> {
     return reviewPosition(pos, price, stats, { bearishCatalyst, thesisChanged });
   });
 
+  // 成效追蹤：載入帳本 → 結算開倉訊號/記錄新訊號 → 寫回
+  const generatedAt = new Date().toISOString();
+  let ledger: TrackedSignal[] = [];
+  if (existsSync(TRACK_PATH)) {
+    try {
+      ledger = JSON.parse(readFileSync(TRACK_PATH, "utf8")) as TrackedSignal[];
+    } catch {
+      ledger = [];
+    }
+  }
+  const { ledger: newLedger, summary: track } = updateTrack(
+    ledger,
+    tickerSnapshots,
+    Date.now(),
+    generatedAt,
+  );
+  writeFileSync(TRACK_PATH, JSON.stringify(newLedger));
+
   const snapshot: Snapshot = {
-    generatedAt: new Date().toISOString(),
+    generatedAt,
     account,
     tickers: tickerSnapshots,
     positions: positionReviews,
+    track,
   };
   const json = JSON.stringify(snapshot, null, 2);
   writeFileSync(SNAPSHOT_PATH, json);
