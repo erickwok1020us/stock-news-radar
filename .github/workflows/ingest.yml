@@ -2,8 +2,10 @@ name: ingest
 
 on:
   schedule:
-    - cron: "*/5 * * * *" # 每 5 分鐘（GitHub 在高負載時可能延遲數分鐘，屬正常）
-  workflow_dispatch: {} # 也能在 Actions 頁面手動觸發
+    # 只在週一～五、UTC 12:00–22:59 每 5 分鐘跑（涵蓋夏/冬令的美股盤前～盤後）。
+    # 程式內 marketActiveET() 還會再精準收到 ET 08:00–17:00，省 Gemini 用量。
+    - cron: "*/5 12-22 * * 1-5"
+  workflow_dispatch: {} # 手動觸發會略過時段檢查，強制跑一次
 
 # 避免兩次排程重疊
 concurrency:

@@ -127,7 +127,29 @@ function newsAlertText(n: AnalyzedNews, price: string): string {
   );
 }
 
+// 只在美股有意義的時段跑（省 Gemini 用量）：週一～五、ET 盤前 08:00～盤後 17:00。
+// 用 Intl 取 America/New_York 時間，自動處理夏令時間，不必自己算 UTC 偏移。
+function marketActiveET(): boolean {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    weekday: "short",
+    hour: "numeric",
+    hour12: false,
+  }).formatToParts(new Date());
+  const wd = parts.find((p) => p.type === "weekday")?.value ?? "";
+  const hour = Number(parts.find((p) => p.type === "hour")?.value ?? "0") % 24;
+  if (wd === "Sat" || wd === "Sun") return false;
+  return hour >= 8 && hour < 17;
+}
+
 async function main(): Promise<void> {
+  // 休市時段直接跳過，不叫 Gemini（手動 workflow_dispatch 仍可強制跑，方便測試）。
+  const manual = process.env.GITHUB_EVENT_NAME === "workflow_dispatch";
+  if (!manual && !marketActiveET()) {
+    console.log("💤 美股休市時段（ET 週末或非 08:00–17:00），略過本輪以節省 Gemini 用量。");
+    return;
+  }
+
   const { tickers: watchlist, alertThreshold } = loadWatchlist();
   const { account, positions } = loadPortfolio();
   const finnhubKey = requireEnv("FINNHUB_API_KEY");
