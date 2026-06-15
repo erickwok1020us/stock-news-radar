@@ -18,9 +18,10 @@ const FINNHUB_KEY = requireEnv("FINNHUB_API_KEY");
 const TG_TOKEN = optionalEnv("TELEGRAM_BOT_TOKEN");
 const TG_CHAT = optionalEnv("TELEGRAM_CHAT_ID");
 const MOVE_THRESHOLDS = [5, 8]; // 今日(vs昨收)大漲/大跌門檻 %
-const VELO_PCT = 2; // 「急拉/急殺」：短窗內 ±2% 就警報
+const VELO_PCT = 3; // 「急拉/急殺」：短窗內 ±3% 才警報（調高避免太敏感）
 const VELO_WINDOW_MS = 5 * 60 * 1000; // 看最近 5 分鐘
-const VELO_COOLDOWN_MS = 10 * 60 * 1000; // 同向 10 分鐘內不重複
+const VELO_COOLDOWN_MS = 15 * 60 * 1000; // 同向 15 分鐘內不重複
+const FLUSH_MS = 3 * 60 * 1000; // 非緊急警報每 3 分鐘合併成一則送出（防洗版）
 
 let snap: Snapshot | null = null;
 let subscribed = new Set<string>();
@@ -30,6 +31,7 @@ const muted = new Set<string>();
 let firedDay = "";
 const ticks = new Map<string, { t: number; p: number }[]>(); // 每檔近期 tick（算速度）
 const lastVelo = new Map<string, number>(); // symbol:dir → 上次急拉/急殺時間
+const fyiBuffer: string[] = []; // 非緊急警報暫存，每 FLUSH_MS 合併送出
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -96,7 +98,16 @@ function alertOnce(symbol: string, key: string, text: string, critical: boolean)
   if (fired.has(key)) return;
   fired.add(key);
   console.log(`[ALERT] ${text.replace(/<\/?b>/g, "")}`);
-  void tgSend(`⚡ ${text}`);
+  if (critical)
+    void tgSend(`⚡ ${text}`); // 緊急（持倉止損/止盈）即時推
+  else fyiBuffer.push(`• ${text}`); // 其餘併入 3 分鐘摘要，防洗版
+}
+
+// 把累積的非緊急警報合併成一則送出
+function flushFyi(): void {
+  if (!fyiBuffer.length) return;
+  const lines = fyiBuffer.splice(0);
+  void tgSend(`📊 <b>盤中異動摘要（近 ${FLUSH_MS / 60000} 分）</b>\n${lines.join("\n")}`);
 }
 
 // ── 摘要文字（給 /focus、/positions、每日摘要共用）────────────
@@ -140,8 +151,8 @@ function checkVelocity(symbol: string, price: number): void {
   if (now - (lastVelo.get(k) ?? 0) < VELO_COOLDOWN_MS) return;
   lastVelo.set(k, now);
   const mins = Math.max(1, Math.round((now - buf[0].t) / 60000));
-  void tgSend(
-    `⚡ <b>$${symbol}</b> ${chg > 0 ? "急拉" : "急殺"} ${chg > 0 ? "+" : ""}${chg.toFixed(1)}%（約 ${mins} 分鐘內 · 現價 ${price}）`,
+  fyiBuffer.push(
+    `• <b>$${symbol}</b> ${chg > 0 ? "急拉" : "急殺"} ${chg > 0 ? "+" : ""}${chg.toFixed(1)}%（約 ${mins} 分鐘內 · ${price}）`,
   );
 }
 
@@ -345,6 +356,7 @@ async function main(): Promise<void> {
   connect();
   void pollCommands();
   setInterval(maybeDigest, 60 * 1000);
+  setInterval(flushFyi, FLUSH_MS);
 }
 
 void main();
