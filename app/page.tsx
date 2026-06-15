@@ -6,11 +6,12 @@ import { TickerCard } from "@/components/TickerCard";
 import { LongCard } from "@/components/LongCard";
 import { PositionsView } from "@/components/PositionsView";
 import { TrackView } from "@/components/TrackView";
+import { FocusView } from "@/components/FocusView";
 
 const DATA_URL = process.env.NEXT_PUBLIC_DATA_URL || "/snapshot.json";
 const REFRESH_MS = 60_000;
 
-type View = "short" | "long" | "positions" | "track";
+type View = "focus" | "short" | "long" | "positions" | "track";
 
 const DEFAULT_ACCOUNT = { size: 10000, riskPct: 0.01, currency: "USD" };
 
@@ -18,7 +19,7 @@ export default function Home() {
   const [snap, setSnap] = useState<Snapshot | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
-  const [view, setView] = useState<View>("short");
+  const [view, setView] = useState<View>("focus");
 
   useEffect(() => {
     let alive = true;
@@ -66,6 +67,7 @@ export default function Home() {
       </div>
 
       <div className="seg">
+        <button className={view === "focus" ? "active" : ""} onClick={() => setView("focus")}>焦點</button>
         <button className={view === "short" ? "active" : ""} onClick={() => setView("short")}>短線 Day Trade</button>
         <button className={view === "long" ? "active" : ""} onClick={() => setView("long")}>長期持有</button>
         <button className={view === "positions" ? "active" : ""} onClick={() => setView("positions")}>
@@ -82,7 +84,9 @@ export default function Home() {
         </div>
       )}
 
-      {view === "positions" ? (
+      {view === "focus" ? (
+        <FocusView snap={snap} />
+      ) : view === "positions" ? (
         <PositionsView positions={positions} account={account} />
       ) : view === "track" ? (
         <TrackView track={snap?.track ?? null} />
