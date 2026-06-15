@@ -17,7 +17,10 @@ const DASH_URL =
 const FINNHUB_KEY = requireEnv("FINNHUB_API_KEY");
 const TG_TOKEN = optionalEnv("TELEGRAM_BOT_TOKEN");
 const TG_CHAT = optionalEnv("TELEGRAM_CHAT_ID");
-const MOVE_THRESHOLDS = [5, 8];
+const MOVE_THRESHOLDS = [5, 8]; // 今日(vs昨收)大漲/大跌門檻 %
+const VELO_PCT = 2; // 「急拉/急殺」：短窗內 ±2% 就警報
+const VELO_WINDOW_MS = 5 * 60 * 1000; // 看最近 5 分鐘
+const VELO_COOLDOWN_MS = 10 * 60 * 1000; // 同向 10 分鐘內不重複
 
 let snap: Snapshot | null = null;
 let subscribed = new Set<string>();
@@ -25,6 +28,8 @@ const fired = new Set<string>();
 const sentDigests = new Set<string>();
 const muted = new Set<string>();
 let firedDay = "";
+const ticks = new Map<string, { t: number; p: number }[]>(); // 每檔近期 tick（算速度）
+const lastVelo = new Map<string, number>(); // symbol:dir → 上次急拉/急殺時間
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -117,9 +122,33 @@ function fmtPositions(s: Snapshot): string {
   return `<b>📊 你的持倉</b>\n${lines.join("\n")}`;
 }
 
+// 急拉/急殺：最近 5 分鐘內 ±VELO_PCT%（自帶冷卻，不走每日去重）
+function checkVelocity(symbol: string, price: number): void {
+  const now = Date.now();
+  let buf = ticks.get(symbol);
+  if (!buf) {
+    buf = [];
+    ticks.set(symbol, buf);
+  }
+  buf.push({ t: now, p: price });
+  const cutoff = now - VELO_WINDOW_MS;
+  while (buf.length && buf[0].t < cutoff) buf.shift();
+  if (buf.length < 2 || buf[0].p <= 0) return;
+  const chg = ((price - buf[0].p) / buf[0].p) * 100;
+  if (Math.abs(chg) < VELO_PCT) return;
+  const k = `${symbol}:${chg > 0 ? "up" : "dn"}`;
+  if (now - (lastVelo.get(k) ?? 0) < VELO_COOLDOWN_MS) return;
+  lastVelo.set(k, now);
+  const mins = Math.max(1, Math.round((now - buf[0].t) / 60000));
+  void tgSend(
+    `⚡ <b>$${symbol}</b> ${chg > 0 ? "急拉" : "急殺"} ${chg > 0 ? "+" : ""}${chg.toFixed(1)}%（約 ${mins} 分鐘內 · 現價 ${price}）`,
+  );
+}
+
 // ── 即時成交處理 ────────────────────────────────────────────
 function onTrade(symbol: string, price: number): void {
   if (!snap || muted.has(symbol)) return;
+  checkVelocity(symbol, price); // 先看有沒有「突然」急拉/急殺
 
   // 持倉：價格事件（真錢 → 緊急，永遠推）
   for (const r of snap.positions) {
@@ -144,12 +173,12 @@ function onTrade(symbol: string, price: number): void {
     const ths = [...MOVE_THRESHOLDS].sort((a, b) => b - a);
     for (const th of ths)
       if (chg >= th) {
-        alertOnce(symbol, `${symbol}:up${th}`, `<b>$${symbol}</b> 大漲 +${chg.toFixed(1)}%（現價 ${price}）`, false);
+        alertOnce(symbol, `${symbol}:up${th}`, `<b>$${symbol}</b> 今日大漲 +${chg.toFixed(1)}%（昨收 ${pc} → ${price}）`, false);
         break;
       }
     for (const th of ths)
       if (chg <= -th) {
-        alertOnce(symbol, `${symbol}:dn${th}`, `<b>$${symbol}</b> 大跌 ${chg.toFixed(1)}%（現價 ${price}）`, false);
+        alertOnce(symbol, `${symbol}:dn${th}`, `<b>$${symbol}</b> 今日大跌 ${chg.toFixed(1)}%（昨收 ${pc} → ${price}）`, false);
         break;
       }
   }
