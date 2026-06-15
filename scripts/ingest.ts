@@ -121,23 +121,6 @@ function newsAlertText(n: AnalyzedNews, price: string): string {
   );
 }
 
-function posAlertText(r: PositionReview): string {
-  const label: Record<string, string> = {
-    exit: "🔴 出場（止損觸及）",
-    take_partial: "🟡 部分減碼",
-    move_stop_be: "🟢 移動止損 · 保本",
-    trail_stop: "🟢 移動止損 · 順勢",
-    review: "⚠️ 檢視持倉",
-    hold: "續抱",
-  };
-  const pnl = `${r.pnlPct >= 0 ? "+" : ""}${(r.pnlPct * 100).toFixed(1)}%`;
-  const stop = r.suggestedStop ? `\n建議止損/檢討價：${r.suggestedStop}` : "";
-  return (
-    `<b>持倉 $${r.position.ticker}</b>（${r.position.mode === "day" ? "短線" : "長期"}）${label[r.action] ?? r.action}\n` +
-    `現價 ${r.price} · 損益 ${pnl}${stop}\n${r.reason}`
-  );
-}
-
 async function main(): Promise<void> {
   const { tickers: watchlist, alertThreshold } = loadWatchlist();
   const { account, positions } = loadPortfolio();
@@ -275,27 +258,19 @@ async function main(): Promise<void> {
   saveStore(store);
   console.log(`💾 已寫入 ${SNAPSHOT_PATH}`);
 
-  // 推播：① 新出現、信心夠高、方向非中性的新聞
+  // 推播：cron 只推「新出現、信心夠高、方向非中性」的新聞。
+  // 持倉/價格警報改由常開的即時 worker 負責（避免每 5 分鐘重複洗版 + 兩邊重複）。
   const newsAlerts = analyzedFresh.filter(
     (n) => n.sentiment !== "neutral" && n.confidence >= alertThreshold,
   );
-  // ② 持倉需要動作的（緊急）
-  const posAlerts = positionReviews.filter((r) => r.urgent);
-
-  if (tgToken && tgChat) {
-    if (newsAlerts.length) {
-      console.log(`📣 新聞警報 ${newsAlerts.length} 則`);
-      for (const n of newsAlerts) {
-        const q = quotes.get(n.ticker);
-        const price = q
-          ? `　$${q.current} (${q.changePct >= 0 ? "+" : ""}${q.changePct.toFixed(2)}%)`
-          : "";
-        await sendTelegram(newsAlertText(n, price), tgToken, tgChat);
-      }
-    }
-    if (posAlerts.length) {
-      console.log(`📣 持倉動作 ${posAlerts.length} 筆`);
-      for (const r of posAlerts) await sendTelegram(posAlertText(r), tgToken, tgChat);
+  if (tgToken && tgChat && newsAlerts.length) {
+    console.log(`📣 新聞警報 ${newsAlerts.length} 則`);
+    for (const n of newsAlerts) {
+      const q = quotes.get(n.ticker);
+      const price = q
+        ? `　$${q.current} (${q.changePct >= 0 ? "+" : ""}${q.changePct.toFixed(2)}%)`
+        : "";
+      await sendTelegram(newsAlertText(n, price), tgToken, tgChat);
     }
   }
 
