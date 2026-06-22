@@ -17,7 +17,7 @@ export interface RawNews {
   datetime: number;
 }
 
-/** 經 Claude 判讀後的一則消息 */
+/** 經 Gemini 判讀後的一則消息 */
 export interface AnalyzedNews extends RawNews {
   sentiment: Sentiment;
   /** 0-1 */

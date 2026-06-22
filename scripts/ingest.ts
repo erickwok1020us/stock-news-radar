@@ -1,4 +1,4 @@
-// 主流程：抓新聞+報價+基本面+技術統計 → 去重 → Claude 判讀 → 算價位框架
+// 主流程：抓新聞+報價+基本面+技術統計 → 去重 → Gemini 判讀 → 算價位框架
 // → 檢視每筆持倉 → 寫 snapshot.json → Telegram 推播（新聞警報 + 持倉動作）。
 // GitHub Actions 每 5 分鐘跑一次（也可本機 `npm run ingest`）。
 import "dotenv/config";
@@ -199,7 +199,7 @@ async function main(): Promise<void> {
   }
   console.log(`📰 新消息 ${fresh.length} 則（去重後）`);
 
-  // Claude 判讀新消息 → 存庫
+  // Gemini 判讀新消息 → 存庫
   const analyzedFresh = await chunkedAnalyze(fresh);
   for (const a of analyzedFresh) store[a.id] = { ...a, _seenAt: nowSec };
 
