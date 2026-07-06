@@ -1,4 +1,4 @@
-// 策略擂台：5 套公式各自一份成績表（含「每單 100 港幣」金額換算），依勝率/金額排名、標出領先者；
+// 策略擂台：多套公式各自一份成績表（含派別標籤 + 「每單 100 港幣」金額換算），依勝率/金額排名、標出領先者；
 // 中段是各策略進行中的模擬單，最下面是最近結算明細。
 import { STRATEGIES } from "@/lib/strategies";
 import type { StrategyStat, TrackSummary } from "@/lib/types";
@@ -16,6 +16,13 @@ const rr = (n: number) => `${n >= 0 ? "+" : ""}${n.toFixed(2)}R`;
 const hkd = (n: number) => `${n >= 0 ? "+" : ""}${n.toFixed(1)} HKD`;
 const col = (n: number) => (n >= 0 ? "var(--bull)" : "var(--bear)");
 const BASIS: Record<string, string> = Object.fromEntries(STRATEGIES.map((s) => [s.name, s.basis]));
+const STYLE: Record<string, string> = Object.fromEntries(STRATEGIES.map((s) => [s.name, s.style]));
+const STYLE_COLOR: Record<string, string> = {
+  順勢: "#ff9f43", // 追漲殺跌 = 橙
+  逆勢: "#34e2e8", // 抄底摸頂 = 青
+  事件: "#a78bfa", // 消息面 = 紫
+  綜合: "#8a90a2", // 多因子 = 灰
+};
 
 function StrategyCard({ s, best, openHKD }: { s: StrategyStat; best: boolean; openHKD: number }) {
   const decided = s.wins + s.losses;
@@ -29,6 +36,7 @@ function StrategyCard({ s, best, openHKD }: { s: StrategyStat; best: boolean; op
     >
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 2 }}>
         <span style={{ fontSize: 15, fontWeight: 500 }}>{s.name}</span>
+        <span style={{ fontSize: 10.5, color: STYLE_COLOR[STYLE[s.name]] ?? "var(--muted)", border: `1px solid ${STYLE_COLOR[STYLE[s.name]] ?? "var(--border)"}`, padding: "0 6px", borderRadius: 999 }}>{STYLE[s.name]}</span>
         {best && (
           <span style={{ fontSize: 11, color: "#0a0b14", background: "#34e2e8", padding: "1px 7px", borderRadius: 999 }}>領先</span>
         )}
@@ -96,7 +104,8 @@ export function TrackView({ track }: { track: TrackSummary | null }) {
         <span style={{ color: "var(--muted)", fontSize: 12 }}>已結算 {track.closed} · 觀察中 {track.open}</span>
       </div>
       <div className="muted-note" style={{ marginBottom: 12 }}>
-        5 套公式各自自動下模擬單、自動結算。假設<b>每張單投入 100 港幣</b> → 合計：已結算{" "}
+        {track.byStrategy.length} 套公式各自下模擬單、自動結算（<span style={{ color: STYLE_COLOR["順勢"] }}>順勢</span>追漲殺跌 vs <span style={{ color: STYLE_COLOR["逆勢"] }}>逆勢</span>抄底摸頂，故意對打看哪派賺）。
+        假設<b>每張單投入 100 港幣</b> → 合計：已結算{" "}
         <span style={{ color: col(track.totalHKD), fontWeight: 500 }}>{hkd(track.totalHKD)}</span>
         、進行中浮動 <span style={{ color: col(totalFloatHKD) }}>{hkd(totalFloatHKD)}</span>。
         {decidedTotal === 0 ? "結算數要幾天才長出來，先看浮動。" : ""}

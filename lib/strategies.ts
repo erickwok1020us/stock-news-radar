@@ -1,5 +1,6 @@
 // 多套「明確公式」策略（趨勢／反轉／動能／量能／區間／事件 各種派別）：各自依規則自動開模擬單。
 // 每套都是透明、可驗證的判準。track.ts 讓每套各自下注、各自結算、各自一份成績表，長期比出最好。
+// style（派別）：順勢=追漲殺跌、逆勢=抄底摸頂、事件=消息面、綜合=多因子合成。故意讓兩派對打。
 import type { TickerSnapshot } from "./types";
 
 export interface StratSignal {
@@ -13,6 +14,8 @@ export interface StratSignal {
 export interface Strategy {
   name: string;
   basis: string;
+  /** 派別：順勢（追漲殺跌）/ 逆勢（抄底摸頂）/ 事件 / 綜合 */
+  style: "順勢" | "逆勢" | "事件" | "綜合";
   evaluate: (t: TickerSnapshot) => StratSignal | null;
 }
 
@@ -34,6 +37,7 @@ export const STRATEGIES: Strategy[] = [
   {
     name: "綜合時機",
     basis: "趨勢+RSI+MACD+量能+新聞 合成方向",
+    style: "綜合",
     evaluate(t) {
       const d = t.day;
       const dir = t.timing?.direction;
@@ -52,6 +56,7 @@ export const STRATEGIES: Strategy[] = [
   {
     name: "RSI反轉",
     basis: "RSI<30 做多 / >70 做空（抓超賣反彈、超買回落）",
+    style: "逆勢",
     evaluate(t) {
       const r = t.stats?.rsi14;
       const p = t.quote?.current;
@@ -65,6 +70,7 @@ export const STRATEGIES: Strategy[] = [
   {
     name: "均線順勢",
     basis: "站上 SMA20>SMA50 做多 / 跌破 SMA20<SMA50 做空",
+    style: "順勢",
     evaluate(t) {
       const s = t.stats;
       const p = t.quote?.current;
@@ -77,6 +83,7 @@ export const STRATEGIES: Strategy[] = [
   {
     name: "新聞動能",
     basis: "新聞情緒強(±0.3)就順著做",
+    style: "事件",
     evaluate(t) {
       const sc = t.signal.score;
       const p = t.quote?.current;
@@ -90,6 +97,7 @@ export const STRATEGIES: Strategy[] = [
   {
     name: "突破",
     basis: "突破近 20 日高做多 / 跌破近 20 日低做空",
+    style: "順勢",
     evaluate(t) {
       const s = t.stats;
       const p = t.quote?.current;
@@ -102,6 +110,7 @@ export const STRATEGIES: Strategy[] = [
   {
     name: "爆量順勢",
     basis: "成交量爆量（>1.8×20日均量）就順著當日漲跌方向做",
+    style: "順勢",
     evaluate(t) {
       const s = t.stats;
       const q = t.quote;
@@ -114,6 +123,7 @@ export const STRATEGIES: Strategy[] = [
   {
     name: "區間回歸",
     basis: "預估當日區間=昨收±ATR；碰到預估低位做多、高位做空（賭往中間回歸）",
+    style: "逆勢",
     evaluate(t) {
       const s = t.stats;
       const q = t.quote;
@@ -128,6 +138,7 @@ export const STRATEGIES: Strategy[] = [
   {
     name: "乖離回歸",
     basis: "偏離 20 日均線過大（>2×ATR）就賭回歸：太高做空、太低做多",
+    style: "逆勢",
     evaluate(t) {
       const s = t.stats;
       const p = t.quote?.current;
@@ -141,6 +152,7 @@ export const STRATEGIES: Strategy[] = [
   {
     name: "52週動能",
     basis: "逼近 52 週高點（2%內）做多、逼近 52 週低點做空（強者恆強）",
+    style: "順勢",
     evaluate(t) {
       const s = t.stats;
       const p = t.quote?.current;
@@ -153,6 +165,7 @@ export const STRATEGIES: Strategy[] = [
   {
     name: "MACD動能",
     basis: "MACD 在零軸上且柱狀為正做多；零軸下且柱狀為負做空",
+    style: "順勢",
     evaluate(t) {
       const s = t.stats;
       const p = t.quote?.current;
