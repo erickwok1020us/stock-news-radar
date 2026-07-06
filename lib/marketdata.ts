@@ -143,8 +143,10 @@ export async function getMarketStats(
       sma20: sma(closes, 20),
       sma50: sma(closes, 50),
       sma200: sma(closes, 200),
-      swingHigh: Math.max(...highs.slice(-W)),
-      swingLow: Math.min(...lows.slice(-W)),
+      // 取「不含今天(最後一根)」的前 20 根：這樣「突破」才是真的突破近期高點，
+      // 而不是拿今天的高點跟自己比（現價幾乎永遠 ≤ 今天高，等於永遠不觸發）。
+      swingHigh: Math.max(...highs.slice(-W - 1, -1)),
+      swingLow: Math.min(...lows.slice(-W - 1, -1)),
       high52: Math.max(...highs.slice(-252)),
       low52: Math.min(...lows.slice(-252)),
       avgVol20: sma(vols, 20),
