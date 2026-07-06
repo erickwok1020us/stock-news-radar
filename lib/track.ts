@@ -57,7 +57,7 @@ export function updateTrack(
         } else if (hi >= s.target) {
           s.status = "hit_target";
           s.closePrice = s.target;
-          s.rMultiple = 2;
+          s.rMultiple = realizedR(s, s.target); // 按實際止盈距離算（逆勢的止盈較近，非固定 +2R）
         }
       } else {
         if (hi >= s.stop) {
@@ -67,7 +67,7 @@ export function updateTrack(
         } else if (lo <= s.target) {
           s.status = "hit_target";
           s.closePrice = s.target;
-          s.rMultiple = 2;
+          s.rMultiple = realizedR(s, s.target); // 按實際止盈距離算（逆勢的止盈較近，非固定 +2R）
         }
       }
       if (s.status === "open" && aged) {

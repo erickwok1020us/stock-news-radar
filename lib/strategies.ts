@@ -33,6 +33,32 @@ function levelsFor(direction: "long" | "short", price: number, atr: number): Str
   };
 }
 
+/** 逆勢/回歸用：止盈設在「均值」(近、先落袋)，止損放在極端之外(遠、1.5×ATR)。
+ *  這是均值回歸該有的結構（高勝率、小賺），跟順勢 2:1 追趨勢不同、才公平。 */
+function revertLevels(
+  direction: "long" | "short",
+  price: number,
+  atr: number,
+  meanTarget: number,
+): StratSignal {
+  const stopDist = 1.5 * atr;
+  const minMove = 0.5 * atr; // 止盈至少離現價 0.5×ATR，且要在獲利側
+  const tgt = Number.isFinite(meanTarget)
+    ? direction === "long"
+      ? Math.max(meanTarget, price + minMove)
+      : Math.min(meanTarget, price - minMove)
+    : direction === "long"
+      ? price + atr
+      : price - atr;
+  return {
+    direction,
+    entry: r2(price),
+    stop: r2(direction === "long" ? price - stopDist : price + stopDist),
+    target: r2(tgt),
+    riskPerShare: r2(stopDist),
+  };
+}
+
 export const STRATEGIES: Strategy[] = [
   {
     name: "綜合時機",
@@ -62,8 +88,9 @@ export const STRATEGIES: Strategy[] = [
       const p = t.quote?.current;
       const atr = t.stats?.atr14;
       if (r == null || !p || !atr) return null;
-      if (r < 30) return levelsFor("long", p, atr);
-      if (r > 70) return levelsFor("short", p, atr);
+      const mean = t.stats?.sma20 ?? NaN; // 回歸目標＝均線（抓不到就用 現價±1ATR）
+      if (r < 30) return revertLevels("long", p, atr, mean);
+      if (r > 70) return revertLevels("short", p, atr, mean);
       return null;
     },
   },
@@ -130,8 +157,9 @@ export const STRATEGIES: Strategy[] = [
       if (!s?.atr14 || !q?.prevClose || !q.current) return null;
       const low = q.prevClose - 0.8 * s.atr14; // 預估當日低位
       const high = q.prevClose + 0.8 * s.atr14; // 預估當日高位
-      if (q.current <= low) return levelsFor("long", q.current, s.atr14);
-      if (q.current >= high) return levelsFor("short", q.current, s.atr14);
+      // 回歸目標＝昨收（區間中央）
+      if (q.current <= low) return revertLevels("long", q.current, s.atr14, q.prevClose);
+      if (q.current >= high) return revertLevels("short", q.current, s.atr14, q.prevClose);
       return null;
     },
   },
@@ -144,8 +172,9 @@ export const STRATEGIES: Strategy[] = [
       const p = t.quote?.current;
       if (!s?.sma20 || !s.atr14 || !p) return null;
       const dev = p - s.sma20;
-      if (dev >= 2 * s.atr14) return levelsFor("short", p, s.atr14);
-      if (dev <= -2 * s.atr14) return levelsFor("long", p, s.atr14);
+      // 回歸目標＝SMA20（它偏離的那條均線）
+      if (dev >= 2 * s.atr14) return revertLevels("short", p, s.atr14, s.sma20);
+      if (dev <= -2 * s.atr14) return revertLevels("long", p, s.atr14, s.sma20);
       return null;
     },
   },
