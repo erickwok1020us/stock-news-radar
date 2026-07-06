@@ -255,6 +255,12 @@ export interface TrackStat {
 /** 單一策略（公式）的成績 */
 export interface StrategyStat extends TrackStat {
   name: string;
+  /** 從第一筆單到現在的天數 */
+  days: number;
+  /** 總單數（含進行中） */
+  trades: number;
+  /** 平均每日單數 */
+  perDay: number;
 }
 
 export interface TrackSummary extends TrackStat {
@@ -265,4 +271,10 @@ export interface TrackSummary extends TrackStat {
   recent: TrackedSignal[];
   /** 目前進行中的模擬單（含浮動 R），給 UI 顯示「個別情況」 */
   openList: TrackedSignal[];
+  /** 從第一筆單到現在的天數（全體） */
+  days: number;
+  /** 總單數（含進行中，全體） */
+  trades: number;
+  /** 平均每日單數（全體） */
+  perDay: number;
 }

@@ -82,6 +82,9 @@ function StrategyCard({ s, best, openHKD }: { s: StrategyStat; best: boolean; op
         )}
         {" · "}浮動 <span style={{ color: col(openHKD) }}>{hkd(openHKD)}</span>
       </div>
+      <div style={{ fontSize: 11, color: "var(--muted)", marginTop: 3 }}>
+        {s.days} 天 · 共 {s.trades} 單 · 平均 {s.perDay} 單/日
+      </div>
     </div>
   );
 }
@@ -145,6 +148,7 @@ export function TrackView({ track }: { track: TrackSummary | null }) {
           color={decidedTotal ? (track.winRate >= 0.5 ? "var(--bull)" : "var(--bear)") : undefined}
         />
         <Stat label="進行中浮動" value={hkd(totalFloatHKD)} color={col(totalFloatHKD)} sub={`${track.open} 筆 · ${(track.open * 100).toLocaleString()} HKD`} />
+        <Stat label="運行天數" value={`${track.days} 天`} sub={`共 ${track.trades} 單 · 平均 ${track.perDay} 單/日`} />
       </div>
 
       <div className="muted-note" style={{ marginBottom: 12 }}>

@@ -119,7 +119,7 @@ export function updateTrack(
 
   return {
     ledger: [...open, ...closed],
-    summary: summarize(closed, open, (tk) => byTicker.get(tk)?.quote?.current ?? null),
+    summary: summarize(closed, open, (tk) => byTicker.get(tk)?.quote?.current ?? null, nowMs),
   };
 }
 
@@ -143,14 +143,34 @@ function stat(arr: TrackedSignal[]): TrackStat {
   };
 }
 
+// 活動度：從第一筆到現在幾天、共幾單、平均每日幾單
+function activity(
+  trades: TrackedSignal[],
+  nowMs: number,
+): { days: number; trades: number; perDay: number } {
+  if (!trades.length) return { days: 0, trades: 0, perDay: 0 };
+  let first = Infinity;
+  for (const t of trades) {
+    const ms = Date.parse(t.createdAt);
+    if (Number.isFinite(ms) && ms < first) first = ms;
+  }
+  const days = Number.isFinite(first)
+    ? Math.max(1, Math.round((nowMs - first) / 86_400_000))
+    : 1;
+  return { days, trades: trades.length, perDay: Number((trades.length / days).toFixed(1)) };
+}
+
 function summarize(
   closed: TrackedSignal[],
   open: TrackedSignal[],
   priceOf: (ticker: string) => number | null,
+  nowMs: number,
 ): TrackSummary {
+  const all = [...closed, ...open];
   const byStrategy: StrategyStat[] = STRATEGIES.map((s) => ({
     name: s.name,
     ...stat(closed.filter((c) => c.strategy === s.name)),
+    ...activity(all.filter((x) => x.strategy === s.name), nowMs),
   }));
   // 進行中的模擬單：附上目前浮動 R（依現價），讓前端顯示「個別情況」
   const openList: TrackedSignal[] = open.map((o) => {
@@ -168,6 +188,7 @@ function summarize(
   }));
   return {
     ...stat(closed),
+    ...activity(all, nowMs),
     open: open.length,
     byStrategy,
     recent,
