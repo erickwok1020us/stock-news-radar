@@ -9,7 +9,7 @@ import type {
   TrackSummary,
 } from "./types";
 
-const HORIZON_MS = 7 * 86_400_000; // 7 天沒結果就到期結算
+const HORIZON_MS = 3 * 86_400_000; // 3 天沒結果就到期結算（縮短→資金週轉快、成績累積快）
 const MAX_CLOSED = 400; // 帳本保留最近 400 筆已結算
 
 function realizedR(s: TrackedSignal, closePrice: number): number {
