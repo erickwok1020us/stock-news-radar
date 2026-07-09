@@ -238,6 +238,8 @@ export interface TrackedSignal {
   unrealizedR?: number;
   /** 假設每單 100 港幣的損益（已結算=實現/開倉中=浮動），summary 時計算 */
   pnlHKD?: number;
+  /** 開倉中：已開幾天（summary 時計算，配合到期天數用） */
+  ageDays?: number;
 }
 
 export interface TrackStat {

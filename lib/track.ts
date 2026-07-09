@@ -180,7 +180,8 @@ function summarize(
         ? Number((((o.direction === "long" ? 1 : -1) * (cur - o.entry)) / o.riskPerShare).toFixed(2))
         : undefined;
     const hkd = cur && cur > 0 ? pnlHKD(o, cur) : undefined;
-    return { ...o, unrealizedR: ur, pnlHKD: hkd };
+    const ageDays = Math.max(0, Math.floor((nowMs - Date.parse(o.createdAt)) / 86_400_000));
+    return { ...o, unrealizedR: ur, pnlHKD: hkd, ageDays };
   });
   const recent = closed.slice(0, 15).map((c) => ({
     ...c,

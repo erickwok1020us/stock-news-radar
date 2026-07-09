@@ -15,6 +15,10 @@ const pct = (n: number) => `${Math.round(n * 100)}%`;
 const rr = (n: number) => `${n >= 0 ? "+" : ""}${n.toFixed(2)}R`;
 const hkd = (n: number) => `${n >= 0 ? "+" : ""}${n.toFixed(1)} HKD`;
 const col = (n: number) => (n >= 0 ? "var(--bull)" : "var(--bear)");
+const md = (iso: string) => {
+  const [m, d] = iso.slice(5, 10).split("-");
+  return `${+m}/${+d}`;
+};
 const BASIS: Record<string, string> = Object.fromEntries(STRATEGIES.map((s) => [s.name, s.basis]));
 const STYLE: Record<string, string> = Object.fromEntries(STRATEGIES.map((s) => [s.name, s.style]));
 const STYLE_COLOR: Record<string, string> = {
@@ -189,6 +193,9 @@ export function TrackView({ track }: { track: TrackSummary | null }) {
                         <span className="head">${o.ticker}</span>
                         <span style={{ fontSize: 11.5, color: "var(--muted)" }}>
                           進{o.entry} · 損{o.stop} · 標{o.target}
+                        </span>
+                        <span style={{ fontSize: 11, color: (o.ageDays ?? 0) >= 2 ? "#ffb454" : "var(--muted)", whiteSpace: "nowrap" }}>
+                          開 {md(o.createdAt)} · {o.ageDays ?? 0}天
                         </span>
                         {o.pnlHKD != null && (
                           <span style={{ marginLeft: "auto", fontSize: 12, whiteSpace: "nowrap", color: col(o.pnlHKD) }}>
