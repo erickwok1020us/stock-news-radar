@@ -1,5 +1,7 @@
-// 策略擂台：多套公式各自一份成績表（含派別標籤 + 「每單 100 港幣」金額換算），依勝率/金額排名、標出領先者；
-// 中段是各策略進行中的模擬單，最下面是最近結算明細。
+"use client";
+// 策略擂台：多套公式各自一份成績表（含派別標籤 + 「每單 100 港幣」金額換算）。
+// 頂部頁籤可切「全部 / 單一策略」；記分板、卡片、進行中單、結算明細都會跟著篩選。
+import { useState } from "react";
 import { STRATEGIES } from "@/lib/strategies";
 import type { StrategyStat, TrackSummary } from "@/lib/types";
 
@@ -22,10 +24,10 @@ const md = (iso: string) => {
 const BASIS: Record<string, string> = Object.fromEntries(STRATEGIES.map((s) => [s.name, s.basis]));
 const STYLE: Record<string, string> = Object.fromEntries(STRATEGIES.map((s) => [s.name, s.style]));
 const STYLE_COLOR: Record<string, string> = {
-  順勢: "#ff9f43", // 追漲殺跌 = 橙
-  逆勢: "#34e2e8", // 抄底摸頂 = 青
-  事件: "#a78bfa", // 消息面 = 紫
-  綜合: "#8a90a2", // 多因子 = 灰
+  順勢: "#ff9f43",
+  逆勢: "#34e2e8",
+  事件: "#a78bfa",
+  綜合: "#8a90a2",
 };
 
 function Stat({ label, value, sub, color }: { label: string; value: string; sub?: string; color?: string }) {
@@ -77,7 +79,6 @@ function StrategyCard({ s, best, openHKD }: { s: StrategyStat; best: boolean; op
         </div>
       )}
 
-      {/* 假設每單 100 港幣 → 真金白銀結果 */}
       <div style={{ marginTop: 10, paddingTop: 8, borderTop: "1px solid var(--border)", fontSize: 12, color: "var(--muted)" }}>
         下注 {stake.toLocaleString()} · 已結算{" "}
         <span style={{ color: col(s.totalHKD), fontWeight: 500 }}>{hkd(s.totalHKD)}</span>
@@ -94,25 +95,40 @@ function StrategyCard({ s, best, openHKD }: { s: StrategyStat; best: boolean; op
 }
 
 export function TrackView({ track }: { track: TrackSummary | null }) {
+  const [sel, setSel] = useState("全部");
+
   if (!track || (track.closed === 0 && track.open === 0)) {
     return <div className="empty">尚無訊號 — 等第一次 ingest 跑完後開始累積。</div>;
   }
 
-  // 各策略目前進行中模擬單的浮動港幣（從 openList 加總）
+  const one = sel === "全部" ? null : track.byStrategy.find((x) => x.name === sel) ?? null;
+
   const floatByStrat: Record<string, number> = {};
   for (const o of track.openList ?? []) {
     floatByStrat[o.strategy] = (floatByStrat[o.strategy] ?? 0) + (o.pnlHKD ?? 0);
   }
-  const totalFloatHKD = Object.values(floatByStrat).reduce((a, b) => a + b, 0);
-  const openL = (track.openList ?? []).filter((o) => o.direction === "long").length;
-  const openS = (track.openList ?? []).length - openL;
-  const stakeClosed = track.closed * 100; // 已結算的總下注（每單 100 港幣）
-  const roi = stakeClosed > 0 ? (track.totalHKD / stakeClosed) * 100 : 0; // 報酬率
+
+  const visOpen = (track.openList ?? []).filter((o) => sel === "全部" || o.strategy === sel);
+  const visRecent = track.recent.filter((s) => sel === "全部" || s.strategy === sel);
+  const openL = visOpen.filter((o) => o.direction === "long").length;
+  const openS = visOpen.length - openL;
+  const floatSel = visOpen.reduce((a, o) => a + (o.pnlHKD ?? 0), 0);
+
+  const sbClosed = one ? one.closed : track.closed;
+  const sbHKD = one ? one.totalHKD : track.totalHKD;
+  const sbWins = one ? one.wins : track.wins;
+  const sbLosses = one ? one.losses : track.losses;
+  const sbWinRate = one ? one.winRate : track.winRate;
+  const sbDays = one ? one.days : track.days;
+  const sbTrades = one ? one.trades : track.trades;
+  const sbPerDay = one ? one.perDay : track.perDay;
+  const sbStake = sbClosed * 100;
+  const sbRoi = sbStake > 0 ? (sbHKD / sbStake) * 100 : 0;
+  const sbDecided = sbWins + sbLosses;
 
   const ranked = [...track.byStrategy].sort((a, b) => {
     const da = a.wins + a.losses;
     const db = b.wins + b.losses;
-    // 都還沒分出勝負 → 先排浮動金額多的（早期領先指標）
     if (da === 0 && db === 0)
       return (floatByStrat[b.name] ?? 0) - (floatByStrat[a.name] ?? 0) || b.closed - a.closed;
     if (da === 0) return 1;
@@ -120,59 +136,72 @@ export function TrackView({ track }: { track: TrackSummary | null }) {
     return b.totalHKD - a.totalHKD || b.winRate - a.winRate;
   });
   const bestName = ranked.find((s) => s.wins + s.losses > 0)?.name;
-  const decidedTotal = track.wins + track.losses;
+  const visCards = ranked.filter((s) => sel === "全部" || s.name === sel);
+
+  const tabs = ["全部", ...STRATEGIES.map((s) => s.name)];
 
   return (
     <div>
-      <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 4 }}>
+      <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 6 }}>
         <span style={{ fontSize: 16, fontWeight: 500 }}>策略擂台</span>
         <span style={{ color: "var(--muted)", fontSize: 12 }}>已結算 {track.closed} · 觀察中 {track.open}</span>
       </div>
 
-      {/* 總覽記分板：下了多少、賺賠多少、報酬率、勝率 */}
-      <div
-        style={{
-          display: "flex",
-          gap: 18,
-          flexWrap: "wrap",
-          padding: "12px 14px",
-          background: "rgba(255,255,255,0.03)",
-          border: "1px solid var(--border)",
-          borderRadius: 10,
-          margin: "8px 0 12px",
-        }}
-      >
-        <Stat label="總下注（已結算）" value={`${stakeClosed.toLocaleString()} HKD`} sub={`${track.closed} 筆 × 100`} />
-        <Stat label="總盈虧" value={hkd(track.totalHKD)} color={col(track.totalHKD)} />
-        <Stat label="報酬率" value={`${roi >= 0 ? "+" : ""}${roi.toFixed(1)}%`} color={col(roi)} />
-        <Stat
-          label="勝率"
-          value={decidedTotal ? pct(track.winRate) : "—"}
-          sub={`${track.wins}勝 / ${track.losses}敗`}
-          color={decidedTotal ? (track.winRate >= 0.5 ? "var(--bull)" : "var(--bear)") : undefined}
-        />
-        <Stat label="進行中浮動" value={hkd(totalFloatHKD)} color={col(totalFloatHKD)} sub={`${track.open} 筆 · ${(track.open * 100).toLocaleString()} HKD`} />
-        <Stat label="運行天數" value={`${track.days} 天`} sub={`共 ${track.trades} 單 · 平均 ${track.perDay} 單/日`} />
+      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 10 }}>
+        {tabs.map((name) => {
+          const active = sel === name;
+          const c = name === "全部" ? "#34e2e8" : STYLE_COLOR[STYLE[name]] ?? "var(--muted)";
+          return (
+            <button
+              key={name}
+              onClick={() => setSel(name)}
+              style={{
+                fontSize: 12,
+                padding: "3px 11px",
+                borderRadius: 999,
+                cursor: "pointer",
+                whiteSpace: "nowrap",
+                border: `1px solid ${active ? c : "var(--border)"}`,
+                background: active ? c : "transparent",
+                color: active ? "#0a0b14" : "var(--muted)",
+                fontWeight: active ? 600 : 400,
+              }}
+            >
+              {name}
+            </button>
+          );
+        })}
       </div>
 
-      <div className="muted-note" style={{ marginBottom: 12 }}>
-        {track.byStrategy.length} 套公式各自下模擬單、自動結算，<b>每張單投入 100 港幣</b>（<span style={{ color: STYLE_COLOR["順勢"] }}>順勢</span>追漲殺跌 vs <span style={{ color: STYLE_COLOR["逆勢"] }}>逆勢</span>抄底摸頂，故意對打看哪派賺）。
-        {decidedTotal === 0 ? "結算數要幾天才長出來，先看浮動。" : ""}
+      <div style={{ display: "flex", gap: 18, flexWrap: "wrap", padding: "12px 14px", background: "rgba(255,255,255,0.03)", border: "1px solid var(--border)", borderRadius: 10, margin: "0 0 12px" }}>
+        <Stat label={one ? `${sel}·下注` : "總下注（已結算）"} value={`${sbStake.toLocaleString()} HKD`} sub={`${sbClosed} 筆 × 100`} />
+        <Stat label="總盈虧" value={hkd(sbHKD)} color={col(sbHKD)} />
+        <Stat label="報酬率" value={`${sbRoi >= 0 ? "+" : ""}${sbRoi.toFixed(1)}%`} color={col(sbRoi)} />
+        <Stat label="勝率" value={sbDecided ? pct(sbWinRate) : "—"} sub={`${sbWins}勝 / ${sbLosses}敗`} color={sbDecided ? (sbWinRate >= 0.5 ? "var(--bull)" : "var(--bear)") : undefined} />
+        <Stat label="進行中浮動" value={hkd(floatSel)} color={col(floatSel)} sub={`${visOpen.length} 筆 · ${(visOpen.length * 100).toLocaleString()} HKD`} />
+        <Stat label="運行天數" value={`${sbDays} 天`} sub={`共 ${sbTrades} 單 · 平均 ${sbPerDay} 單/日`} />
       </div>
+
+      {sel === "全部" && (
+        <div className="muted-note" style={{ marginBottom: 12 }}>
+          {track.byStrategy.length} 套公式各自下模擬單、自動結算，<b>每張單投入 100 港幣</b>（<span style={{ color: STYLE_COLOR["順勢"] }}>順勢</span>追漲殺跌 vs <span style={{ color: STYLE_COLOR["逆勢"] }}>逆勢</span>抄底摸頂，故意對打看哪派賺）。
+          {track.wins + track.losses === 0 ? "結算數要幾天才長出來，先看浮動。" : ""}
+        </div>
+      )}
 
       <div className="grid">
-        {ranked.map((s) => (
+        {visCards.map((s) => (
           <StrategyCard key={s.name} s={s} best={s.name === bestName} openHKD={floatByStrat[s.name] ?? 0} />
         ))}
       </div>
 
-      {track.openList && track.openList.length > 0 && (
+      {visOpen.length > 0 && (
         <>
           <div style={{ color: "var(--muted)", fontSize: 13, margin: "16px 0 6px" }}>
-            進行中的模擬單（{track.openList.length} 筆 · <span style={{ color: "var(--bull)" }}>做多 {openL}</span> / <span style={{ color: "var(--bear)" }}>做空 {openS}</span>）— 每套策略各自押什麼、浮動損益（每單 100 港幣）
+            進行中的模擬單（{visOpen.length} 筆 · <span style={{ color: "var(--bull)" }}>做多 {openL}</span> / <span style={{ color: "var(--bear)" }}>做空 {openS}</span>）— 押什麼、開幾天、浮動損益（每單 100 港幣）
           </div>
-          {STRATEGIES.map((strat) => {
-            const orders = [...track.openList]
+          {STRATEGIES.filter((s) => sel === "全部" || s.name === sel).map((strat) => {
+            const orders = [...visOpen]
               .filter((o) => o.strategy === strat.name)
               .sort((a, b) => (b.pnlHKD ?? -99) - (a.pnlHKD ?? -99));
             if (!orders.length) return null;
@@ -213,11 +242,11 @@ export function TrackView({ track }: { track: TrackSummary | null }) {
         </>
       )}
 
-      {track.recent.length > 0 && (
+      {visRecent.length > 0 && (
         <>
           <div style={{ color: "var(--muted)", fontSize: 13, margin: "16px 0 8px" }}>最近結算</div>
           <ul className="news">
-            {track.recent.map((s) => {
+            {visRecent.map((s) => {
               const st = STATUS[s.status];
               return (
                 <li key={s.id}>
