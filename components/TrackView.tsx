@@ -140,6 +140,19 @@ export function TrackView({ track }: { track: TrackSummary | null }) {
 
   const tabs = ["全部", ...STRATEGIES.map((s) => s.name)];
 
+  // 今日可跟單：挑一套（選取的 or 推薦最佳），列出「今天剛出、現價還貼近進場價」的訊號
+  const qualified = [...track.byStrategy]
+    .filter((s) => s.wins + s.losses >= 15 && s.winRate >= 0.55 && s.totalHKD > 0)
+    .sort((a, b) => b.totalHKD - a.totalHKD);
+  const followStat = one ?? qualified[0] ?? null;
+  const followName = followStat?.name ?? null;
+  const followRoi = followStat && followStat.closed > 0 ? (followStat.totalHKD / (followStat.closed * 100)) * 100 : 0;
+  const actionable = followName
+    ? (track.openList ?? [])
+        .filter((o) => o.strategy === followName && (o.ageDays ?? 9) === 0 && Math.abs(o.unrealizedR ?? 9) < 0.5)
+        .sort((a, b) => Math.abs(a.unrealizedR ?? 9) - Math.abs(b.unrealizedR ?? 9))
+    : [];
+
   return (
     <div>
       <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 6 }}>
@@ -172,6 +185,41 @@ export function TrackView({ track }: { track: TrackSummary | null }) {
           );
         })}
       </div>
+
+      {/* 🎯 今日可跟單：把「哪套準」直接變成「今天照它買什麼」 */}
+      {followStat ? (
+        <div style={{ border: "1px solid rgba(52,226,232,0.4)", borderRadius: 10, padding: "10px 14px", margin: "0 0 12px", background: "rgba(52,226,232,0.06)" }}>
+          <div style={{ fontSize: 13.5, fontWeight: 600, marginBottom: actionable.length ? 6 : 4 }}>
+            🎯 今日可跟單 — 跟「{followName}」
+            {one ? "" : <span style={{ color: "#34e2e8" }}>（建議：目前最佳）</span>}
+            <span style={{ color: "var(--muted)", fontWeight: 400, fontSize: 12 }}>　勝率 {pct(followStat.winRate)} · 報酬率 {followRoi >= 0 ? "+" : ""}{followRoi.toFixed(1)}% · {followStat.trades} 單</span>
+          </div>
+          {actionable.length ? (
+            <ul className="news">
+              {actionable.map((o) => (
+                <li key={o.id}>
+                  <div className="line">
+                    <span className="tag" style={{ background: "#1f2435", color: o.direction === "long" ? "var(--bull)" : "var(--bear)" }}>{DIRLABEL[o.direction]}</span>
+                    <span className="head">${o.ticker}</span>
+                    <span style={{ fontSize: 12, color: "var(--muted)" }}>進場 ~{o.entry} · 止損 {o.stop} · 止盈 {o.target}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div style={{ fontSize: 12.5, color: "var(--muted)" }}>這套今天暫無「剛出、現價還貼近進場」的新訊號 — 等下一個，或點其他頁籤看別套。</div>
+          )}
+          <div style={{ fontSize: 11, color: "var(--muted)", marginTop: 6 }}>
+            只列今天剛觸發、現價還貼近進場價的訊號。你在券商照這價位進場、設好止損止盈即可（工具不自動下單）。
+          </div>
+        </div>
+      ) : (
+        sel === "全部" && (
+          <div className="muted-note" style={{ marginBottom: 12 }}>
+            🎯 還沒有一套累積到夠格「建議跟隨」（門檻：≥15 筆、勝率 ≥55%、且賺錢）。先讓它多跑幾天，或點上面頁籤自己挑一套跟。
+          </div>
+        )
+      )}
 
       <div style={{ display: "flex", gap: 18, flexWrap: "wrap", padding: "12px 14px", background: "rgba(255,255,255,0.03)", border: "1px solid var(--border)", borderRadius: 10, margin: "0 0 12px" }}>
         <Stat label={one ? `${sel}·下注` : "總下注（已結算）"} value={`${sbStake.toLocaleString()} HKD`} sub={`${sbClosed} 筆 × 100`} />
