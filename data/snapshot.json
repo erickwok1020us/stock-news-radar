@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T16:23:42.770Z",
+  "generatedAt": "2026-07-13T18:12:46.178Z",
   "account": {
     "size": 10000,
     "riskPct": 0.01,
@@ -9,46 +9,44 @@
     {
       "ticker": "SPCX",
       "quote": {
-        "current": 139.71,
-        "changePct": -3.8472,
+        "current": 137.16,
+        "changePct": -5.6022,
         "high": 144.92,
-        "low": 137.68,
+        "low": 137.08,
         "prevClose": 145.3
       },
       "signal": {
-        "sentiment": "bearish",
-        "score": -0.24,
+        "sentiment": "neutral",
+        "score": -0.13,
         "bullCount": 3,
-        "bearCount": 6
+        "bearCount": 4
       },
       "social": {
-        "bullish": 8,
-        "bearish": 6
+        "bullish": 4,
+        "bearish": 9
       },
       "stats": null,
       "day": {
         "direction": "long",
         "entryZone": [
-          137.68,
-          139.85
+          137.08,
+          139.43
         ],
         "breakout": 144.92,
-        "stop": 134.06,
-        "target": 148.18,
+        "stop": 133.16,
+        "target": 148.45,
         "rr": 2,
-        "riskPerShare": 4.71,
-        "basis": "做多：回踩支撐 137.68 進場 · 止損=支撐下 0.5×ATR(7.24) · 止盈=風報比 2:1 · 突破 144.92 為另一進場參考"
+        "riskPerShare": 5.1,
+        "basis": "做多：回踩支撐 137.08 進場 · 止損=支撐下 0.5×ATR(7.84) · 止盈=風報比 2:1 · 突破 144.92 為另一進場參考"
       },
       "long": null,
       "timing": {
         "direction": "none",
-        "score": 0.17,
+        "score": 0,
         "label": "多空不明 → 觀望",
-        "factors": [
-          "新聞偏空"
-        ]
+        "factors": []
       },
-      "heat": 37,
+      "heat": 41,
       "fundamentals": {
         "marketCap": 1927713.512701329,
         "industry": "Telecommunication",
@@ -67,6 +65,48 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140887195",
+          "ticker": "SPCX",
+          "headline": "OpenAI’s Sam Altman criticizes Elon Musk’s space data center plans amid public feud",
+          "summary": "OpenAI (Unlisted:OPAI) CEO Sam Altman has criticized Elon Musk’s plans for space-based data centers, accusing the SpaceX Corp (NASDAQ:SPCX) and xAI leader of promoting an unproven technology to public market investors as the two technology executives continued their long-running dispute. The...",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=f55caad635fb963faec50357fcaaf0aac92f5faa2178e540d20931d3e7ef6641",
+          "datetime": 1783956300,
+          "sentiment": "bearish",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "競爭對手批評馬斯克計畫，短期負面。"
+        },
+        {
+          "id": "finnhub-140886897",
+          "ticker": "SPCX",
+          "headline": "As SpaceX stock dips near IPO price, bulls like BofA's Epstein say buy on 'launch leadership'",
+          "summary": "Another analyst on Wall Street is getting on board the SpaceX trade, just as the stock hits a weak moment.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=4435af8c387da3b1901e9f1ccc6d1209eabd6a49ad435ee53b61b6791bc7cef8",
+          "datetime": 1783954947,
+          "sentiment": "bullish",
+          "confidence": 0.6,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "分析師建議買入，因發射領導地位。"
+        },
+        {
+          "id": "finnhub-140887202",
+          "ticker": "SPCX",
+          "headline": "SPCX Stock Slides After ‘Leading Competitor’ China's Reusable Rocket Launch – So, Why Is Bernstein Still Bullish?",
+          "summary": "Bernstein named China as SpaceX’s \"leading competitor\" following Beijing's first successful landing of a reusable rocket booster.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=f581601ad26a3cd5c78306cd179bf4d9c7b6ca6305892314e46ddfdaea721787",
+          "datetime": 1783952210,
+          "sentiment": "neutral",
+          "confidence": 0.5,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "中國競爭者成功發射，但分析師仍看好。"
+        },
         {
           "id": "finnhub-140885937",
           "ticker": "SPCX",
@@ -96,6 +136,76 @@
           "reason": "分析師看好，目標價高。"
         },
         {
+          "id": "finnhub-140887205",
+          "ticker": "SPCX",
+          "headline": "SpaceX Stock Is So Complex, It Took 3 Analysts to Call It a Buy",
+          "summary": "SpaceX’s ambitions span many industries, which is creating a problem for Wall Street brokers covering the stock.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=9a205dc71218eeecc62213bf426317d1c770b3432f14929dd2f5520ad8e7f355",
+          "datetime": 1783950540,
+          "sentiment": "bullish",
+          "confidence": 0.6,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "多位分析師看好，但公司業務複雜。"
+        },
+        {
+          "id": "finnhub-140888175",
+          "ticker": "SPCX",
+          "headline": "SpaceX: Five Reasons I'm Bearish At A $1.9 Trillion Valuation",
+          "summary": "SpaceX valuation at ~99x TTM revenue: Starlink cash, AI-led 2030 growth, heavy CapEx, and IPO lock-up supply risksâclick to read the analysis now.",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=3097a0a338dc63f5db4c73114fa24c876ebed65d38f527488f4b370d3df513b1",
+          "datetime": 1783949601,
+          "sentiment": "bearish",
+          "confidence": 0.8,
+          "credibility": "rumor",
+          "longTermImpact": "thesis",
+          "reason": "估值過高、資本支出大，分析師看空。"
+        },
+        {
+          "id": "finnhub-140888071",
+          "ticker": "SPCX",
+          "headline": "Q2 2026 Earnings Preview: Navigating High Expectations, Tariff Rebates, And War Uncertainties",
+          "summary": "Wall Street analysts expect Q2 S&P 500 profit growth of 23.6%, which could mark the 7th consecutive quarter of double-digit earnings growth.",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=2a923c9c17553a6147f5b8adec8029a7de9f753ad6111571f496accf2599344a",
+          "datetime": 1783949160,
+          "sentiment": "neutral",
+          "confidence": 0.5,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "華爾街預期標普500獲利成長，非個股。"
+        },
+        {
+          "id": "finnhub-140887820",
+          "ticker": "SPCX",
+          "headline": "Wall Street Lunch: Trump Demands 20% Hormuz Protection Fee",
+          "summary": "President Donald Trump escalated U.S. involvement in the Strait of Hormuz, announcing a 20% reimbursement fee on all cargo shipped through the critical waterway.",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=58b1cd9b3542b8cdd7550625160fac0023b84cfbefa4efec68022b6cc598a33f",
+          "datetime": 1783948320,
+          "sentiment": "neutral",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "川普宣布荷姆茲海峽保護費，非個股。"
+        },
+        {
+          "id": "finnhub-140887918",
+          "ticker": "SPCX",
+          "headline": "Forget Interest Rates: Bank Earnings Could Reveal the Next Catalyst for Financial ETFs",
+          "summary": "Investors are shifting focus from interest rates to strong trading, investment banking, IPO activity, and commercial lending as bank stocks&#39; growth engines.",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=5484b756e44a0fd34a199f7827842d1e021b63629d1009a5e856b3cf8a8990d4",
+          "datetime": 1783948117,
+          "sentiment": "neutral",
+          "confidence": 0.6,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "投資者關注銀行財報，非個股。"
+        },
+        {
           "id": "finnhub-140886071",
           "ticker": "SPCX",
           "headline": "SpaceX Drops 35% From Peak Despite $75 Billion Record IPO",
@@ -122,128 +232,16 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "ETF投資策略調整，中性影響。"
-        },
-        {
-          "id": "finnhub-140886073",
-          "ticker": "SPCX",
-          "headline": "SpaceX Gets All the Attention, but These 3 Under-the-Radar Defense Stocks Have Stronger Fundamentals",
-          "summary": "SpaceX stock is the most popular kid in school today -- but these three defense stocks work harder for your money.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=bbc8340b8d367915df46b626eec42d905563d9018e453f5a521528852f3dd83e",
-          "datetime": 1783944300,
-          "sentiment": "neutral",
-          "confidence": 0.6,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "比較性分析，推薦其他股票。"
-        },
-        {
-          "id": "finnhub-140885110",
-          "ticker": "SPCX",
-          "headline": "SpaceX (SPCX) Faces Brand Trust Questions After X Accounts Push SCATMAN Scam",
-          "summary": "Hacker gains control of SpaceXAI and Starlink X accounts to promote a SCATMAN token rug pull scam. Fraudulent posts use official branding to drive investors into a crypto token before funds are siphoned away. Control of the accounts is eventually restored, but questions emerge around social media security and oversight. Incident affects digital trust in Space Exploration Technologies, NasdaqGS:SPCX, rather than core space or satellite operations. Space Exploration Technologies,...",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=a1f3f60e5d67e741e59c8ea8516a51bebbfef5b2e85a70c2899fc25b289c4a92",
-          "datetime": 1783941166,
-          "sentiment": "bearish",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "帳號被駭推詐騙，損害品牌信任。"
-        },
-        {
-          "id": "finnhub-140885112",
-          "ticker": "SPCX",
-          "headline": "Gary Black Thinks SpaceX Stock Could Soon Trade Below Its IPO Price—Here's Why",
-          "summary": "Investor Gary Black of The Future Fund LLC said on Monday that Elon Musk-led Space Exploration Technologies Corp. (NASDAQ:SPCX) shares could drop below the IPO price of $135/share in the coming days. SPCX’s Share Lock-Up In a post on X, the investor said that the company’s shares will likely fall below “its $135 IPO price as 20% of locked shares become free in early-August.” Read Also: Elon Musk Says SpaceX Will Fly Orbital Data Centers Next Year—Jim Chanos Isn't Buying It The investor is pointi",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=c95a379c39305ece60ec797f2a3c61a4c1b41b5c008e67b926d090a34754141c",
-          "datetime": 1783939726,
-          "sentiment": "bearish",
-          "confidence": 0.7,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "投資者預期解鎖後股價將下跌。"
-        },
-        {
-          "id": "finnhub-140884498",
-          "ticker": "SPCX",
-          "headline": "Is Space Exploration (SPCX) the Best Space Technology Stock To Buy Now?",
-          "summary": "Space Exploration Technologies Corp. (NASDAQ:SPCX) is one of the Best Space Technology Stocks to Buy Now. Wall Street has a positive opinion about Space Exploration Technologies Corp. (NASDAQ:SPCX). Recently, on July 7, Deutsche Bank initiated coverage of the stock with a Buy rating and a $225 price target. On the same day, Cantor Fitzgerald also […]",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=4aabf39d30b24f00eb32e96ade04084cc0d4f63f9a332d5cf4602d2bb3d1762d",
-          "datetime": 1783936807,
-          "sentiment": "bullish",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "德意志銀行等給予買入評級。"
-        },
-        {
-          "id": "finnhub-140885535",
-          "ticker": "SPCX",
-          "headline": "You Shouldn't Call SpaceX An Investment",
-          "summary": "SpaceX aka Space Exploration Technologies Corp. IPO analysis: Starlink profits canât justify 100x+ P/S and rising losses. Click for more on SPCX.",
-          "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=195cbcbe2f3b3e8bc290329938674521bfdde8a36d980f3b0f1df831279219f4",
-          "datetime": 1783935000,
-          "sentiment": "bearish",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "高估值與虧損擴大，不適合作為投資。"
-        },
-        {
-          "id": "finnhub-140885379",
-          "ticker": "SPCX",
-          "headline": "Momentus: Future Space Infrastructure Exposure",
-          "summary": "Momentus (MNTS) stock buy case: water-based MET propulsion moat, strong cash & debt-free balance sheet, and government upsideâread the thesis now.",
-          "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=c30e13d293015b7ca212a984d3c5cda199e72746e4514345906afd33a99b23e3",
-          "datetime": 1783932993,
-          "sentiment": "neutral",
-          "confidence": 0.5,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "新聞關於其他公司，與SPCX無關。"
-        },
-        {
-          "id": "finnhub-140884353",
-          "ticker": "SPCX",
-          "headline": "Zacks Investment Ideas feature highlights: SpaceX, Alibaba's and Nvidia",
-          "summary": "SpaceX, Alibaba's and Nvidia have been highlighted in this Investment Ideas article.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=5ee97ee8e8484a53dc97be1a22cd6e02def1126839a11552be38c1e8f7e10e67",
-          "datetime": 1783929540,
-          "sentiment": "bullish",
-          "confidence": 0.6,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "被投資理念文章提及，可能引發關注。"
-        },
-        {
-          "id": "finnhub-140883894",
-          "ticker": "SPCX",
-          "headline": "How Low Can SpaceX Stock Go?",
-          "summary": "Elon Musk's space transportation company has already lost $1 trillion of its peak value.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=7f4cd0fdcbb549be2467e0b35dc64dc10ada3637d1a3689547e539407419ddc4",
-          "datetime": 1783928880,
-          "sentiment": "bearish",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "股價已大幅下跌，未來走勢仍不明。"
         }
       ]
     },
     {
       "ticker": "NVDA",
       "quote": {
-        "current": 206.15,
-        "changePct": -2.2801,
+        "current": 203.98,
+        "changePct": -3.3087,
         "high": 210.57,
-        "low": 205.8,
+        "low": 203.47,
         "prevClose": 210.96
       },
       "signal": {
@@ -253,49 +251,49 @@
         "bearCount": 3
       },
       "social": {
-        "bullish": 7,
-        "bearish": 1
+        "bullish": 11,
+        "bearish": 3
       },
       "stats": {
-        "atr14": 6.722855704171317,
-        "sma20": 202.0042495727539,
-        "sma50": 209.13250061035157,
-        "sma200": 191.807925491333,
+        "atr14": 6.889284406389509,
+        "sma20": 201.89949951171874,
+        "sma50": 209.0906005859375,
+        "sma200": 191.7974504852295,
         "swingHigh": 213.99000549316406,
         "swingLow": 189.8000030517578,
         "high52": 236.5399932861328,
         "low52": 162.02000427246094,
-        "avgVol20": 141405903.75,
-        "lastVol": 50384775,
-        "rsi14": 51.97263249223332,
+        "avgVol20": 142530834.8,
+        "lastVol": 72883396,
+        "rsi14": 50.141886077606536,
         "macd": {
-          "macd": -1.2794226666512714,
-          "signal": -2.6384622697152285,
-          "hist": 1.359039603063957
+          "macd": -1.4465452711518196,
+          "signal": -2.6718867906153383,
+          "hist": 1.2253415194635187
         }
       },
       "day": {
         "direction": "long",
         "entryZone": [
-          205.8,
-          207.82
+          203.47,
+          205.54
         ],
         "breakout": 210.57,
-        "stop": 202.44,
-        "target": 215.55,
+        "stop": 200.03,
+        "target": 213.46,
         "rr": 2,
-        "riskPerShare": 4.37,
-        "basis": "做多：回踩支撐 205.8 進場 · 止損=支撐下 0.5×ATR(6.72) · 止盈=風報比 2:1 · 突破 210.57 為另一進場參考"
+        "riskPerShare": 4.48,
+        "basis": "做多：回踩支撐 203.47 進場 · 止損=支撐下 0.5×ATR(6.89) · 止盈=風報比 2:1 · 突破 210.57 為另一進場參考"
       },
       "long": {
         "accumulateZone": [
-          186.05,
-          201.4
+          186.04,
+          201.39
         ],
         "trimZone": 236.54,
-        "reviewTrigger": 191.81,
+        "reviewTrigger": 191.8,
         "stretched": false,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 236.54 · 「止損」=收盤跌破 200 日線 191.81 或論點改變"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 236.54 · 「止損」=收盤跌破 200 日線 191.8 或論點改變"
       },
       "timing": {
         "direction": "none",
@@ -303,12 +301,12 @@
         "label": "多空不明 → 觀望",
         "factors": [
           "偏空",
-          "RSI 52 中性",
+          "RSI 50.1 中性",
           "MACD↑",
           "量縮"
         ]
       },
-      "heat": 38,
+      "heat": 46,
       "fundamentals": {
         "marketCap": 5105231.969267338,
         "industry": "Semiconductors",
@@ -500,10 +498,10 @@
     {
       "ticker": "TSLA",
       "quote": {
-        "current": 394.67,
-        "changePct": -3.2102,
+        "current": 392.78,
+        "changePct": -3.6737,
         "high": 405.57,
-        "low": 392.7401,
+        "low": 392.5,
         "prevClose": 407.76
       },
       "signal": {
@@ -513,44 +511,44 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 5,
-        "bearish": 5
+        "bullish": 10,
+        "bearish": 4
       },
       "stats": {
-        "atr14": 19.7928466796875,
-        "sma20": 400.6377456665039,
-        "sma50": 409.6282989501953,
-        "sma200": 417.9826249694824,
+        "atr14": 19.80999755859375,
+        "sma20": 400.5644958496094,
+        "sma50": 409.5989990234375,
+        "sma200": 417.975299987793,
         "swingHigh": 432.8599853515625,
         "swingLow": 368.6000061035156,
         "high52": 498.8299865722656,
         "low52": 297.82000732421875,
-        "avgVol20": 44969326.55,
-        "lastVol": 16405631,
-        "rsi14": 47.113921288684196,
+        "avgVol20": 45254389,
+        "lastVol": 22106880,
+        "rsi14": 46.703602740749965,
         "macd": {
-          "macd": -0.8875771787211875,
-          "signal": -1.2459136855800081,
-          "hist": 0.3583365068588207
+          "macd": -1.0044429834532025,
+          "signal": -1.2692868465264113,
+          "hist": 0.26484386307320884
         }
       },
       "day": {
         "direction": "long",
         "entryZone": [
-          392.74,
-          398.68
+          392.5,
+          398.44
         ],
         "breakout": 405.57,
-        "stop": 382.84,
-        "target": 421.44,
+        "stop": 382.6,
+        "target": 421.22,
         "rr": 2,
-        "riskPerShare": 12.87,
-        "basis": "做多：回踩支撐 392.74 進場 · 止損=支撐下 0.5×ATR(19.79) · 止盈=風報比 2:1 · 突破 405.57 為另一進場參考"
+        "riskPerShare": 12.88,
+        "basis": "做多：回踩支撐 392.5 進場 · 止損=支撐下 0.5×ATR(19.81) · 止盈=風報比 2:1 · 突破 405.57 為另一進場參考"
       },
       "long": {
         "accumulateZone": [
-          394.67,
-          438.88
+          392.78,
+          438.87
         ],
         "trimZone": 498.83,
         "reviewTrigger": 417.98,
@@ -564,12 +562,12 @@
         "factors": [
           "順勢↓",
           "新聞偏多",
-          "RSI 47.1 中性",
+          "RSI 46.7 中性",
           "MACD↑",
           "量縮"
         ]
       },
-      "heat": 49,
+      "heat": 53,
       "fundamentals": {
         "marketCap": 1531433.8225332533,
         "industry": "Automobiles",
@@ -761,52 +759,52 @@
     {
       "ticker": "AAPL",
       "quote": {
-        "current": 317.47,
-        "changePct": 0.6818,
+        "current": 316.23,
+        "changePct": 0.2886,
         "high": 323.45,
-        "low": 316.09,
+        "low": 315.78,
         "prevClose": 315.32
       },
       "signal": {
-        "sentiment": "bullish",
-        "score": 0.33,
-        "bullCount": 6,
-        "bearCount": 1
+        "sentiment": "neutral",
+        "score": 0.13,
+        "bullCount": 4,
+        "bearCount": 3
       },
       "social": {
-        "bullish": 4,
-        "bearish": 2
+        "bullish": 7,
+        "bearish": 4
       },
       "stats": {
         "atr14": 9.122861589704241,
-        "sma20": 299.1760009765625,
-        "sma50": 298.70680053710936,
-        "sma200": 272.76299949645994,
+        "sma20": 299.1267517089844,
+        "sma50": 298.6871008300781,
+        "sma200": 272.75807456970216,
         "swingHigh": 316.9100036621094,
         "swingLow": 273.75,
         "high52": 323.45001220703125,
         "low52": 201.5,
-        "avgVol20": 63391248.1,
-        "lastVol": 19325262,
-        "rsi14": 64.02616912192786,
+        "avgVol20": 63682652.9,
+        "lastVol": 25153358,
+        "rsi14": 63.42276441105081,
         "macd": {
-          "macd": 5.221954984723993,
-          "signal": 2.5596063371732347,
-          "hist": 2.6623486475507585
+          "macd": 5.14338065468479,
+          "signal": 2.543891471165394,
+          "hist": 2.5994891835193963
         }
       },
       "day": {
         "direction": "long",
         "entryZone": [
-          316.09,
-          318.83
+          315.78,
+          318.52
         ],
-        "breakout": 323.45,
-        "stop": 311.53,
-        "target": 329.32,
+        "breakout": 316.91,
+        "stop": 311.22,
+        "target": 329.01,
         "rr": 2,
         "riskPerShare": 5.93,
-        "basis": "做多：回踩支撐 316.09 進場 · 止損=支撐下 0.5×ATR(9.12) · 止盈=風報比 2:1 · 突破 323.45 為另一進場參考"
+        "basis": "做多：回踩支撐 315.78 進場 · 止損=支撐下 0.5×ATR(9.12) · 止盈=風報比 2:1 · 突破 316.91 為另一進場參考"
       },
       "long": {
         "accumulateZone": [
@@ -820,17 +818,16 @@
       },
       "timing": {
         "direction": "long",
-        "score": 0.67,
+        "score": 0.5,
         "label": "偏好做多（順勢、未過熱時進場）",
         "factors": [
           "順勢↑",
-          "新聞偏多",
-          "RSI 64 中性",
+          "RSI 63.4 中性",
           "MACD↑",
           "量縮"
         ]
       },
-      "heat": 31,
+      "heat": 27,
       "fundamentals": {
         "marketCap": 4631217.25221419,
         "industry": "Technology",
@@ -849,6 +846,90 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140888278",
+          "ticker": "AAPL",
+          "headline": "The Vanguard S&P 500 ETF Is Unstoppable, but This 1 Investment Could Be Safer Right Now",
+          "summary": "It's time to start thinking about ways to diversify away from tech concentration while maintaining equity market upside.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=6b78ee3d2e6a897c80c72ae5748bf557d649b5142135e7ca9f9552a9aa09f391",
+          "datetime": 1783965000,
+          "sentiment": "bearish",
+          "confidence": 0.6,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "建議分散科技股，可能對蘋果不利。"
+        },
+        {
+          "id": "finnhub-140888285",
+          "ticker": "AAPL",
+          "headline": "TSMC Reports 36% Sales Growth as AI Demand Stays Strong",
+          "summary": "Quarterly revenue matched estimates as investors await earnings and 2026 capital spending guidance.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=dcb35c4f03d83fd8b86037451e34aad16ce57c33b0727dc9735cf91c7fd2c9e8",
+          "datetime": 1783963085,
+          "sentiment": "bullish",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "台積電銷售成長強勁，AI需求持續。"
+        },
+        {
+          "id": "finnhub-140888304",
+          "ticker": "AAPL",
+          "headline": "Apple, Samsung Gain as Smartphone Market Falls",
+          "summary": "Market share grows despite global shipment decline in Q2",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=b6795115173da816299bb151ff65955c7eabd0e3d07ff866ad6b0e874ba28bc2",
+          "datetime": 1783962265,
+          "sentiment": "bullish",
+          "confidence": 0.8,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "智慧手機市場下滑，蘋果市佔率增加。"
+        },
+        {
+          "id": "finnhub-140888288",
+          "ticker": "AAPL",
+          "headline": "Robinhood Chain's Early Momentum Is Being Driven By Meme Coins, Not Tokenized Stocks",
+          "summary": "Robinhood Chain traders are reaching for Tendies over Apple.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=e5a58d95a89f49dff7e3b52310c460b40e63a9138e6a0d33ef4ae2aa62cf0ea9",
+          "datetime": 1783961976,
+          "sentiment": "neutral",
+          "confidence": 0.6,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "Robinhood用戶偏好迷因幣，非蘋果股票。"
+        },
+        {
+          "id": "finnhub-140888306",
+          "ticker": "AAPL",
+          "headline": "Stock Market Today, July 13: Energy Stocks Cushion Dow as Tech Slides on Geopolitical Tensions",
+          "summary": "Energy names help cushion the Dow as oil jumps on U.S.–Iran tensions and investors brace for key earnings and inflation data, today, July 13, 2026.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=57bedb73d41617dfb4ded24cd68d45f832ba1061ba4289dba14cb6cdb4b41c61",
+          "datetime": 1783960490,
+          "sentiment": "bearish",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "地緣政治緊張導致科技股下跌。"
+        },
+        {
+          "id": "finnhub-140888307",
+          "ticker": "AAPL",
+          "headline": "Retail investors are cashing out of Apple, Tesla, and chip stocks: Chart of the Day",
+          "summary": "Retail is selling former leaders, but record market breadth shows the broader rally is still holding up.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=da468894f2ff2dab6984da8eff68e602aee15e6c6c3301ae4a7d3e76ec51f518",
+          "datetime": 1783959844,
+          "sentiment": "bearish",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "散戶投資者拋售蘋果股票。"
+        },
         {
           "id": "finnhub-140886704",
           "ticker": "AAPL",
@@ -906,6 +987,20 @@
           "reason": "蘋果控告OpenAI竊取機密，馬斯克也加入戰局。"
         },
         {
+          "id": "finnhub-140888274",
+          "ticker": "AAPL",
+          "headline": "5 Things That Should Happen Before The Next Bear Market",
+          "summary": "",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=683d63d07bef6fdf139c8229dedc266404acffc392a6039bf8337bb09e2a2efe",
+          "datetime": 1783950973,
+          "sentiment": "neutral",
+          "confidence": 0.5,
+          "credibility": "unknown",
+          "longTermImpact": "noise",
+          "reason": "無具體內容，無法判斷。"
+        },
+        {
           "id": "finnhub-140885679",
           "ticker": "AAPL",
           "headline": "Musk and Altman Clash Again",
@@ -918,142 +1013,44 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "馬斯克與奧特曼再次衝突，與蘋果股價無直接關聯。"
-        },
-        {
-          "id": "finnhub-140885680",
-          "ticker": "AAPL",
-          "headline": "Apple Sues OpenAI Over Trade Secrets",
-          "summary": "The lawsuit adds fresh pressure to the companies' AI partnership and hardware ambitions.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=e6788156cbbc2c50692f278bf377ff8bf866f3c3e9bf39e9d09d1f44b5b7c59c",
-          "datetime": 1783949308,
-          "sentiment": "neutral",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "蘋果控告OpenAI竊取商業機密，影響AI合作。"
-        },
-        {
-          "id": "finnhub-140885681",
-          "ticker": "AAPL",
-          "headline": "Apple stock target raised as Citi sees continued market share gains",
-          "summary": "Investing.com -- Citi has increased its price target on Apple (NASDAQ: AAPL) to $365 and maintained its Buy rating on the stock in a note on Monday, citing the company's ability to gain market share in a challenging devices environment and its capacity to implement selective price increases to protect margins.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=4bbadf981b22711482de4257819b0f8426f5123d94ff140d497e2ee5c7db22ae",
-          "datetime": 1783948616,
-          "sentiment": "bullish",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "花旗上調蘋果目標價，看好市佔率與利潤。"
-        },
-        {
-          "id": "finnhub-140885682",
-          "ticker": "AAPL",
-          "headline": "Prediction: Apple Stock Will Crush the S&P 500 in Its New CEO’s First Year",
-          "summary": "John Ternus is stepping into the Apple CEO role at a moment that could define the company's next decade, but whether his product instincts and a bold on-device AI strategy are enough to outrun the broader market is far from a settled question.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=cae853d6bd0aa477fd02c6d5d9a9e58fdfcf076ddd956b0c6d6b17af350b3665",
-          "datetime": 1783948349,
-          "sentiment": "bullish",
-          "confidence": 0.7,
-          "credibility": "rumor",
-          "longTermImpact": "thesis",
-          "reason": "預測蘋果新CEO將帶領股價跑贏大盤。"
-        },
-        {
-          "id": "finnhub-140885684",
-          "ticker": "AAPL",
-          "headline": "Global smartphone shipments in second quarter hit lowest in 13 years on memory chip crunch",
-          "summary": "Global smartphone shipments fell 11% in the second quarter to their lowest level ‌for the period since 2013, as a prolonged ‌memory chip shortage drove up handset prices and dampened demand, according ​to early estimates from Counterpoint Research. Apple bucked the trend with a 3% rise in shipments, taking its global market share to a record 20% in the quarter ‌on resilient demand for ⁠its premium iPhone lineup and keeping prices unchanged. However, analysts expect price increases in ⁠the coming months.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=69959beae395994cbefaba1c75f47e7c1fa59ca37eee574b7d19785270b9f72a",
-          "datetime": 1783946974,
-          "sentiment": "bullish",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "蘋果逆勢成長，市佔率創紀錄。"
-        },
-        {
-          "id": "finnhub-140885685",
-          "ticker": "AAPL",
-          "headline": "Musk, Altman Clash Again After Apple Files OpenAI Trade Secrets Lawsuit",
-          "summary": "Public dispute escalates as Apple sues OpenAI and Musk renews criticism while defending SpaceX's AI infrastructure plans.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=0d287412d179335246b3ce1c525caaa5e5bbd90f763c8445a2f3686365131992",
-          "datetime": 1783946223,
-          "sentiment": "neutral",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "蘋果控告OpenAI竊取機密，馬斯克也加入戰局。"
-        },
-        {
-          "id": "finnhub-140885686",
-          "ticker": "AAPL",
-          "headline": "Apple Adds $600 Billion as Investors Rotate Away From AI Spending Concerns",
-          "summary": "Apple's 15% rebound reflects investor preference for stronger cash flow over AI infrastructure spending.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=25f5209a21e23ef4ec00129d77e4fc94a6a0bca05040d27d9993397f17ae3136",
-          "datetime": 1783945612,
-          "sentiment": "bullish",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "蘋果市值增加，投資者偏好現金流。"
-        },
-        {
-          "id": "finnhub-140886725",
-          "ticker": "AAPL",
-          "headline": "Nasdaq falls, Dow slips as oil prices rebound on fresh US-Iran fighting",
-          "summary": "Investors will balance renewed geopolitical tensions against a busy week for inflation data and the start of bank earnings season",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=22f4e3f8614c8fd65472329bf61bc6fb2ca9b73665c8f8fcaa71ab2df3ad82bd",
-          "datetime": 1783945440,
-          "sentiment": "bearish",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "那斯達克下跌，受地緣政治影響。"
         }
       ]
     },
     {
       "ticker": "AMD",
       "quote": {
-        "current": 541.5,
-        "changePct": -2.9379,
+        "current": 537.41,
+        "changePct": -3.671,
         "high": 551.87,
         "low": 526.92,
         "prevClose": 557.89
       },
       "signal": {
-        "sentiment": "neutral",
-        "score": -0.05,
+        "sentiment": "bearish",
+        "score": -0.17,
         "bullCount": 4,
-        "bearCount": 4
+        "bearCount": 6
       },
       "social": {
-        "bullish": 7,
-        "bearish": 1
+        "bullish": 8,
+        "bearish": 2
       },
       "stats": {
         "atr14": 38.405748639787944,
-        "sma20": 533.5809951782227,
-        "sma50": 485.9733996582031,
-        "sma200": 289.56424964904784,
+        "sma20": 533.3809951782226,
+        "sma50": 485.8933996582031,
+        "sma200": 289.54424964904786,
         "swingHigh": 584.72998046875,
         "swingLow": 458.0199890136719,
         "high52": 584.72998046875,
         "low52": 141.89999389648438,
-        "avgVol20": 29347376.85,
-        "lastVol": 11341337,
-        "rsi14": 54.24663710243292,
+        "avgVol20": 29515012.35,
+        "lastVol": 14694047,
+        "rsi14": 53.536436852380696,
         "macd": {
-          "macd": 17.55974899309365,
-          "signal": 20.715337954626964,
-          "hist": -3.155588961533315
+          "macd": 17.2406606740052,
+          "signal": 20.651520290809273,
+          "hist": -3.410859616804075
         }
       },
       "day": {
@@ -1071,26 +1068,27 @@
       },
       "long": {
         "accumulateZone": [
-          280.88,
-          304.04
+          280.86,
+          304.02
         ],
         "trimZone": 584.73,
-        "reviewTrigger": 289.56,
+        "reviewTrigger": 289.54,
         "stretched": true,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 584.73 · 「止損」=收盤跌破 200 日線 289.56 或論點改變 · ⚠ 現價明顯高於均線，宜小額分批/等回檔"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 584.73 · 「止損」=收盤跌破 200 日線 289.54 或論點改變 · ⚠ 現價明顯高於均線，宜小額分批/等回檔"
       },
       "timing": {
-        "direction": "long",
+        "direction": "none",
         "score": 0.33,
-        "label": "偏好做多（順勢、未過熱時進場）",
+        "label": "多空不明 → 觀望",
         "factors": [
           "順勢↑",
-          "RSI 54.2 中性",
+          "新聞偏空",
+          "RSI 53.5 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 46,
+      "heat": 53,
       "fundamentals": {
         "marketCap": 909695.7121409004,
         "industry": "Semiconductors",
@@ -1110,6 +1108,48 @@
       },
       "news": [
         {
+          "id": "finnhub-140888284",
+          "ticker": "AMD",
+          "headline": "TSMC Revenue Tops Forecasts on AI Strength",
+          "summary": "June growth strengthens expectations ahead of full earnings",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=6756bc5530cb851d6301adadda33bd8f6239179445506f905405a6289ae47040",
+          "datetime": 1783963185,
+          "sentiment": "bullish",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "台積電營收超預期，AI需求強勁。"
+        },
+        {
+          "id": "finnhub-140888353",
+          "ticker": "AMD",
+          "headline": "Cathie Wood Loads Up on SpaceX, Meta, Eli Lilly and Circle Group",
+          "summary": "Cathie Wood Unveils Major Portfolio Reset With SpaceX, Meta Buys and AMD Cuts",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=4485315c448a89a6ae42a93ee1eff88cb436b1981d6da3cd995a10471ecdc57d",
+          "datetime": 1783961547,
+          "sentiment": "bearish",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "Cathie Wood減持AMD股票。"
+        },
+        {
+          "id": "finnhub-140888293",
+          "ticker": "AMD",
+          "headline": "Nvidia, AMD, Microsoft Partnerships — And These Clues — Fuel Dell Stock",
+          "summary": "After shocking Wall Street with a huge earnings beat, Dell stock rocketed higher, lifting it toward a breakout.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=b741a944009d38a4681244c247a27869f8663ffbb7645aa36c99eb3d79ca4dc8",
+          "datetime": 1783961064,
+          "sentiment": "bullish",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "與戴爾合作推動其股價上漲。"
+        },
+        {
           "id": "finnhub-140886828",
           "ticker": "AMD",
           "headline": "How Investors Are Reacting To Advanced Micro Devices (AMD) Sector-Wide AI Chip Pullback And Valuation Jitters",
@@ -1122,6 +1162,20 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "晶片股回檔，投資者獲利了結。"
+        },
+        {
+          "id": "finnhub-140888384",
+          "ticker": "AMD",
+          "headline": "NVDA, AMD and INTC Forecasts – AI Tech Chip Stocks a Little Soft",
+          "summary": "Semis look a bit soft, as risk appetite could be a bit strained on Monday, according to premarket trading.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=40c10cb83db915cac0fb8051c51f0ea641c8c20e99143973ebf7d12cebe04ffc",
+          "datetime": 1783946278,
+          "sentiment": "bearish",
+          "confidence": 0.6,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "晶片股表現疲軟，風險偏好受限。"
         },
         {
           "id": "finnhub-140885274",
@@ -1150,6 +1204,20 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "CEO個人軼事，與公司營運無關。"
+        },
+        {
+          "id": "finnhub-140887866",
+          "ticker": "AMD",
+          "headline": "AMD Stock Drops 5%: Why Global Supply Chain Fears and Tech Profit-Taking Are Hurting Chip Giants",
+          "summary": "Advanced Micro Devices (NASDAQ: AMD) stock slid nearly 5% on Monday as macro-driven profit-taking, geopolitical tensions, and supply chain fears cooled the high-flying semiconductor sector.",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=2c839696b914d9e3d018f817338223716cf6dd5e2aaf3e363d8771f5c2ae6606",
+          "datetime": 1783939311,
+          "sentiment": "bearish",
+          "confidence": 0.8,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "宏觀因素、地緣政治導致股價下跌。"
         },
         {
           "id": "finnhub-140884341",
@@ -1206,85 +1274,15 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "台積電股價下跌，受伊朗局勢影響。"
-        },
-        {
-          "id": "finnhub-140885192",
-          "ticker": "AMD",
-          "headline": "AMD: Now Is Really Not The Time To Be Greedy",
-          "summary": "AMD stock has surged, but a rich valuation needs bigger AI chip share gains.",
-          "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=85ff732c3be21bf38296b8c8d38251ec5e91e25970a24176cf600e551815167e",
-          "datetime": 1783930523,
-          "sentiment": "bearish",
-          "confidence": 0.8,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "股價過高，需更大AI市佔率支撐。"
-        },
-        {
-          "id": "finnhub-140882986",
-          "ticker": "AMD",
-          "headline": "Nvidia Stock Is Losing to the Market in 2026. Time to Walk Away or Double Down?",
-          "summary": "Nvidia could have a strong second half of the year.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=6686122da6e997d407187e3c17d719217334eb7ceb6847077c1ed285683b739e",
-          "datetime": 1783908300,
-          "sentiment": "neutral",
-          "confidence": 0.5,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "報導Nvidia表現，與AMD無直接關聯。"
-        },
-        {
-          "id": "finnhub-140882609",
-          "ticker": "AMD",
-          "headline": "Rackspace Technology Inc (RXT) Q2 2026 Earnings Call Highlights: Strategic Shift Towards AI ...",
-          "summary": "Rackspace Technology Inc (RXT) outlines its strategic pivot to AI and higher-margin opportunities, despite a revised revenue outlook for FY26.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=55fa66d5524cdb06937e9612df9aaa9c6486872318fb05dee05f9f35d013a907",
-          "datetime": 1783904422,
-          "sentiment": "bullish",
-          "confidence": 0.7,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "Rackspace轉向AI，擴展AMD AI容量。"
-        },
-        {
-          "id": "finnhub-140882989",
-          "ticker": "AMD",
-          "headline": "Taiwan Semi Stock Is Approaching Fair Value Ahead of July 16. How to Play TSM Here.",
-          "summary": "GF Securities expects strong growth for Taiwan Semiconductor in Q2.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=0b9360ed51d1b9f642543975a87d32b50d4b5526094aa3ee63d525bd8d23a8f8",
-          "datetime": 1783885565,
-          "sentiment": "neutral",
-          "confidence": 0.5,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "報導台積電估值，與AMD無直接關聯。"
-        },
-        {
-          "id": "finnhub-140878493",
-          "ticker": "AMD",
-          "headline": "3 AI Infrastructure Stocks That Could Double by 2027",
-          "summary": "Low valuations and rapid revenue growth leave room for these stocks to double.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=0ffbaa6944d7bd941dc5792a13ea6178ef4d61e74e183a52246f9a1c8f4f767c",
-          "datetime": 1783875600,
-          "sentiment": "bullish",
-          "confidence": 0.7,
-          "credibility": "rumor",
-          "longTermImpact": "thesis",
-          "reason": "預測AI基礎設施股長期成長。"
         }
       ]
     },
     {
       "ticker": "MSFT",
       "quote": {
-        "current": 390.94,
-        "changePct": 1.5165,
-        "high": 391.45,
+        "current": 392,
+        "changePct": 1.7917,
+        "high": 393.57,
         "low": 384.15,
         "prevClose": 385.1
       },
@@ -1295,44 +1293,44 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 9,
-        "bearish": 3
+        "bullish": 11,
+        "bearish": 4
       },
       "stats": {
-        "atr14": 12.160714285714286,
-        "sma20": 380.5374954223633,
-        "sma50": 402.94319702148437,
-        "sma200": 441.68654891967776,
+        "atr14": 12.312142508370536,
+        "sma20": 380.60424652099607,
+        "sma50": 402.9698974609375,
+        "sma200": 441.693224029541,
         "swingHigh": 401.75,
         "swingLow": 349.20001220703125,
         "high52": 555.4500122070312,
         "low52": 349.20001220703125,
-        "avgVol20": 46280545.4,
-        "lastVol": 11064708,
-        "rsi14": 50.87626040663765,
+        "avgVol20": 46530095.2,
+        "lastVol": 16055704,
+        "rsi14": 51.596781338422815,
         "macd": {
-          "macd": -4.537989201601931,
-          "signal": -7.334878394463724,
-          "hist": 2.7968891928617925
+          "macd": -4.4314917223017005,
+          "signal": -7.313578898603677,
+          "hist": 2.882087176301977
         }
       },
       "day": {
         "direction": "long",
         "entryZone": [
           384.15,
-          387.8
+          387.84
         ],
-        "breakout": 391.45,
-        "stop": 378.07,
-        "target": 401.78,
+        "breakout": 393.57,
+        "stop": 377.99,
+        "target": 402,
         "rr": 2,
-        "riskPerShare": 7.9,
-        "basis": "做多：回踩支撐 384.15 進場 · 止損=支撐下 0.5×ATR(12.16) · 止盈=風報比 2:1 · 突破 391.45 為另一進場參考"
+        "riskPerShare": 8,
+        "basis": "做多：回踩支撐 384.15 進場 · 止損=支撐下 0.5×ATR(12.31) · 止盈=風報比 2:1 · 突破 393.57 為另一進場參考"
       },
       "long": {
         "accumulateZone": [
-          390.94,
-          463.77
+          392,
+          463.78
         ],
         "trimZone": 555.45,
         "reviewTrigger": 441.69,
@@ -1346,12 +1344,12 @@
         "factors": [
           "偏空",
           "新聞偏多",
-          "RSI 50.9 中性",
+          "RSI 51.6 中性",
           "MACD↑",
           "量縮"
         ]
       },
-      "heat": 33,
+      "heat": 36,
       "fundamentals": {
         "marketCap": 2860690.044002531,
         "industry": "Technology",
@@ -1543,8 +1541,8 @@
     {
       "ticker": "META",
       "quote": {
-        "current": 660.09,
-        "changePct": -1.3628,
+        "current": 660.9,
+        "changePct": -1.2418,
         "high": 676.62,
         "low": 654.2,
         "prevClose": 669.21
@@ -1556,25 +1554,25 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 12,
-        "bearish": 3
+        "bullish": 14,
+        "bearish": 1
       },
       "stats": {
         "atr14": 27.195713588169642,
-        "sma20": 589.1569946289062,
-        "sma50": 600.2519970703125,
-        "sma200": 642.2382489013672,
+        "sma20": 589.2669952392578,
+        "sma50": 600.2959973144531,
+        "sma200": 642.2492489624024,
         "swingHigh": 677.8599853515625,
         "swingLow": 540.1799926757812,
         "high52": 796.25,
         "low52": 520.260009765625,
-        "avgVol20": 19849066.25,
-        "lastVol": 8696725,
-        "rsi14": 63.52397874219277,
+        "avgVol20": 19994966.1,
+        "lastVol": 11614722,
+        "rsi14": 64.13855021319787,
         "macd": {
-          "macd": 12.142262859576022,
-          "signal": 0.27812838765661096,
-          "hist": 11.86413447191941
+          "macd": 12.317762408854833,
+          "signal": 0.313228297512373,
+          "hist": 12.00453411134246
         }
       },
       "day": {
@@ -1592,13 +1590,13 @@
       },
       "long": {
         "accumulateZone": [
-          622.97,
-          674.35
+          622.98,
+          674.36
         ],
         "trimZone": 796.25,
-        "reviewTrigger": 642.24,
+        "reviewTrigger": 642.25,
         "stretched": false,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 796.25 · 「止損」=收盤跌破 200 日線 642.24 或論點改變"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 796.25 · 「止損」=收盤跌破 200 日線 642.25 或論點改變"
       },
       "timing": {
         "direction": "long",
@@ -1607,13 +1605,13 @@
         "factors": [
           "偏多",
           "新聞偏多",
-          "RSI 63.5 中性",
+          "RSI 64.1 中性",
           "MACD↑",
           "量縮",
           "乖離大·追高險"
         ]
       },
-      "heat": 46,
+      "heat": 48,
       "fundamentals": {
         "marketCap": 1698738.0877146542,
         "industry": "Media",
@@ -1805,38 +1803,38 @@
     {
       "ticker": "AMZN",
       "quote": {
-        "current": 247.97,
-        "changePct": 1.072,
+        "current": 248.09,
+        "changePct": 1.1209,
         "high": 249.35,
         "low": 244.18,
         "prevClose": 245.34
       },
       "signal": {
         "sentiment": "neutral",
-        "score": -0.03,
-        "bullCount": 1,
-        "bearCount": 2
+        "score": -0.01,
+        "bullCount": 3,
+        "bearCount": 3
       },
       "social": {
-        "bullish": 10,
-        "bearish": 0
+        "bullish": 13,
+        "bearish": 1
       },
       "stats": {
         "atr14": 7.549282618931362,
-        "sma20": 240.51549911499023,
-        "sma50": 253.7335998535156,
-        "sma200": 233.46960006713869,
+        "sma20": 240.5264991760254,
+        "sma50": 253.7379998779297,
+        "sma200": 233.4707000732422,
         "swingHigh": 251.02999877929688,
         "swingLow": 225.5500030517578,
         "high52": 278.55999755859375,
         "low52": 196,
-        "avgVol20": 60674371.25,
-        "lastVol": 13869725,
-        "rsi14": 53.55621949103759,
+        "avgVol20": 60902380.6,
+        "lastVol": 18429912,
+        "rsi14": 53.76158845224344,
         "macd": {
-          "macd": -0.9962107010582884,
-          "signal": -2.81974317689732,
-          "hist": 1.8235324758390314
+          "macd": -0.9786607461304015,
+          "signal": -2.8162331859117424,
+          "hist": 1.8375724397813409
         }
       },
       "day": {
@@ -1868,12 +1866,12 @@
         "label": "多空不明 → 觀望",
         "factors": [
           "偏空",
-          "RSI 53.6 中性",
+          "RSI 53.8 中性",
           "MACD↑",
           "量縮"
         ]
       },
-      "heat": 28,
+      "heat": 29,
       "fundamentals": {
         "marketCap": 2639149.142337494,
         "industry": "Retail",
@@ -1892,6 +1890,62 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140888280",
+          "ticker": "AMZN",
+          "headline": "Amazon Stock Hasn't Been This Cheap in Over a Decade. Has the Sell-Off Gone Too Far?",
+          "summary": "Amazon's P/E ratio is near multiyear lows.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=c26f278aa42aa55d1f19537416a3640c8252c1efe49fe6b9fb63d9f279f9bdb1",
+          "datetime": 1783964100,
+          "sentiment": "bullish",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "亞馬遜本益比處於低點，可能被低估。"
+        },
+        {
+          "id": "finnhub-140888282",
+          "ticker": "AMZN",
+          "headline": "GOOGL Reportedly Expands TPU Sales To Battle Nvidia Amid Wall Street Price Target Cuts On Big Tech Ahead Of Q2 Earnings",
+          "summary": "According to a report by The Information, the company is said to be specifically looking at \"neocloud\" providers to increase the adoption of its custom TPUs, including Nvidia-backed Nscale.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=f9b9be7d95fc4a8ee06d7bc4e4a05dcdb4faf789958d49dd4ae5e00e8f6564a2",
+          "datetime": 1783963371,
+          "sentiment": "bearish",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "華爾街下調大型科技股目標價。"
+        },
+        {
+          "id": "finnhub-140888323",
+          "ticker": "AMZN",
+          "headline": "AI Costs Keep Rising As Morgan Stanley Ups CapEx Estimates For Amazon, Meta",
+          "summary": "Spending on AI data centers by cloud hyperscalers could reach $1.4 trillion by 2028, analysts with Morgan Stanley said Monday.  The investment bank raised its estimates for capital expenditures by Meta Platforms and Amazon — with returns on AI spending a key debate for both stocks.  Morgan Stanley analyst Brian Nowak said in a client note that he expects Meta's capex to reach $225 billion in 2027 and $250 billion in 2028, up 29% and 22% from his prior estimates.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=7f54995b88e7acfc794d9408f84dd1470fa5c632a158469920fc17feff479053",
+          "datetime": 1783961359,
+          "sentiment": "bearish",
+          "confidence": 0.8,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "AI成本上升，摩根士丹利上調資本支出預估。"
+        },
+        {
+          "id": "finnhub-140888308",
+          "ticker": "AMZN",
+          "headline": "MSFT Stock Has Bounced From This Price Before. Now What?",
+          "summary": "Microsoft's stock has fallen to a price level where buyers have repeatedly stepped in, but this time it arrives with an unprecedented spending plan that will define the battle.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=41161b430d53e6e4ef9d3c97fefed83a937aa81a5711aa87452af023fb00abef",
+          "datetime": 1783958722,
+          "sentiment": "bullish",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "股價觸及支撐位，潛在反彈。"
+        },
         {
           "id": "finnhub-140886737",
           "ticker": "AMZN",
@@ -2003,70 +2057,14 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "亞馬遜運動營養品類建立者故事。"
-        },
-        {
-          "id": "finnhub-140885705",
-          "ticker": "AMZN",
-          "headline": "The Real Risk Inside MercadoLibre Stock",
-          "summary": "The company is intentionally sacrificing profits for growth, but the quality of that growth, especially in its credit arm, is the key vulnerability for investors.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=8c7034081ac40192547a382bc5a67e978e9f5fe929ec0d806c55fc50b9cf6edc",
-          "datetime": 1783945949,
-          "sentiment": "neutral",
-          "confidence": 0.7,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "新聞關於MercadoLibre，對Amazon影響中性。"
-        },
-        {
-          "id": "finnhub-140886694",
-          "ticker": "AMZN",
-          "headline": "7 Numbers That Should Make A Prudent Investor Say 'Whoa!'",
-          "summary": "The key market warning signs? Read why tech concentration, stretched valuations, and housing headwinds can lead to trouble for investors.",
-          "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=89b00f20ff3e92a7ecc93748ec4bae0bcd72dafdac0b92439af7c3fa61a4da3d",
-          "datetime": 1783943409,
-          "sentiment": "bearish",
-          "confidence": 0.7,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "市場估值過高，科技股面臨風險。"
-        },
-        {
-          "id": "finnhub-140884937",
-          "ticker": "AMZN",
-          "headline": "Jeff Bezos Backed Grail Before It Lost Half Its Value. Here's Whether He Was Early -- or Just Wrong.",
-          "summary": "The fate of Grail's stock will ultimately be decided in the cost-benefit calculations of medical insurers.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=90e0e66755494ed0410222990f94a2c2a247faec8c05db0a956b5a7206bae5a5",
-          "datetime": 1783942500,
-          "sentiment": "neutral",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "關於貝佐斯個人投資，與亞馬遜營運無關。"
-        },
-        {
-          "id": "finnhub-140886538",
-          "ticker": "AMZN",
-          "headline": "Mark Zuckerberg’s Meta Just Supercharged Its Biggest AI Bet Yet, Expanding Its Hyperion Data Center Into a $50 Billion-Plus Project",
-          "summary": "Meta expands its Hyperion AI data, pushing investment past $50 billion with Louisiana tax incentives and infrastructure spending.",
-          "source": "Benzinga",
-          "url": "https://finnhub.io/api/news?id=45cdabaa9ddfd06183392de2859c8ebbbf50444ad8a9093ac6cbe6d312cef288",
-          "datetime": 1783928220,
-          "sentiment": "neutral",
-          "confidence": 0.7,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "Meta擴大AI數據中心，與AMZN無直接關聯。"
         }
       ]
     },
     {
       "ticker": "GOOGL",
       "quote": {
-        "current": 356.18,
-        "changePct": -0.28,
+        "current": 355.32,
+        "changePct": -0.5207,
         "high": 358.13,
         "low": 354.11,
         "prevClose": 357.18
@@ -2078,25 +2076,25 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 10,
-        "bearish": 1
+        "bullish": 6,
+        "bearish": 2
       },
       "stats": {
         "atr14": 9.889286586216517,
-        "sma20": 357.7980010986328,
-        "sma50": 372.86780029296875,
-        "sma200": 319.4329498291016,
+        "sma20": 357.7615005493164,
+        "sma50": 372.8532000732422,
+        "sma200": 319.4292997741699,
         "swingHigh": 376,
         "swingLow": 330.20001220703125,
         "high52": 408.6099853515625,
         "low52": 179.67999267578125,
-        "avgVol20": 34038965.9,
-        "lastVol": 5366318,
-        "rsi14": 46.14806104317228,
+        "avgVol20": 34158637.95,
+        "lastVol": 7759759,
+        "rsi14": 45.634267317992254,
         "macd": {
-          "macd": -1.922243363470102,
-          "signal": -2.7449836441005284,
-          "hist": 0.8227402806304265
+          "macd": -1.980477858105985,
+          "signal": -2.756630543027705,
+          "hist": 0.77615268492172
         }
       },
       "day": {
@@ -2128,12 +2126,12 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "順勢↓",
-          "RSI 46.1 中性",
+          "RSI 45.6 中性",
           "MACD↑",
           "量縮"
         ]
       },
-      "heat": 21,
+      "heat": 23,
       "fundamentals": {
         "marketCap": 4348509.3408,
         "industry": "Media",
@@ -2251,6 +2249,20 @@
           "reason": "華爾街銀行交易收入預期，與GOOGL無關。"
         },
         {
+          "id": "finnhub-140888226",
+          "ticker": "GOOGL",
+          "headline": "How To Build A $50,000 Dividend Portfolio In Today's Market",
+          "summary": "Build a resilient dividend income portfolio with quality stocks & ETFs: 3.75% yield, low payout ratios, low beta, and defensive sector focus. Here's what investors need to consider.",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=2fc7e2002ab8e39cabb3974c06cad1fde6ceec9d2584a7770aa6b20f081d01e9",
+          "datetime": 1783950349,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "普遍投資建議，與個股無關。"
+        },
+        {
           "id": "finnhub-140885691",
           "ticker": "GOOGL",
           "headline": "The $6 Billion Cybersecurity Prize Tech Giants Are Circling",
@@ -2305,58 +2317,44 @@
           "credibility": "rumor",
           "longTermImpact": "noise",
           "reason": "GOOGL為熱門股票，無明確利多利空。"
-        },
-        {
-          "id": "finnhub-140886762",
-          "ticker": "GOOGL",
-          "headline": "Alphabet Inc. (GOOG) Is a Trending Stock: Facts to Know Before Betting on It",
-          "summary": "Recently, Zacks.com users have been paying close attention to Alphabet (GOOG). This makes it worthwhile to examine what the stock has in store.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=4db3cca00bdf228a2539745857216544419853b46f23278540315391b0981044",
-          "datetime": 1783947603,
-          "sentiment": "neutral",
-          "confidence": 0.5,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "GOOG為熱門股票，無明確利多利空。"
         }
       ]
     },
     {
       "ticker": "NFLX",
       "quote": {
-        "current": 74.63,
-        "changePct": 1.7173,
+        "current": 74.44,
+        "changePct": 1.4584,
         "high": 75.45,
         "low": 73.78,
         "prevClose": 73.37
       },
       "signal": {
         "sentiment": "neutral",
-        "score": -0.03,
-        "bullCount": 4,
+        "score": -0.01,
+        "bullCount": 5,
         "bearCount": 3
       },
       "social": {
-        "bullish": 10,
-        "bearish": 4
+        "bullish": 7,
+        "bearish": 8
       },
       "stats": {
         "atr14": 2.482141767229353,
-        "sma20": 75.27925415039063,
-        "sma50": 82.05890121459962,
-        "sma200": 94.70415538787842,
+        "sma20": 75.2732494354248,
+        "sma50": 82.05649932861328,
+        "sma200": 94.70355491638183,
         "swingHigh": 82.0999984741211,
         "swingLow": 70.86000061035156,
         "high52": 127.75,
         "low52": 70.86000061035156,
-        "avgVol20": 49150233.05,
-        "lastVol": 16945561,
-        "rsi14": 42.037471644641734,
+        "avgVol20": 49386659.9,
+        "lastVol": 21674098,
+        "rsi14": 41.672989458292854,
         "macd": {
-          "macd": -2.1649414226526886,
-          "signal": -2.6869245697388675,
-          "hist": 0.5219831470861789
+          "macd": -2.174521594677927,
+          "signal": -2.6888406041439152,
+          "hist": 0.5143190094659884
         }
       },
       "day": {
@@ -2374,7 +2372,7 @@
       },
       "long": {
         "accumulateZone": [
-          74.63,
+          74.44,
           99.44
         ],
         "trimZone": 127.75,
@@ -2388,17 +2386,17 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "順勢↓",
-          "RSI 42 中性",
+          "RSI 41.7 中性",
           "MACD↑",
           "量縮"
         ]
       },
-      "heat": 35,
+      "heat": 34,
       "fundamentals": {
         "marketCap": 308946.2791913047,
         "industry": "Media",
-        "peTTM": 23.1011,
-        "psTTM": 6.5887,
+        "peTTM": 23.5341,
+        "psTTM": 6.7122,
         "grossMarginTTM": 49.03,
         "beta": 1.5239079,
         "epsGrowthTTMYoy": 46.23,
@@ -2525,6 +2523,20 @@
           "reason": "分析師預測Q2關鍵指標，無明確利多利空。"
         },
         {
+          "id": "finnhub-140888032",
+          "ticker": "NFLX",
+          "headline": "Traders are betting on a comeback quarter for Netflix",
+          "summary": "Options traders are striking a decidedly bullish tone heading into the streaming giant's earnings on Thursday.",
+          "source": "CNBC",
+          "url": "https://finnhub.io/api/news?id=cbcbaf3ef2a1957d4f1ecdb13c7b541e273b1b267b2e020dbd68eb1330951f2e",
+          "datetime": 1783946676,
+          "sentiment": "bullish",
+          "confidence": 0.6,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "交易員看好財報，期權市場偏多。"
+        },
+        {
           "id": "finnhub-140885860",
           "ticker": "NFLX",
           "headline": "Netflix Price Target Cuts Grow Ahead Of Q2 Earnings – What's Driving Wall Street's Caution On NFLX Stock?",
@@ -2565,82 +2577,68 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "地緣政治緊張導致大盤下跌。"
-        },
-        {
-          "id": "finnhub-140886499",
-          "ticker": "NFLX",
-          "headline": "TSMC Could Swing $150 Billion as Options Market Prices Big Moves for This Week’s Earnings",
-          "summary": "TSMC, JPMorgan, ASML, Netflix and more report earnings next week. See the options-implied moves, market caps and billions in market value at stake.",
-          "source": "Benzinga",
-          "url": "https://finnhub.io/api/news?id=fe2cc42d718bb0ede68b078e17a8e90e9c2cdfed4ed647b4dee06d264e76c81d",
-          "datetime": 1783930923,
-          "sentiment": "neutral",
-          "confidence": 0.6,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "提及財報週，市場預期波動。"
         }
       ]
     },
     {
       "ticker": "AVGO",
       "quote": {
-        "current": 389.41,
-        "changePct": -2.6402,
+        "current": 385.87,
+        "changePct": -3.5253,
         "high": 395.745,
-        "low": 386.8,
+        "low": 385.42,
         "prevClose": 399.97
       },
       "signal": {
         "sentiment": "neutral",
-        "score": 0.05,
-        "bullCount": 4,
-        "bearCount": 1
+        "score": -0.05,
+        "bullCount": 3,
+        "bearCount": 2
       },
       "social": {
-        "bullish": 11,
-        "bearish": 0
+        "bullish": 10,
+        "bearish": 1
       },
       "stats": {
-        "atr14": 14.918568202427455,
-        "sma20": 382.9415008544922,
-        "sma50": 406.1242010498047,
-        "sma200": 362.69750030517577,
+        "atr14": 15.017137799944196,
+        "sma20": 382.77665557861326,
+        "sma50": 406.05826293945313,
+        "sma200": 362.6810157775879,
         "swingHigh": 414.6400146484375,
         "swingLow": 356.42999267578125,
         "high52": 495,
         "low52": 269.5799865722656,
-        "avgVol20": 27859645.45,
-        "lastVol": 6679009,
-        "rsi14": 49.74206033941211,
+        "avgVol20": 27957936.55,
+        "lastVol": 8644831,
+        "rsi14": 48.66719672511735,
         "macd": {
-          "macd": -4.091446408086654,
-          "signal": -7.455152803741987,
-          "hist": 3.363706395655333
+          "macd": -4.354447418035932,
+          "signal": -7.507753005731842,
+          "hist": 3.15330558769591
         }
       },
       "day": {
         "direction": "long",
         "entryZone": [
-          386.8,
-          391.28
+          385.42,
+          389.93
         ],
         "breakout": 395.75,
-        "stop": 379.34,
-        "target": 408.43,
+        "stop": 377.91,
+        "target": 407.19,
         "rr": 2,
-        "riskPerShare": 9.7,
-        "basis": "做多：回踩支撐 386.8 進場 · 止損=支撐下 0.5×ATR(14.92) · 止盈=風報比 2:1 · 突破 395.75 為另一進場參考"
+        "riskPerShare": 9.76,
+        "basis": "做多：回踩支撐 385.42 進場 · 止損=支撐下 0.5×ATR(15.02) · 止盈=風報比 2:1 · 突破 395.75 為另一進場參考"
       },
       "long": {
         "accumulateZone": [
-          351.82,
-          380.83
+          351.8,
+          380.82
         ],
         "trimZone": 495,
-        "reviewTrigger": 362.7,
+        "reviewTrigger": 362.68,
         "stretched": false,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 495 · 「止損」=收盤跌破 200 日線 362.7 或論點改變"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 495 · 「止損」=收盤跌破 200 日線 362.68 或論點改變"
       },
       "timing": {
         "direction": "none",
@@ -2648,12 +2646,12 @@
         "label": "多空不明 → 觀望",
         "factors": [
           "偏空",
-          "RSI 49.7 中性",
+          "RSI 48.7 中性",
           "MACD↑",
           "量縮"
         ]
       },
-      "heat": 41,
+      "heat": 47,
       "fundamentals": {
         "marketCap": 1902889.2343550066,
         "industry": "Semiconductors",
@@ -2672,6 +2670,48 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140888279",
+          "ticker": "AVGO",
+          "headline": "A Generational Transfer Is Happening: Amazon, Google, Microsoft Are the Losers. NVIDIA and Micron the Winners.",
+          "summary": "Hyperscaler giants are hemorrhaging cash while two chip names absorb every dollar they spend, but only one of those chipmakers belongs in a retirement portfolio and the answer may surprise you.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=db342a0be2bc2e470676a6afdb55918020024f1959d2c7840ad222b36da82e30",
+          "datetime": 1783964301,
+          "sentiment": "neutral",
+          "confidence": 0.5,
+          "credibility": "rumor",
+          "longTermImpact": "thesis",
+          "reason": "產業趨勢轉變，晶片股受惠。"
+        },
+        {
+          "id": "finnhub-140888301",
+          "ticker": "AVGO",
+          "headline": "Broadcom Insiders Dump $10 Million in Stock -- Here's Why",
+          "summary": "Broadcom Insiders Sell Millions in Stock After Landmark Apple Chip Deal",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=662f8740988c84c2c71bb4313c7ce779d1428478b5523f09ea6c3a6bed598ed6",
+          "datetime": 1783963404,
+          "sentiment": "bearish",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "內部人士出售股票，短期壓力。"
+        },
+        {
+          "id": "finnhub-140888339",
+          "ticker": "AVGO",
+          "headline": "Intel Just Announced A $5.7B Investment In Ireland – Retail Says Move Strengthens The Chipmaker’s Position",
+          "summary": "Intel said it will upgrade existing fabrication facilities, install the latest manufacturing equipment, and make infrastructure enhancements at its facility in Ireland.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=8e508f5c8cb499c33a93f85f4bbd5f9fedc513b3dac1a7bc62b470264cdd3804",
+          "datetime": 1783958187,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "關於英特爾投資，與博通無關。"
+        },
         {
           "id": "finnhub-140886717",
           "ticker": "AVGO",
@@ -2797,57 +2837,15 @@
           "credibility": "rumor",
           "longTermImpact": "thesis",
           "reason": "博通對輝達構成威脅。"
-        },
-        {
-          "id": "finnhub-140885667",
-          "ticker": "AVGO",
-          "headline": "QCOM Keeps Climbing. Should You Climb On?",
-          "summary": "This chip designer is on a powerful run fueled by real business quality, but its legacy market is hitting a rough patch. The question is whether the new engines can outpace the old drag.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=3c54f3c78b957ffda00b78ae3bb5bd1e660757b80330ec4377017599037cd84b",
-          "datetime": 1783945953,
-          "sentiment": "neutral",
-          "confidence": 0.5,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "討論高通股價走勢。"
-        },
-        {
-          "id": "finnhub-140885669",
-          "ticker": "AVGO",
-          "headline": "AMD Stock: Collect 14% While Setting A 50%-Off Buy Price",
-          "summary": "Here is a way to collect an upfront income stream from one of the market's hottest stocks, which you keep no matter what, while lining up a chance to buy it at a serious discount if it ever pulls back.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=12f33836c83331b21538c1efbcba7c9a8ef17676a2236e681bcfb491d4b67060",
-          "datetime": 1783945945,
-          "sentiment": "neutral",
-          "confidence": 0.5,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "討論超微股票交易策略。"
-        },
-        {
-          "id": "finnhub-140885672",
-          "ticker": "AVGO",
-          "headline": "Broadcom vs Nvidia: Yes, Broadcom Is Set to Outpace Nvidia Through the Rest of 2026",
-          "summary": "Broadcom and NVIDIA both crushed their latest earnings, but the gap between them is widening in ways the headline numbers hide. One company carries a timing advantage, a marquee customer anchor, and an AI growth rate that puts its rival on defense through year-end.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=799ec454c15ddf61f08d042f405bd9394403e5581e7fb5b4c84c1f439fe6192a",
-          "datetime": 1783945464,
-          "sentiment": "bullish",
-          "confidence": 0.8,
-          "credibility": "rumor",
-          "longTermImpact": "thesis",
-          "reason": "博通有望超越輝達。"
         }
       ]
     },
     {
       "ticker": "PLTR",
       "quote": {
-        "current": 129.67,
-        "changePct": 2.2715,
-        "high": 130.49,
+        "current": 129,
+        "changePct": 1.743,
+        "high": 130.72,
         "low": 126.195,
         "prevClose": 126.79
       },
@@ -2858,43 +2856,43 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 16,
-        "bearish": 1
+        "bullish": 12,
+        "bearish": 3
       },
       "stats": {
-        "atr14": 6.728857312883649,
-        "sma20": 124.83949928283691,
-        "sma50": 133.08249954223632,
-        "sma200": 156.53779987335204,
+        "atr14": 6.74528557913644,
+        "sma20": 124.81799964904785,
+        "sma50": 133.0738996887207,
+        "sma200": 156.53564990997313,
         "swingHigh": 138.89999389648438,
         "swingLow": 106.37000274658203,
         "high52": 207.52000427246094,
         "low52": 106.37000274658203,
-        "avgVol20": 44111504.9,
-        "lastVol": 16566098,
-        "rsi14": 50.88121645910568,
+        "avgVol20": 44434762.4,
+        "lastVol": 23031248,
+        "rsi14": 50.45432475353052,
         "macd": {
-          "macd": -1.1414533784264762,
-          "signal": -2.7051146437051323,
-          "hist": 1.5636612652786561
+          "macd": -1.175754788460324,
+          "signal": -2.711974925711902,
+          "hist": 1.5362201372515778
         }
       },
       "day": {
         "direction": "long",
         "entryZone": [
           126.2,
-          128.21
+          128.22
         ],
-        "breakout": 130.49,
-        "stop": 122.83,
-        "target": 135.95,
+        "breakout": 130.72,
+        "stop": 122.82,
+        "target": 135.98,
         "rr": 2,
-        "riskPerShare": 4.37,
-        "basis": "做多：回踩支撐 126.2 進場 · 止損=支撐下 0.5×ATR(6.73) · 止盈=風報比 2:1 · 突破 130.49 為另一進場參考"
+        "riskPerShare": 4.38,
+        "basis": "做多：回踩支撐 126.2 進場 · 止損=支撐下 0.5×ATR(6.75) · 止盈=風報比 2:1 · 突破 130.72 為另一進場參考"
       },
       "long": {
         "accumulateZone": [
-          129.67,
+          129,
           164.36
         ],
         "trimZone": 207.52,
@@ -2909,12 +2907,12 @@
         "factors": [
           "偏空",
           "新聞偏多",
-          "RSI 50.9 中性",
+          "RSI 50.5 中性",
           "MACD↑",
           "量縮"
         ]
       },
-      "heat": 45,
+      "heat": 44,
       "fundamentals": {
         "marketCap": 303955.20931526,
         "industry": "Technology",
@@ -3106,10 +3104,10 @@
     {
       "ticker": "COIN",
       "quote": {
-        "current": 156.78,
-        "changePct": -1.4396,
+        "current": 155.03,
+        "changePct": -2.5398,
         "high": 161.19,
-        "low": 155.25,
+        "low": 154.01,
         "prevClose": 159.07
       },
       "signal": {
@@ -3119,49 +3117,49 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 7,
-        "bearish": 4
+        "bullish": 5,
+        "bearish": 9
       },
       "stats": {
-        "atr14": 9.749998910086495,
-        "sma20": 159.00324935913085,
-        "sma50": 174.6308999633789,
-        "sma200": 225.86627464294435,
+        "atr14": 9.93142809186663,
+        "sma20": 158.92299880981446,
+        "sma50": 174.59879974365234,
+        "sma200": 225.85824958801268,
         "swingHigh": 176.47999572753906,
         "swingLow": 139.17999267578125,
         "high52": 444.6499938964844,
         "low52": 139.17999267578125,
-        "avgVol20": 7561638.8,
-        "lastVol": 2421876,
-        "rsi14": 45.18861508823474,
+        "avgVol20": 7602420.3,
+        "lastVol": 3237506,
+        "rsi14": 44.15761152767109,
         "macd": {
-          "macd": -3.4944084255332655,
-          "signal": -4.841717129895207,
-          "hist": 1.3473087043619412
+          "macd": -3.622443489969669,
+          "signal": -4.867324142782487,
+          "hist": 1.2448806528128182
         }
       },
       "day": {
         "direction": "short",
         "entryZone": [
-          158.27,
+          158.21,
           161.19
         ],
-        "breakout": 155.25,
-        "stop": 166.06,
-        "target": 147.05,
+        "breakout": 154.01,
+        "stop": 166.16,
+        "target": 146.79,
         "rr": 2,
-        "riskPerShare": 6.34,
-        "basis": "做空：反彈靠近阻力 161.19 進場 · 止損=阻力上方 0.5×ATR(9.75) · 止盈=風報比 2:1(往下) · 跌破 155.25 為順勢續空"
+        "riskPerShare": 6.46,
+        "basis": "做空：反彈靠近阻力 161.19 進場 · 止損=阻力上方 0.5×ATR(9.93) · 止盈=風報比 2:1(往下) · 跌破 154.01 為順勢續空"
       },
       "long": {
         "accumulateZone": [
-          156.78,
-          237.16
+          155.03,
+          237.15
         ],
         "trimZone": 444.65,
-        "reviewTrigger": 225.87,
+        "reviewTrigger": 225.86,
         "stretched": false,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 444.65 · 「止損」=收盤跌破 200 日線 225.87 或論點改變"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 444.65 · 「止損」=收盤跌破 200 日線 225.86 或論點改變"
       },
       "timing": {
         "direction": "short",
@@ -3169,12 +3167,12 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "順勢↓",
-          "RSI 45.2 中性",
+          "RSI 44.2 中性",
           "MACD↑",
           "量縮"
         ]
       },
-      "heat": 38,
+      "heat": 45,
       "fundamentals": {
         "marketCap": 41908.74127,
         "industry": "Financial Services",
@@ -3366,38 +3364,38 @@
     {
       "ticker": "MSTR",
       "quote": {
-        "current": 91.82,
-        "changePct": -2.9797,
+        "current": 91.9,
+        "changePct": -2.8952,
         "high": 93.64,
         "low": 90.02,
         "prevClose": 94.64
       },
       "signal": {
         "sentiment": "neutral",
-        "score": -0.1,
-        "bullCount": 2,
-        "bearCount": 3
+        "score": -0.06,
+        "bullCount": 1,
+        "bearCount": 2
       },
       "social": {
-        "bullish": 14,
-        "bearish": 4
+        "bullish": 9,
+        "bearish": 8
       },
       "stats": {
         "atr14": 8.22428730555943,
-        "sma20": 101.40444908142089,
-        "sma50": 136.14097930908204,
-        "sma200": 174.01249530792236,
+        "sma20": 101.41449928283691,
+        "sma50": 136.14499938964843,
+        "sma200": 174.01350032806397,
         "swingHigh": 136.25,
         "swingLow": 81.80999755859375,
         "high52": 457.2200012207031,
         "low52": 81.80999755859375,
-        "avgVol20": 26829672.5,
-        "lastVol": 6298650,
-        "rsi14": 36.238435039060704,
+        "avgVol20": 26920539.6,
+        "lastVol": 8115992,
+        "rsi14": 36.347732955178756,
         "macd": {
-          "macd": -11.142041713846169,
-          "signal": -12.801698696634679,
-          "hist": 1.6596569827885101
+          "macd": -11.126007204464486,
+          "signal": -12.798491794758343,
+          "hist": 1.6724845902938572
         }
       },
       "day": {
@@ -3415,7 +3413,7 @@
       },
       "long": {
         "accumulateZone": [
-          91.82,
+          91.9,
           182.71
         ],
         "trimZone": 457.22,
@@ -3429,7 +3427,7 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "順勢↓",
-          "RSI 36.2 中性",
+          "RSI 36.3 中性",
           "MACD↑",
           "量縮"
         ]
@@ -3453,6 +3451,48 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140887165",
+          "ticker": "MSTR",
+          "headline": "Jim Cramer on Weyerhaeuser: “I’m More Bullish on It Than the Rest of Wall Street”",
+          "summary": "Weyerhaeuser Company (NYSE:WY) was among Jim Cramer’s stock calls on Mad Money, as he advised investors to stick with the largest tech companies in the market. When a caller inquired about the stock, Cramer remarked: Okay, here’s the problem: Weyerhaeuser, if rates go up, this stock goes down, and people think rates are going higher. […]",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=cc005dcd36e3339a57afad5705062d785984f0afd947239dfec893be6a284402",
+          "datetime": 1783956367,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "關於其他公司評論，與MSTR無關。"
+        },
+        {
+          "id": "finnhub-140887224",
+          "ticker": "MSTR",
+          "headline": "Strategy Pads Cash Reserves to $3 Billion, Skipping Bitcoin Buy for Third Week",
+          "summary": "Strategy went another week without buying Bitcoin, focusing instead on lifting its cash reserves to $3 billion via common stock proceeds.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=0e82aa79f5550e7ba53fc180262f88345a7285b73b59efc39ec85f1a4fd76f32",
+          "datetime": 1783951778,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "公司暫停購買比特幣，增加現金儲備。"
+        },
+        {
+          "id": "finnhub-140887225",
+          "ticker": "MSTR",
+          "headline": "Strategy Keeps Bitcoin Holdings Steady and Raises $467 Million Through Stock Sale",
+          "summary": "On Monday, the company formerly known as  MicroStrategy  disclosed that it kept its cryptocurrency reserves completely steady last week, opting instead to boost its cash buffer by selling common stock.  As the world’s largest corporate holder of the crypto, Strategy sent shockwaves through the market last month by unveiling a bold new financial framework that includes strategic Bitcoin sales.  The move marks a dramatic departure from the long-held “buy-and-hold” mantra championed by its co-founder and executive chairman, Michael Saylor.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=2d8b14b9e33a7dbc8aa3905f22ff4ec2c8c6dda3235be11edbdf860c6a3f8d85",
+          "datetime": 1783951200,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "公司改變比特幣策略，出售股票增現金。"
+        },
         {
           "id": "finnhub-140886096",
           "ticker": "MSTR",
@@ -3578,86 +3618,44 @@
           "credibility": "confirmed",
           "longTermImpact": "thesis",
           "reason": "改變純持有策略，賣出比特幣以應付債務。"
-        },
-        {
-          "id": "finnhub-140883898",
-          "ticker": "MSTR",
-          "headline": "Michael Saylor Hints at More Bitcoin Purchases With 'Orange Dots'  — Analyst Sees 'Great Opportunity' in MSTR Despite the 'Mocking'",
-          "summary": "Popular cryptocurrency analyst Michaël van de Poppe flagged on Sunday a “great opportunity” to buy into Strategy Inc. (NASDAQ:MSTR) and Bitcoin (CRYPTO: BTC), likening the setup to the 2022 bear market bottom. What Does mNAV Reading Say? Van De Poppe quoted an X post by On-chain Mind showing how Strategy’s Market Net Asset Value, or mNAV, is at depressed levels similar to the 2022 bear market bottom. Market Net Asset Value is calculated by dividing the Strategy’s Enterprise Value by the total ma",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=d8120a11339d66fd4d019df6cfe47df752414dc5a4d7121cced1afcac6dbc7ff",
-          "datetime": 1783924614,
-          "sentiment": "bullish",
-          "confidence": 0.6,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "分析師看好，Saylor暗示可能再買比特幣。"
-        },
-        {
-          "id": "finnhub-140882591",
-          "ticker": "MSTR",
-          "headline": "Why Strategy Stock Collapsed In The First Half of 2026",
-          "summary": "The company's Bitcoin accumulation strategy is beginning to unravel.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=3c3f4e40b682e9bf3c06efd6cbaea868b5fd6b5b51ec0c2c488cbbc505775c67",
-          "datetime": 1783903821,
-          "sentiment": "bearish",
-          "confidence": 0.8,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "比特幣累積策略瓦解，股價下跌。"
-        },
-        {
-          "id": "finnhub-140886509",
-          "ticker": "MSTR",
-          "headline": "Elizabeth Warren Says Trump 'Outearned' Every Single Publicly Traded Crypto Company in America: He's Not Fighting for You",
-          "summary": "Sen. Elizabeth Warren (D-Mass.) said on Sunday, July 12, that President Donald Trump is not fighting for the American people as he claimed before, highlighting his billion-dollar cryptocurrency gains during the first year of his presidency.",
-          "source": "Benzinga",
-          "url": "https://finnhub.io/api/news?id=d5ef2797f994165de06845fb2f26b7db962a159952929df98efce31e389942dd",
-          "datetime": 1783899065,
-          "sentiment": "neutral",
-          "confidence": 0.6,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "政治人物言論，非公司營運消息。"
         }
       ]
     },
     {
       "ticker": "MU",
       "quote": {
-        "current": 931.84,
-        "changePct": -4.8463,
+        "current": 927.15,
+        "changePct": -5.3252,
         "high": 943.5,
         "low": 902.6,
         "prevClose": 979.3
       },
       "signal": {
         "sentiment": "neutral",
-        "score": -0.09,
+        "score": -0.01,
         "bullCount": 5,
-        "bearCount": 5
+        "bearCount": 4
       },
       "social": {
-        "bullish": 12,
-        "bearish": 5
+        "bullish": 5,
+        "bearish": 4
       },
       "stats": {
         "atr14": 97.98501586914062,
-        "sma20": 1050.313003540039,
-        "sma50": 907.2960009765625,
-        "sma200": 468.30595039367677,
+        "sma20": 1050.0830017089843,
+        "sma50": 907.2040002441406,
+        "sma200": 468.2829502105713,
         "swingHigh": 1255,
         "swingLow": 891.6599731445312,
         "high52": 1255,
         "low52": 103.37999725341797,
-        "avgVol20": 51616745.3,
-        "lastVol": 18766206,
-        "rsi14": 45.79080505059066,
+        "avgVol20": 51884472.85,
+        "lastVol": 24120757,
+        "rsi14": 45.49749972071678,
         "macd": {
-          "macd": 11.33918171585833,
-          "signal": 40.56104161735731,
-          "hist": -29.22185990149898
+          "macd": 10.972227227566009,
+          "signal": 40.48765071969885,
+          "hist": -29.51542349213284
         }
       },
       "day": {
@@ -3675,13 +3673,13 @@
       },
       "long": {
         "accumulateZone": [
-          454.26,
-          491.72
+          454.23,
+          491.7
         ],
         "trimZone": 1255,
-        "reviewTrigger": 468.31,
+        "reviewTrigger": 468.28,
         "stretched": true,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 1255 · 「止損」=收盤跌破 200 日線 468.31 或論點改變 · ⚠ 現價明顯高於均線，宜小額分批/等回檔"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 1255 · 「止損」=收盤跌破 200 日線 468.28 或論點改變 · ⚠ 現價明顯高於均線，宜小額分批/等回檔"
       },
       "timing": {
         "direction": "none",
@@ -3689,18 +3687,18 @@
         "label": "多空不明 → 觀望",
         "factors": [
           "偏多",
-          "RSI 45.8 中性",
+          "RSI 45.5 中性",
           "MACD↓",
           "量縮",
           "乖離大·殺低險"
         ]
       },
-      "heat": 56,
+      "heat": 57,
       "fundamentals": {
         "marketCap": 1106014.6462696737,
         "industry": "Semiconductors",
-        "peTTM": 21.9147,
-        "psTTM": 12.2518,
+        "peTTM": 20.8426,
+        "psTTM": 11.6524,
         "grossMarginTTM": 72.57,
         "beta": 2.199782,
         "epsGrowthTTMYoy": 700.71,
@@ -3714,6 +3712,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140887733",
+          "ticker": "MU",
+          "headline": "These S&P500 stocks are moving in today's session",
+          "summary": "Curious about the S&P500 stocks that are in motion on Monday? Join us as we explore the top movers within the S&P500 index during today's session.",
+          "source": "ChartMill",
+          "url": "https://finnhub.io/api/news?id=e8c7542148bbc108976f5a596a58170a4921b816dbf824084b032173e60431f3",
+          "datetime": 1783960501,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "普遍市場觀察，與個股無關。"
+        },
         {
           "id": "finnhub-140886805",
           "ticker": "MU",
@@ -3867,97 +3879,83 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "那斯達克下跌，SK海力士暴跌。"
-        },
-        {
-          "id": "finnhub-140885757",
-          "ticker": "MU",
-          "headline": "Micron, SanDisk, Western Digital Fall 6% as SK Hynix’s Weak Outlook Rattles Memory Stocks",
-          "summary": "A single brokerage note out of Seoul just triggered the biggest single-day drop in SK Hynix history, and the shockwaves are now tearing through U.S. memory stocks that were up as much as 700% this year.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=42d1edba85f645d8fc7ce039cfdbb2f54aac3f4535f5e03ab90f51d36df7a266",
-          "datetime": 1783949727,
-          "sentiment": "bearish",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "SK海力士展望疲弱，記憶體股下跌。"
         }
       ]
     },
     {
       "ticker": "ARM",
       "quote": {
-        "current": 300.04,
-        "changePct": -7.2204,
+        "current": 298.08,
+        "changePct": -7.8265,
         "high": 312.21,
         "low": 293.5,
         "prevClose": 323.39
       },
       "signal": {
-        "sentiment": "bullish",
-        "score": 0.4,
+        "sentiment": "bearish",
+        "score": -0.25,
         "bullCount": 1,
-        "bearCount": 0
+        "bearCount": 1
       },
       "social": {
-        "bullish": 6,
-        "bearish": 3
+        "bullish": 7,
+        "bearish": 2
       },
       "stats": {
         "atr14": 30.13700212751116,
-        "sma20": 354.3972473144531,
-        "sma50": 311.15529876708985,
-        "sma200": 182.13050006866456,
+        "sma20": 354.29099731445314,
+        "sma50": 311.1127987670898,
+        "sma200": 182.11987506866456,
         "swingHigh": 452.70001220703125,
         "swingLow": 290.45001220703125,
         "high52": 452.70001220703125,
         "low52": 100.0199966430664,
-        "avgVol20": 9638244.05,
-        "lastVol": 2831781,
-        "rsi14": 43.18938013281504,
+        "avgVol20": 9666677.3,
+        "lastVol": 3400446,
+        "rsi14": 42.82104408795698,
         "macd": {
-          "macd": -4.844169977820741,
-          "signal": 4.481119173887117,
-          "hist": -9.325289151707857
+          "macd": -5.013685647336445,
+          "signal": 4.447216039983976,
+          "hist": -9.46090168732042
         }
       },
       "day": {
-        "direction": "long",
+        "direction": "short",
         "entryZone": [
-          293.5,
-          302.54
+          303.17,
+          312.21
         ],
-        "breakout": 312.21,
-        "stop": 278.43,
-        "target": 337.2,
+        "breakout": 293.5,
+        "stop": 327.28,
+        "target": 268.51,
         "rr": 2,
         "riskPerShare": 19.59,
-        "basis": "做多：回踩支撐 293.5 進場 · 止損=支撐下 0.5×ATR(30.14) · 止盈=風報比 2:1 · 突破 312.21 為另一進場參考"
+        "basis": "做空：反彈靠近阻力 312.21 進場 · 止損=阻力上方 0.5×ATR(30.14) · 止盈=風報比 2:1(往下) · 跌破 293.5 為順勢續空"
       },
       "long": {
         "accumulateZone": [
-          176.67,
-          191.24
+          176.66,
+          191.23
         ],
         "trimZone": 452.7,
-        "reviewTrigger": 182.13,
+        "reviewTrigger": 182.12,
         "stretched": true,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 452.7 · 「止損」=收盤跌破 200 日線 182.13 或論點改變 · ⚠ 現價明顯高於均線，宜小額分批/等回檔"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 452.7 · 「止損」=收盤跌破 200 日線 182.12 或論點改變 · ⚠ 現價明顯高於均線，宜小額分批/等回檔"
       },
       "timing": {
-        "direction": "none",
-        "score": 0.17,
-        "label": "多空不明 → 觀望",
+        "direction": "short",
+        "score": 0.33,
+        "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "偏空",
-          "新聞偏多",
-          "RSI 43.2 中性",
+          "新聞偏空",
+          "RSI 42.8 中性",
           "MACD↓",
           "量縮",
           "乖離大·殺低險"
         ]
       },
-      "heat": 60,
+      "heat": 59,
       "fundamentals": {
         "marketCap": 348853.674805,
         "industry": "Semiconductors",
@@ -3977,6 +3975,20 @@
       },
       "news": [
         {
+          "id": "finnhub-140886972",
+          "ticker": "ARM",
+          "headline": "Arm And Marvell Tumble As Chip Stocks Sell Off",
+          "summary": "Chip stocks sold off on Monday despite an upbeat report from Taiwan Semiconductor Manufacturing. Arm and other stocks broke support.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=cfc188bd6b935659320ad09b077bf63b02dbb1fbc665f61e7a8ed4e8d321d699",
+          "datetime": 1783957578,
+          "sentiment": "bearish",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "晶片股普遍下跌，跌破支撐。"
+        },
+        {
           "id": "finnhub-140871098",
           "ticker": "ARM",
           "headline": "5 Under the Radar AI Chip Stocks Powering the Data Center Boom",
@@ -3995,8 +4007,8 @@
     {
       "ticker": "UBER",
       "quote": {
-        "current": 75.2,
-        "changePct": 0.8854,
+        "current": 74.58,
+        "changePct": 0.0537,
         "high": 76.3,
         "low": 74.41,
         "prevClose": 74.54
@@ -4008,25 +4020,25 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 9,
+        "bullish": 12,
         "bearish": 1
       },
       "stats": {
         "atr14": 2.8085714067731584,
-        "sma20": 73.00400009155274,
-        "sma50": 73.1,
-        "sma200": 80.43475006103516,
+        "sma20": 72.97300491333007,
+        "sma50": 73.08760192871094,
+        "sma200": 80.4316505432129,
         "swingHigh": 77.76000213623047,
         "swingLow": 67.19000244140625,
         "high52": 101.98999786376953,
         "low52": 67.19000244140625,
-        "avgVol20": 20584799.8,
-        "lastVol": 5241496,
-        "rsi14": 55.62031522012976,
+        "avgVol20": 20666850.05,
+        "lastVol": 6882501,
+        "rsi14": 54.148697357563,
         "macd": {
-          "macd": 0.6048379287298502,
-          "signal": 0.34016380876323626,
-          "hist": 0.26467411996661394
+          "macd": 0.555386932135292,
+          "signal": 0.3302736094443246,
+          "hist": 0.2251133226909674
         }
       },
       "day": {
@@ -4044,8 +4056,8 @@
       },
       "long": {
         "accumulateZone": [
-          75.2,
-          84.46
+          74.58,
+          84.45
         ],
         "trimZone": 101.99,
         "reviewTrigger": 80.43,
@@ -4058,12 +4070,12 @@
         "label": "偏好做多（順勢、未過熱時進場）",
         "factors": [
           "偏多",
-          "RSI 55.6 中性",
+          "RSI 54.1 中性",
           "MACD↑",
           "量縮"
         ]
       },
-      "heat": 32,
+      "heat": 30,
       "fundamentals": {
         "marketCap": 151733.54627287615,
         "industry": "Road & Rail",
@@ -4213,38 +4225,38 @@
     {
       "ticker": "DIS",
       "quote": {
-        "current": 97.1,
-        "changePct": 1.5478,
+        "current": 96.04,
+        "changePct": 0.4392,
         "high": 97.54,
         "low": 96.01,
         "prevClose": 95.62
       },
       "signal": {
         "sentiment": "bullish",
-        "score": 0.24,
-        "bullCount": 8,
+        "score": 0.2,
+        "bullCount": 7,
         "bearCount": 1
       },
       "social": {
-        "bullish": 10,
-        "bearish": 5
+        "bullish": 13,
+        "bearish": 2
       },
       "stats": {
         "atr14": 2.2828004019601003,
-        "sma20": 99.11200523376465,
-        "sma50": 101.38500244140624,
-        "sma200": 105.80495056152344,
+        "sma20": 99.06100044250488,
+        "sma50": 101.36460052490234,
+        "sma200": 105.79985008239746,
         "swingHigh": 104.52999877929688,
         "swingLow": 94.77999877929688,
         "high52": 123.4000015258789,
         "low52": 92.19000244140625,
-        "avgVol20": 11700184.55,
-        "lastVol": 3655691,
-        "rsi14": 43.959870391390936,
+        "avgVol20": 11798021.55,
+        "lastVol": 5612431,
+        "rsi14": 40.51840290363854,
         "macd": {
-          "macd": -1.3862503078395463,
-          "signal": -1.1930950353488332,
-          "hist": -0.19315527249071307
+          "macd": -1.467625473382185,
+          "signal": -1.209370068457361,
+          "hist": -0.258255404924824
         }
       },
       "day": {
@@ -4262,8 +4274,8 @@
       },
       "long": {
         "accumulateZone": [
-          97.1,
-          111.1
+          96.04,
+          111.09
         ],
         "trimZone": 123.4,
         "reviewTrigger": 105.8,
@@ -4277,12 +4289,12 @@
         "factors": [
           "順勢↓",
           "新聞偏多",
-          "RSI 44 中性",
+          "RSI 40.5 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 30,
+      "heat": 27,
       "fundamentals": {
         "marketCap": 166045.21236828825,
         "industry": "Media",
@@ -4428,6 +4440,20 @@
           "reason": "迪士尼被視為潛在反彈股，吸引逢低買盤。"
         },
         {
+          "id": "finnhub-140887931",
+          "ticker": "DIS",
+          "headline": "The 10 best state economies in America in 2026",
+          "summary": "Economy is one of the most important categories in CNBC’s annual America’s Top States for Business rankings. Several states stand out for economic strength.",
+          "source": "CNBC",
+          "url": "https://finnhub.io/api/news?id=e7bc2ada588cf2adac84f1c0501fa0221bd7ce5aaec251bb11ce57714a088ce5",
+          "datetime": 1783936801,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "關於美國州經濟，與迪士尼無關。"
+        },
+        {
           "id": "finnhub-140877954",
           "ticker": "DIS",
           "headline": "Disney: The IP Flywheel Is Working Better Than Ever",
@@ -4454,72 +4480,58 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "體育賽事影響廣播商，對迪士尼股價影響不明。"
-        },
-        {
-          "id": "finnhub-140871429",
-          "ticker": "DIS",
-          "headline": "Disney: Value Trap Or Contrarian Buy? It Isn't For The Weak",
-          "summary": "Disney looks oversold near 10-year low valuations. Click to read more about the DIS stock.",
-          "source": "SeekingAlpha",
-          "url": "https://finnhub.io/api/news?id=e7ba5b6732e241cf3821922dec38c030d3a63f62da051580cf6448c10d8e4f34",
-          "datetime": 1783765800,
-          "sentiment": "bullish",
-          "confidence": 0.8,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "迪士尼估值偏低，被視為潛在逆勢買入機會。"
         }
       ]
     },
     {
       "ticker": "BA",
       "quote": {
-        "current": 217.15,
-        "changePct": -2.3079,
+        "current": 216.13,
+        "changePct": -2.7668,
         "high": 222,
-        "low": 217.11,
+        "low": 215.71,
         "prevClose": 222.28
       },
       "signal": {
         "sentiment": "bullish",
-        "score": 0.22,
-        "bullCount": 4,
+        "score": 0.24,
+        "bullCount": 5,
         "bearCount": 0
       },
       "social": {
-        "bullish": 7,
+        "bullish": 6,
         "bearish": 0
       },
       "stats": {
-        "atr14": 6.056424822126116,
-        "sma20": 222.34350051879883,
-        "sma50": 223.1750003051758,
-        "sma200": 218.6424504852295,
+        "atr14": 6.1542816162109375,
+        "sma20": 222.292000579834,
+        "sma50": 223.15440032958983,
+        "sma200": 218.637300491333,
         "swingHigh": 237.47999572753906,
         "swingLow": 209.8000030517578,
         "high52": 254.35000610351562,
         "low52": 176.77000427246094,
-        "avgVol20": 5476569.05,
-        "lastVol": 1569181,
-        "rsi14": 45.053324201699894,
+        "avgVol20": 5526272.6,
+        "lastVol": 2563252,
+        "rsi14": 44.21535513543142,
         "macd": {
-          "macd": 0.420657258665841,
-          "signal": 0.4528429065347223,
-          "hist": -0.032185647868881284
+          "macd": 0.33849211387860123,
+          "signal": 0.43640987757727434,
+          "hist": -0.09791776369867311
         }
       },
       "day": {
         "direction": "short",
         "entryZone": [
-          220.18,
+          220.15,
           222
         ],
-        "breakout": 217.11,
-        "stop": 225.03,
-        "target": 213.22,
+        "breakout": 215.71,
+        "stop": 225.08,
+        "target": 213.08,
         "rr": 2,
-        "riskPerShare": 3.94,
-        "basis": "做空：反彈靠近阻力 222 進場 · 止損=阻力上方 0.5×ATR(6.06) · 止盈=風報比 2:1(往下) · 跌破 217.11 為順勢續空"
+        "riskPerShare": 4,
+        "basis": "做空：反彈靠近阻力 222 進場 · 止損=阻力上方 0.5×ATR(6.15) · 止盈=風報比 2:1(往下) · 跌破 215.71 為順勢續空"
       },
       "long": {
         "accumulateZone": [
@@ -4538,12 +4550,12 @@
         "factors": [
           "順勢↓",
           "新聞偏多",
-          "RSI 45.1 中性",
+          "RSI 44.2 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 36,
+      "heat": 42,
       "fundamentals": {
         "marketCap": 175223.83730829184,
         "industry": "Aerospace & Defense",
@@ -4562,6 +4574,48 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-140888417",
+          "ticker": "BA",
+          "headline": "The Iran War Hasn’t Helped Defense Stocks. Maybe Earnings Can.",
+          "summary": "Expectations for defense earnings are low. That isn’t the case for commercial aerospace earnings, though.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=efdb6704359430d68a96649c93bfdaee24acba454c4433d7db5a915c84c1f3d6",
+          "datetime": 1783962780,
+          "sentiment": "bullish",
+          "confidence": 0.6,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "商業航空財報預期較好，抵銷國防影響。"
+        },
+        {
+          "id": "finnhub-140887734",
+          "ticker": "BA",
+          "headline": "Discover which dow jones stocks are making waves on Monday.",
+          "summary": "Stay updated with the movement of dow jones stocks in today's session. Discover which dow jones stocks are making waves on Monday.",
+          "source": "ChartMill",
+          "url": "https://finnhub.io/api/news?id=125afec3135f0eabea38274af6bc3b39ef8f893650eb6807f2ca927064936ff0",
+          "datetime": 1783960804,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "普遍市場觀察，與個股無關。"
+        },
+        {
+          "id": "finnhub-140888418",
+          "ticker": "BA",
+          "headline": "Missed GE’s Aerospace Rally? XLI Holders Made More Money",
+          "summary": "Everyone beating themselves up for missing GE Aerospace's big run this year might want to check what the boring industrials ETF quietly did over the exact same stretch before feeling too bad about it.",
+          "source": "Yahoo",
+          "url": "https://finnhub.io/api/news?id=7e98bc1200e475a0d4bdd42257718bee4d93848e8f9e113c7dba9370c12004ab",
+          "datetime": 1783959436,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "關於其他公司與ETF，與波音無關。"
+        },
         {
           "id": "finnhub-140887002",
           "ticker": "BA",
@@ -4675,70 +4729,28 @@
           "reason": "波音將在航展展示產品與合作，強化市場信心。"
         },
         {
-          "id": "finnhub-140879845",
+          "id": "finnhub-140888412",
           "ticker": "BA",
-          "headline": "SpaceX’s Ambition Is ‘Unlike Anything’ This Analyst Has Ever Seen",
-          "summary": "“The amount of ambition around [SpaceX’s] industrialization is unlike anything I’ve ever witnessed,” says RBC analyst Ken Herbert.",
+          "headline": "FTSE 100 Live: Stocks flat as Trump says US to be 'guardian of Hormuz strait'",
+          "summary": "FTSE 100 up 1 point at 10,498 Oil prices hit 3-week high amid new US-Iran strikes Plus500, PageGroup, Oxford Nanopore post numbers 5.15pm: Investors cautious As investors eyed geopolitical developments, London stocks finished the day little changed, up 1 point at 10,498. The US’...",
           "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=063a13d7e1d94e16523fc79014746c73f6bfd86ac8e9fb2389c3b501c5c932c3",
-          "datetime": 1783879560,
+          "url": "https://finnhub.io/api/news?id=93f5340e5800f1d6cc38b15c4dfc371cb4de26812bf2bca911cd8e2923379f1a",
+          "datetime": 1783923540,
           "sentiment": "neutral",
-          "confidence": 0.5,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "新聞關於SpaceX，與波音BA無直接關聯。"
-        },
-        {
-          "id": "finnhub-140878574",
-          "ticker": "BA",
-          "headline": "SpaceX’s Ambitions Are Bigger Than Most People Think",
-          "summary": "“The amount of ambition around [SpaceX’s] industrialization is unlike anything I’ve ever witnessed,” says RBC analyst Ken Herbert.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=a0839ade44bb1622665b5146439c1386a6a849988ba6d29eb6f577b950715c12",
-          "datetime": 1783875660,
-          "sentiment": "neutral",
-          "confidence": 0.5,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "新聞關於SpaceX，與波音BA無直接關聯。"
-        },
-        {
-          "id": "finnhub-140878575",
-          "ticker": "BA",
-          "headline": "Ken Griffin Warns Losing TSMC Chips Could Trigger a 'Great Depression:' They're in 'Every High-End Product'",
-          "summary": "Speaking at the Goldman Sachs Apex Symposium, Citadel founder and CEO Ken Griffin warned that losing access to Taiwanese semiconductor chips would cause the U.S. gross domestic product (GDP) to decline by 8% within six months, triggering a modern “Great...",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=a441c4f2865c2f6f7fc58d3436bc064a7febb515371ca049e46c7297bf4711b5",
-          "datetime": 1783873881,
-          "sentiment": "neutral",
-          "confidence": 0.6,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "總體經濟風險警告，與波音BA無直接關聯。"
-        },
-        {
-          "id": "finnhub-140873002",
-          "ticker": "BA",
-          "headline": "Morgan Stanley drops timely Honeywell stock opinion",
-          "summary": "Honeywell Aerospace (HONA) officially became an independent, publicly traded company on June 29, 2026, and Wall Street has already made up its mind on the stock. The company separated from Honeywell International on June 29, 2026, and landed on the Nasdaq as HONA. The parent kept the HON ticker and ...",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=443ad26f0683a446f7e7a5a9f3e99cda4449f9408c808c332257d6f71ff779df",
-          "datetime": 1783798620,
-          "sentiment": "neutral",
-          "confidence": 0.5,
+          "confidence": 0.9,
           "credibility": "confirmed",
           "longTermImpact": "noise",
-          "reason": "新聞關於Honeywell，與波音BA無直接關聯。"
+          "reason": "關於英國股市與地緣政治，與波音無關。"
         }
       ]
     },
     {
       "ticker": "SMCI",
       "quote": {
-        "current": 27.66,
-        "changePct": -2.296,
+        "current": 27.53,
+        "changePct": -2.7552,
         "high": 28.2499,
-        "low": 27.5,
+        "low": 27.34,
         "prevClose": 28.31
       },
       "signal": {
@@ -4748,25 +4760,25 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 3,
+        "bullish": 10,
         "bearish": 7
       },
       "stats": {
-        "atr14": 1.8864281518118722,
-        "sma20": 29.5292498588562,
-        "sma50": 33.446499824523926,
-        "sma200": 34.468974905014036,
+        "atr14": 1.8978567123413086,
+        "sma20": 29.52624979019165,
+        "sma50": 33.445299797058105,
+        "sma200": 34.46867489814758,
         "swingHigh": 36.79999923706055,
         "swingLow": 25.40999984741211,
         "high52": 62.36000061035156,
         "low52": 19.479999542236328,
-        "avgVol20": 53806199.8,
-        "lastVol": 10137596,
-        "rsi14": 41.748281455480935,
+        "avgVol20": 54027803.2,
+        "lastVol": 14569664,
+        "rsi14": 41.62976782331264,
         "macd": {
-          "macd": -1.960037464903575,
-          "signal": -1.8410167103800634,
-          "hist": -0.11902075452351157
+          "macd": -1.96482389924018,
+          "signal": -1.8419739972473845,
+          "hist": -0.12284990199279555
         }
       },
       "day": {
@@ -4775,16 +4787,16 @@
           27.68,
           28.25
         ],
-        "breakout": 27.5,
-        "stop": 29.19,
-        "target": 25.51,
+        "breakout": 27.34,
+        "stop": 29.2,
+        "target": 25.5,
         "rr": 2,
         "riskPerShare": 1.23,
-        "basis": "做空：反彈靠近阻力 28.25 進場 · 止損=阻力上方 0.5×ATR(1.89) · 止盈=風報比 2:1(往下) · 跌破 27.5 為順勢續空"
+        "basis": "做空：反彈靠近阻力 28.25 進場 · 止損=阻力上方 0.5×ATR(1.9) · 止盈=風報比 2:1(往下) · 跌破 27.34 為順勢續空"
       },
       "long": {
         "accumulateZone": [
-          27.66,
+          27.53,
           36.19
         ],
         "trimZone": 62.36,
@@ -4799,12 +4811,12 @@
         "factors": [
           "順勢↓",
           "新聞偏多",
-          "RSI 41.7 中性",
+          "RSI 41.6 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 52,
+      "heat": 55,
       "fundamentals": {
         "marketCap": 18312.97408064165,
         "industry": "Technology",
@@ -4863,15 +4875,15 @@
         "shares": 10,
         "entry": 195
       },
-      "price": 206.15,
-      "pnlPct": 0.05717948717948721,
-      "pnlAmount": 111.5,
+      "price": 203.98,
+      "pnlPct": 0.046051282051282,
+      "pnlAmount": 89.8,
       "rMultiple": null,
       "suggestedTarget": null,
-      "action": "review",
-      "suggestedStop": 191.81,
-      "reason": "出現可能改變長期論點的新聞，建議檢視這筆持倉。",
-      "urgent": true
+      "action": "trail_stop",
+      "suggestedStop": 191.8,
+      "reason": "論點未變，續抱；把「檢討價」上移到 200 日線 191.8。",
+      "urgent": false
     }
   ],
   "track": {
@@ -4883,9 +4895,9 @@
     "totalR": 61.9,
     "totalHKD": 93.04,
     "days": 28,
-    "trades": 287,
+    "trades": 289,
     "perDay": 10.3,
-    "open": 45,
+    "open": 47,
     "byStrategy": [
       {
         "name": "綜合時機",
@@ -4897,7 +4909,7 @@
         "totalR": 72.99,
         "totalHKD": 165.09,
         "days": 28,
-        "trades": 129,
+        "trades": 130,
         "perDay": 4.6
       },
       {
@@ -4975,8 +4987,8 @@
         "totalR": 2.84,
         "totalHKD": 20.94,
         "days": 7,
-        "trades": 20,
-        "perDay": 2.9
+        "trades": 21,
+        "perDay": 3
       },
       {
         "name": "乖離回歸",
@@ -5288,8 +5300,8 @@
         "target": 749.72,
         "riskPerShare": 40.26,
         "status": "open",
-        "unrealizedR": -0.23,
-        "pnlHKD": -1.36,
+        "unrealizedR": -0.21,
+        "pnlHKD": -1.24,
         "ageDays": 2
       },
       {
@@ -5304,8 +5316,8 @@
         "target": 377.01,
         "riskPerShare": 12.8,
         "status": "open",
-        "unrealizedR": 0.62,
-        "pnlHKD": 1.97,
+        "unrealizedR": 0.77,
+        "pnlHKD": 2.44,
         "ageDays": 0
       },
       {
@@ -5320,8 +5332,8 @@
         "target": 329.68,
         "riskPerShare": 5.93,
         "status": "open",
-        "unrealizedR": -0.06,
-        "pnlHKD": -0.11,
+        "unrealizedR": -0.27,
+        "pnlHKD": -0.5,
         "ageDays": 0
       },
       {
@@ -5336,8 +5348,8 @@
         "target": 403.12,
         "riskPerShare": 7.84,
         "status": "open",
-        "unrealizedR": 0.45,
-        "pnlHKD": 0.9,
+        "unrealizedR": 0.58,
+        "pnlHKD": 1.18,
         "ageDays": 0
       },
       {
@@ -5352,8 +5364,8 @@
         "target": 698.09,
         "riskPerShare": 17.44,
         "status": "open",
-        "unrealizedR": -0.18,
-        "pnlHKD": -0.47,
+        "unrealizedR": -0.13,
+        "pnlHKD": -0.35,
         "ageDays": 0
       },
       {
@@ -5368,8 +5380,8 @@
         "target": 343.8,
         "riskPerShare": 6.42,
         "status": "open",
-        "unrealizedR": 0.07,
-        "pnlHKD": 0.13,
+        "unrealizedR": 0.21,
+        "pnlHKD": 0.37,
         "ageDays": 0
       },
       {
@@ -5384,8 +5396,8 @@
         "target": 71.8,
         "riskPerShare": 1.61,
         "status": "open",
-        "unrealizedR": 0.24,
-        "pnlHKD": 0.52,
+        "unrealizedR": 0.36,
+        "pnlHKD": 0.77,
         "ageDays": 0
       },
       {
@@ -5400,8 +5412,8 @@
         "target": 135.86,
         "riskPerShare": 4.33,
         "status": "open",
-        "unrealizedR": 0.57,
-        "pnlHKD": 1.94,
+        "unrealizedR": 0.42,
+        "pnlHKD": 1.42,
         "ageDays": 0
       },
       {
@@ -5416,8 +5428,8 @@
         "target": 80.8,
         "riskPerShare": 5.33,
         "status": "open",
-        "unrealizedR": -0.07,
-        "pnlHKD": -0.39,
+        "unrealizedR": -0.08,
+        "pnlHKD": -0.48,
         "ageDays": 0
       },
       {
@@ -5432,8 +5444,8 @@
         "target": 78.78,
         "riskPerShare": 1.82,
         "status": "open",
-        "unrealizedR": 0.03,
-        "pnlHKD": 0.08,
+        "unrealizedR": -0.31,
+        "pnlHKD": -0.75,
         "ageDays": 0
       },
       {
@@ -5448,8 +5460,8 @@
         "target": 93.93,
         "riskPerShare": 1.47,
         "status": "open",
-        "unrealizedR": -0.16,
-        "pnlHKD": -0.25,
+        "unrealizedR": 0.56,
+        "pnlHKD": 0.85,
         "ageDays": 0
       },
       {
@@ -5464,8 +5476,8 @@
         "target": 25.51,
         "riskPerShare": 1.23,
         "status": "open",
-        "unrealizedR": 0.25,
-        "pnlHKD": 1.11,
+        "unrealizedR": 0.36,
+        "pnlHKD": 1.57,
         "ageDays": 0
       },
       {
@@ -5480,8 +5492,8 @@
         "target": 335.5,
         "riskPerShare": 29.55,
         "status": "open",
-        "unrealizedR": 0,
-        "pnlHKD": -0.02,
+        "unrealizedR": 0.06,
+        "pnlHKD": 0.46,
         "ageDays": 0
       },
       {
@@ -5496,8 +5508,8 @@
         "target": 348.94,
         "riskPerShare": 13.68,
         "status": "open",
-        "unrealizedR": -0.3,
-        "pnlHKD": -1.27,
+        "unrealizedR": -0.39,
+        "pnlHKD": -1.66,
         "ageDays": 0
       },
       {
@@ -5512,8 +5524,8 @@
         "target": 326.66,
         "riskPerShare": 14.82,
         "status": "open",
-        "unrealizedR": 0.01,
-        "pnlHKD": 0.04,
+        "unrealizedR": 0.07,
+        "pnlHKD": 0.28,
         "ageDays": 0
       },
       {
@@ -5528,8 +5540,8 @@
         "target": 67.74,
         "riskPerShare": 3.72,
         "status": "open",
-        "unrealizedR": 0.15,
-        "pnlHKD": 0.72,
+        "unrealizedR": 0.2,
+        "pnlHKD": 0.97,
         "ageDays": 0
       },
       {
@@ -5544,8 +5556,8 @@
         "target": 127.05,
         "riskPerShare": 14.76,
         "status": "open",
-        "unrealizedR": -0.01,
-        "pnlHKD": -0.13,
+        "unrealizedR": 0.11,
+        "pnlHKD": 0.99,
         "ageDays": 0
       },
       {
@@ -5561,7 +5573,7 @@
         "riskPerShare": 12.3,
         "status": "open",
         "unrealizedR": -0.1,
-        "pnlHKD": -1.31,
+        "pnlHKD": -1.4,
         "ageDays": 0
       },
       {
@@ -5576,8 +5588,8 @@
         "target": 90.35,
         "riskPerShare": 3.39,
         "status": "open",
-        "unrealizedR": 0.01,
-        "pnlHKD": 0.03,
+        "unrealizedR": 0.32,
+        "pnlHKD": 1.12,
         "ageDays": 0
       },
       {
@@ -5592,8 +5604,8 @@
         "target": 201.74,
         "riskPerShare": 8.9,
         "status": "open",
-        "unrealizedR": 0.27,
-        "pnlHKD": 1.09,
+        "unrealizedR": 0.38,
+        "pnlHKD": 1.55,
         "ageDays": 0
       },
       {
@@ -5608,8 +5620,8 @@
         "target": 22.26,
         "riskPerShare": 2.83,
         "status": "open",
-        "unrealizedR": 0.09,
-        "pnlHKD": 0.93,
+        "unrealizedR": 0.14,
+        "pnlHKD": 1.4,
         "ageDays": 0
       },
       {
@@ -5624,8 +5636,8 @@
         "target": 294.2,
         "riskPerShare": 13.68,
         "status": "open",
-        "unrealizedR": 0.3,
-        "pnlHKD": 1.27,
+        "unrealizedR": 0.39,
+        "pnlHKD": 1.66,
         "ageDays": 0
       },
       {
@@ -5640,8 +5652,8 @@
         "target": 744.24,
         "riskPerShare": 40.25,
         "status": "open",
-        "unrealizedR": -0.09,
-        "pnlHKD": -0.55,
+        "unrealizedR": -0.07,
+        "pnlHKD": -0.43,
         "ageDays": 0
       },
       {
@@ -5656,8 +5668,8 @@
         "target": 146.96,
         "riskPerShare": 9.99,
         "status": "open",
-        "unrealizedR": 0.27,
-        "pnlHKD": 2.13,
+        "unrealizedR": 0.2,
+        "pnlHKD": 1.6,
         "ageDays": 0
       },
       {
@@ -5672,8 +5684,8 @@
         "target": 620.46,
         "riskPerShare": 146.98,
         "status": "open",
-        "unrealizedR": -0.12,
-        "pnlHKD": -1.91,
+        "unrealizedR": -0.09,
+        "pnlHKD": -1.39,
         "ageDays": 0
       },
       {
@@ -5688,8 +5700,8 @@
         "target": 384.87,
         "riskPerShare": 45.21,
         "status": "open",
-        "unrealizedR": 0.12,
-        "pnlHKD": 1.89,
+        "unrealizedR": 0.08,
+        "pnlHKD": 1.23,
         "ageDays": 0
       },
       {
@@ -5704,8 +5716,8 @@
         "target": 348.94,
         "riskPerShare": 13.68,
         "status": "open",
-        "unrealizedR": -0.3,
-        "pnlHKD": -1.27,
+        "unrealizedR": -0.39,
+        "pnlHKD": -1.66,
         "ageDays": 0
       },
       {
@@ -5720,8 +5732,8 @@
         "target": 399.97,
         "riskPerShare": 22.38,
         "status": "open",
-        "unrealizedR": 0.1,
-        "pnlHKD": 0.57,
+        "unrealizedR": -0.06,
+        "pnlHKD": -0.35,
         "ageDays": 0
       },
       {
@@ -5736,8 +5748,8 @@
         "target": 323.39,
         "riskPerShare": 45.21,
         "status": "open",
-        "unrealizedR": 0.12,
-        "pnlHKD": 1.89,
+        "unrealizedR": 0.08,
+        "pnlHKD": 1.23,
         "ageDays": 0
       },
       {
@@ -5752,8 +5764,8 @@
         "target": 299.39,
         "riskPerShare": 13.68,
         "status": "open",
-        "unrealizedR": 0.3,
-        "pnlHKD": 1.27,
+        "unrealizedR": 0.39,
+        "pnlHKD": 1.66,
         "ageDays": 0
       },
       {
@@ -5768,8 +5780,8 @@
         "target": 589.36,
         "riskPerShare": 40.25,
         "status": "open",
-        "unrealizedR": 0.09,
-        "pnlHKD": 0.55,
+        "unrealizedR": 0.07,
+        "pnlHKD": 0.43,
         "ageDays": 0
       },
       {
@@ -5784,8 +5796,8 @@
         "target": 348.94,
         "riskPerShare": 13.68,
         "status": "open",
-        "unrealizedR": -0.3,
-        "pnlHKD": -1.27,
+        "unrealizedR": -0.39,
+        "pnlHKD": -1.66,
         "ageDays": 0
       },
       {
@@ -5800,8 +5812,8 @@
         "target": 348.94,
         "riskPerShare": 13.68,
         "status": "open",
-        "unrealizedR": -0.3,
-        "pnlHKD": -1.27,
+        "unrealizedR": -0.39,
+        "pnlHKD": -1.66,
         "ageDays": 0
       },
       {
@@ -5816,8 +5828,8 @@
         "target": 744.24,
         "riskPerShare": 40.25,
         "status": "open",
-        "unrealizedR": -0.09,
-        "pnlHKD": -0.55,
+        "unrealizedR": -0.07,
+        "pnlHKD": -0.43,
         "ageDays": 0
       },
       {
@@ -5832,8 +5844,8 @@
         "target": 204.05,
         "riskPerShare": 45.21,
         "status": "open",
-        "unrealizedR": -0.12,
-        "pnlHKD": -1.89,
+        "unrealizedR": -0.08,
+        "pnlHKD": -1.23,
         "ageDays": 0
       },
       {
@@ -5848,8 +5860,8 @@
         "target": 83.34,
         "riskPerShare": 4.2,
         "status": "open",
-        "unrealizedR": 0.06,
-        "pnlHKD": 0.35,
+        "unrealizedR": -0.09,
+        "pnlHKD": -0.48,
         "ageDays": 0
       },
       {
@@ -5864,8 +5876,8 @@
         "target": 90.35,
         "riskPerShare": 3.39,
         "status": "open",
-        "unrealizedR": 0.01,
-        "pnlHKD": 0.03,
+        "unrealizedR": 0.32,
+        "pnlHKD": 1.12,
         "ageDays": 0
       },
       {
@@ -5880,8 +5892,8 @@
         "target": 237.34,
         "riskPerShare": 8.9,
         "status": "open",
-        "unrealizedR": -0.27,
-        "pnlHKD": -1.09,
+        "unrealizedR": -0.38,
+        "pnlHKD": -1.55,
         "ageDays": 0
       },
       {
@@ -5896,8 +5908,8 @@
         "target": 22.26,
         "riskPerShare": 2.83,
         "status": "open",
-        "unrealizedR": 0.09,
-        "pnlHKD": 0.93,
+        "unrealizedR": 0.14,
+        "pnlHKD": 1.4,
         "ageDays": 0
       },
       {
@@ -5912,8 +5924,8 @@
         "target": 582.61,
         "riskPerShare": 24.96,
         "status": "open",
-        "unrealizedR": 0.35,
-        "pnlHKD": 1.66,
+        "unrealizedR": 0.19,
+        "pnlHKD": 0.89,
         "ageDays": 0
       },
       {
@@ -5928,8 +5940,8 @@
         "target": 147.05,
         "riskPerShare": 6.34,
         "status": "open",
-        "unrealizedR": 0.47,
-        "pnlHKD": 1.85,
+        "unrealizedR": 0.74,
+        "pnlHKD": 2.94,
         "ageDays": 0
       },
       {
@@ -5944,8 +5956,8 @@
         "target": 213.22,
         "riskPerShare": 3.94,
         "status": "open",
-        "unrealizedR": 1,
-        "pnlHKD": 1.78,
+        "unrealizedR": 1.26,
+        "pnlHKD": 2.24,
         "ageDays": 0
       },
       {
@@ -5960,8 +5972,8 @@
         "target": 656.72,
         "riskPerShare": 57.61,
         "status": "open",
-        "unrealizedR": 0,
-        "pnlHKD": 0,
+        "unrealizedR": -0.07,
+        "pnlHKD": -0.76,
         "ageDays": 0
       },
       {
@@ -5976,8 +5988,8 @@
         "target": 33.32,
         "riskPerShare": 2.83,
         "status": "open",
-        "unrealizedR": 0,
-        "pnlHKD": 0,
+        "unrealizedR": -0.05,
+        "pnlHKD": -0.47,
         "ageDays": 0
       },
       {
@@ -5991,6 +6003,38 @@
         "stop": 208.07,
         "target": 222.28,
         "riskPerShare": 9.08,
+        "status": "open",
+        "unrealizedR": -0.11,
+        "pnlHKD": -0.47,
+        "ageDays": 0
+      },
+      {
+        "id": "綜合時機-ARM-1783966366179",
+        "strategy": "綜合時機",
+        "ticker": "ARM",
+        "direction": "short",
+        "createdAt": "2026-07-13T18:12:46.178Z",
+        "createdPrice": 298.08,
+        "entry": 307.69,
+        "stop": 327.28,
+        "target": 268.51,
+        "riskPerShare": 19.59,
+        "status": "open",
+        "unrealizedR": 0.49,
+        "pnlHKD": 3.12,
+        "ageDays": 0
+      },
+      {
+        "id": "區間回歸-NVDA-1783966366179",
+        "strategy": "區間回歸",
+        "ticker": "NVDA",
+        "direction": "long",
+        "createdAt": "2026-07-13T18:12:46.178Z",
+        "createdPrice": 203.98,
+        "entry": 203.98,
+        "stop": 193.65,
+        "target": 210.96,
+        "riskPerShare": 10.33,
         "status": "open",
         "unrealizedR": 0,
         "pnlHKD": 0,
