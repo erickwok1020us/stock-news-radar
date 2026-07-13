@@ -255,7 +255,32 @@ async function pollCommands(): Promise<void> {
   }
 }
 
-// ── 每日摘要（盤前 9:15 / 盤後 16:15 ET）──────────────────────
+// 今日可跟單：挑目前唯一夠格的最佳策略，列出「今天剛出、現價還貼近進場」的訊號
+function followSignals(s: Snapshot): {
+  name: string;
+  winRate: number;
+  roi: number;
+  lines: string[];
+} | null {
+  const t = s.track;
+  if (!t) return null;
+  const best = [...t.byStrategy]
+    .filter((x) => x.wins + x.losses >= 15 && x.winRate >= 0.55 && x.totalHKD > 0)
+    .sort((a, b) => b.totalHKD - a.totalHKD)[0];
+  if (!best) return null;
+  const roi = best.closed > 0 ? (best.totalHKD / (best.closed * 100)) * 100 : 0;
+  const lines = (t.openList ?? [])
+    .filter((o) => o.strategy === best.name && (o.ageDays ?? 9) === 0 && Math.abs(o.unrealizedR ?? 9) < 0.5)
+    .sort((a, b) => Math.abs(a.unrealizedR ?? 9) - Math.abs(b.unrealizedR ?? 9))
+    .slice(0, 8)
+    .map(
+      (o) =>
+        `${o.direction === "long" ? "🟢做多" : "🔴做空"} <b>$${o.ticker}</b> 進~${o.entry} 損${o.stop} 標${o.target}`,
+    );
+  return { name: best.name, winRate: best.winRate, roi, lines };
+}
+
+// ── 每日摘要（盤前 9:15 / 今日可跟單 9:50 / 盤後 16:15 ET）──────
 function maybeDigest(): void {
   if (!snap) return;
   const { dow, minutes, date } = ny();
@@ -263,6 +288,16 @@ function maybeDigest(): void {
   if (minutes >= 555 && minutes < 565 && !sentDigests.has(`${date}:pre`)) {
     sentDigests.add(`${date}:pre`);
     void tgSend(`🌅 <b>盤前 · 今日設定</b>\n\n${fmtFocus(snap)}`);
+  }
+  // 開盤後 9:50 ET：推「今日可跟單」（最佳策略今天要進場的訊號）
+  if (minutes >= 590 && minutes < 600 && !sentDigests.has(`${date}:follow`)) {
+    sentDigests.add(`${date}:follow`);
+    const f = followSignals(snap);
+    if (f && f.lines.length) {
+      void tgSend(
+        `🎯 <b>今日可跟單 · ${f.name}</b>（勝率 ${Math.round(f.winRate * 100)}% · 報酬率 ${f.roi >= 0 ? "+" : ""}${f.roi.toFixed(1)}%）\n${f.lines.join("\n")}\n\n照價位進場、掛好止損止盈即可；不用全吃，挑 2–3 檔。（決策輔助，單由你下）`,
+      );
+    }
   }
   if (minutes >= 975 && minutes < 985 && !sentDigests.has(`${date}:post`)) {
     sentDigests.add(`${date}:post`);
