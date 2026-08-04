@@ -126,7 +126,9 @@ export function TrackView({ track }: { track: TrackSummary | null }) {
   const sbRoi = sbStake > 0 ? (sbHKD / sbStake) * 100 : 0;
   const sbDecided = sbWins + sbLosses;
 
-  const ranked = [...track.byStrategy].sort((a, b) => {
+  const ranked = track.byStrategy
+    .filter((s) => STRATEGIES.some((x) => x.name === s.name)) // 已停用的策略不顯示（資料還沒重算前的保險）
+    .sort((a, b) => {
     const da = a.wins + a.losses;
     const db = b.wins + b.losses;
     if (da === 0 && db === 0)

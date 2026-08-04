@@ -95,33 +95,6 @@ export const STRATEGIES: Strategy[] = [
     },
   },
   {
-    name: "均線順勢",
-    basis: "站上 SMA20>SMA50 做多 / 跌破 SMA20<SMA50 做空",
-    style: "順勢",
-    evaluate(t) {
-      const s = t.stats;
-      const p = t.quote?.current;
-      if (!s?.sma20 || !s.sma50 || !s.atr14 || !p) return null;
-      if (p > s.sma20 && s.sma20 > s.sma50) return levelsFor("long", p, s.atr14);
-      if (p < s.sma20 && s.sma20 < s.sma50) return levelsFor("short", p, s.atr14);
-      return null;
-    },
-  },
-  {
-    name: "新聞動能",
-    basis: "新聞情緒強(±0.3)就順著做",
-    style: "事件",
-    evaluate(t) {
-      const sc = t.signal.score;
-      const p = t.quote?.current;
-      const atr = t.stats?.atr14;
-      if (!p || !atr) return null;
-      if (sc >= 0.3) return levelsFor("long", p, atr);
-      if (sc <= -0.3) return levelsFor("short", p, atr);
-      return null;
-    },
-  },
-  {
     name: "突破",
     basis: "突破近 20 日高做多 / 跌破近 20 日低做空",
     style: "順勢",
