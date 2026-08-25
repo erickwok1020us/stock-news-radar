@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T19:22:26.006Z",
+  "generatedAt": "2026-08-25T19:49:58.555Z",
   "account": {
     "size": 10000,
     "riskPct": 0.01,
@@ -9,38 +9,38 @@
     {
       "ticker": "SPCX",
       "quote": {
-        "current": 138.24,
-        "changePct": 2.4,
+        "current": 138.5,
+        "changePct": 2.5926,
         "high": 139.75,
         "low": 136.1,
         "prevClose": 135
       },
       "signal": {
-        "sentiment": "neutral",
-        "score": 0.04,
-        "bullCount": 3,
+        "sentiment": "bullish",
+        "score": 0.18,
+        "bullCount": 5,
         "bearCount": 3
       },
       "social": {
-        "bullish": 10,
-        "bearish": 5
+        "bullish": 18,
+        "bearish": 3
       },
       "stats": {
         "atr14": 9.307143075125557,
-        "sma20": 130.1127487182617,
-        "sma50": 141.04289978027344,
+        "sma20": 130.1262535095215,
+        "sma50": 141.04830169677734,
         "sma200": null,
         "swingHigh": 149.8000030517578,
         "swingLow": 104.83000183105469,
         "high52": 225.63999938964844,
         "low52": 104.83000183105469,
-        "avgVol20": 116593063.3,
-        "lastVol": 43352266,
-        "rsi14": 52.614392517649364,
+        "avgVol20": 116748771.6,
+        "lastVol": 46316832,
+        "rsi14": 52.775404980757685,
         "macd": {
-          "macd": 1.4540158468521724,
-          "signal": 0.10305478640614843,
-          "hist": 1.350961060446024
+          "macd": 1.4755619525657835,
+          "signal": 0.10736400754887063,
+          "hist": 1.3681979450169128
         }
       },
       "day": {
@@ -58,26 +58,27 @@
       },
       "long": {
         "accumulateZone": [
-          118.19,
-          138.24
+          118.3,
+          138.5
         ],
         "trimZone": 225.64,
-        "reviewTrigger": 103.68,
+        "reviewTrigger": 103.88,
         "stretched": false,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 225.64 · 「止損」=收盤跌破 200 日線 103.68 或論點改變"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 225.64 · 「止損」=收盤跌破 200 日線 103.88 或論點改變"
       },
       "timing": {
-        "direction": "none",
-        "score": 0.17,
-        "label": "多空不明 → 觀望",
+        "direction": "long",
+        "score": 0.33,
+        "label": "偏好做多（順勢、未過熱時進場）",
         "factors": [
           "偏空",
-          "RSI 52.6 中性",
+          "新聞偏多",
+          "RSI 52.8 中性",
           "MACD↑",
           "量縮"
         ]
       },
-      "heat": 43,
+      "heat": 46,
       "fundamentals": {
         "marketCap": 1885971.4983717448,
         "industry": "Telecommunication",
@@ -96,6 +97,76 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-141317805",
+          "ticker": "SPCX",
+          "headline": "SpaceX Stock Is Moving Higher: What's Going On Today?",
+          "summary": "SpaceX stock is rising Tuesday. JPMorgan reiterated an Overweight and $240 price target, pointing to progress on SpaceX&#39;s AI ambitions.",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=986fb9f9edd38b8c336796a5e6d158e4f3d4abb923310f4d71e0b968027edcde",
+          "datetime": 1787663118,
+          "sentiment": "bullish",
+          "confidence": 0.8,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "大行重申看好，AI發展具潛力。"
+        },
+        {
+          "id": "finnhub-141317806",
+          "ticker": "SPCX",
+          "headline": "SpaceX Posts On X \"Introducing Starbase, Louisiana – a high-cadence launch site that will enable Starship to open a pathway to the stars for humanity.\"",
+          "summary": "https://x.com/SpaceX/status/2092284173730144732",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=b40b12f74fb6d6bf1655df226d49bb5f592202500eab7e31537e8827c3944ac4",
+          "datetime": 1787660305,
+          "sentiment": "bullish",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "官方宣布新發射場，擴大營運能力。"
+        },
+        {
+          "id": "finnhub-141317810",
+          "ticker": "SPCX",
+          "headline": "SpaceX's AI Push Comes Into Focus as JPMorgan Sees Nearly 80% Upside",
+          "summary": "Grok&#39;s functions—including its lack of safeguards—have received significant industry backlash. Still, JPMorgan remains bullish.",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=b4520d07d2189542cc60eb0a864c7fcf3937537ce7a54b0d00a64284503b1c7e",
+          "datetime": 1787645089,
+          "sentiment": "bullish",
+          "confidence": 0.8,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "大行看好AI發展潛力，給予高目標價。"
+        },
+        {
+          "id": "finnhub-141317812",
+          "ticker": "SPCX",
+          "headline": "Elon Musk’s xAI Sounds Alarm Over Power Shutdown: Grok Could ‘Largely Cease to Function’",
+          "summary": "xAI warns that shutting down gas turbines could cripple Grok, disrupt AI services used by millions worldwide.",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=ac85b276750d887980b3e78e2e5b46ccd374349e26b6e1940a51c47e6c708262",
+          "datetime": 1787632391,
+          "sentiment": "bearish",
+          "confidence": 0.8,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "xAI警告斷電風險，可能影響AI服務。"
+        },
+        {
+          "id": "finnhub-141317813",
+          "ticker": "SPCX",
+          "headline": "Elon Musk Says Grok Is Taking Over Starlink Support: 15,000+ Calls a Day, 3,000+ Orders a Week",
+          "summary": "Elon Musk says Starlink uses Grok Voice at scale for support &amp; sales, handling over 15,000 calls and 3,000 orders weekly.",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=c8e6743a5498a88c0748432fa45c6b9af7082e38a3e027ac664ed71e45bdc03f",
+          "datetime": 1787628582,
+          "sentiment": "bullish",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "thesis",
+          "reason": "Grok應用於Starlink客服，提升效率。"
+        },
         {
           "id": "finnhub-141310971",
           "ticker": "SPCX",
@@ -193,114 +264,44 @@
           "credibility": "confirmed",
           "longTermImpact": "thesis",
           "reason": "中國競爭加劇，影響未來成長。"
-        },
-        {
-          "id": "finnhub-141302781",
-          "ticker": "SPCX",
-          "headline": "AT&T's Dividend Costs the Company a Fixed Amount Every Quarter Regardless of Competitive Pressure From Starlink or Cable Rivals. Here's the Coverage Ratio That Actually Determines Whether It's Safe.",
-          "summary": "AT&T paid out $3.973 billion in dividends in the first half of 2026, but where does that money come from?",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=3b770c115f74bfa901898a497772a0fb5b1a5a513231f593481d6678bbfefedf",
-          "datetime": 1787495700,
-          "sentiment": "neutral",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "內容主要關於AT&T，與SPCX無直接關聯。"
-        },
-        {
-          "id": "finnhub-141302967",
-          "ticker": "SPCX",
-          "headline": "Exclusive: Anthropic's $2 Trillion Valuation Faces a Reality Check—SPCX Offers a Warning, Wall Street Veteran Says",
-          "summary": "Anthropic’s reported potential $2 trillion valuation would require investors to underwrite an extraordinary combination of growth and margin expansion, while also taking lessons from Space Exploration Technologies Corp.‘s (NASDAQ:SPCX) turbulent transition from private-market darling to public company, says Dr Chan...",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=31a349850b8d80427f0d0b874bd73be43c85bf452daecd2863ceef07f75dd949",
-          "datetime": 1787493629,
-          "sentiment": "bearish",
-          "confidence": 0.7,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "引用SPCX作為估值警示，暗示上市挑戰。"
-        },
-        {
-          "id": "finnhub-141302968",
-          "ticker": "SPCX",
-          "headline": "Anthropic Could Outdo SpaceX With Its IPO. Here's How Much Investors Think It's Worth Right Now and Why.",
-          "summary": "There are still a lot of questions, but Anthropic's revenue growth is incredible.",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=457c0d6eb40f5dd91a266d96f5e3bf8fabc0f49574d7aa629ec0c5588e0d302d",
-          "datetime": 1787484300,
-          "sentiment": "neutral",
-          "confidence": 0.6,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "比較Anthropic與SPCX的IPO潛力，非SPCX直接消息。"
-        },
-        {
-          "id": "finnhub-141302969",
-          "ticker": "SPCX",
-          "headline": "Trump Orders 1,000 Space Launches a Year by 2030 — That's 5x Today's Pace",
-          "summary": "President Donald Trump signed a memo Thursday directing federal agencies to dramatically ramp up commercial rocket activity, setting a target of at least 1,000 launches and re-entries annually by 2030, according to Reuters. Last year’s total sat at 178 launches...",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=2433d951c0562ac6b93cfc15cd07f82079a1a269f27f7824664156bb63702a75",
-          "datetime": 1787481955,
-          "sentiment": "bullish",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "thesis",
-          "reason": "總統命令大幅增加發射量，利好SPCX。"
-        },
-        {
-          "id": "finnhub-141302970",
-          "ticker": "SPCX",
-          "headline": "Jim Cramer Shared Insights Into Space Exploration Technologies Corp. (NASDAQ:SPCX) Short Selling",
-          "summary": "Space Exploration Technologies Corp. (NASDAQ:SPCX)’s post IPO performance has seen the shares dip by 14.9% since their first closing price of $160. Cramer has discussed the firm frequently since it listed the shares for trading. He believes in Space Exploration Technologies Corp. (NASDAQ:SPCX)’s long-term potential and has advised subscribers and viewers to buy the shares […]",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=5dc0c422551d65371e7b6d2de9e2343960a24a20daca311b802fd38dca9ea2c0",
-          "datetime": 1787448101,
-          "sentiment": "bullish",
-          "confidence": 0.7,
-          "credibility": "rumor",
-          "longTermImpact": "noise",
-          "reason": "知名分析師看好SPCX長期潛力並建議買入。"
         }
       ]
     },
     {
       "ticker": "NVDA",
       "quote": {
-        "current": 211.88,
-        "changePct": 1.6309,
+        "current": 212.43,
+        "changePct": 1.8947,
         "high": 214.73,
         "low": 210.11,
         "prevClose": 208.48
       },
       "signal": {
-        "sentiment": "bullish",
-        "score": 0.17,
+        "sentiment": "neutral",
+        "score": 0.15,
         "bullCount": 4,
         "bearCount": 1
       },
       "social": {
-        "bullish": 6,
-        "bearish": 5
+        "bullish": 9,
+        "bearish": 2
       },
       "stats": {
         "atr14": 5.599934169224331,
-        "sma20": 214.5165008544922,
-        "sma50": 207.78179931640625,
-        "sma200": 195.41950019836426,
+        "sma20": 214.5460006713867,
+        "sma50": 207.79359924316407,
+        "sma200": 195.42245018005372,
         "swingHigh": 227.9199981689453,
         "swingLow": 190.00999450683594,
         "high52": 236.5399932861328,
         "low52": 164.07000732421875,
-        "avgVol20": 113020992.4,
-        "lastVol": 82463148,
-        "rsi14": 48.36120218993472,
+        "avgVol20": 113282900.5,
+        "lastVol": 87310310,
+        "rsi14": 48.96560236340099,
         "macd": {
-          "macd": 2.0955478563075474,
-          "signal": 3.4381256648401854,
-          "hist": -1.342577808532638
+          "macd": 2.1426130912389567,
+          "signal": 3.4475387118264673,
+          "hist": -1.3049256205875106
         }
       },
       "day": {
@@ -327,17 +328,16 @@
         "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 236.54 · 「止損」=收盤跌破 200 日線 195.42 或論點改變"
       },
       "timing": {
-        "direction": "long",
-        "score": 0.33,
-        "label": "偏好做多（順勢、未過熱時進場）",
+        "direction": "none",
+        "score": 0.17,
+        "label": "多空不明 → 觀望",
         "factors": [
           "偏多",
-          "新聞偏多",
-          "RSI 48.4 中性",
+          "RSI 49 中性",
           "MACD↓"
         ]
       },
-      "heat": 37,
+      "heat": 39,
       "fundamentals": {
         "marketCap": 5113462.315207394,
         "industry": "Semiconductors",
@@ -369,6 +369,20 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "僅提及交易活躍，無明確方向。"
+        },
+        {
+          "id": "finnhub-141317893",
+          "ticker": "NVDA",
+          "headline": "Leveraged Single-Stock ETF Closures Went From 3 To 63 In A Year As Money Piles Into Nvidia Bets",
+          "summary": "Leveraged ETF launches are surging in 2026, but 63 funds have closed as assets concentrate in winners tied to Nvidia, AI and semiconductors.",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=2c25c4250c0ba4a06b66038c48c26ef7bacbd77337e30f813a2e4fc83e9a24d7",
+          "datetime": 1787670899,
+          "sentiment": "bullish",
+          "confidence": 0.7,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "資金湧入Nvidia相關ETF，顯示市場熱度。"
         },
         {
           "id": "finnhub-141317422",
@@ -509,58 +523,44 @@
           "credibility": "rumor",
           "longTermImpact": "thesis",
           "reason": "分析師預期Nvidia上調財測。"
-        },
-        {
-          "id": "finnhub-141316834",
-          "ticker": "NVDA",
-          "headline": "Raymond James Maintains Strong Buy on NVIDIA, Raises Price Target to $352",
-          "summary": "Raymond James  analyst Simon Leopold   maintains NVIDIA (NASDAQ:NVDA) with a Strong Buy and raises the price target from $330 to $352.",
-          "source": "Benzinga",
-          "url": "https://finnhub.io/api/news?id=bc734babb9d7be1181bbb7b4b0292a27aaf7c3561d7575ed7f540be0f8057f8b",
-          "datetime": 1787637834,
-          "sentiment": "bullish",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "分析師維持買入，上調目標價。"
         }
       ]
     },
     {
       "ticker": "TSLA",
       "quote": {
-        "current": 351.48,
-        "changePct": 0.725,
+        "current": 351.53,
+        "changePct": 0.7394,
         "high": 357,
         "low": 349.2003,
         "prevClose": 348.95
       },
       "signal": {
         "sentiment": "neutral",
-        "score": -0.06,
-        "bullCount": 4,
+        "score": -0.12,
+        "bullCount": 3,
         "bearCount": 5
       },
       "social": {
-        "bullish": 7,
-        "bearish": 5
+        "bullish": 6,
+        "bearish": 8
       },
       "stats": {
         "atr14": 12.021429879324776,
-        "sma20": 332.3335021972656,
-        "sma50": 363.75579956054685,
-        "sma200": 402.2912002563477,
+        "sma20": 332.3239974975586,
+        "sma50": 363.7519976806641,
+        "sma200": 402.29024978637693,
         "swingHigh": 366.5,
         "swingLow": 297.3800048828125,
         "high52": 498.8299865722656,
         "low52": 297.3800048828125,
-        "avgVol20": 34066209.75,
-        "lastVol": 25199295,
-        "rsi14": 52.44462383236718,
+        "avgVol20": 34123781.45,
+        "lastVol": 26273829,
+        "rsi14": 52.36600482194772,
         "macd": {
-          "macd": -1.6302763223883403,
-          "signal": -6.843764313168197,
-          "hist": 5.213487990779857
+          "macd": -1.6454405156531493,
+          "signal": -6.846797151821159,
+          "hist": 5.2013566361680095
         }
       },
       "day": {
@@ -578,8 +578,8 @@
       },
       "long": {
         "accumulateZone": [
-          351.48,
-          422.41
+          351.53,
+          422.4
         ],
         "trimZone": 498.83,
         "reviewTrigger": 402.29,
@@ -596,7 +596,7 @@
           "MACD↑"
         ]
       },
-      "heat": 36,
+      "heat": 38,
       "fundamentals": {
         "marketCap": 1391623.1481569903,
         "industry": "Automobiles",
@@ -615,6 +615,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-141317807",
+          "ticker": "TSLA",
+          "headline": "Einhorn Vs. Musk: Hedge Fund Manager Says SpaceX IPO Was ‘Meme-ification of the Market’",
+          "summary": "A hedge fund manager is critical of SpaceX and its high valuation. Here&#39;s what they had to say.",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=f61f9050df08e9286f04b9b46334336f41c60d0ec60c8b5f6408abbde5dee690",
+          "datetime": 1787659379,
+          "sentiment": "neutral",
+          "confidence": 0.6,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "評論SpaceX估值，與TSLA無直接關聯。"
+        },
         {
           "id": "finnhub-141316722",
           "ticker": "TSLA",
@@ -768,28 +782,14 @@
           "credibility": "unknown",
           "longTermImpact": "thesis",
           "reason": "基本面弱，現金流負，合併風險。"
-        },
-        {
-          "id": "finnhub-141308191",
-          "ticker": "TSLA",
-          "headline": "Solar Stocks’ Weighted Gains Mask a Broad Selloff in the Average Name",
-          "summary": "Solar stocks show a split: large caps like Tesla lift the index, while average solar stocks decline. Discover the leaders and laggards.",
-          "source": "ChartMill",
-          "url": "https://finnhub.io/api/news?id=91332a4036ce17030a26be9ec5ccaab0a38cff400940fabdcf5bb371b3b07f3b",
-          "datetime": 1787573334,
-          "sentiment": "bullish",
-          "confidence": 0.7,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "TSLA被視為太陽能股中拉抬指數者。"
         }
       ]
     },
     {
       "ticker": "AAPL",
       "quote": {
-        "current": 309.1,
-        "changePct": -0.3996,
+        "current": 309.29,
+        "changePct": -0.3383,
         "high": 313.59,
         "low": 308.21,
         "prevClose": 310.34
@@ -801,25 +801,25 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 9,
+        "bullish": 10,
         "bearish": 1
       },
       "stats": {
         "atr14": 5.9957122802734375,
-        "sma20": 311.4612503051758,
-        "sma50": 310.86169982910155,
-        "sma200": 281.8978744506836,
+        "sma20": 311.4709991455078,
+        "sma50": 310.8655993652344,
+        "sma200": 281.8988493347168,
         "swingHigh": 344.57000732421875,
         "swingLow": 300,
         "high52": 344.57000732421875,
         "low52": 224.69000244140625,
-        "avgVol20": 50474268,
-        "lastVol": 15902660,
-        "rsi14": 47.09466889864089,
+        "avgVol20": 50529839.6,
+        "lastVol": 16995492,
+        "rsi14": 47.270927043214456,
         "macd": {
-          "macd": -1.5023545493754682,
-          "signal": -1.3030030676435544,
-          "hist": -0.19935148173191375
+          "macd": -1.4868008440024028,
+          "signal": -1.2998923265689413,
+          "hist": -0.18690851743346149
         }
       },
       "day": {
@@ -852,7 +852,7 @@
         "factors": [
           "偏空",
           "新聞偏多",
-          "RSI 47.1 中性",
+          "RSI 47.3 中性",
           "MACD↓",
           "量縮"
         ]
@@ -1049,8 +1049,8 @@
     {
       "ticker": "AMD",
       "quote": {
-        "current": 479.44,
-        "changePct": 4.9689,
+        "current": 478.55,
+        "changePct": 4.774,
         "high": 481.5,
         "low": 469.07,
         "prevClose": 456.745
@@ -1062,25 +1062,25 @@
         "bearCount": 2
       },
       "social": {
-        "bullish": 9,
-        "bearish": 3
+        "bullish": 10,
+        "bearish": 5
       },
       "stats": {
         "atr14": 20.631423950195312,
-        "sma20": 480.44700317382814,
-        "sma50": 508.95780090332033,
-        "sma200": 332.01235054016115,
+        "sma20": 480.42675323486327,
+        "sma50": 508.9497009277344,
+        "sma200": 332.01032554626465,
         "swingHigh": 530.1300048828125,
         "swingLow": 424.0299987792969,
         "high52": 584.72998046875,
         "low52": 149.22000122070312,
-        "avgVol20": 24733293.8,
-        "lastVol": 15274976,
-        "rsi14": 48.070069565400296,
+        "avgVol20": 24777326.6,
+        "lastVol": 16108432,
+        "rsi14": 47.979523941722114,
         "macd": {
-          "macd": -8.463928335423361,
-          "signal": -7.565196252642194,
-          "hist": -0.8987320827811676
+          "macd": -8.49623593035301,
+          "signal": -7.571657771628123,
+          "hist": -0.924578158724886
         }
       },
       "day": {
@@ -1113,12 +1113,12 @@
         "factors": [
           "順勢↓",
           "新聞偏多",
-          "RSI 48.1 中性",
+          "RSI 48 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 63,
+      "heat": 62,
       "fundamentals": {
         "marketCap": 777931.4541744756,
         "industry": "Semiconductors",
@@ -1137,6 +1137,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-141317901",
+          "ticker": "AMD",
+          "headline": "AI Semiconductor Chips Vs. Software Stocks: Understanding Cyclicality And Disruption",
+          "summary": "Read this comparison of top AI software vs. semiconductor stocksâNVDA, MSFT, PLTR, CRWD, AVGO, AMD, MU & CRMâto know their valuations, risks, and catalysts.",
+          "source": "SeekingAlpha",
+          "url": "https://finnhub.io/api/news?id=be982ebc4a89a5a9360ce887cc0bb555e3d0c48ed10a27a2b0c301e97e2dc1a9",
+          "datetime": 1787671968,
+          "sentiment": "neutral",
+          "confidence": 0.6,
+          "credibility": "rumor",
+          "longTermImpact": "thesis",
+          "reason": "分析文章，探討產業趨勢與估值。"
+        },
         {
           "id": "finnhub-141317328",
           "ticker": "AMD",
@@ -1290,28 +1304,14 @@
           "credibility": "confirmed",
           "longTermImpact": "thesis",
           "reason": "AMD在AI領域穩步推進，股價表現強勁。"
-        },
-        {
-          "id": "finnhub-141278081",
-          "ticker": "AMD",
-          "headline": "Advanced Micro Devices (AMD) Adds Tim Ryan To Board After Director Retirement",
-          "summary": "Advanced Micro Devices (NasdaqGS:AMD) appointed Tim Ryan to its Board of Directors, adding new governance experience from his prior roles at Citi and PwC. The appointment follows the retirement of a long serving AMD director and includes related changes to the composition of board committees. Tim Ryan brings decades of background in technology, corporate strategy and risk management that may influence AMD's board oversight and decision making. Readers tracking boardroom shifts at AMD and...",
-          "source": "Yahoo",
-          "url": "https://finnhub.io/api/news?id=d99806ffef788abf24ee64af9108293ca5fd46c094410ee2446dd400b9b9f69c",
-          "datetime": 1787382602,
-          "sentiment": "neutral",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "董事會成員變動，影響通常中性。"
         }
       ]
     },
     {
       "ticker": "MSFT",
       "quote": {
-        "current": 490.36,
-        "changePct": 0.6259,
+        "current": 490.9,
+        "changePct": 0.7367,
         "high": 491.62,
         "low": 484.3,
         "prevClose": 487.31
@@ -1328,20 +1328,20 @@
       },
       "stats": {
         "atr14": 9.346426827566964,
-        "sma20": 482.8564971923828,
-        "sma50": 423.7777978515625,
-        "sma200": 431.0940492248535,
+        "sma20": 482.87274780273435,
+        "sma50": 423.78429809570315,
+        "sma200": 431.09567428588866,
         "swingHigh": 513.72998046875,
         "swingLow": 388.739990234375,
         "high52": 553.719970703125,
         "low52": 349.20001220703125,
-        "avgVol20": 35073190.1,
-        "lastVol": 11406702,
-        "rsi14": 65.2215233692018,
+        "avgVol20": 35100544.8,
+        "lastVol": 11939296,
+        "rsi14": 65.34325439234495,
         "macd": {
-          "macd": 18.14660518781642,
-          "signal": 21.53183579152116,
-          "hist": -3.3852306037047413
+          "macd": 18.172532087522654,
+          "signal": 21.53702117146241,
+          "hist": -3.3644890839397554
         }
       },
       "day": {
@@ -1363,9 +1363,9 @@
           452.65
         ],
         "trimZone": 553.72,
-        "reviewTrigger": 431.09,
+        "reviewTrigger": 431.1,
         "stretched": false,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 553.72 · 「止損」=收盤跌破 200 日線 431.09 或論點改變"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 553.72 · 「止損」=收盤跌破 200 日線 431.1 或論點改變"
       },
       "timing": {
         "direction": "long",
@@ -1373,12 +1373,12 @@
         "label": "偏好做多（順勢、未過熱時進場）",
         "factors": [
           "順勢↑",
-          "RSI 65.2 中性",
+          "RSI 65.3 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 20,
+      "heat": 21,
       "fundamentals": {
         "marketCap": 3635249.992783145,
         "industry": "Technology",
@@ -1570,9 +1570,9 @@
     {
       "ticker": "META",
       "quote": {
-        "current": 565.86,
-        "changePct": 1.2236,
-        "high": 568.64,
+        "current": 569.59,
+        "changePct": 1.8908,
+        "high": 570.8,
         "low": 561.4001,
         "prevClose": 559.02
       },
@@ -1583,49 +1583,49 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 8,
-        "bearish": 3
+        "bullish": 11,
+        "bearish": 1
       },
       "stats": {
-        "atr14": 16.257847377232142,
-        "sma20": 573.3647491455079,
-        "sma50": 592.7806945800781,
-        "sma200": 623.4362731933594,
+        "atr14": 16.41213117327009,
+        "sma20": 573.5559997558594,
+        "sma50": 592.8571948242187,
+        "sma200": 623.4553982543945,
         "swingHigh": 612.4299926757812,
         "swingLow": 524.489990234375,
         "high52": 790.7999877929688,
         "low52": 520.260009765625,
-        "avgVol20": 17145326.75,
-        "lastVol": 5974035,
-        "rsi14": 44.947769887085876,
+        "avgVol20": 17195533.8,
+        "lastVol": 6923976,
+        "rsi14": 46.32273101856569,
         "macd": {
-          "macd": -12.802436059832871,
-          "signal": -11.09096804167736,
-          "hist": -1.7114680181555109
+          "macd": -12.497306880924384,
+          "signal": -11.029942205895663,
+          "hist": -1.4673646750287208
         }
       },
       "day": {
         "direction": "short",
         "entryZone": [
-          563.76,
-          568.64
+          565.88,
+          570.8
         ],
         "breakout": 561.4,
-        "stop": 576.77,
-        "target": 545.07,
+        "stop": 579.01,
+        "target": 547,
         "rr": 2,
-        "riskPerShare": 10.57,
-        "basis": "做空：反彈靠近阻力 568.64 進場 · 止損=阻力上方 0.5×ATR(16.26) · 止盈=風報比 2:1(往下) · 跌破 561.4 為順勢續空"
+        "riskPerShare": 10.67,
+        "basis": "做空：反彈靠近阻力 570.8 進場 · 止損=阻力上方 0.5×ATR(16.41) · 止盈=風報比 2:1(往下) · 跌破 561.4 為順勢續空"
       },
       "long": {
         "accumulateZone": [
-          565.86,
-          654.61
+          569.59,
+          654.63
         ],
         "trimZone": 790.8,
-        "reviewTrigger": 623.44,
+        "reviewTrigger": 623.46,
         "stretched": false,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 790.8 · 「止損」=收盤跌破 200 日線 623.44 或論點改變"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 790.8 · 「止損」=收盤跌破 200 日線 623.46 或論點改變"
       },
       "timing": {
         "direction": "short",
@@ -1633,12 +1633,12 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "順勢↓",
-          "RSI 44.9 中性",
+          "RSI 46.3 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 31,
+      "heat": 35,
       "fundamentals": {
         "marketCap": 1441379.0209587647,
         "industry": "Media",
@@ -1830,8 +1830,8 @@
     {
       "ticker": "AMZN",
       "quote": {
-        "current": 260.01,
-        "changePct": -0.786,
+        "current": 260.93,
+        "changePct": -0.435,
         "high": 263.89,
         "low": 259.83,
         "prevClose": 262.07
@@ -1843,25 +1843,25 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 10,
-        "bearish": 4
+        "bullish": 11,
+        "bearish": 3
       },
       "stats": {
         "atr14": 5.5637054443359375,
-        "sma20": 264.3689987182617,
-        "sma50": 250.56879943847656,
-        "sma200": 238.43869995117188,
+        "sma20": 264.41551361083987,
+        "sma50": 250.5874053955078,
+        "sma200": 238.4433514404297,
         "swingHigh": 287.20001220703125,
         "swingLow": 226.16000366210938,
         "high52": 287.20001220703125,
         "low52": 196,
-        "avgVol20": 46133422.9,
-        "lastVol": 14642358,
-        "rsi14": 50.683464599206545,
+        "avgVol20": 46196109.2,
+        "lastVol": 15849284,
+        "rsi14": 51.47367425770311,
         "macd": {
-          "macd": 2.7204258805382437,
-          "signal": 4.248722672313169,
-          "hist": -1.5282967917749248
+          "macd": 2.7946376749649176,
+          "signal": 4.263565031198503,
+          "hist": -1.4689273562335856
         }
       },
       "day": {
@@ -1880,7 +1880,7 @@
       "long": {
         "accumulateZone": [
           231.29,
-          250.36
+          250.37
         ],
         "trimZone": 287.2,
         "reviewTrigger": 238.44,
@@ -1893,12 +1893,12 @@
         "label": "多空不明 → 觀望",
         "factors": [
           "偏多",
-          "RSI 50.7 中性",
+          "RSI 51.5 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 24,
+      "heat": 22,
       "fundamentals": {
         "marketCap": 2812963.024846142,
         "industry": "Retail",
@@ -2090,8 +2090,8 @@
     {
       "ticker": "GOOGL",
       "quote": {
-        "current": 346.41,
-        "changePct": -0.4741,
+        "current": 347.34,
+        "changePct": -0.2069,
         "high": 350.16,
         "low": 345.6,
         "prevClose": 348.06
@@ -2103,25 +2103,25 @@
         "bearCount": 3
       },
       "social": {
-        "bullish": 13,
+        "bullish": 11,
         "bearish": 1
       },
       "stats": {
         "atr14": 6.358572823660714,
-        "sma20": 350.1100143432617,
-        "sma50": 351.3108056640625,
-        "sma200": 333.6887010192871,
+        "sma20": 350.1467483520508,
+        "sma50": 351.32549926757815,
+        "sma200": 333.692374420166,
         "swingHigh": 384.4800109863281,
         "swingLow": 324.44000244140625,
         "high52": 408.6099853515625,
         "low52": 205.27999877929688,
-        "avgVol20": 25589547.65,
-        "lastVol": 9463953,
-        "rsi14": 48.380324086013324,
+        "avgVol20": 25639371.2,
+        "lastVol": 10430124,
+        "rsi14": 48.90395208801667,
         "macd": {
-          "macd": -1.8459341765833415,
-          "signal": -1.7756108342983157,
-          "hist": -0.07032334228502579
+          "macd": -1.7873272109939649,
+          "signal": -1.7638894411804404,
+          "hist": -0.02343776981352441
         }
       },
       "day": {
@@ -2140,7 +2140,7 @@
       "long": {
         "accumulateZone": [
           323.68,
-          350.37
+          350.38
         ],
         "trimZone": 408.61,
         "reviewTrigger": 333.69,
@@ -2153,12 +2153,12 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "順勢↓",
-          "RSI 48.4 中性",
+          "RSI 48.9 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 20,
+      "heat": 19,
       "fundamentals": {
         "marketCap": 4240569.05,
         "industry": "Media",
@@ -2190,6 +2190,20 @@
           "credibility": "confirmed",
           "longTermImpact": "thesis",
           "reason": "Waymo擴展至德國市場，有利長期成長。"
+        },
+        {
+          "id": "finnhub-141317808",
+          "ticker": "GOOGL",
+          "headline": "'Anthropic Expected to Tell Investors It Sees Over $30 Trillion in Potential Revenue' - WSJ Exclusive",
+          "summary": "https://www.wsj.com/tech/ai/anthropic-expected-to-tell-investors-it-sees-over-30-trillion-in-potential-revenue-a611efea",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=cee5faec1d2e782d538f1d54ce18c3aa1139b3390e67c37b5389f430018753c2",
+          "datetime": 1787659357,
+          "sentiment": "neutral",
+          "confidence": 0.6,
+          "credibility": "rumor",
+          "longTermImpact": "noise",
+          "reason": "競爭者/合作夥伴的營收預期，間接影響。"
         },
         {
           "id": "finnhub-141316340",
@@ -2330,29 +2344,15 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "歷史績效回顧，無新資訊。"
-        },
-        {
-          "id": "finnhub-141311093",
-          "ticker": "GOOGL",
-          "headline": "Meta Stock Faces Litigation Overhang: Expert Says It Lacks Tobacco's Pricing Power",
-          "summary": "Meta stock to face more pressure as litigation looms. Here&#39;s why it could be different from tobacco litigation decades ago.",
-          "source": "Benzinga",
-          "url": "https://finnhub.io/api/news?id=64a79b7ca0808e876f125fe720ecaa5d7fc7ead4a9f0bf54e8eda51410cdf39b",
-          "datetime": 1787568341,
-          "sentiment": "neutral",
-          "confidence": 0.5,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "新聞內容與GOOGL無關。"
         }
       ]
     },
     {
       "ticker": "NFLX",
       "quote": {
-        "current": 82.29,
-        "changePct": 2.8496,
-        "high": 82.34,
+        "current": 82.27,
+        "changePct": 2.8246,
+        "high": 82.465,
         "low": 79.4,
         "prevClose": 80.01
       },
@@ -2363,43 +2363,43 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 8,
-        "bearish": 1
+        "bullish": 9,
+        "bearish": 0
       },
       "stats": {
-        "atr14": 2.281786782400949,
-        "sma20": 76.2567195892334,
-        "sma50": 74.53348739624023,
-        "sma200": 88.13296672821045,
+        "atr14": 2.2910728454589844,
+        "sma20": 76.25749435424805,
+        "sma50": 74.5337973022461,
+        "sma200": 88.13304420471191,
         "swingHigh": 81.16000366210938,
         "swingLow": 70.55000305175781,
         "high52": 126.70999908447266,
         "low52": 65.08000183105469,
-        "avgVol20": 31374036.85,
-        "lastVol": 20080637,
-        "rsi14": 67.31080551494527,
+        "avgVol20": 31459624.4,
+        "lastVol": 21744088,
+        "rsi14": 67.33931430174363,
         "macd": {
-          "macd": 1.8168787702497298,
-          "signal": 1.068623122183358,
-          "hist": 0.7482556480663718
+          "macd": 1.8181148625807992,
+          "signal": 1.0688703406495719,
+          "hist": 0.7492445219312274
         }
       },
       "day": {
         "direction": "long",
         "entryZone": [
           79.4,
-          80.08
+          80.09
         ],
-        "breakout": 82.34,
-        "stop": 78.26,
-        "target": 82.71,
+        "breakout": 82.47,
+        "stop": 78.25,
+        "target": 82.72,
         "rr": 2,
-        "riskPerShare": 1.48,
-        "basis": "做多：回踩支撐 79.4 進場 · 止損=支撐下 0.5×ATR(2.28) · 止盈=風報比 2:1 · 突破 82.34 為另一進場參考"
+        "riskPerShare": 1.49,
+        "basis": "做多：回踩支撐 79.4 進場 · 止損=支撐下 0.5×ATR(2.29) · 止盈=風報比 2:1 · 突破 82.47 為另一進場參考"
       },
       "long": {
         "accumulateZone": [
-          82.29,
+          82.27,
           92.54
         ],
         "trimZone": 126.71,
@@ -2419,7 +2419,7 @@
           "量縮"
         ]
       },
-      "heat": 44,
+      "heat": 45,
       "fundamentals": {
         "marketCap": 341068.746100909,
         "industry": "Media",
@@ -2513,8 +2513,8 @@
     {
       "ticker": "AVGO",
       "quote": {
-        "current": 355.45,
-        "changePct": -0.9226,
+        "current": 356.04,
+        "changePct": -0.7582,
         "high": 362.99,
         "low": 355.31,
         "prevClose": 358.76
@@ -2526,25 +2526,25 @@
         "bearCount": 4
       },
       "social": {
-        "bullish": 10,
-        "bearish": 1
+        "bullish": 8,
+        "bearish": 4
       },
       "stats": {
         "atr14": 13.400000435965401,
-        "sma20": 393.5697509765625,
-        "sma50": 387.4345001220703,
-        "sma200": 369.214475402832,
+        "sma20": 393.60150146484375,
+        "sma50": 387.4472003173828,
+        "sma200": 369.2176504516602,
         "swingHigh": 432.7300109863281,
         "swingLow": 357.6099853515625,
         "high52": 495,
         "low52": 287.1700134277344,
-        "avgVol20": 19549791.55,
-        "lastVol": 12483631,
-        "rsi14": 34.33988251858405,
+        "avgVol20": 19602201.4,
+        "lastVol": 13486928,
+        "rsi14": 34.54147298722209,
         "macd": {
-          "macd": -8.256359169340726,
-          "signal": -1.9302360573779995,
-          "hist": -6.326123111962726
+          "macd": -8.205703119661223,
+          "signal": -1.9201048474420985,
+          "hist": -6.285598272219124
         }
       },
       "day": {
@@ -2562,13 +2562,13 @@
       },
       "long": {
         "accumulateZone": [
-          355.45,
+          356.04,
           387.68
         ],
         "trimZone": 495,
-        "reviewTrigger": 369.21,
+        "reviewTrigger": 369.22,
         "stretched": false,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 495 · 「止損」=收盤跌破 200 日線 369.21 或論點改變"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 495 · 「止損」=收盤跌破 200 日線 369.22 或論點改變"
       },
       "timing": {
         "direction": "short",
@@ -2576,12 +2576,12 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "偏空",
-          "RSI 34.3 中性",
+          "RSI 34.5 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 39,
+      "heat": 38,
       "fundamentals": {
         "marketCap": 1717795.6976675852,
         "industry": "Semiconductors",
@@ -2773,10 +2773,10 @@
     {
       "ticker": "PLTR",
       "quote": {
-        "current": 172.67,
-        "changePct": -1.8307,
+        "current": 173.42,
+        "changePct": -1.4043,
         "high": 179.87,
-        "low": 172.46,
+        "low": 172.2004,
         "prevClose": 175.89
       },
       "signal": {
@@ -2786,44 +2786,44 @@
         "bearCount": 0
       },
       "social": {
-        "bullish": 10,
-        "bearish": 2
+        "bullish": 8,
+        "bearish": 4
       },
       "stats": {
-        "atr14": 7.423072814941406,
-        "sma20": 161.94749908447267,
-        "sma50": 140.72079956054688,
-        "sma200": 151.35529987335204,
+        "atr14": 7.441616603306362,
+        "sma20": 161.98599853515626,
+        "sma50": 140.73619934082032,
+        "sma200": 151.3591498184204,
         "swingHigh": 182.44000244140625,
         "swingLow": 117.88999938964844,
         "high52": 207.52000427246094,
         "low52": 106.37000274658203,
-        "avgVol20": 46337335.6,
-        "lastVol": 19190612,
-        "rsi14": 61.66039855035288,
+        "avgVol20": 46409136.4,
+        "lastVol": 20545128,
+        "rsi14": 62.424637319449246,
         "macd": {
-          "macd": 11.009787159197629,
-          "signal": 11.085949020185755,
-          "hist": -0.07616186098812605
+          "macd": 11.071210784219915,
+          "signal": 11.098233745190212,
+          "hist": -0.02702296097029766
         }
       },
       "day": {
         "direction": "long",
         "entryZone": [
-          172.46,
-          174.69
+          172.2,
+          174.43
         ],
         "breakout": 179.87,
-        "stop": 168.75,
-        "target": 183.22,
+        "stop": 168.48,
+        "target": 182.99,
         "rr": 2,
-        "riskPerShare": 4.82,
-        "basis": "做多：回踩支撐 172.46 進場 · 止損=支撐下 0.5×ATR(7.42) · 止盈=風報比 2:1 · 突破 179.87 為另一進場參考"
+        "riskPerShare": 4.84,
+        "basis": "做多：回踩支撐 172.2 進場 · 止損=支撐下 0.5×ATR(7.44) · 止盈=風報比 2:1 · 突破 179.87 為另一進場參考"
       },
       "long": {
         "accumulateZone": [
-          146.81,
-          158.92
+          146.82,
+          158.93
         ],
         "trimZone": 207.52,
         "reviewTrigger": 151.36,
@@ -2836,12 +2836,12 @@
         "label": "偏好做多（順勢、未過熱時進場）",
         "factors": [
           "順勢↑",
-          "RSI 61.7 中性",
+          "RSI 62.4 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 41,
+      "heat": 39,
       "fundamentals": {
         "marketCap": 419219.5959049471,
         "industry": "Technology",
@@ -2991,8 +2991,8 @@
     {
       "ticker": "COIN",
       "quote": {
-        "current": 188.27,
-        "changePct": 4.8975,
+        "current": 186.62,
+        "changePct": 3.9782,
         "high": 189.27,
         "low": 174.73,
         "prevClose": 179.48
@@ -3009,20 +3009,20 @@
       },
       "stats": {
         "atr14": 9.714283534458705,
-        "sma20": 157.41999893188478,
-        "sma50": 159.45839904785157,
-        "sma200": 197.23159988403322,
+        "sma20": 157.34149932861328,
+        "sma50": 159.42699920654297,
+        "sma200": 197.22374992370607,
         "swingHigh": 191.83999633789062,
         "swingLow": 139.11000061035156,
         "high52": 402.1600036621094,
         "low52": 139.11000061035156,
-        "avgVol20": 9866802.5,
-        "lastVol": 7769650,
-        "rsi14": 65.42325825736525,
+        "avgVol20": 9896380.85,
+        "lastVol": 8327917,
+        "rsi14": 64.82479877154734,
         "macd": {
-          "macd": 4.96844757291592,
-          "signal": 0.33437277843614155,
-          "hist": 4.634074794479779
+          "macd": 4.843206040630918,
+          "signal": 0.30932447197914104,
+          "hist": 4.533881568651776
         }
       },
       "day": {
@@ -3040,13 +3040,13 @@
       },
       "long": {
         "accumulateZone": [
-          188.27,
-          207.09
+          186.62,
+          207.08
         ],
         "trimZone": 402.16,
-        "reviewTrigger": 197.23,
+        "reviewTrigger": 197.22,
         "stretched": false,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 402.16 · 「止損」=收盤跌破 200 日線 197.23 或論點改變"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 402.16 · 「止損」=收盤跌破 200 日線 197.22 或論點改變"
       },
       "timing": {
         "direction": "long",
@@ -3055,12 +3055,12 @@
         "factors": [
           "偏多",
           "新聞偏多",
-          "RSI 65.4 中性",
+          "RSI 64.8 中性",
           "MACD↑",
           "乖離大·追高險"
         ]
       },
-      "heat": 68,
+      "heat": 64,
       "fundamentals": {
         "marketCap": 49208.23887000001,
         "industry": "Financial Services",
@@ -3252,8 +3252,8 @@
     {
       "ticker": "MSTR",
       "quote": {
-        "current": 127.42,
-        "changePct": 3.9061,
+        "current": 126.71,
+        "changePct": 3.3271,
         "high": 128.66,
         "low": 118.45,
         "prevClose": 122.63
@@ -3265,25 +3265,25 @@
         "bearCount": 3
       },
       "social": {
-        "bullish": 19,
-        "bearish": 1
+        "bullish": 16,
+        "bearish": 2
       },
       "stats": {
         "atr14": 6.903572627476284,
-        "sma20": 101.3317497253418,
-        "sma50": 99.89929946899414,
-        "sma200": 142.69497501373291,
+        "sma20": 101.29224967956543,
+        "sma50": 99.88349945068359,
+        "sma200": 142.69102500915528,
         "swingHigh": 127.9000015258789,
         "swingLow": 89.20999908447266,
         "high52": 365.2099914550781,
         "low52": 81.80999755859375,
-        "avgVol20": 22614113.5,
-        "lastVol": 24588670,
-        "rsi14": 70.4782569245689,
+        "avgVol20": 22711497.5,
+        "lastVol": 26338150,
+        "rsi14": 70.09220070968222,
         "macd": {
-          "macd": 4.7394836809621665,
-          "signal": 0.8474450722872777,
-          "hist": 3.8920386086748886
+          "macd": 4.676463664908724,
+          "signal": 0.8348410690765891,
+          "hist": 3.841622595832135
         }
       },
       "day": {
@@ -3301,7 +3301,7 @@
       },
       "long": {
         "accumulateZone": [
-          127.42,
+          126.71,
           149.83
         ],
         "trimZone": 365.21,
@@ -3315,12 +3315,12 @@
         "label": "多空不明 → 觀望",
         "factors": [
           "順勢↑",
-          "RSI 70.5 超買",
+          "RSI 70.1 超買",
           "MACD↑",
           "乖離大·追高險"
         ]
       },
-      "heat": 62,
+      "heat": 60,
       "fundamentals": {
         "marketCap": 48758.216159033684,
         "industry": "Technology",
@@ -3512,8 +3512,8 @@
     {
       "ticker": "MU",
       "quote": {
-        "current": 926.96,
-        "changePct": 1.8156,
+        "current": 926.05,
+        "changePct": 1.7157,
         "high": 946.67,
         "low": 916.3,
         "prevClose": 910.43
@@ -3525,25 +3525,25 @@
         "bearCount": 4
       },
       "social": {
-        "bullish": 6,
+        "bullish": 7,
         "bearish": 1
       },
       "stats": {
         "atr14": 55.835784912109375,
-        "sma20": 902.0607482910157,
-        "sma50": 961.7835034179687,
-        "sma200": 578.0062255859375,
+        "sma20": 902.0652496337891,
+        "sma50": 961.7853039550781,
+        "sma200": 578.0066757202148,
         "swingHigh": 1036.1300048828125,
         "swingLow": 737.8800048828125,
         "high52": 1255,
         "low52": 114.25,
-        "avgVol20": 36076530.55,
-        "lastVol": 15736811,
-        "rsi14": 50.163360862301545,
+        "avgVol20": 36120417.55,
+        "lastVol": 16455651,
+        "rsi14": 50.17226900882191,
         "macd": {
-          "macd": 7.4049813539634215,
-          "signal": 2.484997701857673,
-          "hist": 4.919983652105748
+          "macd": 7.412162983459439,
+          "signal": 2.4864340277568764,
+          "hist": 4.925728955702562
         }
       },
       "day": {
@@ -3772,8 +3772,8 @@
     {
       "ticker": "ARM",
       "quote": {
-        "current": 240.6,
-        "changePct": 0.7622,
+        "current": 242.82,
+        "changePct": 1.6919,
         "high": 247.99,
         "low": 240.34,
         "prevClose": 238.78
@@ -3790,20 +3790,20 @@
       },
       "stats": {
         "atr14": 16.36121586390904,
-        "sma20": 259.19224853515624,
-        "sma50": 297.49089874267577,
-        "sma200": 197.93134990692138,
+        "sma20": 259.30724868774416,
+        "sma50": 297.5368988037109,
+        "sma200": 197.9428499221802,
         "swingHigh": 299.2850036621094,
         "swingLow": 219.38999938964844,
         "high52": 452.70001220703125,
         "low52": 100.0199966430664,
-        "avgVol20": 5062728.8,
-        "lastVol": 2364476,
-        "rsi14": 38.73243203331839,
+        "avgVol20": 5077713.4,
+        "lastVol": 2664168,
+        "rsi14": 39.84615360676223,
         "macd": {
-          "macd": -11.21852465377063,
-          "signal": -9.793095453192082,
-          "hist": -1.425429200578547
+          "macd": -11.035048626849829,
+          "signal": -9.756400247807923,
+          "hist": -1.2786483790419059
         }
       },
       "day": {
@@ -3821,13 +3821,13 @@
       },
       "long": {
         "accumulateZone": [
-          191.99,
-          207.83
+          192,
+          207.84
         ],
         "trimZone": 452.7,
-        "reviewTrigger": 197.93,
+        "reviewTrigger": 197.94,
         "stretched": true,
-        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 452.7 · 「止損」=收盤跌破 200 日線 197.93 或論點改變 · ⚠ 現價明顯高於均線，宜小額分批/等回檔"
+        "basis": "分批區錨定 200 日線附近 · 減碼參考≈52週高 452.7 · 「止損」=收盤跌破 200 日線 197.94 或論點改變 · ⚠ 現價明顯高於均線，宜小額分批/等回檔"
       },
       "timing": {
         "direction": "short",
@@ -3835,12 +3835,12 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "順勢↓",
-          "RSI 38.7 中性",
+          "RSI 39.8 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 37,
+      "heat": 42,
       "fundamentals": {
         "marketCap": 255017.038696,
         "industry": "Semiconductors",
@@ -3920,8 +3920,8 @@
     {
       "ticker": "UBER",
       "quote": {
-        "current": 80.21,
-        "changePct": 1.1603,
+        "current": 80.1,
+        "changePct": 1.0216,
         "high": 80.29,
         "low": 78.61,
         "prevClose": 79.29
@@ -3933,25 +3933,25 @@
         "bearCount": 3
       },
       "social": {
-        "bullish": 12,
-        "bearish": 3
+        "bullish": 13,
+        "bearish": 2
       },
       "stats": {
         "atr14": 2.76135744367327,
-        "sma20": 74.87227020263671,
-        "sma50": 73.33630828857422,
-        "sma200": 76.9586771774292,
+        "sma20": 74.87250022888183,
+        "sma50": 73.33640029907227,
+        "sma200": 76.95870018005371,
         "swingHigh": 80.22000122070312,
         "swingLow": 66.73500061035156,
         "high52": 101.98999786376953,
         "low52": 65.41000366210938,
-        "avgVol20": 18963069.45,
-        "lastVol": 9277789,
-        "rsi14": 64.67865788598094,
+        "avgVol20": 19015149.45,
+        "lastVol": 10283989,
+        "rsi14": 64.68738945038518,
         "macd": {
-          "macd": 1.910260626930807,
-          "signal": 1.3368657511030106,
-          "hist": 0.5733948758277962
+          "macd": 1.9106276203703203,
+          "signal": 1.3369391497909133,
+          "hist": 0.573688470579407
         }
       },
       "day": {
@@ -4181,15 +4181,15 @@
     {
       "ticker": "DIS",
       "quote": {
-        "current": 111.29,
-        "changePct": 0.6148,
+        "current": 111.32,
+        "changePct": 0.6419,
         "high": 111.595,
         "low": 109.76,
         "prevClose": 110.61
       },
       "signal": {
         "sentiment": "neutral",
-        "score": 0.07,
+        "score": 0.06,
         "bullCount": 1,
         "bearCount": 0
       },
@@ -4199,20 +4199,20 @@
       },
       "stats": {
         "atr14": 2.2467863900320872,
-        "sma20": 103.57100067138671,
-        "sma50": 100.29180053710938,
-        "sma200": 104.08955024719238,
+        "sma20": 103.57150077819824,
+        "sma50": 100.29200057983398,
+        "sma200": 104.08960025787354,
         "swingHigh": 111.87000274658203,
         "swingLow": 94.45999908447266,
         "high52": 119.77999877929688,
         "low52": 92.19000244140625,
-        "avgVol20": 10406162.6,
-        "lastVol": 3975152,
-        "rsi14": 70.80057649191176,
+        "avgVol20": 10428246.95,
+        "lastVol": 4416839,
+        "rsi14": 70.81504509963912,
         "macd": {
-          "macd": 2.862333567744571,
-          "signal": 2.10279958827224,
-          "hist": 0.759533979472331
+          "macd": 2.8631314589538306,
+          "signal": 2.1029591665140916,
+          "hist": 0.7601722924397389
         }
       },
       "day": {
@@ -4249,7 +4249,7 @@
           "量縮"
         ]
       },
-      "heat": 22,
+      "heat": 23,
       "fundamentals": {
         "marketCap": 192128.45127145704,
         "industry": "Media",
@@ -4268,6 +4268,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-141317764",
+          "ticker": "DIS",
+          "headline": "These dow jones stocks are moving in today's session",
+          "summary": "Uncover the latest developments among dow jones stocks in today's session. Stay tuned to the dow jones index's top gainers and losers on Tuesday.",
+          "source": "ChartMill",
+          "url": "https://finnhub.io/api/news?id=4a58a6f746e24ff8c34ddff188f2b82ff0e1326f391c36ca862d996d0c19ac28",
+          "datetime": 1787685007,
+          "sentiment": "neutral",
+          "confidence": 0.5,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "籠統市場新聞，無具體資訊。"
+        },
         {
           "id": "finnhub-141317034",
           "ticker": "DIS",
@@ -4343,8 +4357,8 @@
     {
       "ticker": "BA",
       "quote": {
-        "current": 210.7,
-        "changePct": 0.114,
+        "current": 211.38,
+        "changePct": 0.4371,
         "high": 212.94,
         "low": 210.11,
         "prevClose": 210.46
@@ -4356,25 +4370,25 @@
         "bearCount": 2
       },
       "social": {
-        "bullish": 5,
+        "bullish": 7,
         "bearish": 1
       },
       "stats": {
         "atr14": 5.040715898786273,
-        "sma20": 225.47449951171876,
-        "sma50": 221.48159942626953,
-        "sma200": 219.64855018615722,
+        "sma20": 225.49850463867188,
+        "sma50": 221.4912014770508,
+        "sma200": 219.65095069885254,
         "swingHigh": 241.08999633789062,
         "swingLow": 208.6999969482422,
         "high52": 254.35000610351562,
         "low52": 176.77000427246094,
-        "avgVol20": 5719904.65,
-        "lastVol": 3400393,
-        "rsi14": 37.55109189901457,
+        "avgVol20": 5745142.8,
+        "lastVol": 3879156,
+        "rsi14": 38.17299231589509,
         "macd": {
-          "macd": -1.8938242735200106,
-          "signal": 0.7049324797668077,
-          "hist": -2.5987567532868185
+          "macd": -1.855525495475149,
+          "signal": 0.7125922353757801,
+          "hist": -2.568117730850929
         }
       },
       "day": {
@@ -4392,7 +4406,7 @@
       },
       "long": {
         "accumulateZone": [
-          210.7,
+          211.38,
           230.63
         ],
         "trimZone": 254.35,
@@ -4406,12 +4420,12 @@
         "label": "偏好做空（反彈靠近阻力進場）",
         "factors": [
           "偏空",
-          "RSI 37.6 中性",
+          "RSI 38.2 中性",
           "MACD↓",
           "量縮"
         ]
       },
-      "heat": 24,
+      "heat": 27,
       "fundamentals": {
         "marketCap": 167242.29630217806,
         "industry": "Aerospace & Defense",
@@ -4443,6 +4457,20 @@
           "credibility": "confirmed",
           "longTermImpact": "thesis",
           "reason": "贏得巨額國防合約，營收大增。"
+        },
+        {
+          "id": "finnhub-141317811",
+          "ticker": "BA",
+          "headline": "Adam Schiff Slams Trump’s Freedom 250 Race as ‘Spectacle’ Amid $4 Gas, Graham Rahal Fires Back",
+          "summary": "Schiff accuses Trump of using IndyCar race as a political distraction from gas prices. Rahal defends race as privately funded and unifying.",
+          "source": "Benzinga",
+          "url": "https://finnhub.io/api/news?id=6751302081918a0689cd94b7c322b83ac224a531e092bd97dbec435fbc9acdea",
+          "datetime": 1787638756,
+          "sentiment": "neutral",
+          "confidence": 0.9,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "政治新聞，與公司營運無關。"
         },
         {
           "id": "finnhub-141310583",
@@ -4561,8 +4589,8 @@
     {
       "ticker": "SMCI",
       "quote": {
-        "current": 38.35,
-        "changePct": 9.0418,
+        "current": 38.06,
+        "changePct": 8.2172,
         "high": 38.61,
         "low": 35.885,
         "prevClose": 35.17
@@ -4574,25 +4602,25 @@
         "bearCount": 1
       },
       "social": {
-        "bullish": 20,
-        "bearish": 1
+        "bullish": 14,
+        "bearish": 4
       },
       "stats": {
         "atr14": 2.6835714067731584,
-        "sma20": 33.607249927520755,
-        "sma50": 30.704299926757812,
-        "sma200": 31.37372491836548,
+        "sma20": 33.59404497146606,
+        "sma50": 30.69901794433594,
+        "sma200": 31.37240442276001,
         "swingHigh": 42.310001373291016,
         "swingLow": 25.68000030517578,
         "high52": 58.779998779296875,
         "low52": 19.479999542236328,
-        "avgVol20": 54989947.7,
-        "lastVol": 37154854,
-        "rsi14": 61.80157171625923,
+        "avgVol20": 55129086.8,
+        "lastVol": 39856336,
+        "rsi14": 61.314756475664744,
         "macd": {
-          "macd": 2.1244680910901295,
-          "signal": 1.8759545218013727,
-          "hist": 0.24851356928875679
+          "macd": 2.1034003549345073,
+          "signal": 1.8717409745702482,
+          "hist": 0.23165938036425904
         }
       },
       "day": {
@@ -4625,13 +4653,12 @@
         "factors": [
           "順勢↑",
           "新聞偏多",
-          "RSI 61.8 中性",
+          "RSI 61.3 中性",
           "MACD↑",
-          "量縮",
           "乖離大·追高險"
         ]
       },
-      "heat": 63,
+      "heat": 64,
       "fundamentals": {
         "marketCap": 24794.640256873467,
         "industry": "Technology",
@@ -4650,6 +4677,20 @@
         }
       },
       "news": [
+        {
+          "id": "finnhub-141317763",
+          "ticker": "SMCI",
+          "headline": "Top S&P500 movers in Tuesday's session",
+          "summary": "Wondering what's happening in today's session for the S&P500 index? Stay informed with the top movers within the S&P500 index on Tuesday.",
+          "source": "ChartMill",
+          "url": "https://finnhub.io/api/news?id=d9a2b22a4880b4c57a5a78e197c6c5ce8a510e121a48982bd29dab32dc155385",
+          "datetime": 1787684701,
+          "sentiment": "neutral",
+          "confidence": 0.5,
+          "credibility": "confirmed",
+          "longTermImpact": "noise",
+          "reason": "籠統市場新聞，無具體資訊。"
+        },
         {
           "id": "finnhub-141317450",
           "ticker": "SMCI",
@@ -4803,20 +4844,6 @@
           "credibility": "confirmed",
           "longTermImpact": "noise",
           "reason": "新聞與Supermicro無直接關係。"
-        },
-        {
-          "id": "finnhub-141310582",
-          "ticker": "SMCI",
-          "headline": "Stay informed with the top movers within the S&P500 index on Monday.",
-          "summary": "Stay informed about the performance of the S&P500 index one hour before the close of the markets on Monday. Uncover the top gainers and losers in today's session for valuable insights.",
-          "source": "ChartMill",
-          "url": "https://finnhub.io/api/news?id=37c77b353f564166487672d942c21d5b0eced09b4ede4b83d36496c9b06c59c3",
-          "datetime": 1787598301,
-          "sentiment": "neutral",
-          "confidence": 0.9,
-          "credibility": "confirmed",
-          "longTermImpact": "noise",
-          "reason": "僅為市場動態報導，無實質影響。"
         }
       ]
     }
@@ -4830,9 +4857,9 @@
         "shares": 10,
         "entry": 195
       },
-      "price": 211.88,
-      "pnlPct": 0.08656410256410255,
-      "pnlAmount": 168.8,
+      "price": 212.43,
+      "pnlPct": 0.08938461538461542,
+      "pnlAmount": 174.3,
       "rMultiple": null,
       "suggestedTarget": null,
       "action": "trail_stop",
@@ -4843,29 +4870,29 @@
   ],
   "track": {
     "closed": 400,
-    "wins": 108,
+    "wins": 109,
     "losses": 57,
-    "winRate": 0.6545454545454545,
-    "avgR": 0.3846500000000003,
-    "totalR": 153.86,
-    "totalHKD": 567.21,
+    "winRate": 0.6566265060240963,
+    "avgR": 0.3906000000000004,
+    "totalR": 156.24,
+    "totalHKD": 573.07,
     "days": 20,
-    "trades": 460,
-    "perDay": 23,
-    "open": 60,
+    "trades": 461,
+    "perDay": 23.1,
+    "open": 61,
     "byStrategy": [
       {
         "name": "綜合時機",
-        "closed": 179,
-        "wins": 78,
+        "closed": 180,
+        "wins": 79,
         "losses": 38,
-        "winRate": 0.6724137931034483,
-        "avgR": 0.7932402234636874,
-        "totalR": 141.99,
-        "totalHKD": 477.64,
+        "winRate": 0.6752136752136753,
+        "avgR": 0.7999444444444448,
+        "totalR": 143.99,
+        "totalHKD": 481.26,
         "days": 20,
-        "trades": 196,
-        "perDay": 9.8
+        "trades": 198,
+        "perDay": 9.9
       },
       {
         "name": "RSI反轉",
@@ -4947,19 +4974,36 @@
       },
       {
         "name": "MACD動能",
-        "closed": 72,
+        "closed": 71,
         "wins": 0,
         "losses": 5,
         "winRate": 0,
-        "avgR": -0.0054166666666666825,
-        "totalR": -0.39,
-        "totalHKD": 2.83,
+        "avgR": -0.00014084507042255097,
+        "totalR": -0.01,
+        "totalHKD": 5.07,
         "days": 20,
-        "trades": 88,
-        "perDay": 4.4
+        "trades": 87,
+        "perDay": 4.3
       }
     ],
     "recent": [
+      {
+        "id": "綜合時機-NFLX-1787574301139",
+        "strategy": "綜合時機",
+        "ticker": "NFLX",
+        "direction": "long",
+        "createdAt": "2026-08-24T12:25:01.138Z",
+        "createdPrice": 79.59,
+        "entry": 79.5,
+        "stop": 78.06,
+        "target": 82.38,
+        "riskPerShare": 1.44,
+        "status": "hit_target",
+        "closePrice": 82.38,
+        "rMultiple": 2,
+        "closedAt": "2026-08-25T19:49:58.555Z",
+        "pnlHKD": 3.62
+      },
       {
         "id": "綜合時機-MSTR-1787587239020",
         "strategy": "綜合時機",
@@ -5197,23 +5241,6 @@
         "rMultiple": -0.24,
         "closedAt": "2026-08-24T16:38:09.126Z",
         "pnlHKD": -1.9
-      },
-      {
-        "id": "綜合時機-AMD-1787326917223",
-        "strategy": "綜合時機",
-        "ticker": "AMD",
-        "direction": "short",
-        "createdAt": "2026-08-21T15:41:57.222Z",
-        "createdPrice": 469.77,
-        "entry": 473.85,
-        "stop": 489.06,
-        "target": 443.42,
-        "riskPerShare": 15.21,
-        "status": "expired",
-        "closePrice": 460.03,
-        "rMultiple": 0.91,
-        "closedAt": "2026-08-24T16:00:39.019Z",
-        "pnlHKD": 2.92
       }
     ],
     "openList": [
@@ -5229,8 +5256,8 @@
         "target": 303.09,
         "riskPerShare": 4.16,
         "status": "open",
-        "unrealizedR": 0.56,
-        "pnlHKD": 0.74,
+        "unrealizedR": 0.51,
+        "pnlHKD": 0.68,
         "ageDays": 1
       },
       {
@@ -5245,24 +5272,8 @@
         "target": 493.82,
         "riskPerShare": 6.85,
         "status": "open",
-        "unrealizedR": 1.5,
-        "pnlHKD": 2.13,
-        "ageDays": 1
-      },
-      {
-        "id": "綜合時機-NFLX-1787574301139",
-        "strategy": "綜合時機",
-        "ticker": "NFLX",
-        "direction": "long",
-        "createdAt": "2026-08-24T12:25:01.138Z",
-        "createdPrice": 79.59,
-        "entry": 79.5,
-        "stop": 78.06,
-        "target": 82.38,
-        "riskPerShare": 1.44,
-        "status": "open",
-        "unrealizedR": 1.94,
-        "pnlHKD": 3.51,
+        "unrealizedR": 1.58,
+        "pnlHKD": 2.25,
         "ageDays": 1
       },
       {
@@ -5277,8 +5288,8 @@
         "target": 353.37,
         "riskPerShare": 9.76,
         "status": "open",
-        "unrealizedR": 1.79,
-        "pnlHKD": 4.67,
+        "unrealizedR": 1.73,
+        "pnlHKD": 4.52,
         "ageDays": 1
       },
       {
@@ -5293,8 +5304,8 @@
         "target": 186.49,
         "riskPerShare": 6.25,
         "status": "open",
-        "unrealizedR": -0.21,
-        "pnlHKD": -0.76,
+        "unrealizedR": -0.09,
+        "pnlHKD": -0.33,
         "ageDays": 1
       },
       {
@@ -5309,8 +5320,8 @@
         "target": 82.18,
         "riskPerShare": 1.94,
         "status": "open",
-        "unrealizedR": 0.99,
-        "pnlHKD": 2.45,
+        "unrealizedR": 0.93,
+        "pnlHKD": 2.31,
         "ageDays": 1
       },
       {
@@ -5325,8 +5336,8 @@
         "target": 212.59,
         "riskPerShare": 13.05,
         "status": "open",
-        "unrealizedR": 0.14,
-        "pnlHKD": 0.95,
+        "unrealizedR": 0.01,
+        "pnlHKD": 0.07,
         "ageDays": 1
       },
       {
@@ -5341,8 +5352,8 @@
         "target": 137.57,
         "riskPerShare": 9.16,
         "status": "open",
-        "unrealizedR": 0.89,
-        "pnlHKD": 6.85,
+        "unrealizedR": 0.81,
+        "pnlHKD": 6.26,
         "ageDays": 1
       },
       {
@@ -5358,7 +5369,7 @@
         "riskPerShare": 17.26,
         "status": "open",
         "unrealizedR": 0.66,
-        "pnlHKD": 3.14,
+        "pnlHKD": 3.12,
         "ageDays": 1
       },
       {
@@ -5373,8 +5384,8 @@
         "target": 157.27,
         "riskPerShare": 14.42,
         "status": "open",
-        "unrealizedR": 0.5,
-        "pnlHKD": 4.04,
+        "unrealizedR": 0.45,
+        "pnlHKD": 3.62,
         "ageDays": 1
       },
       {
@@ -5389,8 +5400,8 @@
         "target": 169.37,
         "riskPerShare": 16.2,
         "status": "open",
-        "unrealizedR": 0.08,
-        "pnlHKD": 0.93,
+        "unrealizedR": 0.09,
+        "pnlHKD": 1.12,
         "ageDays": 1
       },
       {
@@ -5405,8 +5416,8 @@
         "target": 290.13,
         "riskPerShare": 9.61,
         "status": "open",
-        "unrealizedR": 0.03,
-        "pnlHKD": 0.08,
+        "unrealizedR": 0.01,
+        "pnlHKD": 0.02,
         "ageDays": 1
       },
       {
@@ -5421,8 +5432,8 @@
         "target": 403.03,
         "riskPerShare": 35.11,
         "status": "open",
-        "unrealizedR": -0.18,
-        "pnlHKD": -1.31,
+        "unrealizedR": -0.15,
+        "pnlHKD": -1.12,
         "ageDays": 1
       },
       {
@@ -5437,8 +5448,8 @@
         "target": 498.84,
         "riskPerShare": 25.53,
         "status": "open",
-        "unrealizedR": -0.63,
-        "pnlHKD": -2.9,
+        "unrealizedR": -0.77,
+        "pnlHKD": -3.58,
         "ageDays": 1
       },
       {
@@ -5453,8 +5464,8 @@
         "target": 319.94,
         "riskPerShare": 12.44,
         "status": "open",
-        "unrealizedR": -0.13,
-        "pnlHKD": -0.46,
+        "unrealizedR": -0.2,
+        "pnlHKD": -0.73,
         "ageDays": 1
       },
       {
@@ -5470,7 +5481,7 @@
         "riskPerShare": 3.32,
         "status": "open",
         "unrealizedR": 0.81,
-        "pnlHKD": 3.39,
+        "pnlHKD": 3.37,
         "ageDays": 1
       },
       {
@@ -5485,8 +5496,8 @@
         "target": 323.42,
         "riskPerShare": 22.51,
         "status": "open",
-        "unrealizedR": 0.58,
-        "pnlHKD": 3.53,
+        "unrealizedR": 0.55,
+        "pnlHKD": 3.37,
         "ageDays": 1
       },
       {
@@ -5501,8 +5512,8 @@
         "target": 208.78,
         "riskPerShare": 14.42,
         "status": "open",
-        "unrealizedR": -0.5,
-        "pnlHKD": -4.04,
+        "unrealizedR": -0.45,
+        "pnlHKD": -3.62,
         "ageDays": 1
       },
       {
@@ -5517,8 +5528,8 @@
         "target": 137.57,
         "riskPerShare": 9.16,
         "status": "open",
-        "unrealizedR": 0.89,
-        "pnlHKD": 6.85,
+        "unrealizedR": 0.81,
+        "pnlHKD": 6.26,
         "ageDays": 1
       },
       {
@@ -5533,8 +5544,8 @@
         "target": 1135.43,
         "riskPerShare": 84.33,
         "status": "open",
-        "unrealizedR": -0.47,
-        "pnlHKD": -4.12,
+        "unrealizedR": -0.48,
+        "pnlHKD": -4.21,
         "ageDays": 1
       },
       {
@@ -5549,8 +5560,8 @@
         "target": 186.11,
         "riskPerShare": 28.61,
         "status": "open",
-        "unrealizedR": 0.1,
-        "pnlHKD": 1.12,
+        "unrealizedR": 0.02,
+        "pnlHKD": 0.21,
         "ageDays": 1
       },
       {
@@ -5565,8 +5576,8 @@
         "target": 87.75,
         "riskPerShare": 4.47,
         "status": "open",
-        "unrealizedR": 0.32,
-        "pnlHKD": 1.79,
+        "unrealizedR": 0.29,
+        "pnlHKD": 1.65,
         "ageDays": 1
       },
       {
@@ -5581,8 +5592,8 @@
         "target": 114.58,
         "riskPerShare": 3.4,
         "status": "open",
-        "unrealizedR": 1.03,
-        "pnlHKD": 3.26,
+        "unrealizedR": 1.04,
+        "pnlHKD": 3.28,
         "ageDays": 1
       },
       {
@@ -5597,8 +5608,8 @@
         "target": 44.89,
         "riskPerShare": 3.82,
         "status": "open",
-        "unrealizedR": 0.29,
-        "pnlHKD": 2.98,
+        "unrealizedR": 0.21,
+        "pnlHKD": 2.2,
         "ageDays": 1
       },
       {
@@ -5613,8 +5624,8 @@
         "target": 216.06,
         "riskPerShare": 10.81,
         "status": "open",
-        "unrealizedR": -0.27,
-        "pnlHKD": -1.23,
+        "unrealizedR": -0.48,
+        "pnlHKD": -2.16,
         "ageDays": 1
       },
       {
@@ -5629,8 +5640,8 @@
         "target": 103,
         "riskPerShare": 3.68,
         "status": "open",
-        "unrealizedR": 0.03,
-        "pnlHKD": 0.11,
+        "unrealizedR": 0.02,
+        "pnlHKD": 0.08,
         "ageDays": 1
       },
       {
@@ -5645,8 +5656,8 @@
         "target": 118.77,
         "riskPerShare": 3.68,
         "status": "open",
-        "unrealizedR": -0.03,
-        "pnlHKD": -0.11,
+        "unrealizedR": -0.02,
+        "pnlHKD": -0.08,
         "ageDays": 1
       },
       {
@@ -5661,8 +5672,8 @@
         "target": 966.78,
         "riskPerShare": 84.85,
         "status": "open",
-        "unrealizedR": 0.42,
-        "pnlHKD": 4.04,
+        "unrealizedR": 0.41,
+        "pnlHKD": 3.94,
         "ageDays": 1
       },
       {
@@ -5677,8 +5688,8 @@
         "target": 107.78,
         "riskPerShare": 3.68,
         "status": "open",
-        "unrealizedR": 0.03,
-        "pnlHKD": 0.11,
+        "unrealizedR": 0.02,
+        "pnlHKD": 0.08,
         "ageDays": 1
       },
       {
@@ -5693,8 +5704,8 @@
         "target": 395.01,
         "riskPerShare": 20.16,
         "status": "open",
-        "unrealizedR": -0.33,
-        "pnlHKD": -1.85,
+        "unrealizedR": -0.3,
+        "pnlHKD": -1.69,
         "ageDays": 1
       },
       {
@@ -5709,8 +5720,8 @@
         "target": 156.73,
         "riskPerShare": 13.03,
         "status": "open",
-        "unrealizedR": -0.16,
-        "pnlHKD": -1.11,
+        "unrealizedR": -0.03,
+        "pnlHKD": -0.22,
         "ageDays": 1
       },
       {
@@ -5725,8 +5736,8 @@
         "target": 99.75,
         "riskPerShare": 9.06,
         "status": "open",
-        "unrealizedR": -0.57,
-        "pnlHKD": -4.24,
+        "unrealizedR": -0.49,
+        "pnlHKD": -3.66,
         "ageDays": 1
       },
       {
@@ -5741,8 +5752,8 @@
         "target": 103,
         "riskPerShare": 3.68,
         "status": "open",
-        "unrealizedR": 0.03,
-        "pnlHKD": 0.11,
+        "unrealizedR": 0.02,
+        "pnlHKD": 0.08,
         "ageDays": 1
       },
       {
@@ -5757,8 +5768,8 @@
         "target": 226.04,
         "riskPerShare": 7.55,
         "status": "open",
-        "unrealizedR": -0.08,
-        "pnlHKD": -0.28,
+        "unrealizedR": 0.01,
+        "pnlHKD": 0.04,
         "ageDays": 1
       },
       {
@@ -5773,8 +5784,8 @@
         "target": 212.26,
         "riskPerShare": 13.03,
         "status": "open",
-        "unrealizedR": 0.16,
-        "pnlHKD": 1.11,
+        "unrealizedR": 0.03,
+        "pnlHKD": 0.22,
         "ageDays": 1
       },
       {
@@ -5789,8 +5800,8 @@
         "target": 196.2,
         "riskPerShare": 7.55,
         "status": "open",
-        "unrealizedR": 0.08,
-        "pnlHKD": 0.28,
+        "unrealizedR": -0.01,
+        "pnlHKD": -0.04,
         "ageDays": 1
       },
       {
@@ -5805,8 +5816,8 @@
         "target": 969.77,
         "riskPerShare": 36.83,
         "status": "open",
-        "unrealizedR": 0.84,
-        "pnlHKD": 3.44,
+        "unrealizedR": 0.81,
+        "pnlHKD": 3.34,
         "ageDays": 1
       },
       {
@@ -5821,8 +5832,8 @@
         "target": 214.2,
         "riskPerShare": 7.66,
         "status": "open",
-        "unrealizedR": 0.13,
-        "pnlHKD": 0.46,
+        "unrealizedR": 0.21,
+        "pnlHKD": 0.78,
         "ageDays": 1
       },
       {
@@ -5837,8 +5848,8 @@
         "target": 205.84,
         "riskPerShare": 3.35,
         "status": "open",
-        "unrealizedR": 0.55,
-        "pnlHKD": 0.87,
+        "unrealizedR": 0.35,
+        "pnlHKD": 0.55,
         "ageDays": 1
       },
       {
@@ -5853,8 +5864,8 @@
         "target": 99.98,
         "riskPerShare": 9.52,
         "status": "open",
-        "unrealizedR": -0.07,
-        "pnlHKD": -0.5,
+        "unrealizedR": 0.01,
+        "pnlHKD": 0.06,
         "ageDays": 1
       },
       {
@@ -5869,8 +5880,8 @@
         "target": 339.98,
         "riskPerShare": 5.21,
         "status": "open",
-        "unrealizedR": 0.77,
-        "pnlHKD": 1.14,
+        "unrealizedR": 0.59,
+        "pnlHKD": 0.87,
         "ageDays": 1
       },
       {
@@ -5886,7 +5897,7 @@
         "riskPerShare": 17.57,
         "status": "open",
         "unrealizedR": 0.24,
-        "pnlHKD": 1.2,
+        "pnlHKD": 1.18,
         "ageDays": 1
       },
       {
@@ -5901,8 +5912,8 @@
         "target": 193.48,
         "riskPerShare": 7.74,
         "status": "open",
-        "unrealizedR": -0.23,
-        "pnlHKD": -0.84,
+        "unrealizedR": -0.31,
+        "pnlHKD": -1.16,
         "ageDays": 1
       },
       {
@@ -5918,7 +5929,7 @@
         "riskPerShare": 3.31,
         "status": "open",
         "unrealizedR": -0.62,
-        "pnlHKD": -2.57,
+        "pnlHKD": -2.54,
         "ageDays": 1
       },
       {
@@ -5933,8 +5944,8 @@
         "target": 267.66,
         "riskPerShare": 3.99,
         "status": "open",
-        "unrealizedR": 0.08,
-        "pnlHKD": 0.12,
+        "unrealizedR": 0.31,
+        "pnlHKD": 0.48,
         "ageDays": 1
       },
       {
@@ -5949,9 +5960,9 @@
         "target": 191.93,
         "riskPerShare": 5.93,
         "status": "open",
-        "unrealizedR": 1.38,
-        "pnlHKD": 4.55,
-        "ageDays": 0
+        "unrealizedR": 1.1,
+        "pnlHKD": 3.63,
+        "ageDays": 1
       },
       {
         "id": "爆量順勢-MSTR-1787601867193",
@@ -5965,8 +5976,8 @@
         "target": 141.82,
         "riskPerShare": 9.59,
         "status": "open",
-        "unrealizedR": 0.5,
-        "pnlHKD": 3.91,
+        "unrealizedR": 0.43,
+        "pnlHKD": 3.33,
         "ageDays": 0
       },
       {
@@ -5981,8 +5992,8 @@
         "target": 215.79,
         "riskPerShare": 3.83,
         "status": "open",
-        "unrealizedR": 0.98,
-        "pnlHKD": 1.8,
+        "unrealizedR": 1.12,
+        "pnlHKD": 2.06,
         "ageDays": 0
       },
       {
@@ -5997,8 +6008,8 @@
         "target": 111.67,
         "riskPerShare": 1.61,
         "status": "open",
-        "unrealizedR": 1.76,
-        "pnlHKD": 2.62,
+        "unrealizedR": 1.78,
+        "pnlHKD": 2.65,
         "ageDays": 0
       },
       {
@@ -6013,8 +6024,8 @@
         "target": 214.72,
         "riskPerShare": 8.83,
         "status": "open",
-        "unrealizedR": 0.39,
-        "pnlHKD": 1.63,
+        "unrealizedR": 0.45,
+        "pnlHKD": 1.89,
         "ageDays": 0
       },
       {
@@ -6029,8 +6040,8 @@
         "target": 545.07,
         "riskPerShare": 10.57,
         "status": "open",
-        "unrealizedR": 0.03,
-        "pnlHKD": 0.06,
+        "unrealizedR": -0.32,
+        "pnlHKD": -0.6,
         "ageDays": 0
       },
       {
@@ -6045,8 +6056,8 @@
         "target": 39.73,
         "riskPerShare": 1.72,
         "status": "open",
-        "unrealizedR": 1.2,
-        "pnlHKD": 5.71,
+        "unrealizedR": 1.03,
+        "pnlHKD": 4.91,
         "ageDays": 0
       },
       {
@@ -6061,8 +6072,8 @@
         "target": 456.75,
         "riskPerShare": 30.65,
         "status": "open",
-        "unrealizedR": -0.19,
-        "pnlHKD": -1.24,
+        "unrealizedR": -0.16,
+        "pnlHKD": -1.06,
         "ageDays": 0
       },
       {
@@ -6077,8 +6088,8 @@
         "target": 35.17,
         "riskPerShare": 3.98,
         "status": "open",
-        "unrealizedR": -0.12,
-        "pnlHKD": -1.29,
+        "unrealizedR": -0.05,
+        "pnlHKD": -0.53,
         "ageDays": 0
       },
       {
@@ -6093,8 +6104,8 @@
         "target": 87.9,
         "riskPerShare": 3.36,
         "status": "open",
-        "unrealizedR": 0.33,
-        "pnlHKD": 1.37,
+        "unrealizedR": 0.32,
+        "pnlHKD": 1.34,
         "ageDays": 0
       },
       {
@@ -6109,8 +6120,8 @@
         "target": 450.97,
         "riskPerShare": 13.38,
         "status": "open",
-        "unrealizedR": -0.13,
-        "pnlHKD": -0.36,
+        "unrealizedR": -0.06,
+        "pnlHKD": -0.17,
         "ageDays": 0
       },
       {
@@ -6126,7 +6137,7 @@
         "riskPerShare": 3.39,
         "status": "open",
         "unrealizedR": -0.13,
-        "pnlHKD": -0.55,
+        "pnlHKD": -0.53,
         "ageDays": 0
       },
       {
@@ -6141,8 +6152,8 @@
         "target": 179.48,
         "riskPerShare": 14.45,
         "status": "open",
-        "unrealizedR": -0.05,
-        "pnlHKD": -0.39,
+        "unrealizedR": 0.06,
+        "pnlHKD": 0.49,
         "ageDays": 0
       },
       {
@@ -6157,8 +6168,8 @@
         "target": 122.63,
         "riskPerShare": 10.36,
         "status": "open",
-        "unrealizedR": 0.09,
-        "pnlHKD": 0.76,
+        "unrealizedR": 0.16,
+        "pnlHKD": 1.32,
         "ageDays": 0
       },
       {
@@ -6173,8 +6184,40 @@
         "target": 317.35,
         "riskPerShare": 20.02,
         "status": "open",
-        "unrealizedR": 0.1,
-        "pnlHKD": 0.54,
+        "unrealizedR": 0.07,
+        "pnlHKD": 0.38,
+        "ageDays": 0
+      },
+      {
+        "id": "綜合時機-SPCX-1787687398556",
+        "strategy": "綜合時機",
+        "ticker": "SPCX",
+        "direction": "long",
+        "createdAt": "2026-08-25T19:49:58.555Z",
+        "createdPrice": 138.5,
+        "entry": 137.5,
+        "stop": 131.45,
+        "target": 149.6,
+        "riskPerShare": 6.05,
+        "status": "open",
+        "unrealizedR": 0.17,
+        "pnlHKD": 0.73,
+        "ageDays": 0
+      },
+      {
+        "id": "綜合時機-NFLX-1787687398556",
+        "strategy": "綜合時機",
+        "ticker": "NFLX",
+        "direction": "long",
+        "createdAt": "2026-08-25T19:49:58.555Z",
+        "createdPrice": 82.27,
+        "entry": 79.75,
+        "stop": 78.25,
+        "target": 82.72,
+        "riskPerShare": 1.49,
+        "status": "open",
+        "unrealizedR": 1.69,
+        "pnlHKD": 3.16,
         "ageDays": 0
       }
     ]
